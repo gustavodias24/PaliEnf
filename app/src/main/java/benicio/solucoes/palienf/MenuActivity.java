@@ -26,7 +26,7 @@ public class MenuActivity extends AppCompatActivity {
         mainBinding.verPacientes.setOnClickListener(view -> Toast.makeText(this, "Ainda não fiz", Toast.LENGTH_SHORT).show());
         mainBinding.cadastrarPaciente.setOnClickListener(view -> Toast.makeText(this, "Ainda não fiz", Toast.LENGTH_SHORT).show());
         mainBinding.relatarProblema.setOnClickListener(view -> Toast.makeText(this, "Ainda não fiz", Toast.LENGTH_SHORT).show());
-        mainBinding.configuracoes.setOnClickListener(view -> Toast.makeText(this, "Ainda não fiz", Toast.LENGTH_SHORT).show());
+        mainBinding.configuracoes.setOnClickListener(view ->  startActivity(new Intent(this, ConfiguracoesActivity.class)));
         mainBinding.cadastrarUsuario.setOnClickListener(view -> startActivity(new Intent(this, CadastrarUsuarioActivity.class)));
     }
 }
