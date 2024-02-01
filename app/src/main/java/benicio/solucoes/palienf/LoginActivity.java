@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.widget.Toast;
 
 import benicio.solucoes.palienf.databinding.ActivityLoginBinding;
@@ -19,6 +20,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(mainBinding.getRoot());
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+        mainBinding.verSenha.setOnClickListener(view -> mainBinding.edtSenha.setInputType(InputType.TYPE_CLASS_TEXT));
 
         mainBinding.btnEntrar.setOnClickListener(view -> {
             String user, senha;

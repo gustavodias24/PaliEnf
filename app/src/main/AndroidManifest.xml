@@ -13,10 +13,13 @@
         android:theme="@style/Theme.PaliEnf"
         tools:targetApi="31">
         <activity
+            android:name=".CadastrarUsuarioActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
+            android:exported="false" />
+        <activity
             android:name=".MenuActivity"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
-            />
+            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar" />
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
