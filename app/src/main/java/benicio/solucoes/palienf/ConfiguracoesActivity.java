@@ -54,18 +54,27 @@ public class ConfiguracoesActivity extends AppCompatActivity {
                         }
                     }
                     String novaSenha = mainBinding.novaSenha.getText().toString();
+                    String antigaSenha = mainBinding.senhaAntiga.getText().toString();
 
-                    if ( !novaSenha.isEmpty() ){
-                        userLogado.setSenha(novaSenha);
-                        refUsuarios.child(sharedPreferences.getString("id", "")).setValue(userLogado).addOnCompleteListener(task -> {
-                            if ( task.isSuccessful()){
-                                mainBinding.repetir.setText("");
-                                mainBinding.novaSenha.setText("");
-                                mainBinding.senhaAntiga.setText("");
-                                Toast.makeText(ConfiguracoesActivity.this, "Senha trocada com sucesso!", Toast.LENGTH_SHORT).show();
+                    if ( !antigaSenha.isEmpty()){
+                        if ( antigaSenha.equals(userLogado.getSenha())){
+                            if ( !novaSenha.isEmpty() ){
+                                userLogado.setSenha(novaSenha);
+                                refUsuarios.child(sharedPreferences.getString("id", "")).setValue(userLogado).addOnCompleteListener(task -> {
+                                    if ( task.isSuccessful()){
+                                        mainBinding.repetir.setText("");
+                                        mainBinding.novaSenha.setText("");
+                                        mainBinding.senhaAntiga.setText("");
+                                        Toast.makeText(ConfiguracoesActivity.this, "Senha trocada com sucesso!", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
                             }
-                        });
+                        }else{
+                            Toast.makeText(ConfiguracoesActivity.this, "Senha antiga incorreta!", Toast.LENGTH_SHORT).show();
+                        }
+
                     }
+
                 }
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {

@@ -24,7 +24,7 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/nome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -32,44 +32,37 @@
             android:hint="Nome Completo *"
             android:inputType="text" />
 
-        <EditText
-            android:id="@+id/editTextText2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Data de Nascimento *"
-            android:inputType="text" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/editTextText5"
+            <com.vicmikhailau.maskededittext.MaskedEditText
+                android:id="@+id/dataNascimento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:ems="10"
+                app:mask="##/##/####"
                 android:hint="Data de Nascimento *"
-                android:inputType="text" />
+                android:inputType="number" />
 
-            <EditText
-                android:id="@+id/editTextText4"
+            <com.vicmikhailau.maskededittext.MaskedEditText
+                android:id="@+id/cpf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="CPF"
-                android:inputType="text" />
+                android:hint="CPF *"
+                android:inputType="number"
+                app:mask="###.###.###-##" />
 
         </LinearLayout>
 
         <EditText
-            android:id="@+id/editTextText3"
+            android:id="@+id/prontuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -88,21 +81,13 @@
             android:textColor="@color/azul"
             android:textSize="24sp" />
 
-        <EditText
-            android:id="@+id/editTextText6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Prontuário *"
-            android:inputType="text" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/cidade"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -112,6 +97,7 @@
                 android:inputType="text" />
 
             <EditText
+                android:id="@+id/bairro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -128,6 +114,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/cep"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -137,6 +124,7 @@
                 android:inputType="text" />
 
             <EditText
+                android:id="@+id/numero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -148,7 +136,7 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/editTextText7"
+            android:id="@+id/referencia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -183,6 +171,7 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/financeiro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sim" />
@@ -193,6 +182,16 @@
                     android:layout_marginStart="12dp"
                     android:text="Não" />
             </RadioGroup>
+
+            <EditText
+                android:id="@+id/descriFinanceiro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Descrição"
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout
@@ -211,6 +210,7 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/familiaPresente"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sim" />
@@ -220,7 +220,18 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:text="Não" />
+
             </RadioGroup>
+
+            <EditText
+                android:id="@+id/descriFamiliaPresente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Descrição"
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout
@@ -231,7 +242,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Crença/religião, você gostaria de receber a visita do seu líder espiritual?" />
+                android:text="Crença/religião ?" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -239,6 +250,7 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/crencaReligiao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sim" />
@@ -248,7 +260,18 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:text="Não" />
+
             </RadioGroup>
+
+            <EditText
+                android:id="@+id/descriCrencaReligiao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Descrição"
+                android:inputType="text" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -258,7 +281,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Crença/religião, você gostaria de receber a visita do seu líder espiritual?" />
+                    android:text=" você gostaria de receber a visita do seu líder espiritual?" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -266,6 +289,7 @@
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/visitarLider"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sim" />
@@ -275,6 +299,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:text="Não" />
+
                 </RadioGroup>
 
                 <LinearLayout
@@ -287,27 +312,10 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Você gostaria de receber a visita do capelão do hospital?" />
-
                         <RadioGroup
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Sim" />
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="12dp"
-                                android:text="Não" />
-                        </RadioGroup>
+                            android:orientation="horizontal"/>
 
                     </LinearLayout>
 
@@ -322,6 +330,7 @@
                         android:orientation="horizontal">
 
                         <RadioButton
+                            android:id="@+id/ritoEspiritual"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Sim" />
@@ -331,7 +340,18 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
                             android:text="Não" />
+
                     </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/descriRituEspiritual"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Descrição"
+                        android:inputType="text" />
 
                 </LinearLayout>
 
@@ -351,7 +371,7 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editTextText17"
+            android:id="@+id/alergias"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -360,12 +380,21 @@
             android:inputType="text" />
 
         <EditText
-            android:id="@+id/editTextText18"
+            android:id="@+id/internacaoRecente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="Internação recente"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/doencaOncologica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Doença oncológica de base"
             android:inputType="text" />
 
         <TextView
@@ -380,25 +409,25 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editTextText8"
+            android:id="@+id/procedencia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ems="10"
-            android:hint="Doença oncológica de base"
+            android:hint="Procedência"
             android:inputType="text" />
 
         <EditText
-            android:id="@+id/editTextText9"
+            android:id="@+id/motivo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ems="10"
-            android:hint="Procedência motivo da internação no setor"
+            android:hint="Motivo da internação no setor"
             android:inputType="text" />
 
         <EditText
-            android:id="@+id/editTextText11"
+            android:id="@+id/acampanhante"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -407,7 +436,7 @@
             android:inputType="text" />
 
         <EditText
-            android:id="@+id/editTextText12"
+            android:id="@+id/peso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -416,7 +445,7 @@
             android:inputType="text" />
 
         <EditText
-            android:id="@+id/editTextText13"
+            android:id="@+id/altura"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -425,7 +454,7 @@
             android:inputType="text" />
 
         <EditText
-            android:id="@+id/editTextText14"
+            android:id="@+id/sc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -434,7 +463,7 @@
             android:inputType="text" />
 
         <EditText
-            android:id="@+id/editTextText15"
+            android:id="@+id/imc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -443,7 +472,7 @@
             android:inputType="text" />
 
         <EditText
-            android:id="@+id/editTextText16"
+            android:id="@+id/numeroLeito"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -452,7 +481,7 @@
             android:inputType="text" />
 
         <Button
-            android:id="@+id/cadastrar2"
+            android:id="@+id/cadastrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"

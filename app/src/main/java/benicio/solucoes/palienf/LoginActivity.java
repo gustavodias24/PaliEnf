@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
                         for (DataSnapshot dado : snapshot.getChildren()){
                             UsuarioModel usuarioBD = dado.getValue(UsuarioModel.class);
 
-                            if ( usuarioBD.getEmail().trim().toLowerCase().equals(user)){
+                            if ( usuarioBD.getNr().trim().toLowerCase().equals(user)){
                                 if( usuarioBD.getSenha().trim().toLowerCase().equals(senha)){
                                     startActivity(new Intent(LoginActivity.this, MenuActivity.class));
                                     logado = true;
