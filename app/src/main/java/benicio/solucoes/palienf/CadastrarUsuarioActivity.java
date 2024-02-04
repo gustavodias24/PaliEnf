@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -38,29 +40,33 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
             String email = mainBinding.email.getText().toString();
             String nr = mainBinding.nr.getText().toString();
             String nome = mainBinding.nome.getText().toString();
+            String senha = mainBinding.senha.getText().toString();
 
 
-            if ( email.isEmpty() || nr.isEmpty() || nome.isEmpty()){
+            if ( email.isEmpty() || nr.isEmpty() || nome.isEmpty() || senha.isEmpty()){
                 Toast.makeText(this, "Preencha todas as informações", Toast.LENGTH_SHORT).show();
             }else{
 
                 if ( nr.length() != 7){
                     Toast.makeText(this, "Número de registro precisa ter 7 dígitos.", Toast.LENGTH_SHORT).show();
                 }else{
-                    String id = UUID.randomUUID().toString();
+                    String id = Base64.encodeToString(email.getBytes(), Base64.DEFAULT).trim();
+
                     UsuarioModel usuarioModel = new UsuarioModel(
                             id,
                             nome,
                             email,
-                            nr
+                            nr,
+                            senha
                     );
 
-                    refUsuarios.child(id).setValue(usuarioModel).addOnCompleteListener(task -> {
+                    refUsuarios.child(usuarioModel.getId()).setValue(usuarioModel).addOnCompleteListener(task -> {
                         if ( task.isSuccessful()){
                             Toast.makeText(this, "Cadastro Realizado", Toast.LENGTH_LONG).show();
                             mainBinding.email.setText("");
                             mainBinding.nr.setText("");
                             mainBinding.nome.setText("");
+                            mainBinding.senha.setText("");
                         }
                     });
                 }

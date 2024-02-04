@@ -24,7 +24,7 @@
         android:drawablePadding="16dp"
         android:drawableTint="#FF555555"
         android:ems="10"
-        android:hint="Usuário"
+        android:hint="E-mail"
         android:inputType="text" />
 
 

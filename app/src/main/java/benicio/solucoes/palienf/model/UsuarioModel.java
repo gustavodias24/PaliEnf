@@ -2,13 +2,22 @@ package benicio.solucoes.palienf.model;
 
 public class UsuarioModel {
 
-    String id, nome, email, nr;
+    String id, nome, email, nr, senha;
 
-    public UsuarioModel(String id, String nome, String email, String nr) {
+    public UsuarioModel(String id, String nome, String email, String nr, String senha) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.nr = nr;
+        this.senha = senha;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public UsuarioModel() {
