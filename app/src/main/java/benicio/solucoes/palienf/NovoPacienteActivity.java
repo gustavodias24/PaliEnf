@@ -22,11 +22,17 @@ public class NovoPacienteActivity extends AppCompatActivity {
 
     private ActivityNovoPacienteBinding mainBinding;
     private DatabaseReference refPacientes = FirebaseDatabase.getInstance().getReference().child("pacientes");
+    private Bundle b;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mainBinding = ActivityNovoPacienteBinding.inflate(getLayoutInflater());
         setContentView(mainBinding.getRoot());
+
+        b = getIntent().getExtras();
+
+
+
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
@@ -34,12 +40,66 @@ public class NovoPacienteActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+
+        if ( b != null){
+            if ( b.getBoolean("update", false)){
+                refPacientes.child(b.getString("id", "")).get().addOnCompleteListener(  task -> {
+                    PacienteModel pacienteModel =  task.getResult().getValue(PacienteModel.class);
+                    if ( pacienteModel != null ){
+
+                        mainBinding.nome.setText(pacienteModel.getNome());
+                        mainBinding.dataNascimento.setText(pacienteModel.getDataNascimento());
+                        mainBinding.cpf.setText(pacienteModel.getCpf());
+                        mainBinding.prontuario.setText(pacienteModel.getProntuário());
+
+                        mainBinding.cidade.setText(pacienteModel.getCidade());
+                        mainBinding.bairro.setText(pacienteModel.getBairro());
+                        mainBinding.cep.setText(pacienteModel.getCep());
+                        mainBinding.numero.setText(pacienteModel.getNumero());
+                        mainBinding.referencia.setText(pacienteModel.getPontoReferencia());
+
+
+                        mainBinding.financeiro.setChecked(pacienteModel.isNecessidadeFinanceira());
+                        mainBinding.descriFinanceiro.setText(pacienteModel.getDescriNecessidadeFinanceira());
+
+                        mainBinding.familiaPresente.setChecked(pacienteModel.isNecessidadeMenbroFamilia());
+                        mainBinding.descriFamiliaPresente.setText(pacienteModel.getDescriNecessidadeMenbroFamilia());
+
+                        mainBinding.crencaReligiao.setChecked(pacienteModel.isCrencaReligiao());
+                        mainBinding.descriCrencaReligiao.setText(pacienteModel.getDescriCrencaReligiao());
+
+                        mainBinding.visitarLider.setChecked(pacienteModel.isCrencaVistirarLider());
+
+                        mainBinding.ritoEspiritual.setChecked(pacienteModel.isCrencaRitoEspiritual());
+                        mainBinding.descriRituEspiritual.setText(pacienteModel.getDescriRitoEspiritual());
+
+                        mainBinding.alergias.setText(pacienteModel.getAlergias());
+                        mainBinding.internacaoRecente.setText(pacienteModel.getInternacaoRecente());
+                        mainBinding.doencaOncologica.setText(pacienteModel.getDoencaOncológica());
+
+                        mainBinding.procedencia.setText(pacienteModel.getProcedencia());
+                        mainBinding.motivo.setText(pacienteModel.getMotidaInternacao());
+                        mainBinding.acampanhante.setText(pacienteModel.getNomeCompanhante());
+                        mainBinding.peso.setText(pacienteModel.getPeso());
+                        mainBinding.altura.setText(pacienteModel.getAltura());
+                        mainBinding.sc.setText(pacienteModel.getSc());
+                        mainBinding.imc.setText(pacienteModel.getImc());
+                        mainBinding.numeroLeito.setText(pacienteModel.getNumeroLeito());
+
+                    }
+                });
+
+
+                getSupportActionBar().setTitle("Atualizar paciente");
+                mainBinding.cadastrar.setText("Atualizar");
+            }
+        }
+
         mainBinding.cadastrar.setOnClickListener( view -> {
 
             if (
                     mainBinding.nome.getText().toString().isEmpty() ||
                     mainBinding.dataNascimento.getText().toString().isEmpty() ||
-                    mainBinding.cpf.getText().toString().isEmpty() ||
                     mainBinding.prontuario.getText().toString().isEmpty()
             ){
                 Toast.makeText(this, "Preencha todas as informações obrigatórias!", Toast.LENGTH_SHORT).show();
@@ -89,7 +149,11 @@ public class NovoPacienteActivity extends AppCompatActivity {
                     if ( task.isSuccessful() ){
                         finish();
                         startActivity(new Intent(this, this.getClass()));
-                        Toast.makeText(this, "Paciente criado com sucesso!", Toast.LENGTH_SHORT).show();
+                        if ( b == null){
+                            Toast.makeText(this, "Paciente criado com sucesso!", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(this, "Paciente atualizado com sucesso!", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 });
             }
