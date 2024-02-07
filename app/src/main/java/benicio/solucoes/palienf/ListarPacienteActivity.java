@@ -48,6 +48,12 @@ public class ListarPacienteActivity extends AppCompatActivity {
         configurarListener("");
     }
 
+    @Override
+    protected void onStart() {
+        configurarListener("");
+        super.onStart();
+    }
+
     private void configurarRecycler() {
         mainBinding.recyclerPacientes.setLayoutManager(new LinearLayoutManager(this));
         mainBinding.recyclerPacientes.setHasFixedSize(true);

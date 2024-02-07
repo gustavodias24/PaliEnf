@@ -105,7 +105,11 @@ public class NovoPacienteActivity extends AppCompatActivity {
                 Toast.makeText(this, "Preencha todas as informações obrigatórias!", Toast.LENGTH_SHORT).show();
             }else{
                 PacienteModel paciente = new PacienteModel();
-                paciente.setId(UUID.randomUUID().toString());
+                if ( b == null ){
+                    paciente.setId(UUID.randomUUID().toString());
+                }else{
+                    paciente.setId(b.getString("id", ""));
+                }
                 paciente.setNome(mainBinding.nome.getText().toString());
                 paciente.setDataNascimento(mainBinding.dataNascimento.getText().toString());
                 paciente.setCpf(mainBinding.cpf.getText().toString());
@@ -147,10 +151,10 @@ public class NovoPacienteActivity extends AppCompatActivity {
 
                 refPacientes.child(paciente.getId()).setValue(paciente).addOnCompleteListener( task ->{
                     if ( task.isSuccessful() ){
-                        finish();
-                        startActivity(new Intent(this, this.getClass()));
                         if ( b == null){
                             Toast.makeText(this, "Paciente criado com sucesso!", Toast.LENGTH_SHORT).show();
+                            finish();
+                            startActivity(new Intent(this, this.getClass()));
                         }else{
                             Toast.makeText(this, "Paciente atualizado com sucesso!", Toast.LENGTH_SHORT).show();
                         }
