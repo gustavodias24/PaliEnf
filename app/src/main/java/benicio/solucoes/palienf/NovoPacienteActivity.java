@@ -31,9 +31,6 @@ public class NovoPacienteActivity extends AppCompatActivity {
 
         b = getIntent().getExtras();
 
-
-
-
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         getSupportActionBar().setTitle("Cadastrar novo paciente");

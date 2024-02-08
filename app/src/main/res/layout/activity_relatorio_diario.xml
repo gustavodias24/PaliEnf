@@ -1,0 +1,1906 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp"
+        tools:context=".RelatorioDiarioActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Avaliação Física"
+            android:textColor="@color/azul"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pós-operatório:" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sim" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Não" />
+        </RadioGroup>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Temperatura"
+            android:inputType="text" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="PA"
+            android:inputType="text" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="FC"
+            android:inputType="text" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="FR"
+            android:inputType="text" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="SAT. O2"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pulso:" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="amplo" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="filiforme" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="não palpavel" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nível de consciência:" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="acordado" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="lúcido" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sonolento" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="obnubilado  Comatoso" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sedado" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agitado" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Observações"
+                android:inputType="text" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pupilas:" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="isocóricas" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="mióticas" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="midriáticas" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="anisocórica" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="fotorreagentes" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="não fotorreagentes" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Observações"
+                android:inputType="text" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acuidade visual:" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="preservada" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="parcialmente presenvada" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ausente" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="exofitalmia" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="enucleação" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Observações"
+                android:inputType="text" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acuidade auditiva:" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="preservada" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="parcialmente presenvada" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ausente" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Observações"
+                android:inputType="text" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Região cranio-facial:" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="simétrico" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="assimétrico" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cavidade oral:" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="íntegra" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="lesionada" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="sangramento" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="mucosite" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="limpa" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="sujidade" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ar ambiente" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="macronebulização" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BIPAP" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="cateter de O2" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="traqueostomizado" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="intubado" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ventilação mecânica" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Observações"
+                    android:inputType="text" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ausculta pulmonar:" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MVUA" />
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MVUA diminuído" />
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MVUA abolido" />
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="estertores" />
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="roncos" />
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="siblilos" />
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="creptação" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Observações"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ausculta cardíaca:" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2 bulhas" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="3 bulhas" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="4 bulhas" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="sopro" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="regular" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="siblilos" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Observações"
+                            android:inputType="text" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tórax:" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <RadioButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="simétrico" />
+
+                            <RadioButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="assimétrico" />
+
+                            <RadioButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="escavado" />
+
+                            <RadioButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="protuso" />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:hint="Observações"
+                                android:inputType="text" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Abdome:" />
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="globoso" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="distendido" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="depressível" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="táboa" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="rígido" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="vícera palpável" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="piparote +" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="peristlase +" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="peristalse –" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="heperperistaltismo" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="hipoperistaltismo" />
+
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:hint="Observações"
+                                    android:inputType="text" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Genitália:" />
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <RadioButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="íntegra" />
+
+                                    <RadioButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="lesionada" />
+
+                                    <RadioButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="secreção" />
+
+                                    <RadioButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Edema" />
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:hint="Observações"
+                                        android:inputType="text" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Membros superiores:" />
+
+                                    <RadioGroup
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <RadioButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="sem alteração" />
+
+                                        <RadioButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="parético" />
+
+                                        <RadioButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="plégico" />
+
+                                        <RadioButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="parestesia" />
+
+                                        <EditText
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:ems="10"
+                                            android:hint="Observações"
+                                            android:inputType="text" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Membros inferiores:" />
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="sem alteração" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="parético" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="plégico" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="parestesia" />
+
+                                            <EditText
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:ems="10"
+                                                android:hint="Observações"
+                                                android:inputType="text" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="Órtese:" />
+
+                                            <RadioGroup
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <RadioButton
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Não" />
+
+                                                <RadioButton
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Sim" />
+
+                                                <EditText
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:ems="10"
+                                                    android:hint="Observações"
+                                                    android:inputType="text" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Prótese:" />
+
+                                                <RadioGroup
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent">
+
+                                                    <RadioButton
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Não" />
+
+                                                    <RadioButton
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Sim" />
+
+                                                    <EditText
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:ems="10"
+                                                        android:hint="Observações"
+                                                        android:inputType="text" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Mucosas:" />
+
+                                                    <RadioGroup
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent">
+
+                                                        <RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="normocoradas" />
+
+                                                        <RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="hipocoradas" />
+
+                                                        <RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="cianóticas" />
+
+                                                        <RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="icitéricas" />
+
+                                                        <RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="normocoradas" />
+
+                                                        <RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="hidratadas" />
+
+                                                        <RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="desidratada" />
+
+                                                        <EditText
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:ems="10"
+                                                            android:hint="Observações"
+                                                            android:inputType="text" />
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Pele:" />
+
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent">
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="normocoradas" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="hipocoradas" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="cianóticas" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="icitéricas" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="normocoradas" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="hidratadas" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="desidratada" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="petéquias" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Hematomas" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="equimose" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="presença de edema" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="anasarca" />
+
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Observações"
+                                                                android:inputType="text" />
+
+                                                            <RadioGroup
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="match_parent">
+
+                                                                <RadioButton
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:text="Não" />
+
+                                                                <RadioButton
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:text="Sim" />
+
+                                                                <EditText
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:ems="10"
+                                                                    android:hint="Observações"
+                                                                    android:inputType="text" />
+
+                                                                <TextView
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:text="Prótese:" />
+
+                                                                <RadioGroup
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="match_parent">
+
+                                                                    <RadioButton
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:text="Não" />
+
+                                                                    <RadioButton
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:text="Sim" />
+
+                                                                    <EditText
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:ems="10"
+                                                                        android:hint="Observações"
+                                                                        android:inputType="text" />
+
+                                                                    <TextView
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:text="Mucosas:" />
+
+                                                                    <RadioGroup
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="match_parent">
+
+                                                                        <RadioButton
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:text="normocoradas" />
+
+                                                                        <RadioButton
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:text="hipocoradas" />
+
+                                                                        <RadioButton
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:text="cianóticas" />
+
+                                                                        <RadioButton
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:text="icitéricas" />
+
+                                                                        <RadioButton
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:text="normocoradas" />
+
+                                                                        <RadioButton
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:text="hidratadas" />
+
+                                                                        <RadioButton
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:text="desidratada" />
+
+                                                                        <EditText
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:ems="10"
+                                                                            android:hint="Observações"
+                                                                            android:inputType="text" />
+
+                                                                        <TextView
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:text="Pele:" />
+
+                                                                        <RadioGroup
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="match_parent">
+
+                                                                            <RadioButton
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:text="normocoradas" />
+
+                                                                            <RadioButton
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:text="hipocoradas" />
+
+                                                                            <RadioButton
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:text="cianóticas" />
+
+                                                                            <RadioButton
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:text="icitéricas" />
+
+                                                                            <RadioButton
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:text="normocoradas" />
+
+                                                                            <RadioButton
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:text="hidratadas" />
+
+                                                                            <RadioButton
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:text="desidratada" />
+
+                                                                            <RadioButton
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:text="petéquias" />
+
+                                                                            <RadioButton
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:text="Hematomas" />
+
+                                                                            <RadioButton
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:text="equimose" />
+
+                                                                            <RadioButton
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:text="presença de edema" />
+
+                                                                            <RadioButton
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:text="anasarca" />
+
+                                                                            <EditText
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:ems="10"
+                                                                                android:hint="Observações"
+                                                                                android:inputType="text" />
+
+                                                                        </RadioGroup>
+
+                                                                    </RadioGroup>
+
+                                                                </RadioGroup>
+                                                            <TextView
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Presença de dor:" />
+
+                                                            </RadioGroup>
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Não" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Sim" />
+
+
+
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Observações"
+                                                                android:inputType="text" />
+
+                                                        </RadioGroup>
+
+
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginBottom="16dp"
+                                                            android:text="Eliminações:"
+                                                            android:textColor="@color/azul"
+                                                            android:textSize="24sp" />
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Diurese:" />
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="espontânea" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="CVD" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="oligúria" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="anúria" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="hematúria" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="coloração anormal" />
+                                                        </RadioGroup>
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Evacuação:" />
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="presente" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="ausente" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="líquida" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="semilíquida" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="pastosa" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="enrigecida" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="fecaloma" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="realizado clister   coloração" />
+
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Observações"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Presença de lesão:" />
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Sim" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Não" />
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Observações"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Ferida operatória:" />
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Sim" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Não" />
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Observações"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Amputações?" />
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Sim" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Não" />
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Observações"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="História de queda?" />
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Sim" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Não" />
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Observações"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Risco de queda?" />
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Sim" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Não" />
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Observações"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Dispositivos" />
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="acesso venoso periférico" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="CVC jugular" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="CVC femoral" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="CVC subclávia" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="CVC totalmente implantado" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="CVC semi-implantado" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="dissecção venosa" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="punção arterial" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="dreno de tórax" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="dreno de hemovac" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="dreno de J-vac" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="dreno de blake" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="dreno penrose" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="monitorização de PVC " />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="monitorização de PI " />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="DVE/DVPE" />
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Observações"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Fadiga:" />
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="não" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="sim" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="leve" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="moderada" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="intensa" />
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Observações"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Aspectos nutricionais:" />
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="aspecto normal" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="emagrecido" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="caquético" />
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Observações"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Dieta:" />
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="oral sem auxílio" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="oral com auxílio" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="aceitação total" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="aceitação parcial" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="disfagia" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="deficit na deglutição " />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="SNE" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="GTT" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="boa retenção" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="presença de resíduo gástrico" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text=" SNG sifonagem" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="zero" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="NPT" />
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Observações"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginBottom="16dp"
+                                                            android:text="Necessidades Psicossociais:"
+                                                            android:textColor="@color/azul"
+                                                            android:textSize="24sp" />
+
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Estado emocional:" />
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="tranquilo" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="ansioso" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="assustado" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="agressivo" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="agitado" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="irritado" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="triste" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="choroso" />
+
+                                                        </RadioGroup>
+
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Enfrentamento da doença: " />
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="negação e isolamento" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="ira" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="barganha" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="depressão" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="aceitação" />
+                                                        </RadioGroup>
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginBottom="16dp"
+                                                            android:text="Imagem corporal:"
+                                                            android:textColor="@color/azul"
+                                                            android:textSize="24sp" />
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Marque se sim:" />
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Existe alteração da imagem corporal?" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Refere percepção alterada do corpo?" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Apresenta respostas não verbais relacionadas à doença e suas consequências? " />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Evita reconhecer e tocar o próprio corpo? " />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="aceitação" />
+                                                        </RadioGroup>
+
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginBottom="16dp"
+                                                            android:text="Imagem corporal:"
+                                                            android:textColor="@color/azul"
+                                                            android:textSize="24sp" />
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Autoestima:" />
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Apresenta verbalização autonegativa?" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Apresenta expressões de vergonha?" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Verbaliza sentimentos de culpa?" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Avalia a si mesmo como incapaz?" />
+                                                        </RadioGroup>
+
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginBottom="16dp"
+                                                            android:text="Amor/família:"
+                                                            android:textColor="@color/azul"
+                                                            android:textSize="24sp" />
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Recebe suporte da rede social?" />
+
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="não" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="sim" />
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Qual?"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Pratica atividades de lazer e recreação?" />
+
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="não" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="sim" />
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Qual?"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Quantas pessoas moram com você?" />
+
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Quantas?"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Quem será o principal acompanhante durante a internação?" />
+
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Quem?"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Quem é o provedor da renda familiar?" />
+
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Quem?"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Existe dificuldade financeira para prover insumos mínimos, transporte etc.?" />
+
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Existe?"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Onde vocês moram?" />
+
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="onde?"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="É muito longe do hospital? " />
+
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="É longe?"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Quem vocês gostariam que estivesse presente nos momentos em que a equipe de saúde precisar passar alguma informação sobre a saúde da criança/adolescente? Ou quando for preciso tomar alguma decisão importante " />
+
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Quem?"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="O acompanhante tem condições de manter alguns insumos como shampoo, condicionador, sabonete ou qualquer outra coisa enquanto estiver no hospital" />
+
+                                                        <RadioGroup
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            >
+                                                            <EditText
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Tem?"
+                                                                android:inputType="text" />
+                                                        </RadioGroup>
+
+
+
+
+
+                                                        <Button
+                                                            android:id="@+id/cadastrar"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:backgroundTint="@color/azul"
+                                                            android:text="Cadastrar"
+                                                            android:textAllCaps="true"
+                                                            android:textStyle="bold" />
+
+                                                    </RadioGroup>
+
+                                                </RadioGroup>
+
+                                            </RadioGroup>
+
+                                        </RadioGroup>
+
+                                    </RadioGroup>
+
+                                </RadioGroup>
+
+                            </RadioGroup>
+
+                        </RadioGroup>
+
+                    </RadioGroup>
+
+                </RadioGroup>
+
+            </RadioGroup>
+
+        </RadioGroup>
+    </LinearLayout></ScrollView>

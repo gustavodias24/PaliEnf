@@ -20,6 +20,7 @@ import java.util.List;
 
 import benicio.solucoes.palienf.NovoPacienteActivity;
 import benicio.solucoes.palienf.R;
+import benicio.solucoes.palienf.RelatorioDiarioActivity;
 import benicio.solucoes.palienf.model.PacienteModel;
 
 public class AdapterPaciente extends RecyclerView.Adapter<AdapterPaciente.MyViewHolder> {
@@ -54,7 +55,10 @@ public class AdapterPaciente extends RecyclerView.Adapter<AdapterPaciente.MyView
                 if ( menuItem.getItemId() == R.id.relatorio ){
                     Toast.makeText(c, "ainda não fiz", Toast.LENGTH_SHORT).show();
                 }else if ( menuItem.getItemId() == R.id.avaliacao ){
-                    Toast.makeText(c, "ainda não fiz", Toast.LENGTH_SHORT).show();
+                    Intent i  = new Intent(c, RelatorioDiarioActivity.class);
+                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    i.putExtra("id", pacientes.get(position).getId());
+                    c.startActivity(i);
                 }else if ( menuItem.getItemId() == R.id.atualizar ){
                     Intent i  = new Intent(c, NovoPacienteActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
