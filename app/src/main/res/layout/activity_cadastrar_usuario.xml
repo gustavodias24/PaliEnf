@@ -68,4 +68,5 @@
             android:text="Cadastrar"
             android:textAllCaps="true"
             android:textStyle="bold" />
+
     </LinearLayout></ScrollView>

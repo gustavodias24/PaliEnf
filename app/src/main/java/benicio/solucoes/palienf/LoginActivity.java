@@ -45,7 +45,9 @@ public class LoginActivity extends AppCompatActivity {
             senha = mainBinding.edtSenha.getText().toString().trim().toLowerCase();
 
             if ( user.equals("administrador") && senha.equals("administrador") ){
-                startActivity(new Intent(this, MenuActivity.class));
+                Intent i = new Intent(this, MenuActivity.class);
+                i.putExtra("admin", true);
+                startActivity(i);
             }else{
                 refUsuarios.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
