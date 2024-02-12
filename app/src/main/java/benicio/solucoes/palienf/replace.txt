@@ -1,0 +1,49 @@
+<RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Combativo" />
+
+                                                        <RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Muito agitado" />
+
+                                                        <RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Agitado" />
+
+                                                        <RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Inquieto" />
+
+                                                        <RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Alerta e calmo" />
+
+                                                        <RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Sonolento" />
+
+                                                        <RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Sedação leve" />
+
+                                                        <RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Sedação moderada" />
+
+                                                        <RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Sedação intensa" />
+
+                                                        <RadioButton
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Não desperta" />

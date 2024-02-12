@@ -222,7 +222,7 @@
             <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="parcialmente presenvada" />
+                android:text="parcialmente preservada" />
 
             <CheckBox
                 android:layout_width="match_parent"
@@ -339,6 +339,26 @@
                     android:layout_height="wrap_content"
                     android:text="sujidade" />
 
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Observações"
+                    android:inputType="text" />
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ventilação:" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
                 <CheckBox
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -374,58 +394,7 @@
                     android:layout_height="wrap_content"
                     android:text="ventilação mecânica" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Observações"
-                    android:inputType="text" />
-            </RadioGroup>
 
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Ventilação:" />
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ambiente" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="macronebulisação" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="bipape" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="cateter dio 2" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="trato customizado" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="emtubado" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ventilação mecânica" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -826,7 +795,7 @@
                                                         <CheckBox
                                                             android:layout_width="match_parent"
                                                             android:layout_height="wrap_content"
-                                                            android:text="icitéricas" />
+                                                            android:text="Ictéricas" />
 
                                                         <CheckBox
                                                             android:layout_width="match_parent"
@@ -877,7 +846,7 @@
                                                             <CheckBox
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
-                                                                android:text="icitéricas" />
+                                                                android:text="Ictéricas" />
 
                                                             <CheckBox
                                                                 android:layout_width="match_parent"
@@ -1383,6 +1352,12 @@
                                                             android:textColor="@color/azul"
                                                             android:textSize="24sp" />
 
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:gravity="center"
+                                                            android:text="Escala de Glasgow" />
+
                                                         <ImageView
                                                             android:layout_width="match_parent"
                                                             android:layout_height="400dp"
@@ -1393,118 +1368,149 @@
                                                             android:layout_height="wrap_content"
                                                             android:text="Abertura Ocular" />
 
-                                                        <CheckBox
+                                                        <RadioGroup
                                                             android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Espotânea" />
+                                                            android:layout_height="wrap_content">
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Para comando verbal" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Espotânea" />
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Dor" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Para comando verbal" />
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Sem abertura dos olhos" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Dor" />
 
-                                                        <TextView
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Resposta Verbal" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Sem abertura dos olhos" />
+                                                        </RadioGroup>
 
-                                                        <CheckBox
+                                                        <RadioGroup
                                                             android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Orientado" />
+                                                            android:layout_height="wrap_content">
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Confuso" />
+                                                            <TextView
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Resposta Verbal" />
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Palavras impróprias" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Orientado" />
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Sons incompreensíveis" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Confuso" />
 
-                                                        <TextView
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Melhor Resposta Motora" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Palavras impróprias" />
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Obedece aos comandos" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Sons incompreensíveis" />
+                                                        </RadioGroup>
 
-                                                        <CheckBox
+                                                        <RadioGroup
                                                             android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Localiza a dor" />
+                                                            android:layout_height="wrap_content">
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="afasta a dor" />
+                                                            <TextView
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Melhor Resposta Motora" />
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Flexão à dor" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Obedece aos comandos" />
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Extensão à dor" />
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Sem respota motora" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Localiza a dor" />
 
-                                                        <TextView
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Reatividade Pupilar" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="afasta a dor" />
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Nenhuma atividade" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Flexão à dor" />
 
-                                                        <CheckBox
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Extensão à dor" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Sem respota motora" />
+                                                        </RadioGroup>
+
+                                                        <RadioGroup
                                                             android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Unilateral" />
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Reatividade bilateral" />
+                                                            android:layout_height="wrap_content">
+
+                                                            <TextView
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Reatividade Pupilar" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Nenhuma atividade" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Unilateral" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Reatividade bilateral" />
+                                                        </RadioGroup>
+
 
                                                         <TextView
                                                             android:id="@+id/textView10"
                                                             android:layout_width="wrap_content"
                                                             android:layout_height="wrap_content"
                                                             android:layout_gravity="center"
+                                                            android:layout_marginTop="8dp"
                                                             android:gravity="center"
                                                             android:text="Valor Total: ..."
                                                             android:textColor="#000000"
                                                             android:textSize="24sp"
                                                             android:textStyle="bold" />
 
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="8dp"
+                                                            android:gravity="center"
+                                                            android:text="Escala de Dor Não-Verbal em Ventilação Mecânica" />
+
                                                         <ImageView
                                                             android:layout_width="match_parent"
-                                                            android:layout_height="400dp"
+                                                            android:layout_height="300dp"
                                                             app:srcCompat="@drawable/table2" />
 
                                                         <TextView
@@ -1514,16 +1520,18 @@
 
                                                         <RadioGroup
                                                             android:layout_width="match_parent"
-                                                            android:layout_height="match_parent" >
+                                                            android:layout_height="match_parent">
 
                                                             <RadioButton
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="0" />
+
                                                             <RadioButton
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="1" />
+
                                                             <RadioButton
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
@@ -1537,16 +1545,18 @@
 
                                                         <RadioGroup
                                                             android:layout_width="match_parent"
-                                                            android:layout_height="match_parent" >
+                                                            android:layout_height="match_parent">
 
                                                             <RadioButton
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="0" />
+
                                                             <RadioButton
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="1" />
+
                                                             <RadioButton
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
@@ -1560,16 +1570,18 @@
 
                                                         <RadioGroup
                                                             android:layout_width="match_parent"
-                                                            android:layout_height="match_parent" >
+                                                            android:layout_height="match_parent">
 
                                                             <RadioButton
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="0" />
+
                                                             <RadioButton
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="1" />
+
                                                             <RadioButton
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
@@ -1583,16 +1595,18 @@
 
                                                         <RadioGroup
                                                             android:layout_width="match_parent"
-                                                            android:layout_height="match_parent" >
+                                                            android:layout_height="match_parent">
 
                                                             <RadioButton
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="0" />
+
                                                             <RadioButton
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="1" />
+
                                                             <RadioButton
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
@@ -1606,16 +1620,18 @@
 
                                                         <RadioGroup
                                                             android:layout_width="match_parent"
-                                                            android:layout_height="match_parent" >
+                                                            android:layout_height="match_parent">
 
                                                             <RadioButton
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="0" />
+
                                                             <RadioButton
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="1" />
+
                                                             <RadioButton
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
@@ -1623,96 +1639,107 @@
                                                         </RadioGroup>
 
 
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:layout_gravity="center"
-                                                            android:gravity="center"
-                                                            android:text="Valor Total: ..."
-                                                            android:textColor="#000000"
-                                                            android:textSize="24sp"
-                                                            android:textStyle="bold" />
-
-
-
                                                         <ImageView
                                                             android:layout_width="match_parent"
                                                             android:layout_height="400dp"
                                                             app:srcCompat="@drawable/table3" />
 
-                                                        <CheckBox
+                                                        <RadioGroup
                                                             android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Combativo" />
+                                                            android:layout_height="wrap_content">
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Muito agitado" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Combativo" />
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Agitado" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Muito agitado" />
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Inquieto" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Agitado" />
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Alerta e calmo" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Inquieto" />
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Sonolento" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Alerta e calmo" />
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Sedação leve" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Sonolento" />
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Sedação moderada" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Sedação leve" />
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Sedação intensa" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Sedação moderada" />
 
-                                                        <CheckBox
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Não desperta" />
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Sedação intensa" />
+
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Não desperta" />
+                                                        </RadioGroup>
+
 
                                                         <TextView
-                                                            android:layout_width="wrap_content"
+                                                            android:layout_width="match_parent"
                                                             android:layout_height="wrap_content"
-                                                            android:layout_gravity="center"
+                                                            android:layout_marginTop="8dp"
                                                             android:gravity="center"
-                                                            android:text="Valor Total: ..."
-                                                            android:textColor="#000000"
-                                                            android:textSize="24sp"
-                                                            android:textStyle="bold" />
-
-
+                                                            android:text="Escala de Mucosite" />
 
                                                         <ImageView
                                                             android:layout_width="match_parent"
-                                                            android:layout_height="400dp"
+                                                            android:layout_height="250dp"
                                                             app:srcCompat="@drawable/table4" />
 
-                                                        <EditText
+                                                        <RadioGroup
                                                             android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:ems="10"
-                                                            android:hint="Valor"
-                                                            android:inputType="number|numberDecimal|numberSigned" />
+                                                            android:layout_height="wrap_content">
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Grau 0"/>
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Grau I"/>
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Grau II"/>
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Grau III"/>
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Grau IV"/>
+                                                            <RadioButton
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Grau V"/>
+                                                        </RadioGroup>
 
                                                         <TextView
                                                             android:layout_width="match_parent"
@@ -1809,7 +1836,12 @@
                                                             <CheckBox
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
-                                                                android:text="realizado clister   coloração" />
+                                                                android:text="realizado clister" />
+
+                                                            <CheckBox
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="coloração anormal" />
 
                                                             <EditText
                                                                 android:layout_width="match_parent"
@@ -2128,42 +2160,6 @@
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
                                                                 android:hint="Onde?"
-                                                                android:inputType="text" />
-                                                        </RadioGroup>
-
-
-                                                        <TextView
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="Quem vocês gostariam que estivesse presente nos momentos em que a equipe de saúde precisar passar alguma informação sobre a saúde da criança/adolescente? Ou quando for preciso tomar alguma decisão importante " />
-
-                                                        <RadioGroup
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content">
-
-                                                            <EditText
-                                                                android:layout_width="match_parent"
-                                                                android:layout_height="wrap_content"
-                                                                android:ems="10"
-                                                                android:hint="Quem?"
-                                                                android:inputType="text" />
-                                                        </RadioGroup>
-
-
-                                                        <TextView
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:text="O acompanhante tem condições de manter alguns insumos como shampoo, condicionador, sabonete ou qualquer outra coisa enquanto estiver no hospital" />
-
-                                                        <RadioGroup
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content">
-
-                                                            <EditText
-                                                                android:layout_width="match_parent"
-                                                                android:layout_height="wrap_content"
-                                                                android:ems="10"
-                                                                android:hint="Tem?"
                                                                 android:inputType="text" />
                                                         </RadioGroup>
 
