@@ -22,6 +22,7 @@
 
 
         <EditText
+            android:id="@+id/temperatura"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -29,6 +30,7 @@
             android:inputType="text" />
 
         <EditText
+            android:id="@+id/pa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -36,6 +38,7 @@
             android:inputType="text" />
 
         <EditText
+            android:id="@+id/fc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -43,6 +46,7 @@
             android:inputType="text" />
 
         <EditText
+            android:id="@+id/fr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -50,6 +54,7 @@
             android:inputType="text" />
 
         <EditText
+            android:id="@+id/sat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -66,6 +71,7 @@
             android:layout_height="match_parent">
 
             <RadioButton
+                android:id="@+id/posOperatorio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
@@ -76,6 +82,7 @@
                 android:text="Não" />
 
             <EditText
+                android:id="@+id/posOperatorioObservacao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -93,16 +100,19 @@
             android:layout_height="match_parent">
 
             <CheckBox
+                android:id="@+id/amplo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="amplo" />
 
             <CheckBox
+                android:id="@+id/filiforme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="filiforme" />
 
             <CheckBox
+                android:id="@+id/naoPalpavel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="não palpavel" />
@@ -119,36 +129,43 @@
             android:layout_height="match_parent">
 
             <CheckBox
+                android:id="@+id/acordado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="acordado" />
 
             <CheckBox
+                android:id="@+id/lucido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="lúcido" />
 
             <CheckBox
+                android:id="@+id/sonolento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="sonolento" />
 
             <CheckBox
+                android:id="@+id/obnubiladoCamotoso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="obnubilado  Comatoso" />
 
             <CheckBox
+                android:id="@+id/sedado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Sedado" />
 
             <CheckBox
+                android:id="@+id/agitado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Agitado" />
 
             <EditText
+                android:id="@+id/observacaoNivelConsciencia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -167,36 +184,43 @@
             android:layout_height="match_parent">
 
             <CheckBox
+                android:id="@+id/isocoricas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="isocóricas" />
 
             <CheckBox
+                android:id="@+id/mioticas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="mióticas" />
 
             <CheckBox
+                android:id="@+id/midriaticas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="midriáticas" />
 
             <CheckBox
+                android:id="@+id/anisocorica"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="anisocórica" />
 
             <CheckBox
+                android:id="@+id/fotorreagentes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="fotorreagentes" />
 
             <CheckBox
+                android:id="@+id/naoFotorreagentes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="não fotorreagentes" />
 
             <EditText
+                android:id="@+id/observacaoPupila"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -215,31 +239,37 @@
             android:layout_height="match_parent">
 
             <CheckBox
+                android:id="@+id/preservada"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="preservada" />
 
             <CheckBox
+                android:id="@+id/parcialmente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="parcialmente preservada" />
 
             <CheckBox
+                android:id="@+id/ausente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ausente" />
 
             <CheckBox
+                android:id="@+id/exofitalmia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="exofitalmia" />
 
             <CheckBox
+                android:id="@+id/enucleação"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="enucleação" />
 
             <EditText
+                android:id="@+id/observacaoAcuidadeVisual"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -258,21 +288,25 @@
             android:layout_height="match_parent">
 
             <CheckBox
+                android:id="@+id/preservadaAudio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="preservada" />
 
             <CheckBox
+                android:id="@+id/parcialmenteAudio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="parcialmente presenvada" />
 
             <CheckBox
+                android:id="@+id/ausenteAudio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ausente" />
 
             <EditText
+                android:id="@+id/observacaoAcuidadeAuditiva"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -291,6 +325,7 @@
             android:layout_height="match_parent">
 
             <RadioButton
+                android:id="@+id/simetrico"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="simétrico" />
@@ -310,38 +345,44 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
+                    android:id="@+id/íntegra"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="íntegra" />
 
                 <CheckBox
+                    android:id="@+id/lesionada"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="lesionada" />
 
                 <CheckBox
+                    android:id="@+id/sangramento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="sangramento" />
 
                 <CheckBox
+                    android:id="@+id/mucosite"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="mucosite" />
 
                 <CheckBox
+                    android:id="@+id/limpa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="limpa" />
 
                 <CheckBox
+                    android:id="@+id/sujidade"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="sujidade" />
 
 
-
                 <EditText
+                    android:id="@+id/observacaoCavidadeOral"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -360,43 +401,50 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
+                    android:id="@+id/ar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="ar ambiente" />
 
                 <CheckBox
+                    android:id="@+id/macronebulizacao"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="macronebulização" />
 
                 <CheckBox
+                    android:id="@+id/BIPAP"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="BIPAP" />
 
                 <CheckBox
+                    android:id="@+id/cateter"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="cateter de O2" />
 
                 <CheckBox
+                    android:id="@+id/traqueostomizado"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="traqueostomizado" />
 
                 <CheckBox
+                    android:id="@+id/intubado"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="intubado" />
 
                 <CheckBox
+                    android:id="@+id/ventilacaoMecanica"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="ventilação mecânica" />
 
 
-
                 <EditText
+                    android:id="@+id/observacaoVentilacao"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -413,41 +461,49 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/MVUA"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="MVUA" />
 
                     <CheckBox
+                        android:id="@+id/MVUAdiminuído"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="MVUA diminuído" />
 
                     <CheckBox
+                        android:id="@+id/MVUAabolido"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="MVUA abolido" />
 
                     <CheckBox
+                        android:id="@+id/estertores"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="estertores" />
 
                     <CheckBox
+                        android:id="@+id/roncos"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="roncos" />
 
                     <CheckBox
+                        android:id="@+id/siblilos"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="siblilos" />
 
                     <CheckBox
+                        android:id="@+id/creptação"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="creptação" />
 
                     <EditText
+                        android:id="@+id/observacaoAuscultaPulmonar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -464,41 +520,49 @@
                         android:layout_height="match_parent">
 
                         <CheckBox
+                            android:id="@+id/2bulhas"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="2 bulhas" />
 
                         <CheckBox
+                            android:id="@+id/3bulhas"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="3 bulhas" />
 
                         <CheckBox
+                            android:id="@+id/4bulhas"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="4 bulhas" />
 
                         <CheckBox
+                            android:id="@+id/sopro"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="sopro" />
 
                         <CheckBox
+                            android:id="@+id/regular"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="regular" />
 
                         <CheckBox
+                            android:id="@+id/irregular"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="irregular" />
 
                         <CheckBox
+                            android:id="@+id/siblilos"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="siblilos" />
 
                         <EditText
+                            android:id="@+id/observacaoAuscultaCardiaca"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ems="10"
@@ -515,26 +579,31 @@
                             android:layout_height="match_parent">
 
                             <CheckBox
+                                android:id="@+id/simetrico"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="simétrico" />
 
                             <CheckBox
+                                android:id="@+id/assimetrico"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="assimétrico" />
 
                             <CheckBox
+                                android:id="@+id/escavado"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="escavado" />
 
                             <CheckBox
+                                android:id="@+id/protuso"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="protuso" />
 
                             <EditText
+                                android:id="@+id/observacaoTorax"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:ems="10"
@@ -551,61 +620,73 @@
                                 android:layout_height="match_parent">
 
                                 <CheckBox
+                                    android:id="@+id/globoso"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="globoso" />
 
                                 <CheckBox
+                                    android:id="@+id/distendido"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="distendido" />
 
                                 <CheckBox
+                                    android:id="@+id/depressivel"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="depressível" />
 
                                 <CheckBox
+                                    android:id="@+id/taboa"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="táboa" />
 
                                 <CheckBox
+                                    android:id="@+id/rigido"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="rígido" />
 
                                 <CheckBox
+                                    android:id="@+id/vicerapalpavel"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="vícera palpável" />
 
                                 <CheckBox
+                                    android:id="@+id/piparote+"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="piparote +" />
 
                                 <CheckBox
+                                    android:id="@+id/peristlase+"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="peristlase +" />
 
                                 <CheckBox
+                                    android:id="@+id/peristalse–"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="peristalse –" />
 
                                 <CheckBox
+                                    android:id="@+id/heperperistaltismo"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="heperperistaltismo" />
 
                                 <CheckBox
+                                    android:id="@+id/hipoperistaltismo"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="hipoperistaltismo" />
 
                                 <EditText
+                                    android:id="@+id/observacaoAbdome"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:ems="10"
@@ -622,26 +703,31 @@
                                     android:layout_height="match_parent">
 
                                     <CheckBox
+                                        android:id="@+id/íntegraGenitalia"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="íntegra" />
 
                                     <CheckBox
+                                        android:id="@+id/lesionadaGenitalia"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="lesionada" />
 
                                     <CheckBox
+                                        android:id="@+id/secrecaoGenitalia"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="secreção" />
 
                                     <CheckBox
+                                        android:id="@+id/edemaGenitalia"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="Edema" />
 
                                     <EditText
+                                        android:id="@+id/observacaoGenitalia"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:ems="10"
@@ -658,26 +744,31 @@
                                         android:layout_height="match_parent">
 
                                         <CheckBox
+                                            android:id="@+id/semalteracaoSuperior"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="sem alteração" />
 
                                         <CheckBox
+                                            android:id="@+id/pareticoSuperior"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="parético" />
 
                                         <CheckBox
+                                            android:id="@+id/plegicoSuperior"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="plégico" />
 
                                         <CheckBox
+                                            android:id="@+id/parestesiaSuperior"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="parestesia" />
 
                                         <EditText
+                                            android:id="@+id/observacaoMenbroSuperior"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:ems="10"
@@ -694,26 +785,31 @@
                                             android:layout_height="match_parent">
 
                                             <CheckBox
+                                                android:id="@+id/semalteracaoInferior"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:text="sem alteração" />
 
                                             <CheckBox
+                                                android:id="@+id/pareticoInferior"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:text="parético" />
 
                                             <CheckBox
+                                                android:id="@+id/plegicoInferior"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:text="plégico" />
 
                                             <CheckBox
+                                                android:id="@+id/parestesiaInferior"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:text="parestesia" />
 
                                             <EditText
+                                                android:id="@+id/observacaoMenbroInferior"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:ems="10"
@@ -735,11 +831,13 @@
                                                     android:text="Não" />
 
                                                 <RadioButton
+                                                    android:id="@+id/ortese"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
                                                     android:text="Sim" />
 
                                                 <EditText
+                                                    android:id="@+id/observacaoOrtese"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
                                                     android:ems="10"
@@ -761,11 +859,13 @@
                                                         android:text="Não" />
 
                                                     <RadioButton
+                                                        android:id="@+id/protese"
                                                         android:layout_width="match_parent"
                                                         android:layout_height="wrap_content"
                                                         android:text="Sim" />
 
                                                     <EditText
+                                                        android:id="@+id/observacaoProtese"
                                                         android:layout_width="match_parent"
                                                         android:layout_height="wrap_content"
                                                         android:ems="10"
@@ -783,36 +883,43 @@
 
 
                                                         <CheckBox
+                                                            android:id="@+id/hipocoradas"
                                                             android:layout_width="match_parent"
                                                             android:layout_height="wrap_content"
                                                             android:text="hipocoradas" />
 
                                                         <CheckBox
+                                                            android:id="@+id/cianoticas"
                                                             android:layout_width="match_parent"
                                                             android:layout_height="wrap_content"
                                                             android:text="cianóticas" />
 
                                                         <CheckBox
+                                                            android:id="@+id/Ictericas"
                                                             android:layout_width="match_parent"
                                                             android:layout_height="wrap_content"
                                                             android:text="Ictéricas" />
 
                                                         <CheckBox
+                                                            android:id="@+id/normocoradas"
                                                             android:layout_width="match_parent"
                                                             android:layout_height="wrap_content"
                                                             android:text="normocoradas" />
 
                                                         <CheckBox
+                                                            android:id="@+id/hidratadas"
                                                             android:layout_width="match_parent"
                                                             android:layout_height="wrap_content"
                                                             android:text="hidratadas" />
 
                                                         <CheckBox
+                                                            android:id="@+id/desidratada"
                                                             android:layout_width="match_parent"
                                                             android:layout_height="wrap_content"
                                                             android:text="desidratada" />
 
                                                         <EditText
+                                                            android:id="@+id/observacaoMucosas"
                                                             android:layout_width="match_parent"
                                                             android:layout_height="wrap_content"
                                                             android:ems="10"
@@ -829,66 +936,79 @@
                                                             android:layout_height="match_parent">
 
                                                             <CheckBox
+                                                                android:id="@+id/normocoradasPele"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="normocoradas" />
 
                                                             <CheckBox
+                                                                android:id="@+id/hipocoradasPele"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="hipocoradas" />
 
                                                             <CheckBox
+                                                                android:id="@+id/cianoticasPele"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="cianóticas" />
 
                                                             <CheckBox
+                                                                android:id="@+id/IctericasPele"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Ictéricas" />
 
                                                             <CheckBox
+                                                                android:id="@+id/normocoradasPele"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="normocoradas" />
 
                                                             <CheckBox
+                                                                android:id="@+id/hidratadasPele"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="hidratadas" />
 
                                                             <CheckBox
+                                                                android:id="@+id/desidratadaPele"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="desidratada" />
 
                                                             <CheckBox
+                                                                android:id="@+id/petequiasPele"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="petéquias" />
 
                                                             <CheckBox
+                                                                android:id="@+id/HematomasPele"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Hematomas" />
 
                                                             <CheckBox
+                                                                android:id="@+id/equimosePele"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="equimose" />
 
                                                             <CheckBox
+                                                                android:id="@+id/presencaedemaequimosePele"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="presença de edema" />
 
                                                             <CheckBox
+                                                                android:id="@+id/anasarcaPele"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="anasarca" />
 
                                                             <EditText
+                                                                android:id="@+id/observacaoPele"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -927,12 +1047,14 @@
                                                                 android:text="Não" />
 
                                                             <RadioButton
+                                                                android:id="@+id/presencaDor"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Sim" />
 
 
                                                             <EditText
+                                                                android:id="@+id/ObservacaopresencaDeDor"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -940,6 +1062,7 @@
                                                                 android:inputType="text" />
 
                                                             <EditText
+                                                                android:id="@+id/escalaDeDorEva"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -958,6 +1081,7 @@
                                                             android:layout_height="wrap_content">
 
                                                             <RadioButton
+                                                                android:id="@+id/presencaLesao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Sim" />
@@ -968,6 +1092,7 @@
                                                                 android:text="Não" />
 
                                                             <EditText
+                                                                android:id="@+id/observacaopresencaLesao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -985,6 +1110,7 @@
                                                             android:layout_height="wrap_content">
 
                                                             <RadioButton
+                                                                android:id="@+id/feridaOperatoria"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Sim" />
@@ -995,6 +1121,7 @@
                                                                 android:text="Não" />
 
                                                             <EditText
+                                                                android:id="@+id/observacaoFeridaOperatoria"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -1012,6 +1139,7 @@
                                                             android:layout_height="wrap_content">
 
                                                             <RadioButton
+                                                                android:id="@+id/amputacoes"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Sim" />
@@ -1022,6 +1150,7 @@
                                                                 android:text="Não" />
 
                                                             <EditText
+                                                                android:id="@+id/observacaoAmputacoes"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -1039,6 +1168,7 @@
                                                             android:layout_height="wrap_content">
 
                                                             <RadioButton
+                                                                android:id="@+id/historicoQueda"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Sim" />
@@ -1049,6 +1179,7 @@
                                                                 android:text="Não" />
 
                                                             <EditText
+                                                                android:id="@+id/observacaoHistoricoQueda"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -1067,6 +1198,7 @@
                                                             android:layout_height="wrap_content">
 
                                                             <RadioButton
+                                                                android:id="@+id/riscoQueda"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Sim" />
@@ -1077,6 +1209,7 @@
                                                                 android:text="Não" />
 
                                                             <EditText
+                                                                android:id="@+id/observacaoRiscoQueda"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -1095,91 +1228,109 @@
                                                             android:layout_height="wrap_content">
 
                                                             <CheckBox
+                                                                android:id="@+id/CateterPICC"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Cateter PICC" />
 
                                                             <CheckBox
+                                                                android:id="@+id/acessovenoso"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="acesso venoso periférico" />
 
                                                             <CheckBox
+                                                                android:id="@+id/CVCjugular"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="CVC jugular" />
 
                                                             <CheckBox
+                                                                android:id="@+id/CVCfemoral"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="CVC femoral" />
 
                                                             <CheckBox
+                                                                android:id="@+id/CVCsubclavia"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="CVC subclávia" />
 
                                                             <CheckBox
+                                                                android:id="@+id/CVCtotalmente"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="CVC totalmente implantado" />
 
                                                             <CheckBox
+                                                                android:id="@+id/CVCsemi"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="CVC semi-implantado" />
 
                                                             <CheckBox
+                                                                android:id="@+id/disseccao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="dissecção venosa" />
 
                                                             <CheckBox
+                                                                android:id="@+id/puncao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="punção arterial" />
 
                                                             <CheckBox
+                                                                android:id="@+id/dreno"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="dreno de tórax" />
 
                                                             <CheckBox
+                                                                android:id="@+id/hemovac"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="dreno de hemovac" />
 
                                                             <CheckBox
+                                                                android:id="@+id/J_vac"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="dreno de J-vac" />
 
                                                             <CheckBox
+                                                                android:id="@+id/blake"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="dreno de blake" />
 
                                                             <CheckBox
+                                                                android:id="@+id/penrose"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="dreno penrose" />
 
                                                             <CheckBox
+                                                                android:id="@+id/monitorizacao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="monitorização de PVC " />
 
                                                             <CheckBox
+                                                                android:id="@+id/PIC"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="monitorização de PIC " />
 
                                                             <CheckBox
+                                                                android:id="@+id/DVE_DVPE"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="DVE/DVPE" />
 
                                                             <EditText
+                                                                android:id="@+id/observacaoDispositivos"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -1197,31 +1348,37 @@
                                                             android:layout_height="wrap_content">
 
                                                             <RadioButton
+                                                                android:id="@+id/naoFadiga"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="não" />
 
                                                             <RadioButton
+                                                                android:id="@+id/simFadiga"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="sim" />
 
                                                             <RadioButton
+                                                                android:id="@+id/leveFadiga"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="leve" />
 
                                                             <RadioButton
+                                                                android:id="@+id/moderadaFadiga"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="moderada" />
 
                                                             <RadioButton
+                                                                android:id="@+id/intensaFadiga"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="intensa" />
 
                                                             <EditText
+                                                                android:id="@+id/observacaoFadiga"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -1240,21 +1397,25 @@
                                                             android:layout_height="wrap_content">
 
                                                             <RadioButton
+                                                                android:id="@+id/aspectonormal"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="aspecto normal" />
 
                                                             <RadioButton
+                                                                android:id="@+id/emagrecido"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="emagrecido" />
 
                                                             <RadioButton
+                                                                android:id="@+id/caquetico"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="caquético" />
 
                                                             <EditText
+                                                                android:id="@+id/observacaoAspectosNutricionais"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -1272,71 +1433,85 @@
                                                             android:layout_height="wrap_content">
 
                                                             <CheckBox
+                                                                android:id="@+id/semauxilio"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="oral sem auxílio" />
 
                                                             <CheckBox
+                                                                android:id="@+id/comauxilio"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="oral com auxílio" />
 
                                                             <CheckBox
+                                                                android:id="@+id/aceitacao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="aceitação total" />
 
                                                             <CheckBox
+                                                                android:id="@+id/parcial"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="aceitação parcial" />
 
                                                             <CheckBox
+                                                                android:id="@+id/disfagia"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="disfagia" />
 
                                                             <CheckBox
+                                                                android:id="@+id/deficit"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="deficit na deglutição " />
 
                                                             <CheckBox
+                                                                android:id="@+id/SNE"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="SNE" />
 
                                                             <CheckBox
+                                                                android:id="@+id/GTT"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="GTT" />
 
                                                             <CheckBox
+                                                                android:id="@+id/retencao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="boa retenção" />
 
                                                             <CheckBox
+                                                                android:id="@+id/residuogastrico"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="presença de resíduo gástrico" />
 
                                                             <CheckBox
+                                                                android:id="@+id/SNG"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text=" SNG sifonagem" />
 
                                                             <CheckBox
+                                                                android:id="@+id/zero"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="zero" />
 
                                                             <CheckBox
+                                                                android:id="@+id/NPT"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="NPT" />
 
                                                             <EditText
+                                                                android:id="@+id/observacaoDieta"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -1373,21 +1548,25 @@
                                                             android:layout_height="wrap_content">
 
                                                             <RadioButton
+                                                                android:id="@+id/Espotanea"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Espotânea" />
 
                                                             <RadioButton
+                                                                android:id="@+id/comandoverbal"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Para comando verbal" />
 
                                                             <RadioButton
+                                                                android:id="@+id/dor"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Dor" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Semabertura"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Sem abertura dos olhos" />
@@ -1403,21 +1582,25 @@
                                                                 android:text="Resposta Verbal" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Orientado"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Orientado" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Confuso"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Confuso" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Palavrasimproprias"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Palavras impróprias" />
 
                                                             <RadioButton
+                                                                android:id="@+id/incompreensiveis"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Sons incompreensíveis" />
@@ -1433,31 +1616,37 @@
                                                                 android:text="Melhor Resposta Motora" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Obedece"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Obedece aos comandos" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Localiza"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Localiza a dor" />
 
                                                             <RadioButton
+                                                                android:id="@+id/afasta"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="afasta a dor" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Flexao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Flexão à dor" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Extensao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Extensão à dor" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Semrespota"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Sem respota motora" />
@@ -1473,16 +1662,19 @@
                                                                 android:text="Reatividade Pupilar" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Nenhuma"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Nenhuma atividade" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Unilateral"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Unilateral" />
 
                                                             <RadioButton
+                                                                android:id="@+id/bilateral"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Reatividade bilateral" />
@@ -1490,11 +1682,12 @@
 
 
                                                         <TextView
-                                                            android:id="@+id/textView10"
+                                                            android:id="@+id/valorTotalGlasgow"
                                                             android:layout_width="wrap_content"
                                                             android:layout_height="wrap_content"
                                                             android:layout_gravity="center"
                                                             android:layout_marginTop="8dp"
+                                                            android:layout_marginBottom="16dp"
                                                             android:gravity="center"
                                                             android:text="Valor Total: ..."
                                                             android:textColor="#000000"
@@ -1523,16 +1716,19 @@
                                                             android:layout_height="match_parent">
 
                                                             <RadioButton
+                                                                android:id="@+id/expressaoFacil0"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="0" />
 
                                                             <RadioButton
+                                                                android:id="@+id/expressaoFacil1"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="1" />
 
                                                             <RadioButton
+                                                                android:id="@+id/expressaoFacil2"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="2" />
@@ -1548,16 +1744,19 @@
                                                             android:layout_height="match_parent">
 
                                                             <RadioButton
+                                                                android:id="@+id/atividadeCorporal0"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="0" />
 
                                                             <RadioButton
+                                                                android:id="@+id/atividadeCorporal1"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="1" />
 
                                                             <RadioButton
+                                                                android:id="@+id/atividadeCorporal2"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="2" />
@@ -1573,16 +1772,19 @@
                                                             android:layout_height="match_parent">
 
                                                             <RadioButton
+                                                                android:id="@+id/defesal0"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="0" />
 
                                                             <RadioButton
+                                                                android:id="@+id/defesal1"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="1" />
 
                                                             <RadioButton
+                                                                android:id="@+id/defesal2"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="2" />
@@ -1598,16 +1800,19 @@
                                                             android:layout_height="match_parent">
 
                                                             <RadioButton
+                                                                android:id="@+id/sinaisVitais0"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="0" />
 
                                                             <RadioButton
+                                                                android:id="@+id/sinaisVitais1"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="1" />
 
                                                             <RadioButton
+                                                                android:id="@+id/sinaisVitais2"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="2" />
@@ -1623,21 +1828,35 @@
                                                             android:layout_height="match_parent">
 
                                                             <RadioButton
+                                                                android:id="@+id/alteracaoRespiratoria0"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="0" />
 
                                                             <RadioButton
+                                                                android:id="@+id/alteracaoRespiratoria1"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="1" />
 
                                                             <RadioButton
+                                                                android:id="@+id/alteracaoRespiratoria2"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="2" />
                                                         </RadioGroup>
 
+                                                        <TextView
+                                                            android:id="@+id/somaEscalaDorNaoVerbal"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:layout_marginTop="8dp"
+                                                            android:gravity="center"
+                                                            android:text="Valor Total: ..."
+                                                            android:textColor="#000000"
+                                                            android:textSize="24sp"
+                                                            android:textStyle="bold" />
 
                                                         <ImageView
                                                             android:layout_width="match_parent"
@@ -1649,51 +1868,61 @@
                                                             android:layout_height="wrap_content">
 
                                                             <RadioButton
+                                                                android:id="@+id/Combativo"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Combativo" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Muitoagitado"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Muito agitado" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Agitado"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Agitado" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Inquieto"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Inquieto" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Alerta"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Alerta e calmo" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Sonolento"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Sonolento" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Sedacao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Sedação leve" />
 
                                                             <RadioButton
+                                                                android:id="@+id/moderada"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Sedação moderada" />
 
                                                             <RadioButton
+                                                                android:id="@+id/intensa"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Sedação intensa" />
 
                                                             <RadioButton
+                                                                android:id="@+id/Naodesperta"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Não desperta" />
@@ -1715,30 +1944,41 @@
                                                         <RadioGroup
                                                             android:layout_width="match_parent"
                                                             android:layout_height="wrap_content">
+
+                                                            <RadioButton
+                                                                android:id="@+id/Grau0"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Grau 0" />
+
+                                                            <RadioButton
+                                                                android:id="@+id/GrauI"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Grau I" />
+
                                                             <RadioButton
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
-                                                                android:text="Grau 0"/>
+                                                                android:text="Grau II" />
+
                                                             <RadioButton
+                                                                android:id="@+id/GrauIII"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
-                                                                android:text="Grau I"/>
+                                                                android:text="Grau III" />
+
                                                             <RadioButton
+                                                                android:id="@+id/GrauIV"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
-                                                                android:text="Grau II"/>
+                                                                android:text="Grau IV" />
+
                                                             <RadioButton
+                                                                android:id="@+id/GrauV"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
-                                                                android:text="Grau III"/>
-                                                            <RadioButton
-                                                                android:layout_width="match_parent"
-                                                                android:layout_height="wrap_content"
-                                                                android:text="Grau IV"/>
-                                                            <RadioButton
-                                                                android:layout_width="match_parent"
-                                                                android:layout_height="wrap_content"
-                                                                android:text="Grau V"/>
+                                                                android:text="Grau V" />
                                                         </RadioGroup>
 
                                                         <TextView
@@ -1759,31 +1999,37 @@
                                                             android:layout_height="wrap_content">
 
                                                             <CheckBox
+                                                                android:id="@+id/espontanea"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="espontânea" />
 
                                                             <CheckBox
+                                                                android:id="@+id/CVD"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="CVD" />
 
                                                             <CheckBox
+                                                                android:id="@+id/oliguria"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="oligúria" />
 
                                                             <CheckBox
+                                                                android:id="@+id/anuria"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="anúria" />
 
                                                             <CheckBox
+                                                                android:id="@+id/hematuria"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="hematúria" />
 
                                                             <CheckBox
+                                                                android:id="@+id/coloracaoanormal"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="coloração anormal" />
@@ -1799,51 +2045,61 @@
                                                             android:layout_height="wrap_content">
 
                                                             <CheckBox
+                                                                android:id="@+id/presente"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="presente" />
 
                                                             <CheckBox
+                                                                android:id="@+id/ausente"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="ausente" />
 
                                                             <CheckBox
+                                                                android:id="@+id/liquida"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="líquida" />
 
                                                             <CheckBox
+                                                                android:id="@+id/semilíquida"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="semilíquida" />
 
                                                             <CheckBox
+                                                                android:id="@+id/pastosa"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="pastosa" />
 
                                                             <CheckBox
+                                                                android:id="@+id/enrigecida"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="enrigecida" />
 
                                                             <CheckBox
+                                                                android:id="@+id/fecaloma"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="fecaloma" />
 
                                                             <CheckBox
+                                                                android:id="@+id/realizadoclister"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="realizado clister" />
 
                                                             <CheckBox
+                                                                android:id="@+id/coloracaoanormalEvacuacao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="coloração anormal" />
 
                                                             <EditText
+                                                                android:id="@+id/observacaoEliminacoes"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -1871,46 +2127,55 @@
                                                             android:layout_height="wrap_content">
 
                                                             <RadioButton
+                                                                android:id="@+id/tranquilo"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="tranquilo" />
 
                                                             <RadioButton
+                                                                android:id="@+id/ansioso"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="ansioso" />
 
                                                             <RadioButton
+                                                                android:id="@+id/assustado"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="assustado" />
 
                                                             <RadioButton
+                                                                android:id="@+id/agressivo"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="agressivo" />
 
                                                             <RadioButton
+                                                                android:id="@+id/agitado"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="agitado" />
 
                                                             <RadioButton
+                                                                android:id="@+id/irritado"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="irritado" />
 
                                                             <RadioButton
+                                                                android:id="@+id/triste"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="triste" />
 
                                                             <RadioButton
+                                                                android:id="@+id/choroso"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="choroso" />
 
                                                             <EditText
+                                                                android:id="@+id/observacaoEstadoEmocional"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -1930,26 +2195,31 @@
                                                             android:layout_height="wrap_content">
 
                                                             <RadioButton
+                                                                android:id="@+id/negacao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="negação e isolamento" />
 
                                                             <RadioButton
+                                                                android:id="@+id/ira"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="ira" />
 
                                                             <RadioButton
+                                                                android:id="@+id/barganha"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="barganha" />
 
                                                             <RadioButton
+                                                                android:id="@+id/depressao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="depressão" />
 
                                                             <RadioButton
+                                                                android:id="@+id/aceitacao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="aceitação" />
@@ -1973,26 +2243,31 @@
                                                             android:layout_height="wrap_content">
 
                                                             <CheckBox
+                                                                android:id="@+id/alteracao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Existe alteração da imagem corporal?" />
 
                                                             <CheckBox
+                                                                android:id="@+id/percepcao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Refere percepção alterada do corpo?" />
 
                                                             <CheckBox
+                                                                android:id="@+id/respostas"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Apresenta respostas não verbais relacionadas à doença e suas consequências? " />
 
                                                             <CheckBox
+                                                                android:id="@+id/Evita"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Evita reconhecer e tocar o próprio corpo? " />
 
                                                             <CheckBox
+                                                                android:id="@+id/aceitacaoCorporal"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="aceitação" />
@@ -2009,21 +2284,25 @@
                                                             android:layout_height="wrap_content">
 
                                                             <CheckBox
+                                                                android:id="@+id/verbalizacao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Apresenta verbalização autonegativa?" />
 
                                                             <CheckBox
+                                                                android:id="@+id/expressoes"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Apresenta expressões de vergonha?" />
 
                                                             <CheckBox
+                                                                android:id="@+id/sentimentos"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Verbaliza sentimentos de culpa?" />
 
                                                             <CheckBox
+                                                                android:id="@+id/Avalia"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Avalia a si mesmo como incapaz?" />
@@ -2053,11 +2332,13 @@
                                                                 android:text="não" />
 
                                                             <RadioButton
+                                                                android:id="@+id/suporteRedeSocial"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="sim" />
 
                                                             <EditText
+                                                                android:id="@+id/qualSuporteRedeSocial"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -2081,11 +2362,13 @@
                                                                 android:text="não" />
 
                                                             <RadioButton
+                                                                android:id="@+id/atividadeRecreativa"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="sim" />
 
                                                             <EditText
+                                                                android:id="@+id/qualAtividadeRecreativa"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -2103,6 +2386,7 @@
                                                             android:layout_height="wrap_content">
 
                                                             <EditText
+                                                                android:id="@+id/quantasPessoasMoram"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -2121,6 +2405,7 @@
                                                             android:layout_height="wrap_content">
 
                                                             <EditText
+                                                                android:id="@+id/principalAconpanhante"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -2138,6 +2423,7 @@
                                                             android:layout_height="wrap_content">
 
                                                             <EditText
+                                                                android:id="@+id/provedorRenda"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
@@ -2156,6 +2442,7 @@
                                                             android:layout_height="wrap_content">
 
                                                             <EditText
+                                                                android:id="@+id/ondemMoram"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:ems="10"
