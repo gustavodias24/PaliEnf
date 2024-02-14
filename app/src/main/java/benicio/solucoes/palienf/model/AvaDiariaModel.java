@@ -4,6 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AvaDiariaModel {
+    String id, idPaciente;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getIdPaciente() {
+        return idPaciente;
+    }
+
+    public void setIdPaciente(String idPaciente) {
+        this.idPaciente = idPaciente;
+    }
+
     String temperatura, pa, fc, fr, sat;
 
     String posOperatorio = "Não";
@@ -110,6 +128,7 @@ public class AvaDiariaModel {
     String alteracaoRespiratoria;
 
     String richmond;
+    String grauMucosite;
 
     String escalaDeMucosite;
 
@@ -141,6 +160,14 @@ public class AvaDiariaModel {
 
     public String getTemperatura() {
         return temperatura;
+    }
+
+    public String getGrauMucosite() {
+        return grauMucosite;
+    }
+
+    public void setGrauMucosite(String grauMucosite) {
+        this.grauMucosite = grauMucosite;
     }
 
     public void setTemperatura(String temperatura) {

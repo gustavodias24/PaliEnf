@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    tools:viewBindingIgnore="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -251,7 +253,7 @@
                 android:text="parcialmente preservada" />
 
             <CheckBox
-                android:id="@+id/ausente"
+                android:id="@+id/ausenteVisual"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ausente" />
@@ -263,7 +265,7 @@
                 android:text="exofitalmia" />
 
             <CheckBox
-                android:id="@+id/enucleação"
+                android:id="@+id/enucleacao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="enucleação" />
@@ -325,7 +327,7 @@
             android:layout_height="match_parent">
 
             <RadioButton
-                android:id="@+id/simetrico"
+                android:id="@+id/simetricoCranio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="simétrico" />
@@ -345,7 +347,7 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
-                    android:id="@+id/íntegra"
+                    android:id="@+id/integra"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="íntegra" />
@@ -497,7 +499,7 @@
                         android:text="siblilos" />
 
                     <CheckBox
-                        android:id="@+id/creptação"
+                        android:id="@+id/creptacao"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="creptação" />
@@ -520,19 +522,19 @@
                         android:layout_height="match_parent">
 
                         <CheckBox
-                            android:id="@+id/2bulhas"
+                            android:id="@+id/bulhas2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="2 bulhas" />
 
                         <CheckBox
-                            android:id="@+id/3bulhas"
+                            android:id="@+id/bulhas3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="3 bulhas" />
 
                         <CheckBox
-                            android:id="@+id/4bulhas"
+                            android:id="@+id/bulhas4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="4 bulhas" />
@@ -556,7 +558,7 @@
                             android:text="irregular" />
 
                         <CheckBox
-                            android:id="@+id/siblilos"
+                            android:id="@+id/siblilosCardiaco"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="siblilos" />
@@ -656,19 +658,19 @@
                                     android:text="vícera palpável" />
 
                                 <CheckBox
-                                    android:id="@+id/piparote+"
+                                    android:id="@+id/piparoteMais"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="piparote +" />
 
                                 <CheckBox
-                                    android:id="@+id/peristlase+"
+                                    android:id="@+id/peristlaseMais"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="peristlase +" />
 
                                 <CheckBox
-                                    android:id="@+id/peristalse–"
+                                    android:id="@+id/peristalseMenos"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="peristalse –" />
@@ -703,7 +705,7 @@
                                     android:layout_height="match_parent">
 
                                     <CheckBox
-                                        android:id="@+id/íntegraGenitalia"
+                                        android:id="@+id/integraGenitalia"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="íntegra" />
@@ -959,11 +961,6 @@
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Ictéricas" />
 
-                                                            <CheckBox
-                                                                android:id="@+id/normocoradasPele"
-                                                                android:layout_width="match_parent"
-                                                                android:layout_height="wrap_content"
-                                                                android:text="normocoradas" />
 
                                                             <CheckBox
                                                                 android:id="@+id/hidratadasPele"
@@ -1344,6 +1341,7 @@
                                                             android:text="Fadiga:" />
 
                                                         <RadioGroup
+
                                                             android:layout_width="match_parent"
                                                             android:layout_height="wrap_content">
 
@@ -1604,6 +1602,12 @@
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Sons incompreensíveis" />
+
+                                                            <RadioButton
+                                                                android:id="@+id/semRespostaVerbal"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Sem Resposta Verbal" />
                                                         </RadioGroup>
 
                                                         <RadioGroup
@@ -1693,6 +1697,16 @@
                                                             android:textColor="#000000"
                                                             android:textSize="24sp"
                                                             android:textStyle="bold" />
+                                                        <Button
+                                                            android:id="@+id/limparSomaGlasgow"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:backgroundTint="#FF0000"
+                                                            android:text="Limpar Cálculo glasgow"
+                                                            android:textColor="#FFFFFF"
+                                                            android:textStyle="bold" />
+
+
 
                                                         <TextView
                                                             android:layout_width="match_parent"
@@ -1858,6 +1872,15 @@
                                                             android:textSize="24sp"
                                                             android:textStyle="bold" />
 
+                                                        <Button
+                                                            android:id="@+id/limparSomaDorNaoVerbal"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:backgroundTint="#FF0000"
+                                                            android:text="Limpar Cálculo Dor Não Verbal"
+                                                            android:textColor="#FFFFFF"
+                                                            android:textStyle="bold" />
+
                                                         <ImageView
                                                             android:layout_width="match_parent"
                                                             android:layout_height="400dp"
@@ -1958,6 +1981,7 @@
                                                                 android:text="Grau I" />
 
                                                             <RadioButton
+                                                                android:id="@+id/GrauII"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Grau II" />
@@ -2151,7 +2175,7 @@
                                                                 android:text="agressivo" />
 
                                                             <RadioButton
-                                                                android:id="@+id/agitado"
+                                                                android:id="@+id/agitadoEmocional"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="agitado" />
@@ -2219,7 +2243,7 @@
                                                                 android:text="depressão" />
 
                                                             <RadioButton
-                                                                android:id="@+id/aceitacao"
+                                                                android:id="@+id/aceitacaoDoenca"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="aceitação" />
@@ -2452,7 +2476,7 @@
 
 
                                                         <Button
-                                                            android:id="@+id/cadastrar"
+                                                            android:id="@+id/cadastrarRelatorioDiario"
                                                             android:layout_width="match_parent"
                                                             android:layout_height="wrap_content"
                                                             android:backgroundTint="@color/azul"
