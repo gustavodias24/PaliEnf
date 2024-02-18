@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp"
+        tools:context=".CriarDiagnosticoActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Selecione um Domínio"
+            android:textColor="@color/azul"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/d1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="DOMÍNIO 1 – PROMOÇÃO DA SAÚDE"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/d2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="DOMÍNIO 2 – NUTRIÇÃO"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/d3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="DOMÍNIO 3 – ELIMINAÇÃO E TROCA"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/d4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="DOMÍNIO 4 – ATIVIDADE/REPOUSO"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/d5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="DOMÍNIO 5 – PERCEPÇÃO/COGNIÇÃO "
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/d6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="DOMÍNIO 6 – AUTOPERCEPÇÃO"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/d7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="DOMÍNIO 7 – PAPÉIS E RELACIONAMENTOS "
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/d8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="DOMÍNIO 9 – ENFRENTAMENTO/TOLERÂNCIA AO ESTRESSE "
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/d9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="DOMÍNIO 10 – PRINCÍPIOS DA VIDA"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/d10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="DOMÍNIO 11 – SEGURANÇA/PROTEÇÃO"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/d11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="DOMÍNIO 12 – CONFORTO"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/d12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="DOMÍNIO 13 – CRESCIMENTO/DESENVOLVIMENTO"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black" />
+
+    </LinearLayout></ScrollView>
