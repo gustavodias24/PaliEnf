@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 
 import benicio.solucoes.palienf.databinding.ActivityCriarDiagnosticoBinding;
 
@@ -19,7 +20,7 @@ public class CriarDiagnosticoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mainBinding = ActivityCriarDiagnosticoBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_criar_diagnostico);
+        setContentView(mainBinding.getRoot());
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
@@ -86,4 +87,5 @@ public class CriarDiagnosticoActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }
