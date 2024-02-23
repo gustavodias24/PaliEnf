@@ -2,10 +2,15 @@ package benicio.solucoes.palienf.adapter;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,7 +19,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import benicio.solucoes.palienf.R;
+import benicio.solucoes.palienf.databinding.LayoutDiagnosticoBinding;
+import benicio.solucoes.palienf.databinding.LayoutNocBinding;
 import benicio.solucoes.palienf.model.DiagnosticoModel;
+import benicio.solucoes.palienf.model.NocModel;
 
 public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.MyViewHolder> {
     List<DiagnosticoModel> diagnosticos;
@@ -41,8 +49,49 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
 
         holder.botao_noc.setOnClickListener(view -> {
             AlertDialog.Builder b = new AlertDialog.Builder(c);
+            LayoutNocBinding diagnosticoBinding = LayoutNocBinding.inflate(c.getLayoutInflater());
+
+            for (NocModel noc : d.getNocs()) {
+                RadioGroup radioGroup = new RadioGroup(c);
+                radioGroup.setLayoutParams(new RadioGroup.LayoutParams(
+                        RadioGroup.LayoutParams.MATCH_PARENT,
+                        RadioGroup.LayoutParams.WRAP_CONTENT));
+                radioGroup.setOrientation(RadioGroup.VERTICAL);
+
+                TextView textView = new TextView(c);
+                textView.setLayoutParams(new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT));
+                textView.setText(noc.getNome());
+                radioGroup.addView(textView);
+
+                for (String indicador : noc.getPossiveisIndicadores()) {
+                    RadioButton radioButton = new RadioButton(c);
+                    radioButton.setLayoutParams(new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT));
+                    radioButton.setText(indicador);
+                    radioGroup.addView(radioButton);
+                }
+                diagnosticoBinding.layoutNocs.addView(radioGroup);
+
+            }
+
+            Button button = new Button(c);
+            button.setLayoutParams(new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT));
+            button.setBackgroundResource(R.color.azul);
+            button.setText("Concluir");
+            button.setAllCaps(true);
+            button.setTextColor(Color.WHITE);
+            button.setTypeface(null, Typeface.BOLD);
+
+            diagnosticoBinding.layoutNocs.addView(button);
+
+
             // TODO
-//            b.setView();
+            b.setView(diagnosticoBinding.getRoot());
             b.create().show();
         });
     }
@@ -53,8 +102,9 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView titulo_diagnostico_text,descricao_diagnostico_text;
+        TextView titulo_diagnostico_text, descricao_diagnostico_text;
         Button botao_noc;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
