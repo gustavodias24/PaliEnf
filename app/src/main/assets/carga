@@ -1,0 +1,3388 @@
+[ {
+
+  "nome" : "Proteção Ineficaz",
+  "descricao" : "Diminuição na capacidade de se proteger de ameaças internas ou externas, como doenças ou lesões.",
+  "dominio" : "PROMOÇÃO DA SAÚDE",
+  "nocs" : [ {
+
+    "nome" : "Utiliza comportamentos que evitam riscos",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente Demonstrado", "Frequentemente Demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Mantém relações sociais",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente Demonstrado", "Frequentemente Demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Pratica comportamentos saudáveis",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente Demonstrado", "Frequentemente Demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Usar um grupo de apoio durante os estágios de transição para auxiliar na adaptação do novo estilo de vida"
+  }, {
+
+    "descricao" : "Estimular a sentar-se na beira na cama"
+  }, {
+
+    "descricao" : "Proporcionar um ambiente terapêutico, garantindo uma experiência calorosa, relaxante, privada e personalizada"
+  } ]
+}, {
+
+  "nome" : "NUTRIÇÃO desiquilibrada: Menos do que as Necessidades Corporais",
+  "descricao" : "Ingestão de nutrientes insuficiente para satisfazer as necessidades metabólicas.",
+  "dominio" : "NUTRIÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Ingere alimentos de acordo com a dieta prescrita",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente Demonstrado", "Frequentemente Demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Desejo de comer",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Sabor agradável dos alimentos",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Ingestão de nutrientes",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancias da variação normal", "Leve desvio da variação normal", "Sem desvio da variação" ]
+  }, {
+
+    "nome" : "Proporção peso/altura",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancias da variação normal", "Leve desvio da variação normal", "Sem desvio da variação" ]
+  }, {
+
+    "nome" : "Energia",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancias da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Estabelecer metas realistas em curto e longo prazo para a mudança no estado nutricional",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Discutir sobre o que a criança/adolescente gosta de comer",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Monitorar a capacidade de deglutição da criança/adolescente",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Proporcionar alívio adequado da dor antes das refeições",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Manter cabeceira entre 30 e 45º durante a NUTRIÇÃO",
+    "titulo" : "Alimentação por sonda enteral"
+  }, {
+
+    "descricao" : "Checar resíduo gástrico antes da administração das dietas",
+    "titulo" : "Alimentação por sonda enteral"
+  }, {
+
+    "descricao" : "Monitorar o peso três vezes por semana",
+    "titulo" : "Alimentação por sonda enteral"
+  } ]
+}, {
+
+  "nome" : "Risco de Função Hepática Prejudicada",
+  "descricao" : "Suscetibilidade à diminuição na função hepática que pode comprometer a saúde",
+  "dominio" : "NUTRIÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Monitora as alterações do estado geral de saúde",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente Demonstrado", "Frequentemente Demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Identifica os fatores de risco",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente Demonstrado", "Frequentemente Demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Rever os dados derivados das medidas rotineiras para a avaliação do risco",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Implementar atividades de redução dos riscos",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Encaminhar o paciente a outros profissionais da saúde se necessário",
+    "titulo" : ""
+  } ]
+}, {
+
+  "nome" : "Risco de Glicemia Instável",
+  "descricao" : "Suscetibilidade à variação dos níveis séricos de glicose em relação à faixa normal que pode comprometer a saúde",
+  "dominio" : "NUTRIÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Reconhece sinais e sintomas indicativos do risco",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente Demonstrado", "Frequentemente Demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Monitora alterações do estado geral de saúde",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente Demonstrado", "Frequentemente Demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Glicose no sangue",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancias da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar os níveis de glicose sanguínea"
+  }, {
+
+    "descricao" : "Monitorar sinais e sintomas de hiperglicemia: poliúria, polidipsia, polifagia e mal-estar"
+  }, {
+
+    "descricao" : "Administrar insulina conforme esquema prescrito"
+  } ]
+}, {
+
+  "nome" : "Risco de Desequilíbrio Eletrolítico",
+  "descricao" : "Suscetibilidade a mudanças nos níveis de eletrólitos séricos que pode comprometer a saúde",
+  "dominio" : "NUTRIÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Identificou os possíveis riscos",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente Demonstrado", "Frequentemente Demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Monitorou as alterações do estado geral da saúde",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente Demonstrado", "Frequentemente Demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Desenvolveu estratégias efetivas de controle dos riscos",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente Demonstrado", "Frequentemente Demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar as alterações de desequilíbrio de eletrólitos"
+  }, {
+
+    "descricao" : "Manter registro preciso de ingestão e eliminação"
+  }, {
+
+    "descricao" : "Identificar riscos biológicos, comportamentais e ambientais e suas inter-relações"
+  } ]
+}, {
+
+  "nome" : "Volume de Líquido Deficiente",
+  "descricao" : "Diminuição do líquido intravascular, intersticial e/ou intracelular. Refere-se à desidratação, perda de água apenas, sem mudança no sódio",
+  "dominio" : "NUTRIÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Equilíbrio de ingestão e excreção em 24 horas",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Pressão Arterial",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Função cognitiva",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Turgor cutâneo",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Tonteira",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Confusão",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Sede",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Diarreia",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Verificar prescrição para terapia endovenosa "
+  }, {
+
+    "descricao" : "Monitorar ou estimar o volume da êmese "
+  }, {
+
+    "descricao" : "Encorajar o uso de técnicas não farmacológicas para o controle da êmese"
+  }, {
+
+    "descricao" : "Obter fezes para cultura e testes de sensibilidade ",
+    "titulo" : "Controle da diarreia"
+  }, {
+
+    "descricao" : "Mensurar a diarreia/eliminação intestinal ",
+    "titulo" : "Controle da diarreia"
+  }, {
+
+    "descricao" : "Identificar fatores capazes de causar ou contribuir para a diarreia ",
+    "titulo" : "Controle da diarreia"
+  }, {
+
+    "descricao" : "Monitorar os sinais vitais, pressão arterial, estado mental e débito urinário",
+    "titulo" : "Controle do choque"
+  }, {
+
+    "descricao" : "Monitorar oximetria de pulso ",
+    "titulo" : "Controle do choque"
+  }, {
+
+    "descricao" : "Posicionar o paciente favorecendo perfusão cerebral ",
+    "titulo" : "Controle do choque"
+  } ]
+}, {
+
+  "nome" : "Volume de Líquido excessivo",
+  "descricao" : "Entrada excessiva e/ou retenção de líquidos",
+  "dominio" : "NUTRIÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Equilíbrio de ingestão e excreção em 24 horas",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Pressão Arterial ",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Turgor cutâneo ",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Padrões de eliminação",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Débito urinário de 8 horas ",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Edema periférico",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Ascite",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Sons adventícios da respiração",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Estase jugular",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Frequência urinária",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Edema",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Manter equilíbrio de ingestão e eliminação"
+  }, {
+
+    "descricao" : "Inserir cateter urinário conforme apropriado"
+  }, {
+
+    "descricao" : "Monitorar o estado de hidratação"
+  }, {
+
+    "descricao" : "Monitorar resultados laboratoriais relativos à retenção de líquidos"
+  }, {
+
+    "descricao" : "Monitorar pressão arterial, pulso, temperatura e estado respiratório"
+  }, {
+
+    "descricao" : "Monitorar a oximetria de pulso"
+  }, {
+
+    "descricao" : "Administrar agentes farmacológicos para aumentar a eliminação urinária, conforme prescrição"
+  }, {
+
+    "descricao" : "Monitorar sinais e sintomas de ascite"
+  }, {
+
+    "descricao" : "Monitorar as membranas mucosas, turgidez da pele e sede"
+  }, {
+
+    "descricao" : "Monitorar a cor, quantidade específica da urina"
+  }, {
+
+    "descricao" : "Monitorar quanto às veias distendidas no pescoço, ruídos nos pulmões, edema periférico e ganho de peso"
+  } ]
+}, {
+
+  "nome" : "Retenção Urinária",
+  "descricao" : "Incapacidade de esvaziar completamente a bexiga",
+  "dominio" : "ELIMINAÇÃO E TROCA",
+  "nocs" : [ {
+
+    "nome" : "Padrões de eliminação",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Quantidade de urina",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Esvazia a bexiga completamente",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Retenção da urina",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar a eliminação urinária, incluindo frequência, consistência, odor, volume, cor, conforme apropriado"
+  }, {
+
+    "descricao" : "Monitorar sinais e sintomas de retenção urinária"
+  }, {
+
+    "descricao" : "Estimular o reflexo da bexiga aplicando compressas frias sobre a bexiga"
+  }, {
+
+    "descricao" : "Inserir sonda vesical conforme apropriado"
+  }, {
+
+    "descricao" : "Utilizar técnicas de distração para crianças"
+  }, {
+
+    "descricao" : "Usar a massagem isoladamente ou em conjunto com outras medidas"
+  } ]
+}, {
+
+  "nome" : "Constipação",
+  "descricao" : "Diminuição na frequência normal de evacuação, acompanhada por eliminação difícil ou incompleta de fezes e/ou eliminação de fezes excessivamente duras e secas",
+  "dominio" : "ELIMINAÇÃO E TROCA",
+  "nocs" : [ {
+
+    "nome" : "Padrão de eliminação",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Controle de movimentos intestinais",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Facilidade na passagem das fezes",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Constipação",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Dor na passagem das fezes",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Elimina fezes pelo menos a cada três dias",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Ingere quantidade adequada de fibras",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar a eliminação intestinal, incluindo frequência, consistência, volume e cor, conforme apropriado",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Certificar-se de que a dieta inclui alimentos ricos em conteúdo fibras para prevenir constipação",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Selecionar e implementar uma variedade de medidas (farmacológicas, não farmacológicas e interpessoais) para facilitar o alívio da dor, quando apropriado (     )",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Realizar enema quando prescrito",
+    "titulo" : ""
+  }, {
+
+    "descricao" : " Monitorar sons intestinais",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Remover a impactação fecal manualmente se necessário",
+    "titulo" : ""
+  } ]
+}, {
+
+  "nome" : "Constipação Funcional Crônica",
+  "descricao" : "Evacuação de fezes infrequente ou difícil, presente há pelo menos 3 dos 12 meses anteriores.",
+  "dominio" : "ELIMINAÇÃO E TROCA",
+  "nocs" : [ {
+
+    "nome" : "Padrão de eliminação",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Controle de movimentos intestinais",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Facilidade na passagem das fezes",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Constipação",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Dor na passagem das fezes",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Elimina fezes pelo menos a cada três dias",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Ingere quantidade adequada de fibras",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar a eliminação intestinal, incluindo frequência, consistência, volume e cor, conforme apropriado"
+  }, {
+
+    "descricao" : "Certificar-se de que a dieta inclui alimentos ricos em conteúdo fibras para prevenir constipação"
+  }, {
+
+    "descricao" : "Selecionar e implementar uma variedade de medidas (farmacológicas, não farmacológicas e interpessoais) para facilitar o alívio da dor, quando apropriado (     )"
+  }, {
+
+    "descricao" : "Realizar enema quando prescrito"
+  }, {
+
+    "descricao" : " Monitorar sons intestinais"
+  }, {
+
+    "descricao" : "Remover a impactação fecal manualmente se necessário"
+  } ]
+}, {
+
+  "nome" : "Risco de Constipação",
+  "descricao" : "Suscetibilidade à diminuição na frequência normal de evacuação, acompanhada por eliminação difícil ou incompleta de fezes, que pode comprometer a saúde",
+  "dominio" : "ELIMINAÇÃO E TROCA",
+  "nocs" : [ {
+
+    "nome" : "Padrão de eliminação",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Controle de movimentos intestinais",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar a eliminação intestinal, incluindo frequência, consistência, volume e cor, conforme apropriado"
+  }, {
+
+    "descricao" : "Certificar-se de que a dieta inclui alimentos ricos em conteúdo fibras para prevenir constipação"
+  }, {
+
+    "descricao" : "Monitorar sinais e sintomas de constipação e impactação"
+  }, {
+
+    "descricao" : "Monitorar sons intestinais"
+  }, {
+
+    "descricao" : "Usar o relaxamento como técnica adjuvante"
+  } ]
+}, {
+
+  "nome" : "Risco de Constipação Funcional Crônica",
+  "descricao" : "Suscetibilidade à evacuação de fezes infrequente ou difícil, presente em quase 3 dos 12 meses anteriores, que pode comprometer a saúde",
+  "dominio" : "ELIMINAÇÃO E TROCA",
+  "nocs" : [ {
+
+    "nome" : "Elimina fezes pelo menos a cada três dias",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Ingere quantidade adequada de fibras",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Segue a dieta recomendada",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar a eliminação intestinal, incluindo frequência, consistência, volume e cor, conforme apropriado"
+  }, {
+
+    "descricao" : "Certificar-se de que a dieta inclui alimentos ricos em conteúdo fibras para prevenir constipação"
+  }, {
+
+    "descricao" : "Monitorar sinais e sintomas de constipação e impactação"
+  }, {
+
+    "descricao" : "Monitorar sons intestinais"
+  }, {
+
+    "descricao" : "Usar o relaxamento como técnica adjuvante"
+  } ]
+}, {
+
+  "nome" : "Diarreia",
+  "descricao" : "Eliminação de fezes soltas e não formadas",
+  "dominio" : "ELIMINAÇÃO E TROCA",
+  "nocs" : [ {
+
+    "nome" : "Padrão de eliminação",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Cor das Fezes",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Fezes pastosas e formadas",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Diarreia",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Muco nas fezes",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Frequência dos sintomas",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar os movimentos intestinais, incluindo frequência, consistência, formato, volume e cor",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Orientar o paciente sobre alimentos específicos que ajudam a promover a regularidade intestinal",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Contar ou pesar as fraldas",
+    "titulo" : ""
+  } ]
+}, {
+
+  "nome" : "Motilidade Gastrintestinal Disfuncional",
+  "descricao" : "Atividade peristáltica aumentada, diminuída, ineficaz ou ausente no sistema gastrointestinal",
+  "dominio" : "ELIMINAÇÃO E TROCA",
+  "nocs" : [ {
+
+    "nome" : "Controle de movimentos intestinais",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Sons intestinais ",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Tolerância alimentar",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Dor abdominal ",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Distensão abdominal",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Resíduo gástrico ",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Aumento no peristaltismo ",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar sinais e sintomas de constipação e impactação",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Monitorar os movimentos intestinais, incluindo frequência, consistência, formato, volume e cor",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Monitorar ruídos intestinais",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Monitorar quanto à sensação de estar cheio, distensão abdominal, cólicas e excessiva passagem de gases da boca ou do ânus",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Monitorar a quantidade, a cor e consistência do débito gástrico ou nasogástrico",
+    "titulo" : ""
+  } ]
+}, {
+
+  "nome" : "Risco de Motilidade Gastrintestinal Disfuncional",
+  "descricao" : "Suscetibilidade à atividade peristáltica aumentada, diminuída, ineficaz ou ausente no sistema gastrointestinal, a qual pode comprometer a saúde",
+  "dominio" : "ELIMINAÇÃO E TROCA",
+  "nocs" : [ {
+
+    "nome" : "Controle de movimentos intestinais",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Tolerância alimentar",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Reconhece sinais e sintomas dos riscos",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Desenvolve estratégias efetivas para controle dos riscos",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Identificar riscos biológicos, comportamentais e ambientais e suas inter-relações",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Implementar atividades de redução de riscos",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Monitorar os movimentos intestinais, incluindo frequência, consistência, formato, volume e cor",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Monitorar quanto à sensação de estar cheio, distensão abdominal, cólicas e excessiva passagem de gases da boca ou do ânus",
+    "titulo" : ""
+  } ]
+}, {
+
+  "nome" : "Troca de Gases Prejudicada",
+  "descricao" : "Excesso ou éficit na oxigenação e/ou na eliminação de dióxido de carbono na membrana alveolocapilar.",
+  "dominio" : "ELIMINAÇÃO E TROCA",
+  "nocs" : [ {
+
+    "nome" : "Frequência respiratória",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Ritmo respiratório",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Profundidade da Inspiração",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Saturação de oxigênio",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Uso dos músculos acessórios",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Dispneia em repouso",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Cognição prejudicada",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Ruídos respiratórios adventícios",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar padrão respiratório",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Monitorar sinais e sintomas de insuficiência respiratória",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Posicionar o paciente de modo a maximizar o potencial respiratório",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Identificar a criança/adolescente que necessite de inserção real/potencial de via aérea artificial",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Remover secreções, estimulando a tosse/expectoração",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Utilizar técnicas lúdicas para estimular a respiração profunda em crianças",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Administrar oxigênio suplementar como prescrito",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Monitorar frequência, ritmo, profundidade e esforço das respirações",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Monitorar quanto às respirações ruidosas, como estridores e roncos ",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Manter via aérea pérvia",
+    "titulo" : ""
+  }, {
+
+    "descricao" : "Monitorar a gasometria arterial e os níveis de eletrólitos séricos",
+    "titulo" : ""
+  } ]
+}, {
+
+  "nome" : "Capacidade de Transferência Prejudicada",
+  "descricao" : "Limitação de movimento independente entre duas superfícies próximas",
+  "dominio" : "ATIVIDADE/REPOUSO",
+  "nocs" : [ {
+
+    "nome" : "Move-se de um lado para o outro quando deitado",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Move-se de frente para trás quando deitado",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Transferência de uma superfície a outra enquanto deitado",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Exaustão",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Motivação diminuída",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar a capacidade da criança/adolescente em realizar o autocuidado independente"
+  }, {
+
+    "descricao" : "Fornecer assistência até a criança/adolescente ser totalmente capaz de assumir o autocuidado"
+  }, {
+
+    "descricao" : "Determinar se as capacidades física e cognitiva estão estáveis"
+  }, {
+
+    "descricao" : "Consultar fisioterapeuta para lidar com a incapacidade física"
+  }, {
+
+    "descricao" : "Mover o paciente usando tábua de transferência, conforme necessário"
+  } ]
+}, {
+
+  "nome" : "Mobilidade Física Prejudicada",
+  "descricao" : "Limitação no movimento independente e voluntário do corpo ou de uma ou mais extremidades",
+  "dominio" : "ATIVIDADE/REPOUSO",
+  "nocs" : [ {
+
+    "nome" : "Movimento dos músculos",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Movimento das articulações",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Movimentos realizados com facilidade",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Força na porção superior do corpo",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Força na porção inferior do corpo",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Determinar as limitações do movimento articular e efeito sobre a função articular"
+  }, {
+
+    "descricao" : "Colaborar com o fisioterapeuta no desenvolvimento e na execução do programa de exercício"
+  }, {
+
+    "descricao" : "Determinar o nível de motivação da criança/adolescente para manter e restabelecer o movimento da articulação"
+  }, {
+
+    "descricao" : "Fornecer reforço positivo pela realização dos exercícios para a articulação"
+  }, {
+
+    "descricao" : "Massagear usando golpes contínuos, uniformes, apertos ou vibrações com palmas, dedos e polegares"
+  } ]
+}, {
+
+  "nome" : "Mobilidade no Leito Prejudicada",
+  "descricao" : "Limitação de movimento independente de uma posição para outra no leito",
+  "dominio" : "ATIVIDADE/REPOUSO",
+  "nocs" : [ {
+
+    "nome" : "Move-se de um lado para o outro quando deitado",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Passa de deitado para sentado",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Passa de sentado para deitado",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Orientação cognitiva",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Colaborar com o fisioterapeuta no desenvolvimento de um plano de promoção de mecânica corporal"
+  }, {
+
+    "descricao" : "Auxiliar na demonstração de posições adequadas para dormir"
+  }, {
+
+    "descricao" : "Auxiliar para evitar sentar na mesma posição por períodos prolongados"
+  }, {
+
+    "descricao" : "Monitorar a melhora na postura/mecânica corporal da criança/adolescente"
+  }, {
+
+    "descricao" : "Fornecer reforço positivo pela realização dos exercícios para a articulação"
+  } ]
+}, {
+
+  "nome" : "Sentar-se Prejudicado",
+  "descricao" : "Limitação da capacidade para, de maneira independente e intencional, atingir e/ou manter uma posição de descanso apoiada pelas nádegas e coxas com o torso ereto",
+  "dominio" : "ATIVIDADE/REPOUSO",
+  "nocs" : [ {
+
+    "nome" : "Mantém a força muscular",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Mantém a flexibilidade das articulações",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Utiliza exercícios prescritos para prevenir lesões",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Colaborar com o fisioterapeuta no desenvolvimento de um plano de promoção de mecânica corporal"
+  }, {
+
+    "descricao" : "Auxiliar na demonstração de posições adequadas para dormir"
+  }, {
+
+    "descricao" : "Auxiliar para evitar sentar na mesma posição por períodos prolongados"
+  }, {
+
+    "descricao" : "Monitorar a melhora na postura/mecânica corporal da criança/adolescente"
+  }, {
+
+    "descricao" : "Fornecer reforço positivo pela realização dos exercícios para a articulação"
+  } ]
+}, {
+
+  "nome" : "Risco de Síndrome do desuso",
+  "descricao" : "Suscetibilidade à deterioração de sistemas do corpo como resultado de inatividade musculoesquelética prescrita ou inevitável que pode comprometer a saúde",
+  "dominio" : "ATIVIDADE/REPOUSO",
+  "nocs" : [ {
+
+    "nome" : "Estado nutricional",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Força muscular",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Efetividade da tosse",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Úlcera por pressão",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Intestino hipoativo",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Articulações contraídas",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Congestão Pulmonar",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Estase venosa",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Colaborar com o fisioterapeuta no desenvolvimento e na execução do programa de exercício"
+  }, {
+
+    "descricao" : "Fornecer reforço positivo pela realização dos exercícios para a articulação"
+  }, {
+
+    "descricao" : "Massagear usando golpes contínuos, uniformes, apertos ou vibrações com palmas, dedos e polegares"
+  }, {
+
+    "descricao" : "Inspecionar a pele e as mucosas quanto à vermelhidão, calor extremo, edema ou drenagem"
+  }, {
+
+    "descricao" : "Observar a data da última evacuação"
+  }, {
+
+    "descricao" : "Monitorar quanto às respirações ruidosas, como estridores e roncos"
+  } ]
+}, {
+
+  "nome" : "Débito Cardíaco Diminuído",
+  "descricao" : "Volume de sangue bombeado pelo coração inadequado para atender às demandas metabólicas do organismo",
+  "dominio" : "ATIVIDADE/REPOUSO",
+  "nocs" : [ {
+
+    "nome" : "Pressão arterial sistólica",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Pressão arterial diastólica",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Equilíbrio entre ingestão e eliminação em 24 horas",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Débito da urina",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Saturação de oxigênio",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Estase jugular",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Sons cardíacos anormais",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Sons respiratórios adventícios",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Dispneia em repouso",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Edema periférico",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar os sinais vitais com frequência"
+  }, {
+
+    "descricao" : "Monitorar o estado cardiovascular"
+  }, {
+
+    "descricao" : "Observar sinais e sintomas de redução do débito cardíaco "
+  }, {
+
+    "descricao" : "Estabelecer uma relação de apoio com a criança/adolescente e família"
+  }, {
+
+    "descricao" : "Avaliar dor torácica"
+  }, {
+
+    "descricao" : "Auscultar os sons cardíacos"
+  }, {
+
+    "descricao" : "Auscultar os pulmões quanto à presença de crepitações e outros sons adventícios"
+  }, {
+
+    "descricao" : "Administrar oxigenioterapia segundo prescrição médica"
+  }, {
+
+    "descricao" : "Monitorar ingestão e eliminação, débito urinário e peso"
+  }, {
+
+    "descricao" : "Realizar terapia de relaxamento se necessário"
+  } ]
+}, {
+
+  "nome" : "Padrão Respiratório Ineficaz",
+  "descricao" : "Inspiração e/ou expiração que não proporciona ventilação adequada.",
+  "dominio" : "ATIVIDADE/REPOUSO",
+  "nocs" : [ {
+
+    "nome" : "Frequência respiratória",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Ritmo respiratório",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Profundidade da inspiração",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Saturação de oxigênio",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Uso dos músculos acessórios",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Cianose",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Cognição prejudicada ",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Gemido durante a respiração",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Batimento de asa de nariz",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Verificar a necessidade de aspiração oral ou nasal"
+  }, {
+
+    "descricao" : "Auscultar os pulmões quanto à presença de crepitações e outros sons adventícios"
+  }, {
+
+    "descricao" : "Administrar oxigenioterapia segundo prescrição médica"
+  }, {
+
+    "descricao" : "Posicionar a criança/adolescente de modo a maximizar a ventilação"
+  }, {
+
+    "descricao" : "Monitorar o estado respiratório e a oxigenação conforme apropriado"
+  }, {
+
+    "descricao" : "Monitorar os sinais vitais com frequência"
+  }, {
+
+    "descricao" : "Utilizar abordagem calma e tranquilizadora"
+  }, {
+
+    "descricao" : "Proporcionar atividades de diversão voltadas à redução da tensão"
+  } ]
+}, {
+
+  "nome" : "Risco de Perfusão Tissular Cardíaca Diminuída",
+  "descricao" : "Suscetibilidade a uma redução na circulação cardíaca (coronariana) que pode comprometer a saúde.",
+  "dominio" : "ATIVIDADE/REPOUSO",
+  "nocs" : [ {
+
+    "nome" : "Pressão arterial",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Frequência cardíaca  apical",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Fração de ejeção",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Arritmia",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Taquicardia",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Bradicardia",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Diaforese profusa",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Avaliar a criança/adolescente quanto à ansiedade e depressão"
+  }, {
+
+    "descricao" : "Promover técnicas efetivas para reduzir o estresse"
+  }, {
+
+    "descricao" : "Realizar terapia de relaxamento"
+  }, {
+
+    "descricao" : "Identificar os recursos disponíveis para auxiliar na diminuição dos fatores de risco"
+  }, {
+
+    "descricao" : "Implementar atividades de redução dos riscos"
+  }, {
+
+    "descricao" : "Monitorar a pressão arterial, pulso, temperatura e estado respiratório"
+  } ]
+}, {
+
+  "nome" : "Risco de Perfusão Tissular Cerebral Ineficaz",
+  "descricao" : "Suscetibilidade a uma redução na circulação do tecido cerebral que pode comprometer a saúde.",
+  "dominio" : "ATIVIDADE/REPOUSO",
+  "nocs" : [ {
+
+    "nome" : "Pressão intracraniana",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Pressão arterial",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Dor de cabeça",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Agitação",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Vômito",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Cognição prejudicada",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Reflexos neurológicos prejudicados",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar o tamanho da pupila, a forma, a simetria e a reatividade"
+  }, {
+
+    "descricao" : "Monitorar o nível de consciência e orientação"
+  }, {
+
+    "descricao" : "Monitorar a tendência da Escala de Coma de Glasgow"
+  }, {
+
+    "descricao" : "Monitorar os sinais vitais: temperatura, pressão arterial, pulso e respiração"
+  }, {
+
+    "descricao" : "Envolver criança/adolescente e seus familiares nas atividades de monitoramento"
+  } ]
+}, {
+
+  "nome" : "Perfusão Tissular Periférica Ineficaz",
+  "descricao" : "Redução da circulação sanguínea para a periferia que pode comprometer a saúde.",
+  "dominio" : "ATIVIDADE/REPOUSO",
+  "nocs" : [ {
+
+    "nome" : "Enchimento capilar nos dedos das mãos",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Enchimento capilar nos dedos dos pés",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Temperatura da pele nas extremidades",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Força do pulso radial",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Edema periférico",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Dor localizada em extremidades",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Dormência",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Ruptura da pele",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Avaliar edema periférico e pulsos"
+  }, {
+
+    "descricao" : "Inspecionar a pele quanto a úlceras arteriais ou ruptura de tecidos"
+  }, {
+
+    "descricao" : "Inspecionar a pele quanto a úlceras de estase e ruptura de tecido"
+  }, {
+
+    "descricao" : "Administrar medicamentos antiplaquetários ou anticoagulantes conforme apropriado"
+  }, {
+
+    "descricao" : "Mudar a posição da criança/adolescente pelo menos a cada 2 horas"
+  }, {
+
+    "descricao" : "Monitorar o estado hídrico, incluindo ingestão e eliminação"
+  }, {
+
+    "descricao" : "Implementar o tratamento de feridas conforme apropriado"
+  }, {
+
+    "descricao" : "Monitorar o grau de desconforto ou dor "
+  } ]
+}, {
+
+  "nome" : "Resposta Disfuncional ao Desmame Ventilatório",
+  "descricao" : "Incapacidade de ajustar-se a níveis diminuídos de suporte ventilatório mecânico que interrompe e prolonga o processo de desmame.",
+  "dominio" : "ATIVIDADE/REPOUSO",
+  "nocs" : [ {
+
+    "nome" : "Frequência respiratória",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Ritmo respiratório",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Profundidade da inspiração",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Saturação de oxigênio",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Teste de função Pulmonar",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Achados Radiográficos",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Movimentos assimétricos da parede torácica",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Ansiedade",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Inquietação",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Infecção pulmonar",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Secreções respiratórias",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Medo",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Alternar períodos de tentativas de desmame com períodos de descanso"
+  }, {
+
+    "descricao" : "Monitorar para avaliar se criança/adolescente está livre de infecção significativa antes do desmame"
+  }, {
+
+    "descricao" : "Monitorar os sinais de fadiga muscular respiratória, hipoxemia e hipóxia tecidual enquanto o desmame está em processo"
+  }, {
+
+    "descricao" : "Usar técnicas de relaxamento"
+  } ]
+}, {
+
+  "nome" : "Ventilação Espontânea Prejudicada",
+  "descricao" : "Incapacidade de iniciar e/ou manter respiração independente que seja adequada para sustentação da vida",
+  "dominio" : "ATIVIDADE/REPOUSO",
+  "nocs" : [ {
+
+    "nome" : "Frequência respiratória ",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Ritmo respiratório",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Profundidade da Inspiração",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Saturação de oxigênio",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Capacidade de eliminar secreções",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Uso de músculos acessórios",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Retração torácica",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Cianose",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Dispneia em repouso ",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Inquietação",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Diaforese",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Cognição prejudicada",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Respiração difícil",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Manter via aérea pérvia"
+  }, {
+
+    "descricao" : "Posicionar criança/adolescente para aliviar dispneia"
+  }, {
+
+    "descricao" : "Monitorar os efeitos da mudança de posicionamento na oxigenação, saturação"
+  }, {
+
+    "descricao" : "Utilizar técnicas divertidas para estimular respiração profunda em crianças"
+  }, {
+
+    "descricao" : "Monitorar quanto aos sinais de fadiga da musculatura respiratória"
+  }, {
+
+    "descricao" : "Iniciar e manter uso de oxigênio suplementar, conforme prescrito"
+  }, {
+
+    "descricao" : "Administrar medicamentos que promovam a perviedade das vias aéreas e a troca de gases, segundo prescrição"
+  }, {
+
+    "descricao" : "Orientar técnicas de respiração"
+  } ]
+}, {
+
+  "nome" : "Deficit do Autocuidado para Alimentação",
+  "descricao" : "Incapacidade de alimentar-se de forma independente",
+  "dominio" : "ATIVIDADE/REPOUSO",
+  "nocs" : [ {
+
+    "nome" : "Abre recipientes",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Utiliza utensílios",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Mastiga os alimentos",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Deglute os alimentos",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Completa uma refeição",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Leve desvio da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Ingestão oral de alimentos",
+    "possiveisIndicadores" : [ "Levemente adequado", "Moderadamente adequado", "Não adequado ", "Substancialmente adequado", "Totalmente adequado" ]
+  }, {
+
+    "nome" : "Ingestão de alimentos via sonda",
+    "possiveisIndicadores" : [ "Levemente adequado", "Moderadamente adequado", "Não adequado ", "Substancialmente adequado", "Totalmente adequado" ]
+  }, {
+
+    "nome" : "Ingestão parenteral de nutrientes",
+    "possiveisIndicadores" : [ "Levemente adequado", "Moderadamente adequado", "Não adequado ", "Substancialmente adequado", "Totalmente adequado" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Identificar a dieta prescrita"
+  }, {
+
+    "descricao" : "Providenciar canudo e alimentos que podem ser comidos com as mãos se necessário"
+  }, {
+
+    "descricao" : "Manter a atenção na criança/adolescente durante a alimentação"
+  }, {
+
+    "descricao" : "Encorajar os pais a alimentarem a criança/adolescente"
+  }, {
+
+    "descricao" : "Manter cabeceira elevada durante alimentação via sonda"
+  }, {
+
+    "descricao" : "Checar a fluxo de gotejamento da dieta enteral a cada hora"
+  }, {
+
+    "descricao" : "Monitorar sinais e sintomas de aspiração"
+  } ]
+}, {
+
+  "nome" : "Deficit no Autocuidado para o banho",
+  "descricao" : "Incapacidade de completar as atividades de limpeza do corpo de forma independente",
+  "dominio" : "ATIVIDADE/REPOUSO",
+  "nocs" : [ {
+
+    "nome" : "Lava a parte superior do corpo",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Lava a parte inferior do corpo",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Função sensorial e motora",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Estado cognitivo",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Fazer uma avaliação abrangente da dor, incluindo localização, intensidade etc. "
+  }, {
+
+    "descricao" : "Observar as pistas não verbais de desconforto, principalmente naqueles que não se comunicam de forma eficaz "
+  }, {
+
+    "descricao" : "Proporcionar o alívio ideal da dor"
+  }, {
+
+    "descricao" : "Monitorar função sensorial e motora"
+  }, {
+
+    "descricao" : "Encorajar a participação dos pais no autocuidado/banho"
+  }, {
+
+    "descricao" : "Fornecer assistência até que a criança/adolescente ou seus acompanhantes consigam realizar o banho sozinhos"
+  } ]
+}, {
+
+  "nome" : "Deficit no Autocuidado para Higiene Íntima",
+  "descricao" : "Incapacidade de realizar tarefas associadas à eliminação vesical e intestinal de forma independente",
+  "dominio" : "ATIVIDADE/REPOUSO",
+  "nocs" : [ {
+
+    "nome" : "Dor relatada",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Expressões faciais de dor",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "coma",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Fazer uma avaliação abrangente da dor, incluindo localização, intensidade etc. "
+  }, {
+
+    "descricao" : "Observar as pistas não verbais de desconforto, principalmente naqueles que não se comunicam de forma eficaz "
+  }, {
+
+    "descricao" : "Proporcionar o alívio ideal da dor"
+  }, {
+
+    "descricao" : "Monitorar função sensorial e motora "
+  }, {
+
+    "descricao" : "Encorajar a participação dos pais no autocuidado/banho"
+  }, {
+
+    "descricao" : "Fornecer assistência até que a criança/adolescente ou seus acompanhantes consigam realizar o banho sozinhos"
+  } ]
+}, {
+
+  "nome" : "Confusão Aguda",
+  "descricao" : "Distúrbios reversíveis de consciência, atenção, cognição e percepção que surgem em um período de tempo breve, com duração inferior a 3 meses.",
+  "dominio" : "PERCEPÇÃO/COGNIÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Desorientação no tempo",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Desorientação no espaço",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Atividade psicomotora",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Cognição prejudicada",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Verbalização sem sentido",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Estabelecer uma relação interpessoal, de confiança, com a criança/adolescente"
+  }, {
+
+    "descricao" : "Fornecer nível apropriado de vigilância/supervisão para monitorar o paciente"
+  }, {
+
+    "descricao" : "Fornecer medicamentos antipsicóticos e ansiolíticos, conforme prescrição"
+  }, {
+
+    "descricao" : "Ensinar familiares a respeito de maneiras de lidar com a criança/adolescente que está sofrendo alucinações"
+  }, {
+
+    "descricao" : "Obter solicitação médica se necessária para medidas de restrição física"
+  } ]
+}, {
+
+  "nome" : "Risco de Confusão Aguda",
+  "descricao" : "Suscetibilidade a distúrbios reversíveis de consciência, atenção, cognição e percepção que surgem em um período de tempo breve e que podem comprometer a saúde",
+  "dominio" : "PERCEPÇÃO/COGNIÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Identifica a si mesmo",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Identifica o local onde está no momento",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Função renal",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Equilíbrio eletrolítico",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Nível de consciência alterado",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Verbalização sem sentido",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar quanto aos níveis séricos anormais eletrolíticos, conforme disponível"
+  }, {
+
+    "descricao" : "Monitorar o nível de consciência"
+  }, {
+
+    "descricao" : "Monitorar o nível de orientação"
+  }, {
+
+    "descricao" : "Envolver a criança/adolescente nas atividades de  monitoramento  do nível de consciência"
+  }, {
+
+    "descricao" : "Monitorar a função renal da criança/adolescente"
+  } ]
+}, {
+
+  "nome" : "Comunicação Verbal Prejudicada",
+  "descricao" : "Capacidade diminuída, retardada ou ausente para receber, processar, transmitir e/ou usar um sistema de símbolos.",
+  "dominio" : "PERCEPÇÃO/COGNIÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Uso de linguagem falada",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Uso de linguagem não verbal",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Interpretação da linguagem falada",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Consciência",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Função sensorial e motora",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar velocidade, pressão, ritmo, quantidade e volume da fala e dicção"
+  }, {
+
+    "descricao" : "Monitorar processos cognitivos, anatômicos e fisiológicos associados à capacidade da fala"
+  }, {
+
+    "descricao" : "Reconhecer os comportamentos emocionais e físicos como formas de comunicação"
+  }, {
+
+    "descricao" : "Fornecer métodos alternativos de comunicação de voz (quadro de escrita, figura etc.)"
+  }, {
+
+    "descricao" : "Ajustar o estilo de comunicação para atender às necessidaes da criança/adolescente"
+  } ]
+}, {
+
+  "nome" : "Risco de Baixa Autoestima Situacional",
+  "descricao" : "Suscetibilidade ao desenvolvimento de uma percepção negativa sobre o seu próprio valor em resposta a uma situação atual que pode comprometer a saúde",
+  "dominio" : "AUTOPERCEPÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Aceitação de autolimitações",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Mantém a percepção dos sentimentos",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Expressa seus sentimentos para as outras pessoas",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Reconhece a realidade da situação da saúde",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Mantém relacionamentos",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Encorajar a expressão de sentimentos"
+  }, {
+
+    "descricao" : "Fornecer informações factuais, conforme necessário e adequado"
+  }, {
+
+    "descricao" : "Demonstrar empatia, cordialidade e autenticidade"
+  }, {
+
+    "descricao" : "Abraçar ou tocar o paciente para dar apoio"
+  }, {
+
+    "descricao" : "Encaminhar a criança/adolescente para aconselhamento, conforme necessário"
+  }, {
+
+    "descricao" : "Utilizar arteterapia"
+  }, {
+
+    "descricao" : "Musicoterapia"
+  } ]
+}, {
+
+  "nome" : "Distúrbio na imagem Corporal",
+  "descricao" : "Confusão na imagem mental do eu físico",
+  "dominio" : "AUTOPERCEPÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Imagem de si mesmo",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Descrição da parte do corpo afetada ",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Atitude com relação ao uso de estratégias para melhorar a função",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Utiliza suporte social disponível",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Utiliza estratégias efetivas de enfrentamento",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Determinar presença e grau do risco de suicídio"
+  }, {
+
+    "descricao" : "Encorajar a expressão de sentimentos"
+  }, {
+
+    "descricao" : "Fornecer informações factuais, conforme necessário e adequado"
+  }, {
+
+    "descricao" : "Demonstrar empatia, cordialidade e autenticidade"
+  }, {
+
+    "descricao" : "Abraçar ou tocar o paciente para dar apoio"
+  }, {
+
+    "descricao" : "Encaminhar a criança/adolescente para aconselhamento, conforme necessário"
+  }, {
+
+    "descricao" : "Utilizar arteterapia"
+  }, {
+
+    "descricao" : "Musicoterapia"
+  } ]
+}, {
+
+  "nome" : "Risco de tensão do Papel de Cuidados",
+  "descricao" : "Suscetibilidade a dificuldade para atender à responsabilidade, expectativas e/ou comportamentos de cuidados relacionados à família ou a pessoas significativas que pode comprometer a saúde",
+  "dominio" : "PAPÉIS E RELACIONAMENTOS",
+  "nocs" : [ {
+
+    "nome" : "Colabora com os prestadores de saúde na determinação do cuidados",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Familiares verbalizam o significado da crise de saúde",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Proporciona estrutura à criança/adolescente",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Mantém uma comunicação aberta",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Determinar o nível de conhecimento dos cuidados"
+  }, {
+
+    "descricao" : "Determinar a aceitação do papel de cuidador"
+  }, {
+
+    "descricao" : "Reconhecer manifestações de emoções negativas"
+  }, {
+
+    "descricao" : "Identificar recursos por  meio dos quais o cuidados pode tirar folga"
+  }, {
+
+    "descricao" : "Apoiar o cuidador no estabelecimento de limites e nos cuidados consigo mesmo"
+  }, {
+
+    "descricao" : "Apoiar as decisões do cuidados"
+  }, {
+
+    "descricao" : "Identificar e envolver familiares de alto risco em um programa de acompanhamento"
+  } ]
+}, {
+
+  "nome" : "Ansiedade Relacionada à Morte",
+  "descricao" : "Sentimento vago e incômodo de desconforto ou temor gerado por percepções de uma ameaça real ou imaginária à própria existência",
+  "dominio" : "ENFRENTAMENTO/TOLERÂNCIA AO ESTRESSE",
+  "nocs" : [ {
+
+    "nome" : "Bem-estar psicológico",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Apoio familiar",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Vida espiritual",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Expressão de prontidão para morte iminente",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Lamento",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Sofrimento",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Inquietação",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Utilizar abordagem calma e tranquilizadora"
+  }, {
+
+    "descricao" : "Encorajar a verbalização dos sentimentos, das percepções e dos medos sobre a morte"
+  }, {
+
+    "descricao" : "Proporcionar atividades de diversão voltadas à redução da tensão"
+  }, {
+
+    "descricao" : "Facilitar a obtenção de apoio espiritual ao paciente e à família"
+  }, {
+
+    "descricao" : "Apoiar os esforços da família em permanecer na beira do leito"
+  } ]
+}, {
+
+  "nome" : "Regulação do Humor Prejudicada",
+  "descricao" : "Estado mental caracterizado por mudanças no humor ou no afeto e que abarca uma série de manifestações afetivas, cognitivas, somáticas e/ou fisiológicas, variando de leves a graves.",
+  "dominio" : "ENFRENTAMENTO/TOLERÂNCIA AO ESTRESSE",
+  "nocs" : [ {
+
+    "nome" : "Bem-estar psicológico",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Apoio familiar",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Utiliza estratégias efetivas de enfrentamento",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Mantém uma comunicação aberta",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Encaminhar a criança/adolescente para aconselhamento, conforme necessário"
+  }, {
+
+    "descricao" : "Utilizar arteterapia"
+  }, {
+
+    "descricao" : "Musicoterapia"
+  }, {
+
+    "descricao" : "Brinquedo terapêutico"
+  } ]
+}, {
+
+  "nome" : "Capacidade Adaptativa Intracraniana Diminuída",
+  "descricao" : "Os mecanismos da dinâmica dos fluidos intracranianos que normalmente compensam os aumentos nos volumes intracranianos estão comprometidos, resultando em repetidos aumentos desproporcionais na pressão intracraniana (PIC) em resposta a uma variedade de estímulos nocivos e não nocivos",
+  "dominio" : "ENFRENTAMENTO/TOLERÂNCIA AO ESTRESSE",
+  "nocs" : [ {
+
+    "nome" : "Pressão intracraniana",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Função sensorial e motora craniana",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Controle motor central",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Frequência cardíaca",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Pressão arterial",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Reatividade das pupilas",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Orientação cognitiva",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Crise convulsiva",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Delírio",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Coma",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Administrar medicamentos, conforme prescrição"
+  }, {
+
+    "descricao" : "Monitorar para detecção de confusão mudança no estado mental, queixa de tontura e síncope"
+  }, {
+
+    "descricao" : "Monitorar o estado neurológico atentamente e comparar com os dados iniciais"
+  }, {
+
+    "descricao" : "Monitorar sinais vitais"
+  }, {
+
+    "descricao" : "Monitorar pressão intracraniana e a pressão de perfusão cerebral"
+  }, {
+
+    "descricao" : "Reduzir estímulos no ambiente do paciente"
+  }, {
+
+    "descricao" : "Fornecer sedação, conforme necessário"
+  }, {
+
+    "descricao" : "Encorajar a família a conversar com a criança/adolescente"
+  }, {
+
+    "descricao" : "Monitorar mudanças na forma ou reatividade pupilar"
+  } ]
+}, {
+
+  "nome" : "Risco de Religiosidade prejudicada",
+  "descricao" : "Suscetibilidade de capacidade prejudicada de confiar em crenças e/ou participar de rituais de alguma fé religiosa, o que pode comprometer a saúde.",
+  "dominio" : "PRINCÍPIOS DA VIDA",
+  "nocs" : [ {
+
+    "nome" : "Bem-estar psicológico",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Fé",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Esperança",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Satisfação espiritual",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Depressão",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Ansiedade",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Estresse",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Perda da fé",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Identificar as preocupações sobre a expressão religiosa"
+  }, {
+
+    "descricao" : "Encorajar os serviços religiosos quando adequado"
+  }, {
+
+    "descricao" : "Encaminhar para um conselheiro religioso da escolha da criança/adolescente e família"
+  }, {
+
+    "descricao" : "Ouvir com atenção a comunicação do indivíduo e desenvolver senso de hora certa para orações e rituais espirituais"
+  }, {
+
+    "descricao" : "Discutir as experiências emocionais com a criança/adolescente e família"
+  } ]
+}, {
+
+  "nome" : "Risco de Infecção",
+  "descricao" : "Suscetibilidade à invasão e multiplicação de organismos patogênicos que pode comprometer a saúde",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Colonização em cultura sanguínea",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Colonização da cultura da urina",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Colonização da cultura de fezes",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Colonização de cultura de escarro",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Colonização de Líquor",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Colonização do acesso vascular",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Elevação na contagem de leucócitos",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Manter as técnicas de isolamento conforme apropriado"
+  }, {
+
+    "descricao" : "Orientar os pacientes e visitantes quanto às técnicas adequadas para lavagem das mãos"
+  }, {
+
+    "descricao" : "Garantir manuseio asséptico em todas as vias EV"
+  }, {
+
+    "descricao" : "Trocar os equipamentos de atendimento dos pacientes conforme normas da instituição"
+  }, {
+
+    "descricao" : "Identificar os recursos disponíveis para auxiliar na diminuição dos fatores de risco"
+  } ]
+}, {
+
+  "nome" : "Risco de Aspiração",
+  "descricao" : "Suscetibilidade à entrada de secreções gastrintestinais, secreções orofaríngeas, sólidos ou líquidos nas vias traqueobrônquicas que pode comprometer a saúde",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Ruídos respiratórios adventícios",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Respiração difícil",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Batimento de asa de nariz",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Acúmulo de secreção pulmonar",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Tosse",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Cianose",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Posicionar cabeceira maior que 30º em casos de VM e/ou dieta por SNE"
+  }, {
+
+    "descricao" : "Manter o equipamento de aspiração disponível"
+  }, {
+
+    "descricao" : "Supervisionar a alimentação ou auxiliar, conforme necessário"
+  }, {
+
+    "descricao" : "Verificar resíduo gástrico ou da gastrostomia antes de alimentar"
+  }, {
+
+    "descricao" : "Manter o balonete traqueal insuflado, conforme apropriado"
+  }, {
+
+    "descricao" : "Monitorar o nível de consciência, reflexo de tosse, reflexo de vômito e capacidade de deglutição"
+  } ]
+}, {
+
+  "nome" : "Risco de Boca Seca",
+  "descricao" : "Suscetibilidade a desconforto ou dano à mucosa oral devido à quantidade reduzida ou à qualidade da saliva para hidratar a mucosa que pode comprometer a saúde",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Reconhece sinais e sintomas indicativos do risco",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Identifica os riscos",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Promover atividades para modificar os fatores de risco identificados da quimioterapia"
+  }, {
+
+    "descricao" : "Iniciar atividades de saúde bucal, como utilização de saliva artificial após quimioterapia"
+  }, {
+
+    "descricao" : "Ensinar a criança/adolescente sobre autoavaliação da cavidade oral"
+  } ]
+}, {
+
+  "nome" : "Risco de Choque",
+  "descricao" : "Suscetibilidade a fluxo sanguíneo inadequado para os tecidos do corpo, podendo levar à disfunção celular que ameaça a vida, que pode comprometer a saúde",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Pressão de pulso diminuída",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Pressão arterial diminuída",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Frequência respiratória aumentada",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Pele fria e pegajosa",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Palidez",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Tempo de enchimento capilar prolongado",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Nível de consciência diminuída",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar o estado hemodinâmico, incluindo FC, PA, PAM, PVC, pressão arterial pulmonar e débito cardíaco se disponíveis"
+  }, {
+
+    "descricao" : "Monitorar eliminação e ingestão"
+  }, {
+
+    "descricao" : "Monitorar evidências de desidratação"
+  }, {
+
+    "descricao" : "Monitorar as fontes da perda de fluidos (sangramento, vômito, diarreia, transpiração excessiva, taquipneia)"
+  }, {
+
+    "descricao" : "Monitorar os sinais iniciais de síndrome de resposta inflamatória sistêmica"
+  }, {
+
+    "descricao" : "Monitorar sinais de oxigenação tecidual inadequada"
+  }, {
+
+    "descricao" : "Monitorar oximetria de pulso"
+  }, {
+
+    "descricao" : "Orientar a criança/adolescente e seus familiares acerca das etapas a serem seguidas diante do início dos sintomas de choque"
+  } ]
+}, {
+
+  "nome" : "Desobstrução Ineficaz das Vias Aéreas",
+  "descricao" : "Incapacidade de eliminar secreções ou obstruções do trato respiratório para manter a via aérea desobstruída",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Respiração difícil",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Batimento de asa de nariz",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Ansiedade",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Dispneia",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Cianose",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Expiração prejudicada",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Aspirar a nasofaringe com aspirador nasal ou dispositivo de aspiração"
+  }, {
+
+    "descricao" : "Realizar aspiração endotraqueal, conforme necessário"
+  }, {
+
+    "descricao" : "Posicionar a criança/adolescente de modo a maximizar o potencial respiratório"
+  }, {
+
+    "descricao" : "Identificar a criança/adolescente que necessite de inserção real/potencial de via aérea artificial"
+  }, {
+
+    "descricao" : "Orientar como tossir efetivamente"
+  }, {
+
+    "descricao" : "Monitorar o estado respiratório e a oxigenação, conforme apropriado"
+  } ]
+}, {
+
+  "nome" : "Integridade da Membrana Mucosa Oral Prejudicada",
+  "descricao" : "Lesão em lábio, tecidos moles, cavidade oral e/ou orofaringe",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Tamanho da ferida diminuído",
+    "possiveisIndicadores" : [ "Extenso", "Limitado", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Lesões na mucosa oral",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Sangramento",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Determinar a condição da mucosa oral"
+  }, {
+
+    "descricao" : "Aplicar medicamentos seguindo os cinco certos"
+  }, {
+
+    "descricao" : "Documentar localização, tamanho e aspecto da lesão"
+  } ]
+}, {
+
+  "nome" : "Risco de Integridade da membrana oral Prejudicada",
+  "descricao" : "Suscetibilidade à lesão em lábios, tecidos moles, cavidade oral e/ou orofaringe que pode comprometer a saúde",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Lesões na mucosa oral",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Determinar a condição da mucosa oral"
+  }, {
+
+    "descricao" : "Promover atividades para modificar os fatores de risco identificado"
+  }, {
+
+    "descricao" : "Iniciar atividades de saúde bucal"
+  } ]
+}, {
+
+  "nome" : "Integridade da Pele Prejudicada",
+  "descricao" : "Epiderme e/ou derme alterada",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Temperatura da pele",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Hidratação",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Integridade tecidual",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Perfusão tecidual",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Lesões na pele",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Tecidos Cicatriciais",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Úlcera por pressão",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Remover curativo e fita adesiva"
+  }, {
+
+    "descricao" : "Monitorar as características da lesão, incluindo drenagem, cor, tamanho e odor"
+  }, {
+
+    "descricao" : "Medir o leito da lesão"
+  }, {
+
+    "descricao" : "Aplicar curativo adequado ao tipo de lesão"
+  }, {
+
+    "descricao" : "Monitorar quanto a sinais de infecção"
+  }, {
+
+    "descricao" : "Encorajar a ingestão de líquidos"
+  }, {
+
+    "descricao" : "Proporcionar controle adequado da dor"
+  } ]
+}, {
+
+  "nome" : "Risco de Integridade da Pele Prejudicada",
+  "descricao" : "Suscetibilidade à alteração na epiderme e/ou derme que pode comprometer a saúde",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Estado nutricional",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Força muscular",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Movimento articular",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Lesões na pele",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Estase venosa",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Tumores",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Perda de peso",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar a ingestão dietética de calorias"
+  }, {
+
+    "descricao" : "Monitorar quanto a alterações na integridade da pele e tratá-las apropriadamente"
+  }, {
+
+    "descricao" : "Providenciar cuidados especiais à pele em dobras propensas à infecção (nádegas, períneo, virilha etc.)"
+  }, {
+
+    "descricao" : "Monitorar as tendências de perda e ganho de peso"
+  }, {
+
+    "descricao" : "Monitorar a mobilidade e estabilidade do paciente"
+  }, {
+
+    "descricao" : "Utilizar a escala de Braden como ferramenta para avaliação do risco de lesão da pele"
+  }, {
+
+    "descricao" : "Monitorar para fontes de pressão e atrito"
+  } ]
+}, {
+
+  "nome" : "Integridade Tissular Prejudicada",
+  "descricao" : "Dano em membrana mucosa, córnea, sistema tegumentar, fáscia muscular, músculo, tendão, osso, cartilagem, cápsula articular e/ou ligamento",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Lesão nas mucosas",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Abrasão da camada da córnea",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Vermelhidão da conjuntiva",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Secreção mucosa excessiva",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Dor no olho",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Sangramento ",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Gengivite",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Lesão da mucosa oral",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Documentar localização, tamanho e aspecto da lesão"
+  }, {
+
+    "descricao" : "Aplicar lubrificante para umedecer os lábios e mucosa oral, conforme necessário"
+  }, {
+
+    "descricao" : "Monitorar as características da lesão, incluindo drenagem, cor, tamanho e odor"
+  }, {
+
+    "descricao" : "Aplicar curativo adequado ao tipo de lesão"
+  }, {
+
+    "descricao" : "Examinar a lesão a cada troca de curativo"
+  }, {
+
+    "descricao" : "Posicionar a criança/adolescente de modo a evitar a tensão sobre a lesão"
+  }, {
+
+    "descricao" : "Administrar medicamentos conforme prescrito"
+  } ]
+}, {
+
+  "nome" : "Risco de Integridade Tissular Prejudicada",
+  "descricao" : "Suscetibilidade a dano em membrana mucosa, córnea, sistema tegumentar, fáscia muscular, músculo, tendão, osso, cartilagem, cápsula articular e/ou ligamento que pode comprometer a saúde.",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Estado nutricional",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Força muscular",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Movimento articular ",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Hidratação",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Perfusão tecidual",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Estase venosa",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Tumores",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Perda de peso",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Realizar uma avaliação abrangente da circulação periférica"
+  }, {
+
+    "descricao" : "Manter hidratação adequada"
+  }, {
+
+    "descricao" : "Monitorar as extremidades para detecção de áreas de calor, vermelhidão, dor ou inchaço"
+  }, {
+
+    "descricao" : "Monitorar a ingestão dietética de calorias"
+  }, {
+
+    "descricao" : "Monitorar a mobilidade e estabilidade do paciente"
+  }, {
+
+    "descricao" : "Monitorar mucosas quanto ao risco de aparecimento de lesões"
+  } ]
+}, {
+
+  "nome" : "Risco de Lesão",
+  "descricao" : "Suscetibilidade à lesão física por condições ambientais que interagem com os recursos adaptativos e defensivos do indivíduo que pode comprometer a saúde",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Mobilidade prejudicada",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Cognição prejudicada",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Nível de consciência diminuída",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Propiciar um ambiente livre de ameaças"
+  }, {
+
+    "descricao" : "Obter prescrição médica para utilizar restrição física, conforme necessário"
+  }, {
+
+    "descricao" : "Identificar as necessidades de segurança da criança/adolescente, com base no nível de funcionamento físico e cognitivo, além do histórico de comportamento"
+  }, {
+
+    "descricao" : "Identificar os riscos de segurança no ambiente"
+  }, {
+
+    "descricao" : "Remover os riscos do ambiente quando possível "
+  }, {
+
+    "descricao" : "Utilizar a escala de Braden como ferramenta para avaliação do risco de lesão da pele"
+  } ]
+}, {
+
+  "nome" : "Risco de Lesão por Pressão",
+  "descricao" : "Suscetibilidade à lesão localizada da pele e/ou tecido subjacente, normalmente sobre saliência óssea, em consequência de pressão, ou pressão combinada com forças de cisalhamento",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Segue as estratégias selecionadas de controle de riscos",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Propiciar um ambiente livre de ameaças"
+  }, {
+
+    "descricao" : "Obter prescrição médica para utilizar restrição física, conforme necessário"
+  }, {
+
+    "descricao" : "Identificar as necessidades de segurança da criança/adolescente, com base no nível de funcionamento físico e cognitivo, além do histórico de comportamento"
+  }, {
+
+    "descricao" : "Identificar os riscos de segurança no ambiente"
+  }, {
+
+    "descricao" : "Remover os riscos do ambiente quando possível"
+  }, {
+
+    "descricao" : "Utilizar a escala de Braden como ferramenta para avaliação do risco de lesão da pele"
+  } ]
+}, {
+
+  "nome" : "Risco de Lesão do Trato Urinário",
+  "descricao" : "Suscetibilidade a dano às estruturas do trato urinário em decorrência de uso de cateteres que pode comprometer a saúde",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Cognição prejudicada",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Nível de consciência diminuída",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Usar dispositivo de fixação nas sondas urinárias"
+  }, {
+
+    "descricao" : "Monitorar quanto ao risco de tração da sonda urinária"
+  } ]
+}, {
+
+  "nome" : "Risco de lesão na Córnea",
+  "descricao" : "Suscetibilidade à infecção ou lesão inflamatória no tecido da córnea que pode afetar camadas superficiais ou profundas e que pode comprometer a saúde",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Abrasão na camada da córnea",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Instilar medicação no saco conjuntival, conforme prescrição"
+  }, {
+
+    "descricao" : "Monitorar quanto à lubrificação do olho"
+  } ]
+}, {
+
+  "nome" : "Risco de Quedas",
+  "descricao" : "Suscetibilidade aumentada a quedas que pode causar dano físico e comprometer a saúde",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Cai quando sentado",
+    "possiveisIndicadores" : [ "10 ou mais", "(1-3)", "(4-6)", "(7-9)", "Nenhuma" ]
+  }, {
+
+    "nome" : "Cai durante transferência",
+    "possiveisIndicadores" : [ "10 ou mais", "(1-3)", "(4-6)", "(7-9)", "Nenhuma" ]
+  }, {
+
+    "nome" : "Cai da cama",
+    "possiveisIndicadores" : [ "10 ou mais", "(1-3)", "(4-6)", "(7-9)", "Nenhuma" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Identificar deficits cognitivos ou físicos da criança/adolescente que podem aumentar o potencial de quedas em um ambiente específico"
+  }, {
+
+    "descricao" : "Identificar os comportamentos e fatores que afetam o risco de quedas"
+  }, {
+
+    "descricao" : "Rever o histórico de quedas com a criança/adolescente e familiares"
+  }, {
+
+    "descricao" : "Travar as rodas da cadeira de rodas, cama ou maca durante as transferências"
+  }, {
+
+    "descricao" : "Colocar os acessórios facilmente ao alcance da criança/adolescente"
+  }, {
+
+    "descricao" : "Manter as grades da cama e maca elevadas"
+  } ]
+}, {
+
+  "nome" : "Recuperação Cirúrgica Retardada",
+  "descricao" : "Extensão do número de dias de pós-operatório necessários para iniciar e desempenhar atividade que mantém a vida, a saúde e o bem-estar",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Febre",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Infecção",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Confusão",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Aproximação das bordas da ferida",
+    "possiveisIndicadores" : [ "Extenso", "Limitado", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Formação de cicatriz",
+    "possiveisIndicadores" : [ "Extenso", "Limitado", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Granulação",
+    "possiveisIndicadores" : [ "Extenso", "Limitado", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Tamanho da ferida diminuído",
+    "possiveisIndicadores" : [ "Extenso", "Limitado", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Drenagem purulenta",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Drenagem serosa",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Drenagem sanguinolenta",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Edema perilesão ",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Odor desagradável na ferida",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar sinais vitais"
+  }, {
+
+    "descricao" : "Monitorar exames laboratoriais"
+  }, {
+
+    "descricao" : "Fornecer medicamentos usando a técnica e a via adequada "
+  }, {
+
+    "descricao" : "Inspecionar o local da incisão para detecção de vermelhidão, edema ou sinais de deiscência ou evisceração "
+  }, {
+
+    "descricao" : "Observar as características de qualquer secreção"
+  }, {
+
+    "descricao" : "Monitorar o processo de cicatrização no local da incisão "
+  }, {
+
+    "descricao" : "Trocar o curativo em intervalos apropriados"
+  }, {
+
+    "descricao" : "Assegurar cuidados analgésicos para a criança/adolescente "
+  } ]
+}, {
+
+  "nome" : "Risco de Ressecamento Ocular",
+  "descricao" : "Suscetibilidade a desconforto ocular ou dano à córnea e à conjuntiva devido à quantidade reduzida ou à qualidade das lágrimas para hidratar o olho que pode comprometer a saúde",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Diminuição de produção de lágrimas",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Fechamento incompleto das pálpebras",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Vermelhidão da conjuntiva",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar sinais e sintomas de ressecamento ocular"
+  }, {
+
+    "descricao" : "Identificar fatores ambientais (ar seco, ar condicionado, macronebulização) que possam aumentar o potencial de ressecamento ocular"
+  }, {
+
+    "descricao" : "Monitorar o reflexo do ato de piscar"
+  }, {
+
+    "descricao" : "Aplicar lubrificante ao menos duas vezes ao dia ou conforme apropriado"
+  } ]
+}, {
+
+  "nome" : "Risco de Sangramento",
+  "descricao" : "Suscetibilidade à redução no volume de sangue que pode comprometer a saúde",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Tempo de protrombina",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio leve da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Contagem de plaquetas",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio leve da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Fibrinogênio plasmático",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio leve da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Tempo de coagulação ativado",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio leve da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Sem desvio da variação normal" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar atentamente a criança/adolescente quanto à hemorragia"
+  }, {
+
+    "descricao" : "Monitorar os testes de coagulação, incluindo tempo de protrombina, tempo de tromboplastina parcial, fibrinogênio e contagem de plaquetas"
+  }, {
+
+    "descricao" : "Evitar injeções, caso risco alto de hemorragia"
+  }, {
+
+    "descricao" : "Administrar medicamentos conforme prescrição"
+  } ]
+}, {
+
+  "nome" : "Risco de Tromboembolismo Venoso",
+  "descricao" : "Suscetibilidade ao desenvolvimento de coágulos sanguíneos em veia profunda, geralmente na coxa, panturrilha ou extremidade superior, que pode se romper e alojar-se em outro vaso, o que pode comprometer a saúde",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Formação de coágulos",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio leva da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Hematócrito",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio leva da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Trombose venosa",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Estase venosa",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Edema com cacifo",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Dormência",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar os testes de coagulação, incluindo tempo de protrombina,  tempo de tromboplastina parcial, fibrinogênio e contagem de plaquetas"
+  }, {
+
+    "descricao" : "Administrar medicamentos conforme prescrição"
+  }, {
+
+    "descricao" : "Obter um histórico detalhado da saúde da criança/adolescente a fim de determinar os fatores de risco para embolia"
+  }, {
+
+    "descricao" : "Avaliar a presença da tríade de Virchow: estase venosa, hipercoagulabilidade e traumatismo resultante de dano intimal"
+  }, {
+
+    "descricao" : "Elevar membros afetados"
+  } ]
+}, {
+
+  "nome" : "Hipertermia",
+  "descricao" : "Temperatura corporal central acima dos parâmetros diurnos normais devido à falha na termorregulação",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Febre",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Hipertermia",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Desidratação",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar sinais vitais, incluindo temperatura corporal central"
+  }, {
+
+    "descricao" : "Obter amostras de sangue e urina para cultura"
+  }, {
+
+    "descricao" : "Administrar medicamentos antipiréticos, conforme apropriado"
+  }, {
+
+    "descricao" : "Promover a ingestão adequada de nutrientes e líquidos"
+  }, {
+
+    "descricao" : "Monitorar complicações relativas a febre (convulsões etc.)"
+  } ]
+}, {
+
+  "nome" : "Hipotermia",
+  "descricao" : "Temperatura corporal central abaixo dos parâmetros diurnos normais devido à falha na termorregulação",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Hipotermia",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Sonolência",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar sinais vitais, incluindo temperatura corporal central"
+  }, {
+
+    "descricao" : "Minimizar a estimulação da criança/adolescente para evita fibrilação cardíaca"
+  }, {
+
+    "descricao" : "Aplicar o reaquecimento passivo (Cobertor, touca, manta térmica)"
+  }, {
+
+    "descricao" : "Aplicar reaquecimento interno ativo (fluidos EV aquecidos, oxigênio terapia aquecido etc.)"
+  } ]
+}, {
+
+  "nome" : "Risco de Hipotermia",
+  "descricao" : "Suscetibilidade a uma queda inadvertida na temperatura corporal central abaixo de 36ºC, que ocorre no período entre 1 hora antes até 24 horas após cirurgia, que pode comprometer a saúde",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Hipotermia",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar a temperatura da criança/adolescente usando dispositivos e locais de aferência apropriados"
+  } ]
+}, {
+
+  "nome" : "Termorregulação Ineficaz",
+  "descricao" : "Oscilação da temperatura entre hipotermia e hipertermia",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Hipotermia",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Hipertermia",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Função sensorial e motora craniana",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Frequência cardíaca",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Termorregulação",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar sinais vitais, incluindo temperatura corporal central"
+  }, {
+
+    "descricao" : "Monitorar a temperatura pelo menos a cada 2 horas"
+  }, {
+
+    "descricao" : "Instituir um dispositivo de monitoramento contínuo da temperatura central"
+  }, {
+
+    "descricao" : "Promover a ingestão adequada de nutrientes e líquidos"
+  }, {
+
+    "descricao" : "Monitorar e relatar sinais e sintomas de hipotermia ou hipotermia"
+  }, {
+
+    "descricao" : "Ajustar a temperatura do ambiente às necessidades da criança/adolescente"
+  }, {
+
+    "descricao" : "Monitorar alterações sensoriais e motoras"
+  } ]
+}, {
+
+  "nome" : "Risco de Termorregulação Ineficaz",
+  "descricao" : "Suscetibilidade à oscilação da temperatura entre hipotermia e hipertermia que pode comprometer a saúde",
+  "dominio" : "SEGURANÇA/PROTEÇÃO",
+  "nocs" : [ {
+
+    "nome" : "Hipotermia",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Hipertermia",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar a temperatura da criança/adolescente usando dispositivos e locais de aferência apropriados "
+  }, {
+
+    "descricao" : "Monitorar sinais vitais, incluindo temperatura corporal central"
+  } ]
+}, {
+
+  "nome" : "Conforto Prejudicado",
+  "descricao" : "Percepção de falta de conforto, de alívio e de transcendência nas dimensões física, psicoespiritual, ambiental, cultural e/ou social.",
+  "dominio" : "CONFORTO",
+  "nocs" : [ {
+
+    "nome" : "Bem-estar físico",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Controle de sintomas",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Bem-estar psicológico",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Apoio social da família",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Relações sociais",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Vida espiritual",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  }, {
+
+    "nome" : "Ambiente físico",
+    "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Criar um ambiente calmo e acolhedor"
+  }, {
+
+    "descricao" : "Determinar e resolver a causa do desconforto, como curativos molhados, posicionamento dos tubos e irritantes ambientai"
+  }, {
+
+    "descricao" : "Posicionar a criança/adolescente para facilitar o conforto"
+  }, {
+
+    "descricao" : "Discutir experiências emocionais com a criança/adolescente e seus familiares"
+  }, {
+
+    "descricao" : "Usar a comunicação terapêutica para estabelecer confiança e cuidado empático"
+  }, {
+
+    "descricao" : "Favorecer o uso de meditação, oração e outros rituais e tradições religiosas pela criança/adolescente e familiares"
+  }, {
+
+    "descricao" : "Usar o relaxamento como uma estratégia adjuvante com medicamentos para dor ou em conjunto com outras medidas"
+  } ]
+}, {
+
+  "nome" : "Dor Aguda",
+  "descricao" : "Experiência sensorial e emocional desagradável associada à lesão tissular real ou potencial, ou descrita em termos de tal lesão (International Association for the Study of Pain); ínicio súbito ou lento, de intensidade leve a intensa, com término antecipado ou previsível e com duração menor que 3 meses",
+  "dominio" : "CONFORTO",
+  "nocs" : [ {
+
+    "nome" : "Dor relatada",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Duração dos episódios de dor",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Expressões faciais de dor",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Frequência respiratória",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio leva da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Frequência cardíaca apical",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio leva da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Pressão arterial",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio leva da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Sem desvio da variação normal" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Verificar local, características, qualidade e gravidade da dor antes de medicar a criança/adolescente"
+  }, {
+
+    "descricao" : "Escolher o analgésico ou a combinação de analgésicos apropriados segundo prescrição"
+  }, {
+
+    "descricao" : "Atender às necessidades de conforto e realizar outras atividades que ajudem a relaxar a fim de facilitar a resposta analgésica"
+  }, {
+
+    "descricao" : "Monitorar sinais vitais"
+  }, {
+
+    "descricao" : "Utilizar uma abordagem multiprofissional para controle da dor quando apropriado"
+  }, {
+
+    "descricao" : "Utilizar atividades lúdicas como distração no auxílio ao controle da dor"
+  }, {
+
+    "descricao" : "Usar massagem isoladamente ou em conjunto com outras medidas no controle da dor"
+  }, {
+
+    "descricao" : "Musicoterapia quando indicado"
+  }, {
+
+    "descricao" : "Usar o relaxamento como uma estratégia adjuvante com medicamentos para dor ou em conjunto com outras medidas"
+  }, {
+
+    "descricao" : "Promoção do exercício"
+  }, {
+
+    "descricao" : "Terapia com animais"
+  }, {
+
+    "descricao" : "Toque terapêutico"
+  } ]
+}, {
+
+  "nome" : "Dor Crônica",
+  "descricao" : "Experiência sensorial e emocional desagradável associada à lesão tissular real ou potencial, ou descrita em termos de tal lesão (International Association for the Study of Pain); início súbito ou lento, de intensidade leve a intensa, constante ou recorrente, sem término antecipado ou previsível e com duração maior que 3 meses.",
+  "dominio" : "CONFORTO",
+  "nocs" : [ {
+
+    "nome" : "Dor relatada",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Duração dos episódios de dor",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Expressões faciais de dor",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Humor prejudicado ",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Comprometimento das relações interpessoais ",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Perturbação da rotina ",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Sofrimento decorrente da dor",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Depressão",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Reconhece o início da dor",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Descreve fatores causadores",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Usa medidas preventivas",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Usa recursos disponíveis",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Verificar local, características, qualidade e gravidade da dor antes de medicar a criança/adolescente"
+  }, {
+
+    "descricao" : "Reduzir ou eliminar fatores que precipitem ou aumentem a experiência da dor"
+  }, {
+
+    "descricao" : "Selecionar e implementar uma variedade de medidas, farmacológicas, não farmacológicas e interpessoais, para facilitar o alívio da dor"
+  }, {
+
+    "descricao" : "Atender às necessidades de conforto e realizar outras atividades que ajudem a relaxar a fim de facilitar a resposta analgésica"
+  }, {
+
+    "descricao" : "Utilizar uma abordagem multiprofissional para controle da dor quando apropriado"
+  }, {
+
+    "descricao" : "Utilizar atividades lúdicas como distração no auxílio ao controle da dor"
+  }, {
+
+    "descricao" : "Usar massagem isoladamente ou em conjunto com outras medidas no controle da dor"
+  }, {
+
+    "descricao" : "Musicoterapia, quando indicada"
+  }, {
+
+    "descricao" : "Usar o relaxamento como uma estratégia adjuvante com medicamentos para dor ou em conjunto com outras medidas"
+  }, {
+
+    "descricao" : "Promoção do exercício"
+  }, {
+
+    "descricao" : "Terapia com animais"
+  }, {
+
+    "descricao" : "Toque terapêutico"
+  } ]
+}, {
+
+  "nome" : "Náusea",
+  "descricao" : "Fenômeno subjetivo de uma sensação desagradável na parte de trás da garganta e do estômago que pode ou não resultar em vômito",
+  "dominio" : "CONFORTO",
+  "nocs" : [ {
+
+    "nome" : "Descreve fatores causadores",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Usa medidas preventivas",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Usa medicação antiemética, conforme recomendado",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Relata sintomas não controlados",
+    "possiveisIndicadores" : [ "Algumas vezes demonstrado", "Consistentemente demonstrado", "Frequentemente demonstrado", "Nunca demonstrado", "Raramente demonstrado" ]
+  }, {
+
+    "nome" : "Frequência da náusea",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Intensidade da náusea",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Frequência do vômito",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Intensidade do vômito",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Sofrimento causado pelo vômito",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Incentivar a criança/adolescente a monitorar a própria experiência de náusea"
+  }, {
+
+    "descricao" : "Incentivar a criança/adolescente a aprender estratégias para o controle da própria náusea"
+  }, {
+
+    "descricao" : "Realizar avaliação completa das náuseas, incluindo a frequência, duração, intensidade e fatores precipitantes"
+  }, {
+
+    "descricao" : "Observar sinais não verbais de desconforto"
+  }, {
+
+    "descricao" : "Controlar os fatores ambientais que podem provocar náuseas"
+  }, {
+
+    "descricao" : "Auxiliar na busca e oferecer apoio emocional"
+  }, {
+
+    "descricao" : "Realizar frequentemente higiene oral para aliviar a náusea"
+  }, {
+
+    "descricao" : "Monitorar os efeitos do controle das náuseas"
+  } ]
+}, {
+
+  "nome" : "Risco de Desenvolvimento Atrasado",
+  "descricao" : "Suscetibilidade a atraso de 25% ou mais em uma ou mais áreas do comportamento social ou autorregulador, ou em habilidades cognitivas, de linguagem e motoras grossas ou finas, que pode comprometer a saúde",
+  "dominio" : "CRESCIMENTO/DESENVOLVIMENTO",
+  "nocs" : [ {
+
+    "nome" : "Ingestão de nutrientes",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio leva da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Ingestão de alimentos",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio leva da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Proporção peso/altura",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio leva da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Função sensorial e motora craniana",
+    "possiveisIndicadores" : [ "Desvio grave da variação normal", "Desvio leva da variação normal", "Desvio moderado da variação normal", "Desvio substancial da variação normal", "Sem desvio da variação normal" ]
+  }, {
+
+    "nome" : "Depressão",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Tristeza",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  }, {
+
+    "nome" : "Vulnerabilidade",
+    "possiveisIndicadores" : [ "Grave", "Leve", "Moderado", "Nenhum", "Substancial" ]
+  } ],
+  "intervencoes" : [ {
+
+    "descricao" : "Monitorar o crescimento e o desenvolvimento"
+  }, {
+
+    "descricao" : "Obter medidas antropométricas da composição corporal"
+  }, {
+
+    "descricao" : "Monitorar as tendências de perda e ganho de peso"
+  }, {
+
+    "descricao" : "Identificar as recentes mudanças no peso corporal"
+  }, {
+
+    "descricao" : "Determinar padrões alimentares"
+  }, {
+
+    "descricao" : "Monitorar o estado mental"
+  }, {
+
+    "descricao" : "Monitorar o tônus muscular e o movimento motor"
+  }, {
+
+    "descricao" : "Incentivar a criança/adolescente e familiares a participar de interações sociais e atividades conjuntas"
+  }, {
+
+    "descricao" : "Monitorar os aspectos psicológicos"
+  } ]
+} ]
