@@ -113,6 +113,7 @@ public class DiagnosticoSelecaoActivity extends AppCompatActivity {
 
                 if (diagnostico.getNome().toLowerCase().equals(diagnosticoString.split("\n")[0].toLowerCase())) {
                     diagnosticoCriado.setNocs(diagnostico.getNocs());
+                    diagnosticoCriado.setIntervencoes(diagnostico.getIntervencoes());
                     break;
                 }
 

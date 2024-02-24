@@ -2,12 +2,14 @@ package benicio.solucoes.palienf.adapter;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -22,11 +24,13 @@ import benicio.solucoes.palienf.R;
 import benicio.solucoes.palienf.databinding.LayoutDiagnosticoBinding;
 import benicio.solucoes.palienf.databinding.LayoutNocBinding;
 import benicio.solucoes.palienf.model.DiagnosticoModel;
+import benicio.solucoes.palienf.model.IntervencaoModel;
 import benicio.solucoes.palienf.model.NocModel;
 
 public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.MyViewHolder> {
     List<DiagnosticoModel> diagnosticos;
     Activity c;
+    Dialog dialogNoc;
 
     public AdapterDiagnostico(List<DiagnosticoModel> diagnosticos, Activity c) {
         this.diagnosticos = diagnosticos;
@@ -48,6 +52,7 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
         holder.descricao_diagnostico_text.setText(d.getDescricao());
 
         holder.botao_noc.setOnClickListener(view -> {
+
             AlertDialog.Builder b = new AlertDialog.Builder(c);
             LayoutNocBinding diagnosticoBinding = LayoutNocBinding.inflate(c.getLayoutInflater());
 
@@ -82,17 +87,48 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT));
             button.setBackgroundResource(R.color.azul);
-            button.setText("Concluir");
+            button.setText("Próximo");
             button.setAllCaps(true);
             button.setTextColor(Color.WHITE);
             button.setTypeface(null, Typeface.BOLD);
 
             diagnosticoBinding.layoutNocs.addView(button);
 
+            button.setOnClickListener(itenversoesView -> {
+                AlertDialog.Builder b2 = new AlertDialog.Builder(c);
+                LayoutNocBinding diagnosticoBinding2 = LayoutNocBinding.inflate(c.getLayoutInflater());
+
+                diagnosticoBinding2.textView10.setText("Intervenções");
+                for (IntervencaoModel intervencao : d.getIntervencoes()) {
+                    CheckBox checkBox = new CheckBox(c);
+                    checkBox.setLayoutParams(new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT));
+                    checkBox.setText(intervencao.getDescricao());
+                    diagnosticoBinding2.layoutNocs.addView(checkBox);
+                }
+
+                Button buttonConcluir = new Button(c);
+                buttonConcluir.setLayoutParams(new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT));
+                buttonConcluir.setBackgroundResource(R.color.azul);
+                buttonConcluir.setText("Concluir");
+                buttonConcluir.setAllCaps(true);
+                buttonConcluir.setTextColor(Color.WHITE);
+                buttonConcluir.setTypeface(null, Typeface.BOLD);
+                diagnosticoBinding2.layoutNocs.addView(buttonConcluir);
+
+
+                b2.setView(diagnosticoBinding2.getRoot());
+                dialogNoc.dismiss();
+                b2.create().show();
+            });
 
             // TODO
             b.setView(diagnosticoBinding.getRoot());
-            b.create().show();
+            dialogNoc = b.create();
+            dialogNoc.show();
         });
     }
 
