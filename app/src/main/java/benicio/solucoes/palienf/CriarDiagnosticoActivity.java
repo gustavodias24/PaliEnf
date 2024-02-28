@@ -28,7 +28,13 @@ public class CriarDiagnosticoActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        Bundle b = getIntent().getExtras();
         Intent i = new Intent(this, DiagnosticoSelecaoActivity.class);
+
+        if ( b != null){
+            String idPaciente = b.getString("id", "");
+            i.putExtra("id", idPaciente);
+        }
 
         mainBinding.d1.setOnClickListener(view -> {
             i.putExtra("d", 1);

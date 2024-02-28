@@ -1,10 +1,12 @@
 package benicio.solucoes.palienf.adapter;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,28 +16,41 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 import benicio.solucoes.palienf.R;
 import benicio.solucoes.palienf.databinding.LayoutDiagnosticoBinding;
 import benicio.solucoes.palienf.databinding.LayoutNocBinding;
 import benicio.solucoes.palienf.model.DiagnosticoModel;
+import benicio.solucoes.palienf.model.DiagnosticoPacienteModel;
 import benicio.solucoes.palienf.model.IntervencaoModel;
 import benicio.solucoes.palienf.model.NocModel;
 
 public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.MyViewHolder> {
+    private DatabaseReference refDiagnosticos = FirebaseDatabase.getInstance().getReference().child("diagnostico");
     List<DiagnosticoModel> diagnosticos;
     Activity c;
     Dialog dialogNoc;
+    Dialog dialogIntervencao;
+    String idPaciente;
 
-    public AdapterDiagnostico(List<DiagnosticoModel> diagnosticos, Activity c) {
+    public AdapterDiagnostico(List<DiagnosticoModel> diagnosticos, Activity c, String idPaciente) {
         this.diagnosticos = diagnosticos;
         this.c = c;
+        this.idPaciente = idPaciente;
     }
+
 
     @NonNull
     @Override
@@ -95,6 +110,43 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
             diagnosticoBinding.layoutNocs.addView(button);
 
             button.setOnClickListener(itenversoesView -> {
+                DiagnosticoPacienteModel diagnosticoPaciente = new DiagnosticoPacienteModel();
+                diagnosticoPaciente.setNocs(d.getNocs());
+                diagnosticoPaciente.setIntervencoes(d.getIntervencoes());
+
+                for (int i = 0; i < diagnosticoBinding.layoutNocs.getChildCount(); i++) {
+                    View child = diagnosticoBinding.layoutNocs.getChildAt(i);
+                    // Verificar se é um CheckBox e se está marcado
+                    if (child instanceof RadioGroup) {
+                        RadioGroup radioGroup = (RadioGroup) child;
+                        boolean marcado = false;
+                        StringBuilder nocPaciente = new StringBuilder();
+                        for (int i2 = 0; i2 < radioGroup.getChildCount(); i2++) {
+                            View child2 = radioGroup.getChildAt(i2);
+                            if (child2 instanceof RadioButton) {
+                                RadioButton radioButton = (RadioButton) child2;
+                                if (radioButton.isChecked()) {
+                                    marcado = true;
+//                                    nocPaciente.append("R- ").append(radioButton.getText().toString()).append("\n");
+                                    nocPaciente.append(radioButton.getText().toString());
+                                    diagnosticoPaciente.getNocSelecionadas().add(nocPaciente.toString());
+                                    nocPaciente = new StringBuilder();
+                                    break;
+                                }
+                            } else if (child2 instanceof TextView) {
+                                TextView textView = (TextView) child2;
+                                    nocPaciente.append(textView.getText().toString()).append("\n");
+                            }
+                        }
+
+                        if (!marcado) {
+//                            nocPaciente.append("R- ").append("Não Marcado\n");
+                            diagnosticoPaciente.getNocSelecionadas().add(nocPaciente.toString());
+                            nocPaciente = new StringBuilder();
+                        }
+                    }
+                }
+
                 AlertDialog.Builder b2 = new AlertDialog.Builder(c);
                 LayoutNocBinding diagnosticoBinding2 = LayoutNocBinding.inflate(c.getLayoutInflater());
 
@@ -119,13 +171,47 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
                 buttonConcluir.setTypeface(null, Typeface.BOLD);
                 diagnosticoBinding2.layoutNocs.addView(buttonConcluir);
 
+                buttonConcluir.setOnClickListener(view1 -> {
+//                    int count = 0;
+                    for (int i = 0; i < diagnosticoBinding2.layoutNocs.getChildCount(); i++) {
+                        View child = diagnosticoBinding2.layoutNocs.getChildAt(i);
+                        if (child instanceof CheckBox) {
+                            CheckBox checkBox = (CheckBox) child;
+                            if (checkBox.isChecked()) {
+//                                count++;
+//                                diagnosticoPaciente.getIntervensoeSelecionadas().add(count+ "- "+ checkBox.getText().toString());
+                                diagnosticoPaciente.getIntervensoeSelecionadas().add(checkBox.getText().toString());
+                            }
+                        }
+                    }
+
+                    @SuppressLint("SimpleDateFormat") SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                    String dataAtual = dateFormat.format(new Date());
+
+                    diagnosticoPaciente.setDataCriacao(dataAtual);
+                    diagnosticoPaciente.setId(UUID.randomUUID().toString());
+                    diagnosticoPaciente.setIdPaciente(idPaciente);
+
+                    diagnosticoPaciente.setTitulo(d.getNome());
+                    diagnosticoPaciente.setSubTitulo(d.getDescricao());
+
+                    refDiagnosticos.child(diagnosticoPaciente.getId()).setValue(diagnosticoPaciente).addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(c, "Diagnóstico Criado!", Toast.LENGTH_SHORT).show();
+                            dialogIntervencao.dismiss();
+                        }
+                    });
+
+
+                });
+
 
                 b2.setView(diagnosticoBinding2.getRoot());
                 dialogNoc.dismiss();
-                b2.create().show();
+                dialogIntervencao = b2.create();
+                dialogIntervencao.show();
             });
 
-            // TODO
             b.setView(diagnosticoBinding.getRoot());
             dialogNoc = b.create();
             dialogNoc.show();

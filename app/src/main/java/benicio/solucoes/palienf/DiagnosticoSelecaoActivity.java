@@ -47,6 +47,7 @@ public class DiagnosticoSelecaoActivity extends AppCompatActivity {
     List<String> lista10 = new ArrayList<>();
     List<String> lista11 = new ArrayList<>();
     List<String> lista12 = new ArrayList<>();
+    String idPaciente = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,8 @@ public class DiagnosticoSelecaoActivity extends AppCompatActivity {
         preencherListas();
 
         Bundle b = getIntent().getExtras();
+        assert b != null;
+        idPaciente = b.getString("id", "");
 
         listaSelecionadaString = new ArrayList<>();
 
@@ -108,6 +111,8 @@ public class DiagnosticoSelecaoActivity extends AppCompatActivity {
         for (String diagnosticoString : listaSelecionadaString) {
             DiagnosticoModel diagnosticoCriado = new DiagnosticoModel();
             diagnosticoCriado.setNome(diagnosticoString.split("\n")[0]);
+//            int segundoItem = diagnosticoString.indexOf("\n");
+//            diagnosticoCriado.setDescricao(diagnosticoString.substring(segundoItem));
             diagnosticoCriado.setDescricao(diagnosticoString.split("\n")[1]);
             for (DiagnosticoModel diagnostico : DiagnosticosUtils.returnListaDiagnostico(this)) {
 
@@ -129,7 +134,7 @@ public class DiagnosticoSelecaoActivity extends AppCompatActivity {
         recyclerDiagnosticos.setLayoutManager(new LinearLayoutManager(this));
         recyclerDiagnosticos.setHasFixedSize(true);
         recyclerDiagnosticos.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-        adapterDiagnostico = new AdapterDiagnostico(listaSelecionadaStringDiagnosticos, this);
+        adapterDiagnostico = new AdapterDiagnostico(listaSelecionadaStringDiagnosticos, this, idPaciente);
         recyclerDiagnosticos.setAdapter(adapterDiagnostico);
     }
 
@@ -144,14 +149,105 @@ public class DiagnosticoSelecaoActivity extends AppCompatActivity {
     private void preencherListas() {
 
         lista1.add("PROTEÇÃO INEFICAZ\n" +
-                "Diminuição na capacidade de se proteger de ameaças internas ou externas, como doenças ou lesões.");
+                "Diminuição na capacidade de se proteger de ameaças internas ou externas, como doenças ou lesões.\n" +
+                "\u200E \n" +
+                "\n" +
+                "Caracteríscia definidora\n" +
+                "Desorientação\n" +
+                "Dispneia\n" +
+                "Imobilidade\n" +
+                "Lesão por pressão\n" +
+                "\n" +
+                "Fatores Relacionados\n" +
+                "Nutrição inadequada\n" +
+                "\n" +
+                "Condição Associada\n" +
+                "Câncer");
 
-        lista2.add("NUTRIÇÃO DESIQUILIBRADA: MENOS DO QUE AS NECESSIDADES CORPORAIS\nIngestão de nutrientes insuficiente para satisfazer as necessidades metabólicas.");
-        lista2.add("RISCO DE FUNÇÃO HEPÁTICA PREJUDICADA\nSuscetibilidade à diminuição na função hepática que pode comprometer a saúde.");
-        lista2.add("RISCO DE GLICEMIA INSTÁVEL\nSuscetibilidade à variação dos níveis séricos de glicose em relação à faixa normal que pode comprometer a saúde.");
-        lista2.add("RISCO DE DESEQUILÍBRIO ELETROLÍTICO\nSuscetibilidade a mudanças nos níveis de eletrólitos séricos que pode comprometer a saúde.");
-        lista2.add("VOLUME DE LÍQUIDO DEFICIENTE\nDiminuição do líquido intravascular, intersticial e/ou intracelular. Refere-se à desidratação, perda de água apenas, sem mudança no sódio.");
-        lista2.add("VOLUME DE LÍQUIDO EXCESSIVO\nEntrada excessiva e/ou retenção de líquidos.");
+        lista2.add("NUTRIÇÃO DESIQUILIBRADA: MENOS DO QUE AS NECESSIDADES CORPORAIS\nIngestão de nutrientes insuficiente para satisfazer as necessidades metabólicas.\u200E \n" +
+                "\n" +
+                "Caracteríscia definidora\n" +
+                "Cavidade oral ferida\n" +
+                "Diarreia \n" +
+                "Dor abdominal\n" +
+                "Ingestão de alimentos menor do que a ingestão diária recomendada\n" +
+                "Peso corporal 20% ou mais abaixo do ideal \n" +
+                "Ruídos intestinais hiperativos\n" +
+                "\n" +
+                "Fatores Relacionados\n" +
+                "Ingesta alimentar insuficiente\n" +
+                "\n" +
+                "Condição Associada\n" +
+                "Incapacidade de ingerir alimentos\n"
+        );
+        lista2.add("RISCO DE FUNÇÃO HEPÁTICA PREJUDICADA\nSuscetibilidade à diminuição na função hepática que pode comprometer a saúde.\n\nCaracteríscia definidora\n" +
+                "(não se aplica)\n" +
+                "\n" +
+                "Fatores Relacionados\n" +
+                "Abuso de substâncias\n" +
+                "\n" +
+                "Condição Associada\n" +
+                "Agente farmacêutico");
+        lista2.add("RISCO DE GLICEMIA INSTÁVEL\nSuscetibilidade à variação dos níveis séricos de glicose em relação à faixa normal que pode comprometer a saúde.\n" +
+                "\u200E \n" +
+                "\n" +
+                "Caracteríscia definidora\n" +
+                "(não se aplica)\n" +
+                "\n" +
+                "Fatores Relacionados\n" +
+                "Ingestão alimentar insuficiente \n" +
+                "Perda excessiva de peso\n" +
+                "\n" +
+                "\n" +
+                "Condição Associada");
+        lista2.add("RISCO DE DESEQUILÍBRIO ELETROLÍTICO\nSuscetibilidade a mudanças nos níveis de eletrólitos séricos que pode comprometer a saúde.\n" +
+                "\n" +
+                "\u200E \n" +
+                "\n" +
+                "Caracteríscia definidora\n" +
+                "(não se aplica)\n" +
+                "\n" +
+                "Fatores Relacionados\n" +
+                "Diarreia \n" +
+                "Vômito\n" +
+                "\n" +
+                "Condição Associada");
+        lista2.add("VOLUME DE LÍQUIDO DEFICIENTE\nDiminuição do líquido intravascular, intersticial e/ou intracelular. Refere-se à desidratação, perda de água apenas, sem mudança no sódio.\n" +
+                "\u200E \n" +
+                "\n" +
+                "Caracteríscia definidora\n" +
+                "Alteração do estado mental\n" +
+                "Aumento da temperatura corporal\n" +
+                "Aumento da frequência cardíaca\n" +
+                "Diminuição da pressão de pulso\n" +
+                "Diminuição da pressão arterial \n" +
+                "Diminuição do débito urinário\n" +
+                "\n" +
+                "Fatores Relacionados\n" +
+                "Ingestão de líquidos insuficiente \n" +
+                "\n" +
+                "Condição Associada\n" +
+                "Perda ativa do volume de líquidos");
+        lista2.add("VOLUME DE LÍQUIDO EXCESSIVO\nEntrada excessiva e/ou retenção de líquidos.\n" +
+                "\n" +
+                "\u200E \n" +
+                "\n" +
+                "Caracteríscia definidora\n" +
+                "Alteração na pressão arterial\n" +
+                "Alteração no estado mental\n" +
+                "Alteração no padrão respiratório\n" +
+                "Anasarca \n" +
+                "Dispneia\n" +
+                "Edema\n" +
+                "Hematócrito diminuído\n" +
+                "Oligúria\n" +
+                "Presença de 3º bulha cardíaca\n" +
+                "Ruídos adventícios respiratórios\n" +
+                "\n" +
+                "Fatores Relacionados\n" +
+                "\n" +
+                "Condição Associada\n" +
+                "Mecanismo de regulação comprometido");
 
         lista3.add("RETENÇÃO URINÁRIA\nIncapacidade de esvaziar completamente a bexiga.\nAusência de eliminação urinária\nEliminação urinária em pequena quantidade\nBloqueio do trato urinário\nBexigoma (1)\nOligúrico (16)");
         lista3.add("CONSTIPAÇÃO\nDiminuição na frequência normal de evacuação, acompanhada por eliminação difícil ou incompleta de fezes e/ou eliminação de fezes excessivamente duras e secas.\nAbdome distendido\nDor abdominal\nFezes formadas endurecidas\nMassa abdominal palpável\nRuídos intestinais hipoativos\nVômito\nDesidratação\nAlteração nos hábitos alimentares\nPrejuízo neurológico\nAbdome distendido (40)\nAbdome globoso (58)\nAbdome doloroso (6)\nEvacuação com fecaloma (1)\nAbdome rígido com presença de massa à palpação (29)\nPeristalse reduzida (14)\nEpisódio emético (2)\nAceitando dieta oral de forma parcial (6)\nDesidratado (3)\nDesorientado (2)\nComatoso  (32)");

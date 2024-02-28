@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         mainBinding.verSenha.setOnClickListener(view -> mainBinding.edtSenha.setInputType(InputType.TYPE_CLASS_TEXT));
 
         mainBinding.btnEntrar.setOnClickListener(view -> {
-//            startActivity(new Intent(this, MenuActivity.class));
+            startActivity(new Intent(this, MenuActivity.class));
             String user, senha;
 
             user = mainBinding.edtUser.getText().toString().trim().toLowerCase();
