@@ -3,10 +3,13 @@ package benicio.solucoes.palienf.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import benicio.solucoes.palienf.R;
+
 public class DiagnosticoModel {
     String nome, descricao , dominio;
     List<NocModel> nocs = new ArrayList<>();
     List<IntervencaoModel> intervencoes = new ArrayList<>();
+    int tabelaNoc = R.drawable.noc_0;
 
     public DiagnosticoModel(String nome, String descricao, String dominio, List<NocModel> nocs, List<IntervencaoModel> intervencoes) {
         this.nome = nome;
@@ -17,6 +20,14 @@ public class DiagnosticoModel {
     }
 
     public DiagnosticoModel() {
+    }
+
+    public int getTabelaNoc() {
+        return tabelaNoc;
+    }
+
+    public void setTabelaNoc(int tabelaNoc) {
+        this.tabelaNoc = tabelaNoc;
     }
 
     public String getNome() {

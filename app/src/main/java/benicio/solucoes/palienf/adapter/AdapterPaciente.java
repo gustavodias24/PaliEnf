@@ -53,27 +53,28 @@ public class AdapterPaciente extends RecyclerView.Adapter<AdapterPaciente.MyView
             // Definir um listener de clique para tratar as seleções do menu
             popupMenu.setOnMenuItemClickListener(menuItem -> {
 
-                if ( menuItem.getItemId() == R.id.relatorio ){
+                if (menuItem.getItemId() == R.id.relatorio) {
                     Toast.makeText(c, "ainda não fiz", Toast.LENGTH_SHORT).show();
-                }else if ( menuItem.getItemId() == R.id.avaliacao ){
-                    Intent i  = new Intent(c, RelatorioDiarioActivity.class);
+                } else if (menuItem.getItemId() == R.id.avaliacao) {
+                    Intent i = new Intent(c, RelatorioDiarioActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     i.putExtra("id", pacientes.get(position).getId());
                     c.startActivity(i);
-                }else if ( menuItem.getItemId() == R.id.atualizar ){
-                    Intent i  = new Intent(c, NovoPacienteActivity.class);
+                } else if (menuItem.getItemId() == R.id.atualizar) {
+                    Intent i = new Intent(c, NovoPacienteActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     i.putExtra("update", true);
                     i.putExtra("id", pacientes.get(position).getId());
                     c.startActivity(i);
-                }else if ( menuItem.getItemId() == R.id.diagnostico ){
-                    Intent i  = new Intent(c, DiagnosticoEnfermagemActivity.class);
+                } else if (menuItem.getItemId() == R.id.diagnostico) {
+                    Intent i = new Intent(c, DiagnosticoEnfermagemActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     i.putExtra("id", pacientes.get(position).getId());
                     c.startActivity(i);
-                }else if ( menuItem.getItemId() == R.id.intervencao ){
-                    Toast.makeText(c, "ainda não fiz", Toast.LENGTH_SHORT).show();
                 }
+//                }else if ( menuItem.getItemId() == R.id.intervencao ){
+//                    Toast.makeText(c, "ainda não fiz", Toast.LENGTH_SHORT).show();
+//                }
 
                 return false;
             });
@@ -91,6 +92,7 @@ public class AdapterPaciente extends RecyclerView.Adapter<AdapterPaciente.MyView
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView nomePaciente;
         ImageView maisOpcoes;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 

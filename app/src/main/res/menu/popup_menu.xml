@@ -12,7 +12,7 @@
         android:id="@+id/diagnostico"
         android:title="Diagnóstico de enfermagem"/>
 
-    <item
-        android:id="@+id/intervencao"
-        android:title="Intervenções de enfermagem"/>
+<!--    <item-->
+<!--        android:id="@+id/intervencao"-->
+<!--        android:title="Intervenções de enfermagem"/>-->
 </menu>

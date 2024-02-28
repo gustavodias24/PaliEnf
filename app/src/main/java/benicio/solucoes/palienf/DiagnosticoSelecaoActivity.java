@@ -35,6 +35,11 @@ public class DiagnosticoSelecaoActivity extends AppCompatActivity {
     List<DiagnosticoModel> listaSelecionadaStringDiagnosticos = new ArrayList<>();
 
     private ActivityDiagnosticoSelecaoBinding mainBinding;
+
+    /* lista com todos os diagnostico com tabelas
+    para associar com lista especifica de nocs mais tarde */
+    List<DiagnosticoModel> listaAssociativa = new ArrayList<>();
+    List<Integer> listaTabelasNoc = new ArrayList<>();
     List<String> lista1 = new ArrayList<>();
     List<String> lista2 = new ArrayList<>();
     List<String> lista3 = new ArrayList<>();
@@ -114,10 +119,11 @@ public class DiagnosticoSelecaoActivity extends AppCompatActivity {
 //            int segundoItem = diagnosticoString.indexOf("\n");
 //            diagnosticoCriado.setDescricao(diagnosticoString.substring(segundoItem));
             diagnosticoCriado.setDescricao(diagnosticoString.split("\n")[1]);
-            for (DiagnosticoModel diagnostico : DiagnosticosUtils.returnListaDiagnostico(this)) {
+            for (DiagnosticoModel diagnostico : listaAssociativa) {
 
                 if (diagnostico.getNome().toLowerCase().equals(diagnosticoString.split("\n")[0].toLowerCase())) {
                     diagnosticoCriado.setNocs(diagnostico.getNocs());
+                    diagnosticoCriado.setTabelaNoc(diagnostico.getTabelaNoc());
                     diagnosticoCriado.setIntervencoes(diagnostico.getIntervencoes());
                     break;
                 }
@@ -147,6 +153,94 @@ public class DiagnosticoSelecaoActivity extends AppCompatActivity {
     }
 
     private void preencherListas() {
+
+        listaTabelasNoc.add(R.drawable.noc_0);
+        listaTabelasNoc.add(R.drawable.noc_1);
+        listaTabelasNoc.add(R.drawable.noc_2);
+        listaTabelasNoc.add(R.drawable.noc_3);
+        listaTabelasNoc.add(R.drawable.noc_4);
+        listaTabelasNoc.add(R.drawable.noc_5);
+        listaTabelasNoc.add(R.drawable.noc_6);
+        listaTabelasNoc.add(R.drawable.noc_7);
+        listaTabelasNoc.add(R.drawable.noc_8);
+        listaTabelasNoc.add(R.drawable.noc_9);
+        listaTabelasNoc.add(R.drawable.noc_10);
+        listaTabelasNoc.add(R.drawable.noc_11);
+        listaTabelasNoc.add(R.drawable.noc_12);
+        listaTabelasNoc.add(R.drawable.noc_13);
+        listaTabelasNoc.add(R.drawable.noc_14);
+        listaTabelasNoc.add(R.drawable.noc_15);
+        listaTabelasNoc.add(R.drawable.noc_16);
+        listaTabelasNoc.add(R.drawable.noc_17);
+        listaTabelasNoc.add(R.drawable.noc_18);
+        listaTabelasNoc.add(R.drawable.noc_19);
+        listaTabelasNoc.add(R.drawable.noc_20);
+        listaTabelasNoc.add(R.drawable.noc_21);
+        listaTabelasNoc.add(R.drawable.noc_22);
+        listaTabelasNoc.add(R.drawable.noc_23);
+        listaTabelasNoc.add(R.drawable.noc_24);
+        listaTabelasNoc.add(R.drawable.noc_25);
+        listaTabelasNoc.add(R.drawable.noc_26);
+        listaTabelasNoc.add(R.drawable.noc_27);
+        listaTabelasNoc.add(R.drawable.noc_28);
+        listaTabelasNoc.add(R.drawable.noc_29);
+        listaTabelasNoc.add(R.drawable.noc_30);
+        listaTabelasNoc.add(R.drawable.noc_31);
+        listaTabelasNoc.add(R.drawable.noc_32);
+        listaTabelasNoc.add(R.drawable.noc_33);
+        listaTabelasNoc.add(R.drawable.noc_34);
+        listaTabelasNoc.add(R.drawable.noc_35);
+        listaTabelasNoc.add(R.drawable.noc_36);
+        listaTabelasNoc.add(R.drawable.noc_37);
+        listaTabelasNoc.add(R.drawable.noc_38);
+        listaTabelasNoc.add(R.drawable.noc_39);
+        listaTabelasNoc.add(R.drawable.noc_40);
+        listaTabelasNoc.add(R.drawable.noc_41);
+        listaTabelasNoc.add(R.drawable.noc_42);
+        listaTabelasNoc.add(R.drawable.noc_43);
+        listaTabelasNoc.add(R.drawable.noc_44);
+        listaTabelasNoc.add(R.drawable.noc_45);
+        listaTabelasNoc.add(R.drawable.noc_46);
+        listaTabelasNoc.add(R.drawable.noc_47);
+        listaTabelasNoc.add(R.drawable.noc_48);
+        listaTabelasNoc.add(R.drawable.noc_49);
+        listaTabelasNoc.add(R.drawable.noc_50);
+        listaTabelasNoc.add(R.drawable.noc_51);
+        listaTabelasNoc.add(R.drawable.noc_52);
+        listaTabelasNoc.add(R.drawable.noc_53);
+        listaTabelasNoc.add(R.drawable.noc_54);
+        listaTabelasNoc.add(R.drawable.noc_55);
+        listaTabelasNoc.add(R.drawable.noc_56);
+        listaTabelasNoc.add(R.drawable.noc_57);
+        listaTabelasNoc.add(R.drawable.noc_58);
+        listaTabelasNoc.add(R.drawable.noc_59);
+        listaTabelasNoc.add(R.drawable.noc_60);
+        listaTabelasNoc.add(R.drawable.noc_61);
+        listaTabelasNoc.add(R.drawable.noc_62);
+        listaTabelasNoc.add(R.drawable.noc_63);
+        listaTabelasNoc.add(R.drawable.noc_64);
+        listaTabelasNoc.add(R.drawable.noc_65);
+        listaTabelasNoc.add(R.drawable.noc_66);
+        listaTabelasNoc.add(R.drawable.noc_67);
+        listaTabelasNoc.add(R.drawable.noc_68);
+        listaTabelasNoc.add(R.drawable.noc_69);
+        listaTabelasNoc.add(R.drawable.noc_70);
+        listaTabelasNoc.add(R.drawable.noc_71);
+        listaTabelasNoc.add(R.drawable.noc_72);
+        listaTabelasNoc.add(R.drawable.noc_73);
+        listaTabelasNoc.add(R.drawable.noc_74);
+        listaTabelasNoc.add(R.drawable.noc_75);
+        listaTabelasNoc.add(R.drawable.noc_76);
+        listaTabelasNoc.add(R.drawable.noc_77);
+        listaTabelasNoc.add(R.drawable.noc_78);
+        listaTabelasNoc.add(R.drawable.noc_79);
+
+        int pos = 0;
+        for (DiagnosticoModel diagnostico : DiagnosticosUtils.returnListaDiagnostico(this)) {
+            diagnostico.setTabelaNoc(listaTabelasNoc.get(pos));
+            pos++;
+            listaAssociativa.add(diagnostico);
+        }
 
         lista1.add("PROTEÇÃO INEFICAZ\n" +
                 "Diminuição na capacidade de se proteger de ameaças internas ou externas, como doenças ou lesões.\n" +

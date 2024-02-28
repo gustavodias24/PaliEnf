@@ -49,9 +49,9 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/image_noc_diagnostico"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:src="@drawable/noc1" />
+        android:src="@drawable/noc_0" />
 
 </LinearLayout>

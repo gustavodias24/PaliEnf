@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -23,6 +24,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -62,6 +64,8 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         DiagnosticoModel d = diagnosticos.get(position);
         holder.itemView.getRootView().setClickable(false);
+
+        Picasso.get().load(d.getTabelaNoc()).into(holder.image_noc_diagnostico);
 
         holder.titulo_diagnostico_text.setText(d.getNome());
         holder.descricao_diagnostico_text.setText(d.getDescricao());
@@ -226,6 +230,7 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView titulo_diagnostico_text, descricao_diagnostico_text;
         Button botao_noc;
+        ImageView image_noc_diagnostico;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -233,6 +238,7 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
             titulo_diagnostico_text = itemView.findViewById(R.id.titulo_diagnostico_text);
             descricao_diagnostico_text = itemView.findViewById(R.id.descricao_diagnostico_text);
             botao_noc = itemView.findViewById(R.id.botao_noc);
+            image_noc_diagnostico = itemView.findViewById(R.id.image_noc_diagnostico);
 
         }
     }

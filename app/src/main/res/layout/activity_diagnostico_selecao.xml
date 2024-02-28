@@ -25,13 +25,6 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:text="Informativo:\nCD = Característica Definidora\nFR = Fatores Relacionados \nCA = Condição Associada" />
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerDiagnosticos"
             android:layout_width="match_parent"
