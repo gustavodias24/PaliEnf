@@ -1,18 +1,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/relatorio"
-        android:title="Relatório geral paciente"/>
+        android:title="Relatório geral paciente" />
     <item
         android:id="@+id/avaliacao"
-        android:title="Realizar avaliação diária"/>
+        android:title="Realizar avaliação diária" />
     <item
         android:id="@+id/atualizar"
-        android:title="Atualizar informações"/>
+        android:title="Atualizar informações" />
     <item
         android:id="@+id/diagnostico"
-        android:title="Diagnóstico de enfermagem"/>
+        android:title="Diagnóstico de enfermagem" />
 
-<!--    <item-->
-<!--        android:id="@+id/intervencao"-->
-<!--        android:title="Intervenções de enfermagem"/>-->
+    <item
+        android:id="@+id/intervencao"
+        android:title="Intervenções de enfermagem" />
 </menu>

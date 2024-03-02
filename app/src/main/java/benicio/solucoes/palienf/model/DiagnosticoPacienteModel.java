@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DiagnosticoPacienteModel {
+
+    String dataHoraResolucaoIntervencao = "";
     String id, idPaciente, dataCriacao;
     String titulo, subTitulo;
     boolean ativo = true;
@@ -11,6 +13,14 @@ public class DiagnosticoPacienteModel {
     List<IntervencaoModel> intervencoes = new ArrayList<>();
     List<String> intervensoeSelecionadas = new ArrayList<>();
     List<String> nocSelecionadas = new ArrayList<>();
+
+    public String getDataHoraResolucaoIntervencao() {
+        return dataHoraResolucaoIntervencao;
+    }
+
+    public void setDataHoraResolucaoIntervencao(String dataHoraResolucaoIntervencao) {
+        this.dataHoraResolucaoIntervencao = dataHoraResolucaoIntervencao;
+    }
 
     @Override
     public String toString() {

@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import benicio.solucoes.palienf.DiagnosticoEnfermagemActivity;
+import benicio.solucoes.palienf.IntervencoesActivity;
 import benicio.solucoes.palienf.NovoPacienteActivity;
 import benicio.solucoes.palienf.R;
 import benicio.solucoes.palienf.RelatorioDiarioActivity;
@@ -72,9 +73,12 @@ public class AdapterPaciente extends RecyclerView.Adapter<AdapterPaciente.MyView
                     i.putExtra("id", pacientes.get(position).getId());
                     c.startActivity(i);
                 }
-//                }else if ( menuItem.getItemId() == R.id.intervencao ){
-//                    Toast.makeText(c, "ainda não fiz", Toast.LENGTH_SHORT).show();
-//                }
+                else if ( menuItem.getItemId() == R.id.intervencao ){
+                    Intent i = new Intent(c, IntervencoesActivity.class);
+                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    i.putExtra("id", pacientes.get(position).getId());
+                    c.startActivity(i);
+                }
 
                 return false;
             });

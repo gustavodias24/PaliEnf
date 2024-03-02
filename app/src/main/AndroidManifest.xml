@@ -13,10 +13,14 @@
         android:theme="@style/Theme.PaliEnf"
         tools:targetApi="31">
         <activity
-            android:name=".DiagnosticoSelecaoActivity"
+            android:name=".IntervencoesActivity"
             android:exported="false"
             android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
             />
+        <activity
+            android:name=".DiagnosticoSelecaoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar" />
         <activity
             android:name=".CriarDiagnosticoActivity"
             android:exported="false"
