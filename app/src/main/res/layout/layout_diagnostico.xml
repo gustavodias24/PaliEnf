@@ -57,9 +57,10 @@
     <ImageView
         android:id="@+id/image_noc_diagnostico"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/noc_0"
+        android:layout_height="230dp"
+        android:padding="4dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/noc_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />

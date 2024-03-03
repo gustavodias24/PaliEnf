@@ -81,7 +81,7 @@ public class DiagnosticoEnfermagemActivity extends AppCompatActivity {
         recyclerDiagnosticos = mainBinding.recyclerDiagnosticos;
         recyclerDiagnosticos.setLayoutManager(new LinearLayoutManager(this));
         recyclerDiagnosticos.setHasFixedSize(true);
-        recyclerDiagnosticos.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+//        recyclerDiagnosticos.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         adapterDiagnostico = new AdapterDiagnosticoPaciente(listaSelecionadaStringDiagnosticos, this);
         recyclerDiagnosticos.setAdapter(adapterDiagnostico);
 

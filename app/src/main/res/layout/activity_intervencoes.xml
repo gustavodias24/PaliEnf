@@ -18,7 +18,7 @@
             android:id="@+id/info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Informações das Intervenções"
+            android:text="Carregando..."
             android:textColor="@color/azul"
             android:textSize="24sp" />
 
@@ -34,24 +34,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.vicmikhailau.maskededittext.MaskedEditText
-                android:id="@+id/dataHoraResolvido"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Data/Hora da resolução do diagnóstico"
-                android:inputType="number"
-                app:mask="##/##/#### às ##:##" />
 
-            <Button
-                android:id="@+id/botao_resolvido"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="8dp"
-                android:backgroundTint="@color/azul"
-                android:gravity="center|center_horizontal"
-                android:text="resolvido"
-                android:textAllCaps="true" />
         </LinearLayout>
 
     </LinearLayout>
