@@ -131,12 +131,10 @@ public class AdapterDiagnosticoPaciente extends RecyclerView.Adapter<AdapterDiag
                             LinearLayout.LayoutParams.MATCH_PARENT,
                             LinearLayout.LayoutParams.WRAP_CONTENT));
 
-                    for (String intervencaoSelecionado : diagnosticoPacienteModel.getIntervensoeSelecionadas()) {
-                        if (intervencaoSelecionado.equals(intervencao.getDescricao())) {
-                            checkBox.setChecked(true);
-                            break;
-                        }
+                    if (intervencao.isSelecionado()) {
+                        checkBox.setChecked(true);
                     }
+
                     checkBox.setText(intervencao.getDescricao());
                     diagnosticoBinding2.layoutNocs.addView(checkBox);
                 }

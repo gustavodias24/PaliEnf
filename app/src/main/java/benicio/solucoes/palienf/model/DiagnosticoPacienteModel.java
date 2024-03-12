@@ -11,7 +11,6 @@ public class DiagnosticoPacienteModel {
     boolean ativo = true;
     List<NocModel> nocs = new ArrayList<>();
     List<IntervencaoModel> intervencoes = new ArrayList<>();
-    List<String> intervensoeSelecionadas = new ArrayList<>();
     List<String> nocSelecionadas = new ArrayList<>();
 
     public String getDataHoraResolucaoIntervencao() {
@@ -25,8 +24,10 @@ public class DiagnosticoPacienteModel {
     @Override
     public String toString() {
         StringBuilder intervencoes = new StringBuilder();
-        for (String intervencao : this.intervensoeSelecionadas) {
-            intervencoes.append(intervencao).append("\n");
+        for (IntervencaoModel intervencao : this.intervencoes) {
+            if (intervencao.isSelecionado()){
+                intervencoes.append(intervencao.getDescricao()).append("\n");
+            }
         }
 
         StringBuilder nocs = new StringBuilder();
@@ -103,14 +104,6 @@ public class DiagnosticoPacienteModel {
 
     public void setDataCriacao(String dataCriacao) {
         this.dataCriacao = dataCriacao;
-    }
-
-    public List<String> getIntervensoeSelecionadas() {
-        return intervensoeSelecionadas;
-    }
-
-    public void setIntervensoeSelecionadas(List<String> intervensoeSelecionadas) {
-        this.intervensoeSelecionadas = intervensoeSelecionadas;
     }
 
     public List<String> getNocSelecionadas() {

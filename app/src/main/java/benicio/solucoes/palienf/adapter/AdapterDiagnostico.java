@@ -176,16 +176,23 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
                 diagnosticoBinding2.layoutNocs.addView(buttonConcluir);
 
                 buttonConcluir.setOnClickListener(view1 -> {
-//                    int count = 0;
+
+                    diagnosticoPaciente.getIntervencoes().clear();
+
                     for (int i = 0; i < diagnosticoBinding2.layoutNocs.getChildCount(); i++) {
                         View child = diagnosticoBinding2.layoutNocs.getChildAt(i);
+
+                        IntervencaoModel intervencaoModel = new IntervencaoModel();
                         if (child instanceof CheckBox) {
                             CheckBox checkBox = (CheckBox) child;
+
+                            intervencaoModel.setDescricao(checkBox.getText().toString());
+
                             if (checkBox.isChecked()) {
-//                                count++;
-//                                diagnosticoPaciente.getIntervensoeSelecionadas().add(count+ "- "+ checkBox.getText().toString());
-                                diagnosticoPaciente.getIntervensoeSelecionadas().add(checkBox.getText().toString());
+                                intervencaoModel.setSelecionado(true);
                             }
+                            diagnosticoPaciente.getIntervencoes().add(intervencaoModel);
+
                         }
                     }
 

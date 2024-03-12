@@ -3,6 +3,7 @@ package benicio.solucoes.palienf;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.InputType;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -62,45 +64,62 @@ public class IntervencoesActivity extends AppCompatActivity {
                             idDiagnosticos.add(diagnostico.getId());
                             for (IntervencaoModel intervencao : diagnostico.getIntervencoes()) {
 
+                                if (intervencao.isSelecionado() && !intervencao.isResolvido()) {
+                                    semNada = false;
 
-                                for (String intervencaoSelecionado : diagnostico.getIntervensoeSelecionadas()) {
-                                    if (intervencaoSelecionado.equals(intervencao.getDescricao())) {
-                                        CheckBox checkBox = new CheckBox(IntervencoesActivity.this);
-                                        checkBox.setLayoutParams(new LinearLayout.LayoutParams(
-                                                LinearLayout.LayoutParams.MATCH_PARENT,
-                                                LinearLayout.LayoutParams.WRAP_CONTENT));
-                                        checkBox.setChecked(true);
-                                        checkBox.setText(intervencao.getDescricao());
-                                        mainbBinding.layout.addView(checkBox);
+                                    CheckBox checkBox = new CheckBox(IntervencoesActivity.this);
+                                    checkBox.setLayoutParams(new LinearLayout.LayoutParams(
+                                            LinearLayout.LayoutParams.MATCH_PARENT,
+                                            LinearLayout.LayoutParams.WRAP_CONTENT));
+                                    checkBox.setChecked(true);
+                                    checkBox.setText(intervencao.getDescricao());
+                                    mainbBinding.layout.addView(checkBox);
 
-                                        EditText editText = new EditText(IntervencoesActivity.this);
-                                        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                                                ViewGroup.LayoutParams.MATCH_PARENT,
-                                                ViewGroup.LayoutParams.WRAP_CONTENT);
-                                        editText.setLayoutParams(params);
-                                        editText.setHint("Data/Hora da resolução da intervenção");
-                                        editText.setInputType(InputType.TYPE_CLASS_DATETIME | InputType.TYPE_CLASS_NUMBER);
-                                        mainbBinding.layout.addView(editText);
+                                    EditText editText = new EditText(IntervencoesActivity.this);
+                                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                                            ViewGroup.LayoutParams.MATCH_PARENT,
+                                            ViewGroup.LayoutParams.WRAP_CONTENT);
+                                    editText.setLayoutParams(params);
+                                    editText.setHint("Hora da resolução da intervenção");
+                                    editText.setInputType(InputType.TYPE_CLASS_DATETIME | InputType.TYPE_CLASS_NUMBER);
+                                    mainbBinding.layout.addView(editText);
 
-                                        // Criar Button
-                                        Button button = new Button(IntervencoesActivity.this);
-                                        LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams(
-                                                ViewGroup.LayoutParams.MATCH_PARENT,
-                                                ViewGroup.LayoutParams.WRAP_CONTENT);
-                                        button.setLayoutParams(params2);
-                                        button.setText("Resolvido");
-                                        button.setTextColor(getResources().getColor(android.R.color.white));
-                                        button.setBackgroundColor(getResources().getColor(R.color.azul));
-                                        button.setAllCaps(false);
-                                        button.setTextSize(16); // Defina o tamanho da fonte conforme necessário
-                                        button.setPadding(20, 20, 20, 20); // Adicione o preenchimento conforme necessário
-                                        button.setTypeface(null, Typeface.BOLD); // Defina o estilo da fonte como negrito
-                                        mainbBinding.layout.addView(button);
+                                    // Criar Button
+                                    Button button = new Button(IntervencoesActivity.this);
+                                    LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams(
+                                            ViewGroup.LayoutParams.MATCH_PARENT,
+                                            ViewGroup.LayoutParams.WRAP_CONTENT);
+                                    button.setLayoutParams(params2);
+                                    button.setText("Realizado");
+                                    button.setTextColor(getResources().getColor(android.R.color.white));
+                                    button.setBackgroundColor(getResources().getColor(R.color.azul));
+                                    button.setAllCaps(false);
+                                    button.setTextSize(16); // Defina o tamanho da fonte conforme necessário
+                                    button.setPadding(20, 20, 20, 20); // Adicione o preenchimento conforme necessário
+                                    button.setTypeface(null, Typeface.BOLD); // Defina o estilo da fonte como negrito
+                                    mainbBinding.layout.addView(button);
 
-                                        break;
-                                    }
+                                    button.setOnClickListener(view -> {
+                                        String horaIntervencao = editText.getText().toString();
+                                        if (horaIntervencao.isEmpty()) {
+                                            Toast.makeText(IntervencoesActivity.this, "Digite a Hora.", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Toast.makeText(IntervencoesActivity.this, "Salvando", Toast.LENGTH_SHORT).show();
+                                            intervencao.setResolvido(true);
+                                            intervencao.setDescricao(horaIntervencao);
+                                            refDiagnosticos.child(diagnostico.getId()).setValue(diagnostico).addOnCompleteListener(task -> {
+                                                if (task.isSuccessful()) {
+                                                    finish();
+                                                    Intent i = new Intent(IntervencoesActivity.this, IntervencoesActivity.class);
+                                                    i.putExtra("id", b.getString("id", ""));
+                                                    startActivity(i);
+                                                } else {
+                                                    Toast.makeText(IntervencoesActivity.this, "Tente Novamente...", Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
+                                        }
+                                    });
                                 }
-                                semNada = false;
                             }
                         }
                     }
@@ -109,8 +128,11 @@ public class IntervencoesActivity extends AppCompatActivity {
                         mainbBinding.layout2.setVisibility(View.GONE);
                         mainbBinding.info.setText("Sem Nenhuma Intervenção para ser exibida!");
                     } else {
-                        mainbBinding.info.setText("Informações das Intervenções");
+                        mainbBinding.info.setText("Aprazamento");
                     }
+                } else {
+                    mainbBinding.layout2.setVisibility(View.GONE);
+                    mainbBinding.info.setText("Sem Nenhuma Intervenção para ser exibida!");
                 }
             }
 

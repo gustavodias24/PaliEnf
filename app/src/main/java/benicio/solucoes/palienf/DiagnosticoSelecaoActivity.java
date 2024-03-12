@@ -154,7 +154,6 @@ public class DiagnosticoSelecaoActivity extends AppCompatActivity {
 
     private void preencherListas() {
 
-        listaTabelasNoc.add(R.drawable.noc_0);
         listaTabelasNoc.add(R.drawable.noc_1);
         listaTabelasNoc.add(R.drawable.noc_2);
         listaTabelasNoc.add(R.drawable.noc_3);
@@ -234,6 +233,7 @@ public class DiagnosticoSelecaoActivity extends AppCompatActivity {
         listaTabelasNoc.add(R.drawable.noc_77);
         listaTabelasNoc.add(R.drawable.noc_78);
         listaTabelasNoc.add(R.drawable.noc_79);
+        listaTabelasNoc.add(R.drawable.noc_80);
 
         int pos = 0;
         for (DiagnosticoModel diagnostico : DiagnosticosUtils.returnListaDiagnostico(this)) {

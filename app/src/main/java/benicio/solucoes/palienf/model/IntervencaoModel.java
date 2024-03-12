@@ -2,8 +2,35 @@ package benicio.solucoes.palienf.model;
 
 public class IntervencaoModel {
     String descricao;
+    String horaIntervencao;
+    boolean resolvido = false;
+    boolean selecionado = false;
 
     public IntervencaoModel() {
+    }
+
+    public String getHoraIntervencao() {
+        return horaIntervencao;
+    }
+
+    public void setHoraIntervencao(String horaIntervencao) {
+        this.horaIntervencao = horaIntervencao;
+    }
+
+    public boolean isResolvido() {
+        return resolvido;
+    }
+
+    public void setResolvido(boolean resolvido) {
+        this.resolvido = resolvido;
+    }
+
+    public boolean isSelecionado() {
+        return selecionado;
+    }
+
+    public void setSelecionado(boolean selecionado) {
+        this.selecionado = selecionado;
     }
 
     public IntervencaoModel(String descricao) {
