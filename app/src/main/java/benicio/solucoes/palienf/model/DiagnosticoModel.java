@@ -6,6 +6,17 @@ import java.util.List;
 import benicio.solucoes.palienf.R;
 
 public class DiagnosticoModel {
+
+    int position;
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
     String nome, descricao , dominio;
     List<NocModel> nocs = new ArrayList<>();
     List<IntervencaoModel> intervencoes = new ArrayList<>();

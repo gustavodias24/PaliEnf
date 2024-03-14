@@ -34,6 +34,7 @@ import java.util.UUID;
 import benicio.solucoes.palienf.R;
 import benicio.solucoes.palienf.databinding.LayoutDiagnosticoBinding;
 import benicio.solucoes.palienf.databinding.LayoutNocBinding;
+import benicio.solucoes.palienf.databinding.LayoutVerCaracteristicasBinding;
 import benicio.solucoes.palienf.model.DiagnosticoModel;
 import benicio.solucoes.palienf.model.DiagnosticoPacienteModel;
 import benicio.solucoes.palienf.model.IntervencaoModel;
@@ -65,9 +66,19 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
         DiagnosticoModel d = diagnosticos.get(position);
         holder.itemView.getRootView().setClickable(false);
 
-        Picasso.get().load(d.getTabelaNoc()).into(holder.image_noc_diagnostico);
+        holder.verCaracteristicas.setOnClickListener(view -> {
+            AlertDialog.Builder b = new AlertDialog.Builder(c);
+            b.setTitle("Características");
+            LayoutVerCaracteristicasBinding caracteristicasBinding = LayoutVerCaracteristicasBinding.inflate(c.getLayoutInflater());
+            Picasso.get().load(d.getTabelaNoc()).into(caracteristicasBinding.imageView);
+            b.setPositiveButton("Fechar", null);
+            b.setView(caracteristicasBinding.getRoot());
+            b.create().show();
 
-        holder.titulo_diagnostico_text.setText(d.getNome());
+        });
+
+
+        holder.titulo_diagnostico_text.setText( "noc_"+(d.getPosition()+1) + " "+ d.getNome());
         holder.descricao_diagnostico_text.setText(d.getDescricao());
 
         holder.botao_noc.setOnClickListener(view -> {
@@ -139,7 +150,7 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
                                 }
                             } else if (child2 instanceof TextView) {
                                 TextView textView = (TextView) child2;
-                                    nocPaciente.append(textView.getText().toString()).append("\n");
+                                nocPaciente.append(textView.getText().toString()).append("\n");
                             }
                         }
 
@@ -236,8 +247,7 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView titulo_diagnostico_text, descricao_diagnostico_text;
-        Button botao_noc;
-        ImageView image_noc_diagnostico;
+        Button botao_noc, verCaracteristicas;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -245,7 +255,7 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
             titulo_diagnostico_text = itemView.findViewById(R.id.titulo_diagnostico_text);
             descricao_diagnostico_text = itemView.findViewById(R.id.descricao_diagnostico_text);
             botao_noc = itemView.findViewById(R.id.botao_noc);
-            image_noc_diagnostico = itemView.findViewById(R.id.image_noc_diagnostico);
+            verCaracteristicas = itemView.findViewById(R.id.verCaracteristicas);
 
         }
     }

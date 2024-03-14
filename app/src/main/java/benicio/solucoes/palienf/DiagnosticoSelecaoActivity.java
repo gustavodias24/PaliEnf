@@ -125,6 +125,8 @@ public class DiagnosticoSelecaoActivity extends AppCompatActivity {
                     diagnosticoCriado.setNocs(diagnostico.getNocs());
                     diagnosticoCriado.setTabelaNoc(diagnostico.getTabelaNoc());
                     diagnosticoCriado.setIntervencoes(diagnostico.getIntervencoes());
+
+                    diagnosticoCriado.setPosition(diagnostico.getPosition());
                     break;
                 }
 
@@ -163,8 +165,10 @@ public class DiagnosticoSelecaoActivity extends AppCompatActivity {
         listaTabelasNoc.add(R.drawable.noc_7);
         listaTabelasNoc.add(R.drawable.noc_8);
         listaTabelasNoc.add(R.drawable.noc_9);
-        listaTabelasNoc.add(R.drawable.noc_10);
+
         listaTabelasNoc.add(R.drawable.noc_11);
+        listaTabelasNoc.add(R.drawable.noc_10);
+
         listaTabelasNoc.add(R.drawable.noc_12);
         listaTabelasNoc.add(R.drawable.noc_13);
         listaTabelasNoc.add(R.drawable.noc_14);
@@ -206,7 +210,9 @@ public class DiagnosticoSelecaoActivity extends AppCompatActivity {
         listaTabelasNoc.add(R.drawable.noc_50);
         listaTabelasNoc.add(R.drawable.noc_51);
         listaTabelasNoc.add(R.drawable.noc_52);
+
         listaTabelasNoc.add(R.drawable.noc_53);
+
         listaTabelasNoc.add(R.drawable.noc_54);
         listaTabelasNoc.add(R.drawable.noc_55);
         listaTabelasNoc.add(R.drawable.noc_56);
@@ -223,23 +229,41 @@ public class DiagnosticoSelecaoActivity extends AppCompatActivity {
         listaTabelasNoc.add(R.drawable.noc_67);
         listaTabelasNoc.add(R.drawable.noc_68);
         listaTabelasNoc.add(R.drawable.noc_69);
-        listaTabelasNoc.add(R.drawable.noc_70);
-        listaTabelasNoc.add(R.drawable.noc_71);
-        listaTabelasNoc.add(R.drawable.noc_72);
-        listaTabelasNoc.add(R.drawable.noc_73);
-        listaTabelasNoc.add(R.drawable.noc_74);
-        listaTabelasNoc.add(R.drawable.noc_75);
-        listaTabelasNoc.add(R.drawable.noc_76);
-        listaTabelasNoc.add(R.drawable.noc_77);
-        listaTabelasNoc.add(R.drawable.noc_78);
-        listaTabelasNoc.add(R.drawable.noc_79);
-        listaTabelasNoc.add(R.drawable.noc_80);
+//        listaTabelasNoc.add(R.drawable.noc_70);
+//        listaTabelasNoc.add(R.drawable.noc_71);
+//        listaTabelasNoc.add(R.drawable.noc_72);
+//        listaTabelasNoc.add(R.drawable.noc_73);
+//        listaTabelasNoc.add(R.drawable.noc_74);
+//        listaTabelasNoc.add(R.drawable.noc_75);
+//        listaTabelasNoc.add(R.drawable.noc_76);
+//        listaTabelasNoc.add(R.drawable.noc_77);
+//        listaTabelasNoc.add(R.drawable.noc_78);
+//        listaTabelasNoc.add(R.drawable.noc_79);
+//        listaTabelasNoc.add(R.drawable.noc_80);
 
         int pos = 0;
+
         for (DiagnosticoModel diagnostico : DiagnosticosUtils.returnListaDiagnostico(this)) {
-            diagnostico.setTabelaNoc(listaTabelasNoc.get(pos));
-            pos++;
-            listaAssociativa.add(diagnostico);
+
+
+            try {
+                if (diagnostico.getNome().trim().toLowerCase().equals("RISCO DE LESÃO DO TRATO URINÁRIO".trim().toLowerCase())) {
+                    diagnostico.setTabelaNoc(listaTabelasNoc.get(53));
+                    diagnostico.setPosition(53);
+                    listaAssociativa.add(diagnostico);
+                } else if (diagnostico.getNome().trim().toLowerCase().equals("RISCO DE QUEDAS".trim().toLowerCase())) {
+                    diagnostico.setTabelaNoc(listaTabelasNoc.get(56));
+                    diagnostico.setPosition(56);
+                    listaAssociativa.add(diagnostico);
+                } else {
+                    diagnostico.setTabelaNoc(listaTabelasNoc.get(pos));
+                    diagnostico.setPosition(pos);
+                    pos++;
+                    listaAssociativa.add(diagnostico);
+                }
+            } catch (Exception ignored) {
+            }
+
         }
 
         lista1.add("PROTEÇÃO INEFICAZ\n" +
@@ -401,7 +425,9 @@ public class DiagnosticoSelecaoActivity extends AppCompatActivity {
         lista10.add("INTEGRIDADE TISSULAR PREJUDICADA\nDano em membrana mucosa, córnea, sistema tegumentar, fáscia muscular, músculo, tendão, osso, cartilagem, cápsula articular e/ou ligamento.\nCD\nFR\nCA\nTERMOS ENCONTRADOS NOS PRONTUÁRIOS\nDano tecidual\nDor aguda\nHematoma\nSangramento\nTecido destruído\nVolume de líquido deficiente\nVolume de líquido excessivo \nMobilidade prejudicada\nLesão de septo nasal (1)\nLesão de panturrilha (1)\nFace de dor (6)\nHematoma em olho esquerdo (3)\nSecreção peniana sanguinolenta (3)\nDesidratado (3)\nAnasarca (16)\nTetraplégico (3)");
         lista10.add("RISCO DE INTEGRIDADE TISSULAR PREJUDICADA\nSuscetibilidade a dano em membrana mucosa, córnea, sistema tegumentar, fáscia muscular, músculo, tendão, osso, cartilagem, cápsula articular e/ou ligamento que pode comprometer a saúde.");
         lista10.add("RISCO DE LESÃO\nSuscetibilidade à lesão física por condições ambientais que interagem com os recursos adaptativos e defensivos do indivíduo que pode comprometer a saúde.\nCD\n(não se aplica)\nFR\nCA\nTERMOS ENCONTRADOS NOS PRONTUÁRIOS\nExposição a patógenos\nAlteração da função cognitiva\nAlteração da função psicomotora\nHipóxia tissular\nPerfil sanguíneo anormal\nDesorientado (2)\nAgitação psicomotora (8)\nCianose central (2)\nPlaquetopênica (1)\nRecebeu hemácias (2)\nIsolamento de contato (5)");
+
         lista10.add("RISCO DE LESÃO DO TRATO URINÁRIO\nSuscetibilidade a dano às estruturas do trato urinário em decorrência de uso de cateteres que pode comprometer a saúde.\nCD\n(não se aplica)\nFR\nCA\nTERMOS ENCONTRADOS NOS PRONTUÁRIOS\nConfusão\nUso prolongado de cateter urinário\nVariação anatômica em órgãos pélvicos\nDesorientação (2)\nAgitação psicomotora (8)\nDiurese por cateter vesical de demora (122)\nEdema de genitália (19)");
+
         lista10.add("RISCO DE LESÃO NA CÓRNEA\nSuscetibilidade à infecção ou lesão inflamatória no tecido da córnea que pode afetar camadas superficiais ou profundas e que pode comprometer a saúde.\nCD\n(não se aplica)\nFR\nCA\nTERMOS ENCONTRADOS NOS PRONTUÁRIOS\nEdema periorbital\nIntubação\nOxigenioterapia\nTraqueostomia\nVentilação mecânica\nEdema de órbita ocular (5)\nEdema conjuntival (1)\nIntubado em ventilação mecânica (82)\nTraqueostomizado em ventilação mecânica (51)\nRespirando em macronebulização (18)\nRespirando com auxílio de máscara de ventury (7)\nRespirando com auxílio de BIPAP (16)");
         lista10.add("RISCO DE LESÃO POR PRESSÃO\nSuscetibilidade à lesão localizada da pele e/ou tecido subjacente, normalmente sobre saliência óssea, em consequência de pressão, ou pressão combinada com forças de cisalhamento (NPUAP, 2007).");
         lista10.add("RISCO DE QUEDAS\nSuscetibilidade aumentada a quedas que pode causar dano físico e comprometer a saúde.\nCD\n(não se aplica)\nFR\nCA\nTERMOS ENCONTRADOS NOS PRONTUÁRIOS\nDiarreia\nMobilidade prejudicada\nAlteração na função cognitiva\nAnemia\nNeoplasia\nPrejuízo da audição\nVisão prejudicada\nEvacuação líquida (9)\nParestesia direita (4)\nDesorientado (2)\nRecebeu hemácia (2)\nPortador de leucemia (2)\nDeficiente auditivo (1)");

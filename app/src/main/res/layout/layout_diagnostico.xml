@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:adjustViewBounds="true"
     android:orientation="vertical">
@@ -49,18 +49,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="8dp"
             android:backgroundTint="@color/azul"
             android:gravity="center|center_horizontal"
-            android:text="NOC" />
+            android:text="NOC"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/image_noc_diagnostico"
+    <Button
+        android:id="@+id/verCaracteristicas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:src="@drawable/noc_1" />
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/azul"
+        android:text="Características"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
 </LinearLayout>
