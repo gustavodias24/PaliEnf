@@ -117,7 +117,7 @@ public class PDFGenerator {
                 .setUnderline();
 
 
-//        Paragraph dataValor = new Paragraph(avaliacaoModel.getData());
+        Paragraph dataValor = new Paragraph(avaliacaoModel.getData().replace("_", "/"));
         Paragraph prontuarioValor = new Paragraph(pacienteModel.getProntuário());
         Paragraph sexoValor = new Paragraph(pacienteModel.getSexo().isEmpty() ? "Não Informado" : pacienteModel.getSexo());
         Paragraph dataNascimentoValor = new Paragraph(pacienteModel.getDataNascimento());
@@ -135,7 +135,7 @@ public class PDFGenerator {
 
 
         document.add(data);
-//        document.add(dataValor);
+        document.add(dataValor);
 
         document.add(prontuario);
         document.add(prontuarioValor);

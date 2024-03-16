@@ -106,7 +106,7 @@ public class IntervencoesActivity extends AppCompatActivity {
                                         } else {
                                             Toast.makeText(IntervencoesActivity.this, "Salvando", Toast.LENGTH_SHORT).show();
                                             intervencao.setResolvido(true);
-                                            intervencao.setDescricao(horaIntervencao);
+                                            intervencao.setHoraIntervencao(horaIntervencao);
                                             refDiagnosticos.child(diagnostico.getId()).setValue(diagnostico).addOnCompleteListener(task -> {
                                                 if (task.isSuccessful()) {
                                                     finish();
