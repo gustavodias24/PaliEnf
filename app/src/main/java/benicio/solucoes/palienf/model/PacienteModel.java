@@ -4,14 +4,14 @@ public class PacienteModel {
     String
     id,
     nome,
-    dataNascimento,
+    dataNascimento = "Não Informado",
     cpf,
-    prontuário,
+    prontuário = "Não Informado",
     cidade,
     bairro,
     cep,
     numero,
-    pontoReferencia, sexo;
+    pontoReferencia, sexo = "Não Informado";
 
 
     boolean necessidadeFinanceira;

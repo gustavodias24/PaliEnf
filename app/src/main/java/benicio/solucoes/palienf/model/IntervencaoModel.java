@@ -1,8 +1,8 @@
 package benicio.solucoes.palienf.model;
 
 public class IntervencaoModel {
-    String descricao = "";
-    String horaIntervencao = "";
+    String descricao = "Não Informado";
+    String horaIntervencao = "Não Informado";
     boolean resolvido = false;
     boolean selecionado = false;
 

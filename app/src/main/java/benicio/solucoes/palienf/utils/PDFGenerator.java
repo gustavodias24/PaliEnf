@@ -815,15 +815,15 @@ public class PDFGenerator {
                         .add(intervencaoModel.getDescricao())
                         .setFont(font));
 
-                String dataPrazamento = "Pendente";
+                String dataPrazamento = "Não Informado";
 
                 if (intervencaoModel.isResolvido()) {
                     dataPrazamento = intervencaoModel.getHoraIntervencao();
                     if (dataPrazamento.isEmpty()) {
-                        dataPrazamento = "Pendente";
+                        dataPrazamento = "Não Informado";
                     }
                 }
-                document.add(new Paragraph("Data do Aprazamento: ")
+                document.add(new Paragraph("Hora da Resolução: ")
                         .setFont(font)
                         .setBold()
                         .add(dataPrazamento)

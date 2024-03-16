@@ -23,142 +23,142 @@ public class AvaDiariaModel {
         this.idPaciente = idPaciente;
     }
 
-    String temperatura = "", pa= "", fc= "", fr= "", sat= "";
+    String temperatura = "Não Informado", pa= "Não Informado", fc= "Não Informado", fr= "Não Informado", sat= "Não Informado";
 
     String posOperatorio = "Não";
-    String posOperatorioObservacao= "";
+    String posOperatorioObservacao= "Não Informado";
 
     List<String> pulso = new ArrayList<>();
 
     List<String> nivelConsciencia = new ArrayList<>();
-    String observacaoNivelConsciencia= "";
+    String observacaoNivelConsciencia= "Não Informado";
 
     List<String> pupila = new ArrayList<>();
-    String observacaoPupila= "";
+    String observacaoPupila= "Não Informado";
 
     List<String> acuidadeVisual = new ArrayList<>();
-    String observacaoAcuidadeVisual= "";
+    String observacaoAcuidadeVisual= "Não Informado";
 
     List<String> acuidadeAuditiva = new ArrayList<>();
-    String observacaoAcuidadeAuditiva= "";
+    String observacaoAcuidadeAuditiva= "Não Informado";
 
     String regiaoCranioFacial = "assimetrico";
 
     List<String> cavidadeOral = new ArrayList<>();
-    String observacaoCavidadeOral= "";
+    String observacaoCavidadeOral= "Não Informado";
 
     List<String> ventilacao = new ArrayList<>();
-    String observacaoVentilacao= "";
+    String observacaoVentilacao= "Não Informado";
 
     List<String> auscultaPulmonar = new ArrayList<>();
-    String observacaoAuscultaPulmonar= "";
+    String observacaoAuscultaPulmonar= "Não Informado";
 
     List<String> auscultaCardiaca = new ArrayList<>();
-    String observacaoAuscultaCardiaca= "";
+    String observacaoAuscultaCardiaca= "Não Informado";
 
     List<String> torax = new ArrayList<>();
-    String observacaoTorax= "";
+    String observacaoTorax= "Não Informado";
 
     List<String> abdome = new ArrayList<>();
-    String observacaoAbdome= "";
+    String observacaoAbdome= "Não Informado";
 
     List<String> genitalia = new ArrayList<>();
-    String observacaoGenitalia= "";
+    String observacaoGenitalia= "Não Informado";
 
     List<String> menbroSuperior = new ArrayList<>();
-    String observacaoMenbroSuperior= "";
+    String observacaoMenbroSuperior= "Não Informado";
 
     List<String> menbroInferior = new ArrayList<>();
-    String observacaoMenbroInferior= "";
+    String observacaoMenbroInferior= "Não Informado";
 
     String ortese = "Não";
-    String observacaoOrtese= "";
+    String observacaoOrtese= "Não Informado";
     String protese = "Não";
-    String observacaoProtese= "";
+    String observacaoProtese= "Não Informado";
 
 
     List<String> mucosas = new ArrayList<>();
-    String observacaoMucosas= "";
+    String observacaoMucosas= "Não Informado";
 
 
     List<String> pele = new ArrayList<>();
-    String observacaoPele= "";
+    String observacaoPele= "Não Informado";
 
     String presencaDeDor = "Não";
-    String ObservacaopresencaDeDor= "";
-    String escalaDeDorEva= "";
+    String ObservacaopresencaDeDor= "Não Informado";
+    String escalaDeDorEva= "Não Informado";
 
     String presencaLesao = "Não";
-    String observacaopresencaLesao= "";
+    String observacaopresencaLesao= "Não Informado";
 
     String feridaOperatoria = "Não";
-    String observacaoFeridaOperatoria= "";
+    String observacaoFeridaOperatoria= "Não Informado";
 
     String amputacoes = "Não";
-    String observacaoAmputacoes= "";
+    String observacaoAmputacoes= "Não Informado";
 
     String historicoQueda = "Não";
-    String observacaoHistoricoQueda= "";
+    String observacaoHistoricoQueda= "Não Informado";
 
     String riscoQueda = "Não";
-    String observacaoRiscoQueda= "";
+    String observacaoRiscoQueda= "Não Informado";
 
     List<String> dipositivos = new ArrayList<>();
-    String observacaoDispositivos= "";
+    String observacaoDispositivos= "Não Informado";
 
     String fadiga = "Não";
-    String observacaoFadiga= "";
+    String observacaoFadiga= "Não Informado";
 
-    String aspectosNutricionais= "";
-    String observacaoAspectosNutricionais= "";
+    String aspectosNutricionais= "Não Informado";
+    String observacaoAspectosNutricionais= "Não Informado";
 
     List<String> dieta = new ArrayList<>();
-    String observacaoDieta= "";
+    String observacaoDieta= "Não Informado";
 
-    String aberturaOcular= "";
-    String respostaVerbal= "";
-    String respostaMotora= "";
-    String reatividadePupilar= "";
+    String aberturaOcular= "Não Informado";
+    String respostaVerbal= "Não Informado";
+    String respostaMotora= "Não Informado";
+    String reatividadePupilar= "Não Informado";
 
     int somaEscalaGlasgow;
 
 
-    String expressaoFacil= "";
-    String atividadeCorporal= "";
-    String defesa= "";
-    String sinaisVitais= "";
-    String alteracaoRespiratoria= "";
+    String expressaoFacil= "Não Informado";
+    String atividadeCorporal= "Não Informado";
+    String defesa= "Não Informado";
+    String sinaisVitais= "Não Informado";
+    String alteracaoRespiratoria= "Não Informado";
 
     int somaEscalaDorNaoVerbal;
 
 
-    String richmond= "";
-    String grauMucosite= "";
+    String richmond= "Não Informado";
+    String grauMucosite= "Não Informado";
 
-    String escalaDeMucosite= "";
+    String escalaDeMucosite= "Não Informado";
 
     List<String> diurese = new ArrayList<>();
     List<String> evacuacao = new ArrayList<>();
-    String observacaoEliminacoes= "";
+    String observacaoEliminacoes= "Não Informado";
 
-    String estadoEmocional= "";
-    String observacaoEstadoEmocional= "";
+    String estadoEmocional= "Não Informado";
+    String observacaoEstadoEmocional= "Não Informado";
 
-    String enfrentamentoDoenca= "";
+    String enfrentamentoDoenca= "Não Informado";
 
     List<String> imagemCorporal = new ArrayList<>();
     List<String> autoestima = new ArrayList<>();
 
     String suporteRedeSocial = "Não";
-    String qualSuporteRedeSocial= "";
+    String qualSuporteRedeSocial= "Não Informado";
 
     String atividadeRecreativa = "Não";
-    String qualAtividadeRecreativa= "";
+    String qualAtividadeRecreativa= "Não Informado";
 
-    String quantasPessoasMoram= "";
-    String principalAconpanhante= "";
-    String provedorRenda= "";
-    String ondemMoram= "";
+    String quantasPessoasMoram= "Não Informado";
+    String principalAconpanhante= "Não Informado";
+    String provedorRenda= "Não Informado";
+    String ondemMoram= "Não Informado";
 
     public String getData() {
         return data;

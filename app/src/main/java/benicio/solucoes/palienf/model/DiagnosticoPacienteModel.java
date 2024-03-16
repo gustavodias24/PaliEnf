@@ -5,9 +5,9 @@ import java.util.List;
 
 public class DiagnosticoPacienteModel {
 
-    String dataHoraResolucaoIntervencao = "";
+    String dataHoraResolucaoIntervencao = "Não Informado";
     String id, idPaciente, dataCriacao;
-    String titulo = "", subTitulo = "";
+    String titulo = "Não Informado", subTitulo = "Não Informado";
     boolean ativo = true;
     List<NocModel> nocs = new ArrayList<>();
     List<IntervencaoModel> intervencoes = new ArrayList<>();
