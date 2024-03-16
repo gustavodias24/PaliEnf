@@ -18,7 +18,6 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Sexo"
             android:text="Informações Pessoais"
             android:textColor="@color/azul"
             android:textSize="24sp" />
@@ -70,13 +69,21 @@
             android:hint="Prontuário *"
             android:inputType="text" />
 
+        <EditText
+            android:id="@+id/sexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Sexo"
+            android:inputType="text" />
+
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:hint="Sexo"
             android:text="Endereço"
             android:textColor="@color/azul"
             android:textSize="24sp" />
@@ -365,7 +372,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:hint="Sexo"
             android:text="História Pregressa"
             android:textColor="@color/azul"
             android:textSize="24sp" />
@@ -376,7 +382,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ems="10"
-            android:hint="Possui alergias? Quais? "
+            android:hint="Descrição Geral"
             android:inputType="text" />
 
         <EditText

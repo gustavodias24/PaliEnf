@@ -5,6 +5,7 @@ import java.util.List;
 
 public class AvaDiariaModel {
     String id, idPaciente;
+    String data;
 
     public String getId() {
         return id;
@@ -22,138 +23,150 @@ public class AvaDiariaModel {
         this.idPaciente = idPaciente;
     }
 
-    String temperatura, pa, fc, fr, sat;
+    String temperatura = "", pa= "", fc= "", fr= "", sat= "";
 
     String posOperatorio = "Não";
-    String posOperatorioObservacao;
+    String posOperatorioObservacao= "";
 
     List<String> pulso = new ArrayList<>();
 
     List<String> nivelConsciencia = new ArrayList<>();
-    String observacaoNivelConsciencia;
+    String observacaoNivelConsciencia= "";
 
     List<String> pupila = new ArrayList<>();
-    String observacaoPupila;
+    String observacaoPupila= "";
 
     List<String> acuidadeVisual = new ArrayList<>();
-    String observacaoAcuidadeVisual;
+    String observacaoAcuidadeVisual= "";
 
     List<String> acuidadeAuditiva = new ArrayList<>();
-    String observacaoAcuidadeAuditiva;
+    String observacaoAcuidadeAuditiva= "";
 
     String regiaoCranioFacial = "assimetrico";
 
     List<String> cavidadeOral = new ArrayList<>();
-    String observacaoCavidadeOral;
+    String observacaoCavidadeOral= "";
 
     List<String> ventilacao = new ArrayList<>();
-    String observacaoVentilacao;
+    String observacaoVentilacao= "";
 
     List<String> auscultaPulmonar = new ArrayList<>();
-    String observacaoAuscultaPulmonar;
+    String observacaoAuscultaPulmonar= "";
 
     List<String> auscultaCardiaca = new ArrayList<>();
-    String observacaoAuscultaCardiaca;
+    String observacaoAuscultaCardiaca= "";
 
     List<String> torax = new ArrayList<>();
-    String observacaoTorax;
+    String observacaoTorax= "";
 
     List<String> abdome = new ArrayList<>();
-    String observacaoAbdome;
+    String observacaoAbdome= "";
 
     List<String> genitalia = new ArrayList<>();
-    String observacaoGenitalia;
+    String observacaoGenitalia= "";
 
     List<String> menbroSuperior = new ArrayList<>();
-    String observacaoMenbroSuperior;
+    String observacaoMenbroSuperior= "";
 
     List<String> menbroInferior = new ArrayList<>();
-    String observacaoMenbroInferior;
+    String observacaoMenbroInferior= "";
 
     String ortese = "Não";
-    String observacaoOrtese;
+    String observacaoOrtese= "";
     String protese = "Não";
-    String observacaoProtese;
+    String observacaoProtese= "";
 
 
     List<String> mucosas = new ArrayList<>();
-    String observacaoMucosas;
+    String observacaoMucosas= "";
 
 
     List<String> pele = new ArrayList<>();
-    String observacaoPele;
+    String observacaoPele= "";
 
     String presencaDeDor = "Não";
-    String ObservacaopresencaDeDor;
-    String escalaDeDorEva;
+    String ObservacaopresencaDeDor= "";
+    String escalaDeDorEva= "";
 
     String presencaLesao = "Não";
-    String observacaopresencaLesao;
+    String observacaopresencaLesao= "";
 
     String feridaOperatoria = "Não";
-    String observacaoFeridaOperatoria;
+    String observacaoFeridaOperatoria= "";
 
     String amputacoes = "Não";
-    String observacaoAmputacoes;
+    String observacaoAmputacoes= "";
 
     String historicoQueda = "Não";
-    String observacaoHistoricoQueda;
+    String observacaoHistoricoQueda= "";
 
     String riscoQueda = "Não";
-    String observacaoRiscoQueda;
+    String observacaoRiscoQueda= "";
 
     List<String> dipositivos = new ArrayList<>();
-    String observacaoDispositivos;
+    String observacaoDispositivos= "";
 
     String fadiga = "Não";
-    String observacaoFadiga;
+    String observacaoFadiga= "";
 
-    String aspectosNutricionais;
-    String observacaoAspectosNutricionais;
+    String aspectosNutricionais= "";
+    String observacaoAspectosNutricionais= "";
 
     List<String> dieta = new ArrayList<>();
-    String observacaoDieta;
+    String observacaoDieta= "";
+
+    String aberturaOcular= "";
+    String respostaVerbal= "";
+    String respostaMotora= "";
+    String reatividadePupilar= "";
 
     int somaEscalaGlasgow;
-    String aberturaOcular;
-    String respostaVerbal;
-    String respostaMotora;
-    String reatividadePupilar;
+
+
+    String expressaoFacil= "";
+    String atividadeCorporal= "";
+    String defesa= "";
+    String sinaisVitais= "";
+    String alteracaoRespiratoria= "";
 
     int somaEscalaDorNaoVerbal;
-    String expressaoFacil;
-    String atividadeCorporal;
-    String defesa;
-    String sinaisVitais;
-    String alteracaoRespiratoria;
 
-    String richmond;
-    String grauMucosite;
 
-    String escalaDeMucosite;
+    String richmond= "";
+    String grauMucosite= "";
+
+    String escalaDeMucosite= "";
 
     List<String> diurese = new ArrayList<>();
     List<String> evacuacao = new ArrayList<>();
-    String observacaoEliminacoes;
+    String observacaoEliminacoes= "";
 
-    String estadoEmocional;
-    String observacaoEstadoEmocional;
+    String estadoEmocional= "";
+    String observacaoEstadoEmocional= "";
 
-    String enfrentamentoDoenca;
+    String enfrentamentoDoenca= "";
 
     List<String> imagemCorporal = new ArrayList<>();
     List<String> autoestima = new ArrayList<>();
 
     String suporteRedeSocial = "Não";
-    String qualSuporteRedeSocial;
+    String qualSuporteRedeSocial= "";
 
     String atividadeRecreativa = "Não";
-    String qualAtividadeRecreativa;
+    String qualAtividadeRecreativa= "";
 
-    String quantasPessoasMoram;
-    String principalAconpanhante;
-    String provedorRenda;
-    String ondemMoram;
+    String quantasPessoasMoram= "";
+    String principalAconpanhante= "";
+    String provedorRenda= "";
+    String ondemMoram= "";
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
 
     public AvaDiariaModel() {
     }

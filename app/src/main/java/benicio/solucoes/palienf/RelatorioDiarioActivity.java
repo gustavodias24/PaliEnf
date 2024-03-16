@@ -18,7 +18,9 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -1036,6 +1038,10 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
             avaliacao.setId(id);
             avaliacao.setIdPaciente(idPaciente);
 
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd_MM_yyyy");
+            String data = simpleDateFormat.format(new Date());
+
+            avaliacao.setData(data);
             refRelatorio.child(id).setValue(avaliacao).addOnCompleteListener( task -> {
                 if ( task.isSuccessful()){
                     Toast.makeText(this, "Avaliação Cadastrada!", Toast.LENGTH_SHORT).show();

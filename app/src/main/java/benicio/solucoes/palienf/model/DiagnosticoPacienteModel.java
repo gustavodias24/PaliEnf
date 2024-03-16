@@ -7,7 +7,7 @@ public class DiagnosticoPacienteModel {
 
     String dataHoraResolucaoIntervencao = "";
     String id, idPaciente, dataCriacao;
-    String titulo, subTitulo;
+    String titulo = "", subTitulo = "";
     boolean ativo = true;
     List<NocModel> nocs = new ArrayList<>();
     List<IntervencaoModel> intervencoes = new ArrayList<>();
@@ -25,7 +25,7 @@ public class DiagnosticoPacienteModel {
     public String toString() {
         StringBuilder intervencoes = new StringBuilder();
         for (IntervencaoModel intervencao : this.intervencoes) {
-            if (intervencao.isSelecionado()){
+            if (intervencao.isSelecionado()) {
                 intervencoes.append(intervencao.getDescricao()).append("\n");
             }
         }

@@ -44,6 +44,7 @@ public class NovoPacienteActivity extends AppCompatActivity {
                     PacienteModel pacienteModel =  task.getResult().getValue(PacienteModel.class);
                     if ( pacienteModel != null ){
 
+                        mainBinding.sexo.setText(pacienteModel.getSexo());
                         mainBinding.nome.setText(pacienteModel.getNome());
                         mainBinding.dataNascimento.setText(pacienteModel.getDataNascimento());
                         mainBinding.cpf.setText(pacienteModel.getCpf());
@@ -107,6 +108,7 @@ public class NovoPacienteActivity extends AppCompatActivity {
                 }else{
                     paciente.setId(b.getString("id", ""));
                 }
+                paciente.setSexo(mainBinding.sexo.getText().toString());
                 paciente.setNome(mainBinding.nome.getText().toString());
                 paciente.setDataNascimento(mainBinding.dataNascimento.getText().toString());
                 paciente.setCpf(mainBinding.cpf.getText().toString());

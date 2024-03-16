@@ -6,12 +6,15 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.text.InputType;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -78,7 +81,8 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
         });
 
 
-        holder.titulo_diagnostico_text.setText( "noc_"+(d.getPosition()+1) + " "+ d.getNome());
+//        holder.titulo_diagnostico_text.setText( "noc_"+(d.getPosition()+1) + " "+ d.getNome());
+        holder.titulo_diagnostico_text.setText(d.getNome());
         holder.descricao_diagnostico_text.setText(d.getDescricao());
 
         holder.botao_noc.setOnClickListener(view -> {
@@ -172,8 +176,18 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
                             LinearLayout.LayoutParams.MATCH_PARENT,
                             LinearLayout.LayoutParams.WRAP_CONTENT));
                     checkBox.setText(intervencao.getDescricao());
-                    diagnosticoBinding2.layoutNocs.addView(checkBox);
+                    diagnosticoBinding2.layoutIntervencoes.addView(checkBox);
                 }
+
+                EditText campoLivre = new EditText(c);
+                campoLivre.setLayoutParams(new ViewGroup.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                ));
+                campoLivre.setGravity(Gravity.START | Gravity.TOP);
+                campoLivre.setHint("Observações");
+                campoLivre.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_MULTI_LINE);
+                diagnosticoBinding2.layoutIntervencoes.addView(campoLivre);
 
                 Button buttonConcluir = new Button(c);
                 buttonConcluir.setLayoutParams(new LinearLayout.LayoutParams(
@@ -190,8 +204,9 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
 
                     diagnosticoPaciente.getIntervencoes().clear();
 
-                    for (int i = 0; i < diagnosticoBinding2.layoutNocs.getChildCount(); i++) {
-                        View child = diagnosticoBinding2.layoutNocs.getChildAt(i);
+
+                    for (int i = 0; i < diagnosticoBinding2.layoutIntervencoes.getChildCount(); i++) {
+                        View child = diagnosticoBinding2.layoutIntervencoes.getChildAt(i);
 
                         IntervencaoModel intervencaoModel = new IntervencaoModel();
                         if (child instanceof CheckBox) {
@@ -205,6 +220,16 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
                             diagnosticoPaciente.getIntervencoes().add(intervencaoModel);
 
                         }
+                    }
+
+
+                    String intervencaoNova = campoLivre.getText().toString();
+
+                    if (!intervencaoNova.isEmpty()) {
+                        IntervencaoModel intervencaoModel = new IntervencaoModel();
+                        intervencaoModel.setDescricao(intervencaoNova);
+                        intervencaoModel.setSelecionado(true);
+                        diagnosticoPaciente.getIntervencoes().add(intervencaoModel);
                     }
 
                     @SuppressLint("SimpleDateFormat") SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");

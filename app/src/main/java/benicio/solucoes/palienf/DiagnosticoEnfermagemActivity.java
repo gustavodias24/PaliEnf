@@ -47,7 +47,7 @@ public class DiagnosticoEnfermagemActivity extends AppCompatActivity {
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
-        getSupportActionBar().setTitle("Diagnóstico de enfermagem ativos");
+        getSupportActionBar().setTitle("Diagnóstico de enfermagem");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 

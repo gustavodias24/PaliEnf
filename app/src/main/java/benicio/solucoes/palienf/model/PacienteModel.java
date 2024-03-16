@@ -11,7 +11,7 @@ public class PacienteModel {
     bairro,
     cep,
     numero,
-    pontoReferencia;
+    pontoReferencia, sexo;
 
 
     boolean necessidadeFinanceira;
@@ -41,6 +41,14 @@ public class PacienteModel {
     sc, imc, numeroLeito;
 
     public PacienteModel() {
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 
     public String getId() {
