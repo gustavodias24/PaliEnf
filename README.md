@@ -1,8 +1,8 @@
 # Palienf
 
-![Logo]()
+![Logo](https://github.com/gustavodias24/PaliEnf/blob/6f48ba1cf7ee96641b6d37b500869800aefc2276/app/src/main/res/drawable/logoapp.png)
 
-Projeto FreeLancer para a empresa da RedCloud, basicamente o aplicativo é usado pelos colaboradores para fazerem pedidos de produtos e créditos, uma forma mais simples e fácil de organizar um sistema abrangente de pedidos de uma empresa.
+Projeto FreeLancer que eu realizei para o TCC da Amanda, consiste em um aplicativo para gerenciamento de pacientes com doenças paliativas, ou seja, cadastro, realtórios e avaliações diárias para os enfermeiros realizarem no aplicativo.
 
 ## Índice
 
