@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    tools:viewBindingIgnore="true"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:viewBindingIgnore="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -1697,15 +1696,6 @@
                                                             android:textColor="#000000"
                                                             android:textSize="24sp"
                                                             android:textStyle="bold" />
-                                                        <Button
-                                                            android:id="@+id/limparSomaGlasgow"
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:backgroundTint="#FF0000"
-                                                            android:text="Limpar Cálculo glasgow"
-                                                            android:textColor="#FFFFFF"
-                                                            android:textStyle="bold" />
-
 
 
                                                         <TextView
@@ -1872,14 +1862,7 @@
                                                             android:textSize="24sp"
                                                             android:textStyle="bold" />
 
-                                                        <Button
-                                                            android:id="@+id/limparSomaDorNaoVerbal"
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"
-                                                            android:backgroundTint="#FF0000"
-                                                            android:text="Limpar Cálculo Dor Não Verbal"
-                                                            android:textColor="#FFFFFF"
-                                                            android:textStyle="bold" />
+
 
                                                         <ImageView
                                                             android:layout_width="match_parent"

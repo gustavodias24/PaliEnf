@@ -28,8 +28,22 @@ import benicio.solucoes.palienf.model.AvaDiariaModel;
 
 public class RelatorioDiarioActivity extends AppCompatActivity {
 
-    private AvaDiariaModel avaliacao;
+    TextView valorTotalGlasgow;
+    int somaGlasgow1 = 0;
+    int somaGlasgow2 = 0;
+    int somaGlasgow3 = 0;
+    int somaGlasgow4 = 0;
     private int somaGlasgow = 0;
+
+
+    private AvaDiariaModel avaliacao;
+
+    TextView valorTotalSomaDorNaoVerbal;
+    int somaDorNaoVerbal1 = 0;
+    int somaDorNaoVerbal2 = 0;
+    int somaDorNaoVerbal3 = 0;
+    int somaDorNaoVerbal4 = 0;
+    int somaDorNaoVerbal5 = 0;
     private int somaDorNaoVerbal = 0;
 
     private DatabaseReference refRelatorio = FirebaseDatabase.getInstance().getReference().child("relatoriodiario");
@@ -848,22 +862,22 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
             CheckBox hematuria = findViewById(R.id.hematuria);
             CheckBox coloracaoanormal = findViewById(R.id.coloracaoanormal);
 
-            if ( espotanea.isChecked() ){
+            if (espotanea.isChecked()) {
                 avaliacao.getDiurese().add(espotanea.getText().toString());
             }
-            if ( CVD.isChecked() ){
+            if (CVD.isChecked()) {
                 avaliacao.getDiurese().add(CVD.getText().toString());
             }
-            if ( oliguria.isChecked() ){
+            if (oliguria.isChecked()) {
                 avaliacao.getDiurese().add(oliguria.getText().toString());
             }
-            if ( anuria.isChecked() ){
+            if (anuria.isChecked()) {
                 avaliacao.getDiurese().add(anuria.getText().toString());
             }
-            if ( hematuria.isChecked() ){
+            if (hematuria.isChecked()) {
                 avaliacao.getDiurese().add(hematuria.getText().toString());
             }
-            if ( coloracaoanormal.isChecked() ){
+            if (coloracaoanormal.isChecked()) {
                 avaliacao.getDiurese().add(coloracaoanormal.getText().toString());
             }
 
@@ -877,31 +891,31 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
             CheckBox realizadoclister = findViewById(R.id.realizadoclister);
             CheckBox coloracaoanormalEvacuacao = findViewById(R.id.coloracaoanormalEvacuacao);
 
-            if ( presente.isChecked() ){
+            if (presente.isChecked()) {
                 avaliacao.getEvacuacao().add(presente.getText().toString());
             }
-            if ( ausente.isChecked() ){
+            if (ausente.isChecked()) {
                 avaliacao.getEvacuacao().add(ausente.getText().toString());
             }
-            if ( liquida.isChecked() ){
+            if (liquida.isChecked()) {
                 avaliacao.getEvacuacao().add(liquida.getText().toString());
             }
-            if ( semilíquida.isChecked() ){
+            if (semilíquida.isChecked()) {
                 avaliacao.getEvacuacao().add(semilíquida.getText().toString());
             }
-            if ( pastosa.isChecked() ){
+            if (pastosa.isChecked()) {
                 avaliacao.getEvacuacao().add(pastosa.getText().toString());
             }
-            if ( enrigecida.isChecked() ){
+            if (enrigecida.isChecked()) {
                 avaliacao.getEvacuacao().add(enrigecida.getText().toString());
             }
-            if ( fecaloma.isChecked() ){
+            if (fecaloma.isChecked()) {
                 avaliacao.getEvacuacao().add(fecaloma.getText().toString());
             }
-            if ( realizadoclister.isChecked() ){
+            if (realizadoclister.isChecked()) {
                 avaliacao.getEvacuacao().add(realizadoclister.getText().toString());
             }
-            if ( coloracaoanormalEvacuacao.isChecked() ){
+            if (coloracaoanormalEvacuacao.isChecked()) {
                 avaliacao.getEvacuacao().add(coloracaoanormalEvacuacao.getText().toString());
             }
 
@@ -917,28 +931,28 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
             RadioButton triste = findViewById(R.id.triste);
             RadioButton choroso = findViewById(R.id.choroso);
 
-            if ( tranquilo.isChecked() ){
+            if (tranquilo.isChecked()) {
                 avaliacao.setEstadoEmocional(tranquilo.getText().toString());
             }
-            if ( ansioso.isChecked() ){
+            if (ansioso.isChecked()) {
                 avaliacao.setEstadoEmocional(ansioso.getText().toString());
             }
-            if ( assustado.isChecked() ){
+            if (assustado.isChecked()) {
                 avaliacao.setEstadoEmocional(assustado.getText().toString());
             }
-            if ( agressivo.isChecked() ){
+            if (agressivo.isChecked()) {
                 avaliacao.setEstadoEmocional(agressivo.getText().toString());
             }
-            if ( agitadoEmocional.isChecked() ){
+            if (agitadoEmocional.isChecked()) {
                 avaliacao.setEstadoEmocional(agitadoEmocional.getText().toString());
             }
-            if ( irritado.isChecked() ){
+            if (irritado.isChecked()) {
                 avaliacao.setEstadoEmocional(irritado.getText().toString());
             }
-            if ( triste.isChecked() ){
+            if (triste.isChecked()) {
                 avaliacao.setEstadoEmocional(triste.getText().toString());
             }
-            if ( choroso.isChecked() ){
+            if (choroso.isChecked()) {
                 avaliacao.setEstadoEmocional(choroso.getText().toString());
             }
 
@@ -951,19 +965,19 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
             RadioButton depressao = findViewById(R.id.depressao);
             RadioButton aceitacaoDoenca = findViewById(R.id.aceitacaoDoenca);
 
-            if ( negacao.isChecked() ){
+            if (negacao.isChecked()) {
                 avaliacao.setEnfrentamentoDoenca(negacao.getText().toString());
             }
-            if ( ira.isChecked() ){
+            if (ira.isChecked()) {
                 avaliacao.setEnfrentamentoDoenca(ira.getText().toString());
             }
-            if ( barganha.isChecked() ){
+            if (barganha.isChecked()) {
                 avaliacao.setEnfrentamentoDoenca(barganha.getText().toString());
             }
-            if ( depressao.isChecked() ){
+            if (depressao.isChecked()) {
                 avaliacao.setEnfrentamentoDoenca(depressao.getText().toString());
             }
-            if ( aceitacaoDoenca.isChecked() ){
+            if (aceitacaoDoenca.isChecked()) {
                 avaliacao.setEnfrentamentoDoenca(aceitacaoDoenca.getText().toString());
             }
 
@@ -973,19 +987,19 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
             CheckBox Evita = findViewById(R.id.Evita);
             CheckBox aceitacaoCorporal = findViewById(R.id.aceitacaoCorporal);
 
-            if ( alteracao.isChecked() ){
+            if (alteracao.isChecked()) {
                 avaliacao.getImagemCorporal().add(alteracao.getText().toString());
             }
-            if ( percepcao.isChecked() ){
+            if (percepcao.isChecked()) {
                 avaliacao.getImagemCorporal().add(percepcao.getText().toString());
             }
-            if ( respostas.isChecked() ){
+            if (respostas.isChecked()) {
                 avaliacao.getImagemCorporal().add(respostas.getText().toString());
             }
-            if ( Evita.isChecked() ){
+            if (Evita.isChecked()) {
                 avaliacao.getImagemCorporal().add(Evita.getText().toString());
             }
-            if ( aceitacaoCorporal.isChecked() ){
+            if (aceitacaoCorporal.isChecked()) {
                 avaliacao.getImagemCorporal().add(aceitacaoCorporal.getText().toString());
             }
 
@@ -995,26 +1009,26 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
             CheckBox Avalia = findViewById(R.id.Avalia);
 
 
-            if ( verbalizacao.isChecked() ){
+            if (verbalizacao.isChecked()) {
                 avaliacao.getAutoestima().add(verbalizacao.getText().toString());
             }
-            if ( expressoes.isChecked() ){
+            if (expressoes.isChecked()) {
                 avaliacao.getAutoestima().add(expressoes.getText().toString());
             }
-            if ( sentimentos.isChecked() ){
+            if (sentimentos.isChecked()) {
                 avaliacao.getAutoestima().add(sentimentos.getText().toString());
             }
-            if ( Avalia.isChecked() ){
+            if (Avalia.isChecked()) {
                 avaliacao.getAutoestima().add(Avalia.getText().toString());
             }
 
             RadioButton suporteRedeSocial = findViewById(R.id.suporteRedeSocial);
-            avaliacao.setSuporteRedeSocial( suporteRedeSocial.isChecked() ? "Sim" : "Não");
+            avaliacao.setSuporteRedeSocial(suporteRedeSocial.isChecked() ? "Sim" : "Não");
             EditText qualSuporteRedeSocial = findViewById(R.id.qualSuporteRedeSocial);
             avaliacao.setQualSuporteRedeSocial(qualSuporteRedeSocial.getText().toString());
 
             RadioButton atividadeRecreativa = findViewById(R.id.atividadeRecreativa);
-            avaliacao.setAtividadeRecreativa( atividadeRecreativa.isChecked() ? "Sim" : "Não");
+            avaliacao.setAtividadeRecreativa(atividadeRecreativa.isChecked() ? "Sim" : "Não");
             EditText qualAtividadeRecreativa = findViewById(R.id.qualAtividadeRecreativa);
             avaliacao.setQualAtividadeRecreativa(qualAtividadeRecreativa.getText().toString());
 
@@ -1042,8 +1056,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
             String data = simpleDateFormat.format(new Date());
 
             avaliacao.setData(data);
-            refRelatorio.child(id).setValue(avaliacao).addOnCompleteListener( task -> {
-                if ( task.isSuccessful()){
+            refRelatorio.child(id).setValue(avaliacao).addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
                     Toast.makeText(this, "Avaliação Cadastrada!", Toast.LENGTH_SHORT).show();
                     finish();
                     startActivity(new Intent(this, this.getClass()));
@@ -1056,7 +1070,7 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     private void configurarListenerMucosite() {
-        TextView valorTotalSomaDorNaoVerbal = findViewById(R.id.somaEscalaDorNaoVerbal);
+        valorTotalSomaDorNaoVerbal = findViewById(R.id.somaEscalaDorNaoVerbal);
 
         List<Integer> ids = new ArrayList<>();
         // Expressao facial
@@ -1066,8 +1080,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         expressaoFacil0.setOnClickListener(view -> {
             expressaoFacil0.setChecked(true);
             avaliacao.setExpressaoFacil(expressaoFacil0.getText().toString());
-            somaDorNaoVerbal += 0;
-            valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
+            somaDorNaoVerbal1 = 0;
+            fazerSomaMucosite();
         });
 
         RadioButton expressaoFacil1 = findViewById(R.id.expressaoFacil1);
@@ -1075,8 +1089,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         expressaoFacil1.setOnClickListener(view -> {
             expressaoFacil1.setChecked(true);
             avaliacao.setExpressaoFacil(expressaoFacil1.getText().toString());
-            somaDorNaoVerbal += 1;
-            valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
+            somaDorNaoVerbal1 = 1;
+            fazerSomaMucosite();
         });
 
         RadioButton expressaoFacil2 = findViewById(R.id.expressaoFacil2);
@@ -1084,8 +1098,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         expressaoFacil2.setOnClickListener(view -> {
             expressaoFacil2.setChecked(true);
             avaliacao.setExpressaoFacil(expressaoFacil2.getText().toString());
-            somaDorNaoVerbal += 2;
-            valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
+            somaDorNaoVerbal1 = 2;
+            fazerSomaMucosite();
         });
 
 
@@ -1096,8 +1110,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         atividadeCorporal0.setOnClickListener(view -> {
             atividadeCorporal0.setChecked(true);
             avaliacao.setAtividadeCorporal(atividadeCorporal0.getText().toString());
-            somaDorNaoVerbal += 0;
-            valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
+            somaDorNaoVerbal2 = 0;
+            fazerSomaMucosite();
         });
 
         RadioButton atividadeCorporal1 = findViewById(R.id.atividadeCorporal1);
@@ -1105,8 +1119,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         atividadeCorporal1.setOnClickListener(view -> {
             atividadeCorporal1.setChecked(true);
             avaliacao.setAtividadeCorporal(atividadeCorporal1.getText().toString());
-            somaDorNaoVerbal += 1;
-            valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
+            somaDorNaoVerbal2 = 1;
+            fazerSomaMucosite();
         });
 
         RadioButton atividadeCorporal2 = findViewById(R.id.atividadeCorporal2);
@@ -1114,8 +1128,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         atividadeCorporal2.setOnClickListener(view -> {
             atividadeCorporal2.setChecked(true);
             avaliacao.setAtividadeCorporal(atividadeCorporal2.getText().toString());
-            somaDorNaoVerbal += 2;
-            valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
+            somaDorNaoVerbal2 = 2;
+            fazerSomaMucosite();
         });
         // defesa
         RadioButton defesal0 = findViewById(R.id.defesal0);
@@ -1123,8 +1137,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         defesal0.setOnClickListener(view -> {
             defesal0.setChecked(true);
             avaliacao.setDefesa(defesal0.getText().toString());
-            somaDorNaoVerbal += 0;
-            valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
+            somaDorNaoVerbal3 = 0;
+            fazerSomaMucosite();
         });
 
         RadioButton defesal1 = findViewById(R.id.defesal1);
@@ -1132,8 +1146,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         defesal1.setOnClickListener(view -> {
             defesal1.setChecked(true);
             avaliacao.setDefesa(defesal1.getText().toString());
-            somaDorNaoVerbal += 1;
-            valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
+            somaDorNaoVerbal3 = 1;
+            fazerSomaMucosite();
         });
 
         RadioButton defesal2 = findViewById(R.id.defesal2);
@@ -1141,8 +1155,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         defesal2.setOnClickListener(view -> {
             defesal2.setChecked(true);
             avaliacao.setDefesa(defesal2.getText().toString());
-            somaDorNaoVerbal += 2;
-            valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
+            somaDorNaoVerbal3 = 2;
+            fazerSomaMucosite();
         });
         // sinais vitais
 
@@ -1151,8 +1165,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         sinaisVitais0.setOnClickListener(view -> {
             sinaisVitais0.setChecked(true);
             avaliacao.setSinaisVitais(sinaisVitais0.getText().toString());
-            somaDorNaoVerbal += 0;
-            valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
+            somaDorNaoVerbal4 = 0;
+            fazerSomaMucosite();
         });
 
         RadioButton sinaisVitais1 = findViewById(R.id.sinaisVitais1);
@@ -1160,8 +1174,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         sinaisVitais1.setOnClickListener(view -> {
             sinaisVitais1.setChecked(true);
             avaliacao.setSinaisVitais(sinaisVitais1.getText().toString());
-            somaDorNaoVerbal += 1;
-            valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
+            somaDorNaoVerbal4 = 1;
+            fazerSomaMucosite();
         });
 
         RadioButton sinaisVitais2 = findViewById(R.id.sinaisVitais2);
@@ -1169,8 +1183,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         sinaisVitais2.setOnClickListener(view -> {
             sinaisVitais2.setChecked(true);
             avaliacao.setSinaisVitais(sinaisVitais2.getText().toString());
-            somaDorNaoVerbal += 2;
-            valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
+            somaDorNaoVerbal4 = 2;
+            fazerSomaMucosite();
         });
 
         // alteracao respiratoria
@@ -1180,8 +1194,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         alteracaoRespiratoria0.setOnClickListener(view -> {
             alteracaoRespiratoria0.setChecked(true);
             avaliacao.setSinaisVitais(alteracaoRespiratoria0.getText().toString());
-            somaDorNaoVerbal += 0;
-            valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
+            somaDorNaoVerbal5 = 0;
+            fazerSomaMucosite();
         });
 
         RadioButton alteracaoRespiratoria1 = findViewById(R.id.alteracaoRespiratoria1);
@@ -1189,8 +1203,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         alteracaoRespiratoria1.setOnClickListener(view -> {
             alteracaoRespiratoria1.setChecked(true);
             avaliacao.setSinaisVitais(alteracaoRespiratoria1.getText().toString());
-            somaDorNaoVerbal += 1;
-            valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
+            somaDorNaoVerbal5 = 1;
+            fazerSomaMucosite();
         });
 
         RadioButton alteracaoRespiratoria2 = findViewById(R.id.alteracaoRespiratoria2);
@@ -1199,22 +1213,16 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
             alteracaoRespiratoria2.setChecked(true);
             alteracaoRespiratoria2.invalidate();
             avaliacao.setSinaisVitais(alteracaoRespiratoria2.getText().toString());
-            somaDorNaoVerbal += 2;
-            valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
+            somaDorNaoVerbal5 = 2;
+            fazerSomaMucosite();
         });
 
-        Button limparSomaDorNaoVerbal = findViewById(R.id.limparSomaDorNaoVerbal);
-        limparSomaDorNaoVerbal.setOnClickListener(view -> {
-            desmarcarTudo(ids);
-            somaDorNaoVerbal = 0;
-            valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
-        });
     }
 
     @SuppressLint("SetTextI18n")
     private void configurarListenerGlasgow() {
 
-        TextView valorTotalGlasgow = findViewById(R.id.valorTotalGlasgow);
+        valorTotalGlasgow = findViewById(R.id.valorTotalGlasgow);
 
         List<Integer> ids = new ArrayList<>();
 
@@ -1224,8 +1232,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         Espotanea.setOnClickListener(view -> {
             Espotanea.setChecked(true);
             avaliacao.setAberturaOcular(Espotanea.getText().toString());
-            somaGlasgow += 4;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow1 = 4;
+            fazerSomaGlasgow();
         });
 
         RadioButton comandoverbal = findViewById(R.id.comandoverbal);
@@ -1233,8 +1241,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         comandoverbal.setOnClickListener(view -> {
             comandoverbal.setChecked(true);
             avaliacao.setAberturaOcular(comandoverbal.getText().toString());
-            somaGlasgow += 3;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow1 = 3;
+            fazerSomaGlasgow();
         });
 
         RadioButton dor = findViewById(R.id.dor);
@@ -1242,8 +1250,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         dor.setOnClickListener(view -> {
             dor.setChecked(true);
             avaliacao.setAberturaOcular(dor.getText().toString());
-            somaGlasgow += 2;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow1 = 2;
+            fazerSomaGlasgow();
         });
 
         RadioButton Semabertura = findViewById(R.id.Semabertura);
@@ -1251,8 +1259,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         Semabertura.setOnClickListener(view -> {
             Semabertura.setChecked(true);
             avaliacao.setAberturaOcular(Semabertura.getText().toString());
-            somaGlasgow += 1;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow1 = 1;
+            fazerSomaGlasgow();
         });
 
         // Resposta Verbal
@@ -1261,8 +1269,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         Orientado.setOnClickListener(view -> {
             Orientado.setChecked(true);
             avaliacao.setRespostaVerbal(Orientado.getText().toString());
-            somaGlasgow += 5;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow2 = 5;
+            fazerSomaGlasgow();
         });
 
         RadioButton Confuso = findViewById(R.id.Confuso);
@@ -1270,8 +1278,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         Confuso.setOnClickListener(view -> {
             Confuso.setChecked(true);
             avaliacao.setRespostaVerbal(Confuso.getText().toString());
-            somaGlasgow += 4;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow2 = 4;
+            fazerSomaGlasgow();
         });
 
         RadioButton Palavrasimproprias = findViewById(R.id.Palavrasimproprias);
@@ -1279,8 +1287,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         Palavrasimproprias.setOnClickListener(view -> {
             Palavrasimproprias.setChecked(true);
             avaliacao.setRespostaVerbal(Palavrasimproprias.getText().toString());
-            somaGlasgow += 3;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow2 = 3;
+            fazerSomaGlasgow();
         });
 
         RadioButton incompreensiveis = findViewById(R.id.incompreensiveis);
@@ -1288,8 +1296,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         incompreensiveis.setOnClickListener(view -> {
             incompreensiveis.setChecked(true);
             avaliacao.setRespostaVerbal(incompreensiveis.getText().toString());
-            somaGlasgow += 2;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow2 = 2;
+            fazerSomaGlasgow();
         });
 
         RadioButton semRespostaVerbal = findViewById(R.id.semRespostaVerbal);
@@ -1297,8 +1305,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         semRespostaVerbal.setOnClickListener(view -> {
             semRespostaVerbal.setChecked(true);
             avaliacao.setRespostaVerbal(semRespostaVerbal.getText().toString());
-            somaGlasgow += 1;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow2 = 1;
+            fazerSomaGlasgow();
         });
 
         // Melhor Resposta Motora
@@ -1307,8 +1315,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         Obedece.setOnClickListener(view -> {
             Obedece.setChecked(true);
             avaliacao.setRespostaVerbal(Obedece.getText().toString());
-            somaGlasgow += 6;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow3 = 6;
+            fazerSomaGlasgow();
         });
 
         RadioButton Localiza = findViewById(R.id.Localiza);
@@ -1316,8 +1324,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         Localiza.setOnClickListener(view -> {
             Localiza.setChecked(true);
             avaliacao.setRespostaVerbal(Localiza.getText().toString());
-            somaGlasgow += 5;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow3 = 5;
+            fazerSomaGlasgow();
         });
 
         RadioButton afasta = findViewById(R.id.afasta);
@@ -1325,8 +1333,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         afasta.setOnClickListener(view -> {
             afasta.setChecked(true);
             avaliacao.setRespostaVerbal(afasta.getText().toString());
-            somaGlasgow += 4;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow3 = 4;
+            fazerSomaGlasgow();
         });
 
         RadioButton Flexao = findViewById(R.id.Flexao);
@@ -1334,8 +1342,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         Flexao.setOnClickListener(view -> {
             Flexao.setChecked(true);
             avaliacao.setRespostaVerbal(Flexao.getText().toString());
-            somaGlasgow += 3;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow3 = 3;
+            fazerSomaGlasgow();
         });
 
         RadioButton Extensao = findViewById(R.id.Extensao);
@@ -1343,8 +1351,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         Extensao.setOnClickListener(view -> {
             Extensao.setChecked(true);
             avaliacao.setRespostaVerbal(Extensao.getText().toString());
-            somaGlasgow += 2;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow3 = 2;
+            fazerSomaGlasgow();
         });
 
         RadioButton Semrespota = findViewById(R.id.Semrespota);
@@ -1352,17 +1360,18 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         Semrespota.setOnClickListener(view -> {
             Semrespota.setChecked(true);
             avaliacao.setRespostaVerbal(Semrespota.getText().toString());
-            somaGlasgow += 1;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow3 = 1;
+            fazerSomaGlasgow();
         });
+
         // Reatividade Pupilar
         RadioButton Nenhuma = findViewById(R.id.Nenhuma);
         ids.add(Nenhuma.getId());
         Nenhuma.setOnClickListener(view -> {
             Nenhuma.setChecked(true);
             avaliacao.setRespostaVerbal(Nenhuma.getText().toString());
-            somaGlasgow -= 2;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow4 = -2;
+            fazerSomaGlasgow();
         });
 
         RadioButton Unilateral = findViewById(R.id.Unilateral);
@@ -1370,8 +1379,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         Unilateral.setOnClickListener(view -> {
             Unilateral.setChecked(true);
             avaliacao.setRespostaVerbal(Unilateral.getText().toString());
-            somaGlasgow -= 1;
-            valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+            somaGlasgow4 = -1;
+            fazerSomaGlasgow();
         });
 
         RadioButton bilateral = findViewById(R.id.bilateral);
@@ -1379,16 +1388,22 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         bilateral.setOnClickListener(view -> {
             bilateral.setChecked(true);
             avaliacao.setRespostaVerbal(bilateral.getText().toString());
+            somaGlasgow4 = 0;
+            fazerSomaGlasgow();
         });
 
+    }
 
-        Button limparSomaGlasgow = findViewById(R.id.limparSomaGlasgow);
+    @SuppressLint("SetTextI18n")
+    private void fazerSomaGlasgow() {
+        somaGlasgow = somaGlasgow1 + somaGlasgow2 + somaGlasgow3 + somaGlasgow4;
+        valorTotalGlasgow.setText("Valor Total: " + somaGlasgow);
+    }
 
-        limparSomaGlasgow.setOnClickListener(view -> {
-            desmarcarTudo(ids);
-            somaGlasgow = 0;
-            valorTotalGlasgow.setText("Valor Total: 0");
-        });
+    @SuppressLint("SetTextI18n")
+    private void fazerSomaMucosite() {
+        somaDorNaoVerbal = somaDorNaoVerbal1 + somaDorNaoVerbal2 + somaDorNaoVerbal3 + somaDorNaoVerbal4 + somaDorNaoVerbal5;
+        valorTotalSomaDorNaoVerbal.setText("Valor Total: " + somaDorNaoVerbal);
     }
 
     @Override
@@ -1399,14 +1414,4 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void desmarcarTudo(List<Integer> ids){
-
-        for ( int i = 0 ;  i < ids.size() ; i++ ){
-            RadioButton radioButton = findViewById(ids.get(i));
-
-            if ( radioButton.isChecked() ){
-                radioButton.setChecked(false);
-            }
-        }
-    }
 }

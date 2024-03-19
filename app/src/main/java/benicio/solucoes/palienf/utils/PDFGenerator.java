@@ -590,7 +590,7 @@ public class PDFGenerator {
 
         document.add(escalas);
 
-        addImage(context, document, R.drawable.table1);
+//        addImage(context, document, R.drawable.table1);
 
         document.add(new Paragraph("Abertura Ocular: ")
                 .setFont(font)
@@ -622,7 +622,7 @@ public class PDFGenerator {
                 .add(String.valueOf(avaliacaoModel.getSomaEscalaGlasgow()))
                 .setFont(font));
 
-        addImage(context, document, R.drawable.table2);
+//        addImage(context, document, R.drawable.table2);
 
         document.add(new Paragraph("Expressão Facial: ")
                 .setFont(font)
@@ -660,7 +660,7 @@ public class PDFGenerator {
                 .add(String.valueOf(avaliacaoModel.getSomaEscalaDorNaoVerbal()))
                 .setFont(font));
 
-        addImage(context, document, R.drawable.table3);
+//        addImage(context, document, R.drawable.table3);
 
         document.add(new Paragraph("Escala Richmond: ")
                 .setFont(font)
@@ -668,7 +668,7 @@ public class PDFGenerator {
                 .add(String.valueOf(avaliacaoModel.getRichmond()))
                 .setFont(font));
 
-        addImage(context, document, R.drawable.table4);
+//        addImage(context, document, R.drawable.table4);
 
         document.add(new Paragraph("Escala de Mucosite: ")
                 .setFont(font)
@@ -784,10 +784,10 @@ public class PDFGenerator {
                     .setFont(font)
                     .setBold());
 
-            document.add(new Paragraph(diagnostico.getSubTitulo())
-                    .add(avaliacaoModel.getOndemMoram())
-                    .setItalic()
-                    .setFont(font));
+//            document.add(new Paragraph(diagnostico.getSubTitulo())
+//                    .add(avaliacaoModel.getOndemMoram())
+//                    .setItalic()
+//                    .setFont(font));
 
             String diagnosticoResolvido = "Não";
 
@@ -804,7 +804,7 @@ public class PDFGenerator {
             document.add(new Paragraph("Noc's Selecionadas: ")
                     .setFont(font)
                     .setBold()
-                    .add(formatListToString(diagnostico.getNocSelecionadas()))
+                    .add(formatListToString(diagnostico.getNocSelecionadas()).replace(",", "*\n"))
                     .setFont(font));
 
             for (IntervencaoModel intervencaoModel : diagnostico.getIntervencoes()) {
