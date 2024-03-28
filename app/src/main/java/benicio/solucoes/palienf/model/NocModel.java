@@ -7,6 +7,7 @@ public class NocModel {
     String nome;
     List<String> possiveisIndicadores = new ArrayList<>();
 
+
     public NocModel(String nome, List<String> possiveisIndicadores) {
         this.nome = nome;
         this.possiveisIndicadores = possiveisIndicadores;

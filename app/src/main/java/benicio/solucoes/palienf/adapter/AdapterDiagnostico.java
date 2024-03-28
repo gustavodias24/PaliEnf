@@ -35,7 +35,6 @@ import java.util.List;
 import java.util.UUID;
 
 import benicio.solucoes.palienf.R;
-import benicio.solucoes.palienf.databinding.LayoutDiagnosticoBinding;
 import benicio.solucoes.palienf.databinding.LayoutNocBinding;
 import benicio.solucoes.palienf.databinding.LayoutVerCaracteristicasBinding;
 import benicio.solucoes.palienf.model.DiagnosticoModel;
@@ -138,31 +137,30 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
                     // Verificar se é um CheckBox e se está marcado
                     if (child instanceof RadioGroup) {
                         RadioGroup radioGroup = (RadioGroup) child;
-                        boolean marcado = false;
+//                        boolean marcado = false;
                         StringBuilder nocPaciente = new StringBuilder();
                         for (int i2 = 0; i2 < radioGroup.getChildCount(); i2++) {
                             View child2 = radioGroup.getChildAt(i2);
                             if (child2 instanceof RadioButton) {
                                 RadioButton radioButton = (RadioButton) child2;
                                 if (radioButton.isChecked()) {
-                                    marcado = true;
-//                                    nocPaciente.append("R- ").append(radioButton.getText().toString()).append("\n");
+//                                    marcado = true;
                                     nocPaciente.append(radioButton.getText().toString());
                                     diagnosticoPaciente.getNocSelecionadas().add(nocPaciente.toString());
-                                    nocPaciente = new StringBuilder();
+//                                    nocPaciente = new StringBuilder();
                                     break;
                                 }
                             } else if (child2 instanceof TextView) {
                                 TextView textView = (TextView) child2;
-                                nocPaciente.append(textView.getText().toString()).append("\n");
+                                nocPaciente.append(textView.getText().toString()).append("? ");
                             }
                         }
 
-                        if (!marcado) {
-//                            nocPaciente.append("R- ").append("Não Marcado\n");
-                            diagnosticoPaciente.getNocSelecionadas().add(nocPaciente.toString());
-                            nocPaciente = new StringBuilder();
-                        }
+//                        if (!marcado) {
+////                            nocPaciente.append("R- ").append("Não Marcado\n");
+//                            diagnosticoPaciente.getNocSelecionadas().add(nocPaciente.toString());
+//                            nocPaciente = new StringBuilder();
+//                        }
                     }
                 }
 

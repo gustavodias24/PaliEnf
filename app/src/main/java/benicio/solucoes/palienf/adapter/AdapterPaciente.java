@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,8 +27,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 import benicio.solucoes.palienf.DiagnosticoEnfermagemActivity;
@@ -91,7 +95,10 @@ public class AdapterPaciente extends RecyclerView.Adapter<AdapterPaciente.MyView
                                     }
                                 }
 
-                                Collections.reverse(avaliacoes);
+                                for (AvaDiariaModel ava : avaliacoes) {
+                                    Log.d("mayara", "onDataChange: " + ava.getTemperatura());
+                                }
+
                                 if (!avaliacoes.isEmpty()) {
 
                                     refDiagnosticos.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -113,7 +120,7 @@ public class AdapterPaciente extends RecyclerView.Adapter<AdapterPaciente.MyView
                                                 Toast.makeText(c, "Gerando o PDF", Toast.LENGTH_SHORT).show();
                                                 new Thread(
                                                         () -> {
-                                                            generateAndSharePDF(c, avaliacoes.get(0), pacientes.get(position), diagnosticos, dialogCarregando);
+                                                            generateAndSharePDF(c, encontrarDataMaisRecente(avaliacoes), pacientes.get(position), diagnosticos, dialogCarregando);
                                                         }
                                                 ).start();
 
@@ -191,5 +198,32 @@ public class AdapterPaciente extends RecyclerView.Adapter<AdapterPaciente.MyView
             nomePaciente = itemView.findViewById(R.id.nome_paciente);
             maisOpcoes = itemView.findViewById(R.id.mais_opces);
         }
+    }
+
+    public static AvaDiariaModel encontrarDataMaisRecente(List<AvaDiariaModel> lista) {
+        // Criar um objeto SimpleDateFormat para analisar as datas
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy 'às' HH:mm");
+
+        // Variáveis para armazenar a data mais recente e o objeto correspondente
+        Date dataMaisRecente = null;
+        AvaDiariaModel objetoMaisRecente = null;
+
+        // Iterar sobre a lista de objetos
+        for (AvaDiariaModel objeto : lista) {
+            try {
+                // Parse da string de data para um objeto Date
+                Date dataObjeto = dateFormat.parse(objeto.getData());
+                // Verificar se a data é mais recente do que a data atualmente mais recente
+                if (dataMaisRecente == null || dataObjeto.after(dataMaisRecente)) {
+                    dataMaisRecente = dataObjeto;
+                    objetoMaisRecente = objeto;
+                }
+            } catch (ParseException e) {
+                e.printStackTrace(); // Tratar adequadamente a exceção de análise de data
+            }
+        }
+
+        // Retornar o objeto com a data mais recente
+        return objetoMaisRecente;
     }
 }

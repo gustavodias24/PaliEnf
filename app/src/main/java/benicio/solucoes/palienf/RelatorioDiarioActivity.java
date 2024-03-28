@@ -1052,7 +1052,7 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
             avaliacao.setId(id);
             avaliacao.setIdPaciente(idPaciente);
 
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd_MM_yyyy");
+            @SuppressLint("SimpleDateFormat") SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy 'às' HH:mm");
             String data = simpleDateFormat.format(new Date());
 
             avaliacao.setData(data);

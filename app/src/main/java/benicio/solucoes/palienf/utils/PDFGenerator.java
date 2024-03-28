@@ -10,6 +10,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Environment;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.core.content.FileProvider;
@@ -33,6 +34,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.UUID;
 
 import benicio.solucoes.palienf.R;
 import benicio.solucoes.palienf.model.AvaDiariaModel;
@@ -70,6 +72,7 @@ public class PDFGenerator {
                 builder.setPositiveButton("Fechar", null);
                 builder.create().show();
                 e.printStackTrace();
+                activity.runOnUiThread(() -> dialogCarregando.dismiss());
             });
         }
     }
@@ -90,38 +93,38 @@ public class PDFGenerator {
         document.add(titulo);
 
 
-        Paragraph data = new Paragraph("Data: ")
-                .setFont(font)
-                .setBold()
-                .setUnderline();
-        Paragraph endereco = new Paragraph("Endereco: ")
-                .setFont(font)
-                .setBold()
-                .setUnderline();
-        Paragraph nome = new Paragraph("Nome: ")
-                .setFont(font)
-                .setBold()
-                .setUnderline();
-        Paragraph dataNascimento = new Paragraph("Data de Nascimento: ")
-                .setFont(font)
-                .setBold()
-                .setUnderline();
-        Paragraph prontuario = new Paragraph("Prontuário: ")
-                .setFont(font)
-                .setBold()
-                .setUnderline();
+//        Paragraph data = new Paragraph("Data: ")
+//                .setFont(font)
+//                .setBold()
+//                .setUnderline();
+//        Paragraph endereco = new Paragraph("Endereco: ")
+//                .setFont(font)
+//                .setBold()
+//                .setUnderline();
+//        Paragraph nome = new Paragraph("Nome: ")
+//                .setFont(font)
+//                .setBold()
+//                .setUnderline();
+//        Paragraph dataNascimento = new Paragraph("Data de Nascimento: ")
+//                .setFont(font)
+//                .setBold()
+//                .setUnderline();
+//        Paragraph prontuario = new Paragraph("Prontuário: ")
+//                .setFont(font)
+//                .setBold()
+//                .setUnderline();
+//
+//        Paragraph sexo = new Paragraph("Sexo: ")
+//                .setFont(font)
+//                .setBold()
+//                .setUnderline();
 
-        Paragraph sexo = new Paragraph("Sexo: ")
-                .setFont(font)
-                .setBold()
-                .setUnderline();
 
-
-        Paragraph dataValor = new Paragraph(avaliacaoModel.getData().replace("_", "/"));
-        Paragraph prontuarioValor = new Paragraph(pacienteModel.getProntuário());
-        Paragraph sexoValor = new Paragraph(pacienteModel.getSexo().isEmpty() ? "Não Informado" : pacienteModel.getSexo());
-        Paragraph dataNascimentoValor = new Paragraph(pacienteModel.getDataNascimento());
-        Paragraph nomeValor = new Paragraph(pacienteModel.getNome());
+//        Paragraph dataValor = new Paragraph(avaliacaoModel.getData().replace("_", "/"));
+//        Paragraph prontuarioValor = new Paragraph(pacienteModel.getProntuário());
+//        Paragraph sexoValor = new Paragraph(pacienteModel.getSexo().isEmpty() ? "Não Informado" : pacienteModel.getSexo());
+//        Paragraph dataNascimentoValor = new Paragraph(pacienteModel.getDataNascimento());
+//        Paragraph nomeValor = new Paragraph(pacienteModel.getNome());
 
         StringBuilder enderecoBuilder = new StringBuilder();
         enderecoBuilder.append(pacienteModel.getCidade())
@@ -134,23 +137,103 @@ public class PDFGenerator {
         );
 
 
-        document.add(data);
-        document.add(dataValor);
+//        document.add(data);
+//        document.add(dataValor);
+//
+//        document.add(prontuario);
+//        document.add(prontuarioValor);
+//
+//        document.add(dataNascimento);
+//        document.add(dataNascimentoValor);
+//
+//        document.add(nome);
+//        document.add(nomeValor);
+//
+//        document.add(sexo);
+//        document.add(sexoValor);
+//
+//        document.add(endereco);
+//        document.add(enderecoValor);
 
-        document.add(prontuario);
-        document.add(prontuarioValor);
 
-        document.add(dataNascimento);
-        document.add(dataNascimentoValor);
+        document.add(new Paragraph("Nome: ")
+                .setFont(font)
+                .setBold()
+                .add(pacienteModel.getNome())
+                .setFont(font));
 
-        document.add(nome);
-        document.add(nomeValor);
+        document.add(new Paragraph("Data de Nascimento: ")
+                .setFont(font)
+                .setBold()
+                .add(pacienteModel.getDataNascimento() != null ? pacienteModel.getDataNascimento() : "Não Informado")
+                .setFont(font));
 
-        document.add(sexo);
-        document.add(sexoValor);
+        document.add(new Paragraph("CPF: ")
+                .setFont(font)
+                .setBold()
+                .add(pacienteModel.getCpf())
+                .setFont(font));
 
-        document.add(endereco);
-        document.add(enderecoValor);
+        document.add(new Paragraph("Prontuário: ")
+                .setFont(font)
+                .setBold()
+                .add(pacienteModel.getProntuário() != null ? pacienteModel.getProntuário() : "Não Informado")
+                .setFont(font));
+
+        document.add(new Paragraph("Cidade: ")
+                .setFont(font)
+                .setBold()
+                .add(pacienteModel.getCidade())
+                .setFont(font));
+
+        document.add(new Paragraph("Bairro: ")
+                .setFont(font)
+                .setBold()
+                .add(pacienteModel.getBairro())
+                .setFont(font));
+
+        document.add(new Paragraph("CEP: ")
+                .setFont(font)
+                .setBold()
+                .add(pacienteModel.getCep())
+                .setFont(font));
+
+        document.add(new Paragraph("Número: ")
+                .setFont(font)
+                .setBold()
+                .add(pacienteModel.getNumero())
+                .setFont(font));
+
+        document.add(new Paragraph("Ponto de Referência: ")
+                .setFont(font)
+                .setBold()
+                .add(pacienteModel.getPontoReferencia())
+                .setFont(font));
+
+        document.add(new Paragraph("Sexo: ")
+                .setFont(font)
+                .setBold()
+                .add(pacienteModel.getSexo() != null ? pacienteModel.getSexo() : "Não Informado")
+                .setFont(font));
+
+        addBooleanToPdf(document, "Existe necessidades financeiras para prover insumos mínimos?", pacienteModel.isNecessidadeFinanceira(), pacienteModel.getDescriNecessidadeFinanceira(), font);
+        addBooleanToPdf(document, "Gostaria que outros membros da família estejam presentes quando a equipe de saúde for passar informações sobre a saúde da criança/adolescente?", pacienteModel.isNecessidadeMenbroFamilia(), pacienteModel.getDescriNecessidadeMenbroFamilia(), font);
+        addBooleanToPdf(document, "Crença/religião ?", pacienteModel.isCrencaReligiao(), pacienteModel.getDescriCrencaReligiao(), font);
+        addBooleanToPdf(document, "Você gostaria de receber a visita do seu líder espiritual?", pacienteModel.isCrencaVistirarLider(), null, font);
+        addBooleanToPdf(document, "Existe algum rito espiritual que você gostaria de realizar no hospital?", pacienteModel.isCrencaRitoEspiritual(), pacienteModel.getDescriRitoEspiritual(), font);
+
+        addStringToPdf(document, "Descrição Geral", pacienteModel.getAlergias(), font);
+        addStringToPdf(document, "Internação Recente", pacienteModel.getInternacaoRecente(), font);
+        addStringToPdf(document, "Doença Oncológica", pacienteModel.getDoencaOncológica(), font);
+        addStringToPdf(document, "Procedência", pacienteModel.getProcedencia(), font);
+        addStringToPdf(document, "Motivo Internação", pacienteModel.getMotidaInternacao(), font);
+        addStringToPdf(document, "Nome do Acompanhante", pacienteModel.getNomeCompanhante(), font);
+        addStringToPdf(document, "Peso", pacienteModel.getPeso(), font);
+        addStringToPdf(document, "Altura", pacienteModel.getAltura(), font);
+        addStringToPdf(document, "SC", pacienteModel.getSc(), font);
+        addStringToPdf(document, "IMC", pacienteModel.getImc(), font);
+        addStringToPdf(document, "Número do Leito", pacienteModel.getNumeroLeito(), font);
+
 
         String dataDaAvaliacao = "( " + avaliacaoModel.getData().replace("_", "/") + " )";
         Paragraph avaliacaoFisica = new Paragraph("Avaliação Física " + dataDaAvaliacao)
@@ -205,416 +288,111 @@ public class PDFGenerator {
 
         document.add(avaliacaoFisica);
 
-        document.add(new Paragraph("Temperatura: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getTemperatura())
-                .setFont(font));
+        addStringToPdf(document, "Temperatura", avaliacaoModel.getTemperatura(), font);
+        addStringToPdf(document, "PA", avaliacaoModel.getPa(), font);
 
-        document.add(new Paragraph("PA: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getPa())
-                .setFont(font));
+        addStringToPdf(document, "FC", avaliacaoModel.getFc(), font);
+        addStringToPdf(document, "FR", avaliacaoModel.getFr(), font);
+        addStringToPdf(document, "Sat", avaliacaoModel.getSat(), font);
 
-        document.add(new Paragraph("FC: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getFc())
-                .setFont(font));
+        addStringToPdf(document, "Pós-operatório", avaliacaoModel.getPosOperatorio(), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getPosOperatorioObservacao(), font);
+        addStringToPdf(document, "Pulso", formatListToString(avaliacaoModel.getPulso()), font);
+        addStringToPdf(document, "Nível de Consciência", formatListToString(avaliacaoModel.getNivelConsciencia()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoNivelConsciencia(), font);
 
-        document.add(new Paragraph("FR: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getFr())
-                .setFont(font));
 
-        document.add(new Paragraph("Sat: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getSat())
-                .setFont(font));
+        addStringToPdf(document, "Pupila", formatListToString(avaliacaoModel.getPupila()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoPupila(), font);
+        addStringToPdf(document, "Acuidade Visual", formatListToString(avaliacaoModel.getAcuidadeVisual()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoAcuidadeVisual(), font);
+        addStringToPdf(document, "Acuidade Auditiva", formatListToString(avaliacaoModel.getAcuidadeAuditiva()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoAcuidadeAuditiva(), font);
+        addStringToPdf(document, "Região Craniofacial", avaliacaoModel.getRegiaoCranioFacial(), font);
+        addStringToPdf(document, "Cavidade Oral", formatListToString(avaliacaoModel.getCavidadeOral()), font);
 
-        document.add(new Paragraph("Pós-operatório: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getPosOperatorio())
-                .setFont(font));
 
-        document.add(new Paragraph("Observação Pós-operatória: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getPosOperatorioObservacao())
-                .setFont(font));
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoCavidadeOral(), font);
+        addStringToPdf(document, "Ventilação", formatListToString(avaliacaoModel.getVentilacao()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoVentilacao(), font);
+        addStringToPdf(document, "Ausculta Pulmonar", formatListToString(avaliacaoModel.getAuscultaPulmonar()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoAuscultaPulmonar(), font);
+        addStringToPdf(document, "Ausculta Cardíaca", formatListToString(avaliacaoModel.getAuscultaCardiaca()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoAuscultaCardiaca(), font);
+        addStringToPdf(document, "Tórax", formatListToString(avaliacaoModel.getTorax()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoTorax(), font);
+        addStringToPdf(document, "Abdome", formatListToString(avaliacaoModel.getAbdome()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoAbdome(), font);
 
-        document.add(new Paragraph("Pulso: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getPulso()))
-                .setFont(font));
 
-        document.add(new Paragraph("Nível de Consciência: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getNivelConsciencia()))
-                .setFont(font));
+        addStringToPdf(document, "Genitália", formatListToString(avaliacaoModel.getGenitalia()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoGenitalia(), font);
+        addStringToPdf(document, "Membro Superior", formatListToString(avaliacaoModel.getMenbroSuperior()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoMenbroSuperior(), font);
+        addStringToPdf(document, "Membro Inferior", formatListToString(avaliacaoModel.getMenbroInferior()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoMenbroInferior(), font);
+        addStringToPdf(document, "Órtese", avaliacaoModel.getOrtese(), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoOrtese(), font);
+        addStringToPdf(document, "Prótese", avaliacaoModel.getProtese(), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoProtese(), font);
 
-        document.add(new Paragraph("Observação Nível de Consciência: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoNivelConsciencia())
-                .setFont(font));
 
-        document.add(new Paragraph("Pupila: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getPupila()))
-                .setFont(font));
+        addStringToPdf(document, "Mucosas", formatListToString(avaliacaoModel.getMucosas()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoMucosas(), font);
+        addStringToPdf(document, "Pele", formatListToString(avaliacaoModel.getPele()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoPele(), font);
+        addStringToPdf(document, "Presença de Dor", avaliacaoModel.getPresencaDeDor(), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getPresencaDeDor(), font);
+        addStringToPdf(document, "Escala de Dor Eva", avaliacaoModel.getEscalaDeDorEva(), font);
+        addStringToPdf(document, "Presença de Lesão", avaliacaoModel.getPresencaLesao(), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaopresencaLesao(), font);
 
-        document.add(new Paragraph("Observação Pupila: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoPupila())
-                .setFont(font));
 
-        document.add(new Paragraph("Acuidade Visual: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getAcuidadeVisual()))
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Acuidade Visual: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoAcuidadeVisual())
-                .setFont(font));
-
-        document.add(new Paragraph("Acuidade Auditiva: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getAcuidadeAuditiva()))
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Acuidade Auditiva: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoAcuidadeAuditiva())
-                .setFont(font));
-        document.add(new Paragraph("Região Craniofacial: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getRegiaoCranioFacial())
-                .setFont(font));
-
-        document.add(new Paragraph("Cavidade Oral: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getCavidadeOral()))
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Cavidade Oral: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoCavidadeOral())
-                .setFont(font));
-
-        document.add(new Paragraph("Ventilação: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getVentilacao()))
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Ventilação: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoVentilacao())
-                .setFont(font));
-
-        document.add(new Paragraph("Ausculta Pulmonar: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getAuscultaPulmonar()))
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Ausculta Pulmonar: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoAuscultaPulmonar())
-                .setFont(font));
-
-        document.add(new Paragraph("Ausculta Cardíaca: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getAuscultaCardiaca()))
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Ausculta Cardíaca: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoAuscultaCardiaca())
-                .setFont(font));
-
-        document.add(new Paragraph("Tórax: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getTorax()))
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Tórax: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoTorax())
-                .setFont(font));
-
-        document.add(new Paragraph("Abdome: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getAbdome()))
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Abdome: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoAbdome())
-                .setFont(font));
-
-        document.add(new Paragraph("Genitália: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getGenitalia()))
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Genitália: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoGenitalia())
-                .setFont(font));
-
-        document.add(new Paragraph("Membro Superior: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getMenbroSuperior()))
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Membro Superior: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoMenbroSuperior())
-                .setFont(font));
-
-        document.add(new Paragraph("Membro Inferior: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getMenbroInferior()))
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Membro Inferior: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoMenbroInferior())
-                .setFont(font));
-
-        document.add(new Paragraph("Órtese: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getOrtese())
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Órtese: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoOrtese())
-                .setFont(font));
-
-        document.add(new Paragraph("Prótese: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getProtese())
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Prótese: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoProtese())
-                .setFont(font));
-
-        document.add(new Paragraph("Mucosas: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getMucosas()))
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Mucosas: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoMucosas())
-                .setFont(font));
-
-        document.add(new Paragraph("Pele: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getPele()))
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Pele: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoPele())
-                .setFont(font));
-
-        document.add(new Paragraph("Presença de Dor: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getPresencaDeDor())
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Presença de Dor: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getPresencaDeDor())
-                .setFont(font));
-
-        document.add(new Paragraph("Escala de Dor Eva: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getEscalaDeDorEva())
-                .setFont(font));
-
-        document.add(new Paragraph("Presença de Lesão: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getPresencaLesao())
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Presença de Lesão: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaopresencaLesao())
-                .setFont(font));
-
-        document.add(new Paragraph("Ferida Operatória: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getFeridaOperatoria())
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Ferida Operatória: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoFeridaOperatoria())
-                .setFont(font));
-
-        document.add(new Paragraph("Amputações: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getAmputacoes())
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Amputações: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoAmputacoes())
-                .setFont(font));
-
-        document.add(new Paragraph("Histórico de Queda: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getHistoricoQueda())
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Histórico de Queda: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoHistoricoQueda())
-                .setFont(font));
-
-        document.add(new Paragraph("Risco de Queda: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getRiscoQueda())
-                .setFont(font));
-        document.add(new Paragraph("Observação Risco de Queda: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoRiscoQueda())
-                .setFont(font));
-
-        document.add(new Paragraph("Dispositivos: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getDipositivos()))
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Dispositivos: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoDispositivos())
-                .setFont(font));
-
-        document.add(new Paragraph("Fadiga: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getFadiga())
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Fadiga: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoFadiga())
-                .setFont(font));
-
-        document.add(new Paragraph("Aspectos Nutricionais: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getAspectosNutricionais())
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Aspectos Nutricionais: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoAspectosNutricionais())
-                .setFont(font));
-
-        document.add(new Paragraph("Dieta: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getDieta()))
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Dieta: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoDieta())
-                .setFont(font));
+        addStringToPdf(document, "Ferida Operatória", avaliacaoModel.getFeridaOperatoria(), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoFeridaOperatoria(), font);
+        addStringToPdf(document, "Amputações", avaliacaoModel.getAmputacoes(), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoAmputacoes(), font);
+        addStringToPdf(document, "Histórico de Queda", avaliacaoModel.getHistoricoQueda(), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoHistoricoQueda(), font);
+        addStringToPdf(document, "Risco de Queda", avaliacaoModel.getRiscoQueda(), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoRiscoQueda(), font);
+        addStringToPdf(document, "Dispositivos", formatListToString(avaliacaoModel.getDipositivos()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoDispositivos(), font);
+        addStringToPdf(document, "Fadiga", avaliacaoModel.getFadiga(), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoFadiga(), font);
+        addStringToPdf(document, "Aspectos Nutricionais", avaliacaoModel.getAspectosNutricionais(), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoAspectosNutricionais(), font);
+        addStringToPdf(document, "Dieta", formatListToString(avaliacaoModel.getDieta()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoDieta(), font);
 
 
         document.add(escalas);
 
 //        addImage(context, document, R.drawable.table1);
 
-        document.add(new Paragraph("Abertura Ocular: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getAberturaOcular())
-                .setFont(font));
-
-        document.add(new Paragraph("Resposta Verbal: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getRespostaVerbal())
-                .setFont(font));
-
-        document.add(new Paragraph("Resposta Motora: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getRespostaMotora())
-                .setFont(font));
-
-        document.add(new Paragraph("Reatividade Pupilar: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getReatividadePupilar())
-                .setFont(font));
+//        document.add(new Paragraph("Abertura Ocular: ")
+//                .setFont(font)
+//                .setBold()
+//                .add(avaliacaoModel.getAberturaOcular())
+//                .setFont(font));
+//
+//        document.add(new Paragraph("Resposta Verbal: ")
+//                .setFont(font)
+//                .setBold()
+//                .add(avaliacaoModel.getRespostaVerbal())
+//                .setFont(font));
+//
+//        document.add(new Paragraph("Resposta Motora: ")
+//                .setFont(font)
+//                .setBold()
+//                .add(avaliacaoModel.getRespostaMotora())
+//                .setFont(font));
+//
+//        document.add(new Paragraph("Reatividade Pupilar: ")
+//                .setFont(font)
+//                .setBold()
+//                .add(avaliacaoModel.getReatividadePupilar())
+//                .setFont(font));
 
         document.add(new Paragraph("Soma Escala Glasgow: ")
                 .setFont(font)
@@ -624,35 +402,35 @@ public class PDFGenerator {
 
 //        addImage(context, document, R.drawable.table2);
 
-        document.add(new Paragraph("Expressão Facial: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getExpressaoFacil())
-                .setFont(font));
-
-        document.add(new Paragraph("Atividade Corporal: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getAtividadeCorporal())
-                .setFont(font));
-
-        document.add(new Paragraph("Defesa: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getDefesa())
-                .setFont(font));
-
-        document.add(new Paragraph("Sinais Vitais: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getSinaisVitais())
-                .setFont(font));
-
-        document.add(new Paragraph("Alteração Respiratória: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getAlteracaoRespiratoria())
-                .setFont(font));
+//        document.add(new Paragraph("Expressão Facial: ")
+//                .setFont(font)
+//                .setBold()
+//                .add(avaliacaoModel.getExpressaoFacil())
+//                .setFont(font));
+//
+//        document.add(new Paragraph("Atividade Corporal: ")
+//                .setFont(font)
+//                .setBold()
+//                .add(avaliacaoModel.getAtividadeCorporal())
+//                .setFont(font));
+//
+//        document.add(new Paragraph("Defesa: ")
+//                .setFont(font)
+//                .setBold()
+//                .add(avaliacaoModel.getDefesa())
+//                .setFont(font));
+//
+//        document.add(new Paragraph("Sinais Vitais: ")
+//                .setFont(font)
+//                .setBold()
+//                .add(avaliacaoModel.getSinaisVitais())
+//                .setFont(font));
+//
+//        document.add(new Paragraph("Alteração Respiratória: ")
+//                .setFont(font)
+//                .setBold()
+//                .add(avaliacaoModel.getAlteracaoRespiratoria())
+//                .setFont(font));
 
         document.add(new Paragraph("Soma Escala Dor Não Verbal: ")
                 .setFont(font)
@@ -662,7 +440,7 @@ public class PDFGenerator {
 
 //        addImage(context, document, R.drawable.table3);
 
-        document.add(new Paragraph("Escala Richmond: ")
+        document.add(new Paragraph("Escala RASS: ")
                 .setFont(font)
                 .setBold()
                 .add(String.valueOf(avaliacaoModel.getRichmond()))
@@ -673,163 +451,84 @@ public class PDFGenerator {
         document.add(new Paragraph("Escala de Mucosite: ")
                 .setFont(font)
                 .setBold()
-                .add(String.valueOf(avaliacaoModel.getRichmond()))
+                .add(String.valueOf(avaliacaoModel.getGrauMucosite()))
                 .setFont(font));
 
         document.add(eliminacoes);
 
-        document.add(new Paragraph("Diurese: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getDiurese()))
-                .setFont(font));
+        addStringToPdf(document, "Diurese", formatListToString(avaliacaoModel.getDiurese()), font);
+        addStringToPdf(document, "Evacuação", formatListToString(avaliacaoModel.getEvacuacao()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoEliminacoes(), font);
 
-        document.add(new Paragraph("Evacuação: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getEvacuacao()))
-                .setFont(font));
-
-        document.add(new Paragraph("Observação Eliminações: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoEliminacoes())
-                .setFont(font));
 
         document.add(necessidadesPRE);
 
-        document.add(new Paragraph("Estado Emocional: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getEstadoEmocional())
-                .setFont(font));
+        addStringToPdf(document, "Estado Emocional", avaliacaoModel.getEstadoEmocional(), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoEstadoEmocional(), font);
+        addStringToPdf(document, "Enfrentamento da Doença", avaliacaoModel.getEnfrentamentoDoenca(), font);
+        addStringToPdf(document, "Imagem Corporal", formatListToString(avaliacaoModel.getImagemCorporal()), font);
+        addStringToPdf(document, "Autoestima", formatListToString(avaliacaoModel.getAutoestima()), font);
+        addStringToPdf(document, "Suporte Rede Social", avaliacaoModel.getSuporteRedeSocial(), font);
+        addStringToPdf(document, "Qual Suporte Rede Social", avaliacaoModel.getQualSuporteRedeSocial(), font);
+        addStringToPdf(document, "Atividade Recreativa", avaliacaoModel.getAtividadeRecreativa(), font);
+        addStringToPdf(document, "Qual Atividade Recreativa", avaliacaoModel.getQualAtividadeRecreativa(), font);
 
-        document.add(new Paragraph("Observação Estado Emocional: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getObservacaoEstadoEmocional())
-                .setFont(font));
 
-        document.add(new Paragraph("Enfrentamento da Doença: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getEnfrentamentoDoenca())
-                .setFont(font));
-
-        document.add(new Paragraph("Imagem Corporal: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getImagemCorporal()))
-                .setFont(font));
-
-        document.add(new Paragraph("Autoestima: ")
-                .setFont(font)
-                .setBold()
-                .add(formatListToString(avaliacaoModel.getAutoestima()))
-                .setFont(font));
-
-        document.add(new Paragraph("Suporte Rede Social: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getSuporteRedeSocial())
-                .setFont(font));
-
-        document.add(new Paragraph("Qual Suporte Rede Social: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getQualSuporteRedeSocial())
-                .setFont(font));
-
-        document.add(new Paragraph("Atividade Recreativa: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getAtividadeRecreativa())
-                .setFont(font));
-
-        document.add(new Paragraph("Qual Atividade Recreativa: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getQualAtividadeRecreativa())
-                .setFont(font));
-
-        document.add(new Paragraph("Quantas Pessoas Moram: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getQuantasPessoasMoram())
-                .setFont(font));
-
-        document.add(new Paragraph("Principal Acompanhante: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getPrincipalAconpanhante())
-                .setFont(font));
-
-        document.add(new Paragraph("Provedor de Renda: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getProvedorRenda())
-                .setFont(font));
-
-        document.add(new Paragraph("Onde Moram: ")
-                .setFont(font)
-                .setBold()
-                .add(avaliacaoModel.getOndemMoram())
-                .setFont(font));
+        addStringToPdf(document, "Quantas Pessoas Moram", avaliacaoModel.getQuantasPessoasMoram(), font);
+        addStringToPdf(document, "Principal Acompanhante", avaliacaoModel.getPrincipalAconpanhante(), font);
+        addStringToPdf(document, "Provedor de Renda", avaliacaoModel.getProvedorRenda(), font);
+        addStringToPdf(document, "Onde Moram", avaliacaoModel.getOndemMoram(), font);
 
 
         document.add(diagnosticus);
 
         for (DiagnosticoPacienteModel diagnostico : diagnosticoPacienteModels) {
-            document.add(new Paragraph(diagnostico.getTitulo() + "( " + diagnostico.getDataCriacao() + " )")
-                    .setFont(font)
-                    .setBold());
+
+            if (diagnostico.isAtivo()) {
+                document.add(new Paragraph(diagnostico.getTitulo() + "( " + diagnostico.getDataCriacao() + " )")
+                        .setFont(font)
+                        .setBold());
 
 //            document.add(new Paragraph(diagnostico.getSubTitulo())
 //                    .add(avaliacaoModel.getOndemMoram())
 //                    .setItalic()
 //                    .setFont(font));
 
-            String diagnosticoResolvido = "Não";
+                String diagnosticoResolvido = "Não";
 
-            if (!diagnostico.isAtivo()) {
-                diagnosticoResolvido = "Sim";
-            }
+                if (!diagnostico.isAtivo()) {
+                    diagnosticoResolvido = "Sim";
+                }
 
-            document.add(new Paragraph("Diagnóstico Resolvido? ")
-                    .setFont(font)
-                    .setBold()
-                    .add(diagnosticoResolvido)
-                    .setFont(font));
-
-            document.add(new Paragraph("Noc's Selecionadas: ")
-                    .setFont(font)
-                    .setBold()
-                    .add(formatListToString(diagnostico.getNocSelecionadas()).replace(",", "*\n"))
-                    .setFont(font));
-
-            for (IntervencaoModel intervencaoModel : diagnostico.getIntervencoes()) {
-
-                document.add(new Paragraph("Intervenção: ")
+                document.add(new Paragraph("Diagnóstico Resolvido? ")
                         .setFont(font)
                         .setBold()
-                        .add(intervencaoModel.getDescricao())
+                        .add(diagnosticoResolvido)
                         .setFont(font));
 
-                String dataPrazamento = "Não Informado";
+                document.add(new Paragraph("Noc's Selecionadas:\n ")
+                        .setFont(font)
+                        .setBold()
+                        .add(formatListToString(diagnostico.getNocSelecionadas()).replace(",", "\n").replace("\n\n", "\n"))
+                        .setFont(font));
 
-                if (intervencaoModel.isResolvido()) {
-                    dataPrazamento = intervencaoModel.getHoraIntervencao();
-                    if (dataPrazamento.isEmpty()) {
-                        dataPrazamento = "Não Informado";
+                for (IntervencaoModel intervencaoModel : diagnostico.getIntervencoes()) {
+
+                    if (intervencaoModel.isSelecionado()) {
+                        document.add(new Paragraph("Intervenção: ")
+                                .setFont(font)
+                                .setBold()
+                                .add(intervencaoModel.getDescricao())
+                                .setFont(font));
+
+
+                        if (intervencaoModel.isResolvido()) {
+                            addStringToPdf(document, "Hora da Resolução: ", intervencaoModel.getHoraIntervencao(), font);
+
+                        }
                     }
                 }
-                document.add(new Paragraph("Hora da Resolução: ")
-                        .setFont(font)
-                        .setBold()
-                        .add(dataPrazamento)
-                        .setFont(font));
             }
-
 
         }
 
@@ -867,6 +566,33 @@ public class PDFGenerator {
             }
         }
         return stringBuilder.toString();
+    }
+
+    private static void addBooleanToPdf(Document document, String label, boolean value, String description, PdfFont font) {
+        Paragraph paragraph = new Paragraph(label + ": ")
+                .setFont(font)
+                .setBold()
+                .add(value ? "Sim" : "Não")
+                .setFont(font);
+
+        if (description != null && !description.isEmpty()) {
+            paragraph.add(new Paragraph( ", " + description)
+                    .setFont(font)
+                    .setBold()
+                    .setFont(font));
+        }
+
+        document.add(paragraph);
+    }
+
+    private static void addStringToPdf(Document document, String label, String value, PdfFont font) {
+        if (value != null && !value.isEmpty()) {
+            document.add(new Paragraph(label + ": ")
+                    .setFont(font)
+                    .setBold()
+                    .add(value != null ? value : "Não Informado")
+                    .setFont(font));
+        }
     }
 
 }

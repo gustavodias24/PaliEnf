@@ -4,13 +4,20 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SearchView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,11 +34,12 @@ import benicio.solucoes.palienf.databinding.ActivityNovoPacienteBinding;
 import benicio.solucoes.palienf.model.PacienteModel;
 
 public class ListarPacienteActivity extends AppCompatActivity {
-
+    private static final int REQUEST_STORAGE_PERMISSION = 1001;
     private ActivityListarPacienteBinding mainBinding;
     private DatabaseReference refPacientes = FirebaseDatabase.getInstance().getReference().child("pacientes");
     private AdapterPaciente adapterPaciente;
     public List<PacienteModel> pacientes = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,12 +54,44 @@ public class ListarPacienteActivity extends AppCompatActivity {
 
         configurarRecycler();
         configurarListener("");
+
+        if (Build.VERSION.SDK_INT >= 23) {
+            String[] PERMISSIONS = {android.Manifest.permission.WRITE_EXTERNAL_STORAGE};
+            if (!hasPermissions(this, PERMISSIONS)) {
+                ActivityCompat.requestPermissions((Activity) this, PERMISSIONS, REQUEST_STORAGE_PERMISSION );
+            }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case REQUEST_STORAGE_PERMISSION: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    //do here
+                } else {
+                    Toast.makeText(this, "Usuário Negou Acesso!", Toast.LENGTH_LONG).show();
+                }
+            }
+        }
     }
 
     @Override
     protected void onStart() {
         configurarListener("");
         super.onStart();
+    }
+
+    private static boolean hasPermissions(Context context, String... permissions) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {
+            for (String permission : permissions) {
+                if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     private void configurarRecycler() {
@@ -64,27 +104,29 @@ public class ListarPacienteActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if ( item.getItemId() == android.R.id.home) { finish();}
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
         return super.onOptionsItemSelected(item);
     }
 
-    private void configurarListener(String query){
+    private void configurarListener(String query) {
         refPacientes.addListenerForSingleValueEvent(new ValueEventListener() {
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if ( snapshot.exists() ){
+                if (snapshot.exists()) {
                     pacientes.clear();
-                    for ( DataSnapshot dado : snapshot.getChildren()){
+                    for (DataSnapshot dado : snapshot.getChildren()) {
                         PacienteModel pacienteModel = dado.getValue(PacienteModel.class);
-                        if ( query.isEmpty() ){
+                        if (query.isEmpty()) {
                             pacientes.add(pacienteModel);
-                        }else{
+                        } else {
                             assert pacienteModel != null;
                             if (
                                     pacienteModel.getNome().toLowerCase().trim().contains(query)
-                                         
-                            ){
+
+                            ) {
                                 pacientes.add(pacienteModel);
                             }
                         }
