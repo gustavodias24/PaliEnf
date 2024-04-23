@@ -68,6 +68,15 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
 
         cadastrar.setOnClickListener(view -> {
 
+            // obs novas implementacoes
+            EditText obsEnfrentamentoDoenda = findViewById(R.id.observacaoEnfrentamentoDoenca);
+            EditText obsImagemCorporal = findViewById(R.id.observacaoImagemCorporal);
+            EditText obsAutoestima = findViewById(R.id.observacaoAutoestima);
+
+            avaliacao.setObsEnfrentamentoDoenda(obsEnfrentamentoDoenda.getText().toString());
+            avaliacao.setObsImagemCorporal(obsImagemCorporal.getText().toString());
+            avaliacao.setObsAutoestima(obsAutoestima.getText().toString());
+
             EditText temperatura = findViewById(R.id.temperatura);
             avaliacao.setTemperatura(temperatura.getText().toString());
 
@@ -1032,17 +1041,6 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
             EditText qualAtividadeRecreativa = findViewById(R.id.qualAtividadeRecreativa);
             avaliacao.setQualAtividadeRecreativa(qualAtividadeRecreativa.getText().toString());
 
-            EditText quantasPessoasMoram = findViewById(R.id.quantasPessoasMoram);
-            avaliacao.setQuantasPessoasMoram(quantasPessoasMoram.getText().toString());
-
-            EditText principalAconpanhante = findViewById(R.id.principalAconpanhante);
-            avaliacao.setPrincipalAconpanhante(principalAconpanhante.getText().toString());
-
-            EditText provedorRenda = findViewById(R.id.provedorRenda);
-            avaliacao.setProvedorRenda(provedorRenda.getText().toString());
-
-            EditText ondemMoram = findViewById(R.id.ondemMoram);
-            avaliacao.setOndemMoram(ondemMoram.getText().toString());
 
             Bundle b = getIntent().getExtras();
 

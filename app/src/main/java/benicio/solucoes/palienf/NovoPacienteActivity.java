@@ -23,6 +23,7 @@ public class NovoPacienteActivity extends AppCompatActivity {
     private ActivityNovoPacienteBinding mainBinding;
     private DatabaseReference refPacientes = FirebaseDatabase.getInstance().getReference().child("pacientes");
     private Bundle b;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +39,18 @@ public class NovoPacienteActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
-        if ( b != null){
-            if ( b.getBoolean("update", false)){
-                refPacientes.child(b.getString("id", "")).get().addOnCompleteListener(  task -> {
-                    PacienteModel pacienteModel =  task.getResult().getValue(PacienteModel.class);
-                    if ( pacienteModel != null ){
+        if (b != null) {
+            if (b.getBoolean("update", false)) {
+                refPacientes.child(b.getString("id", "")).get().addOnCompleteListener(task -> {
+                    PacienteModel pacienteModel = task.getResult().getValue(PacienteModel.class);
+                    if (pacienteModel != null) {
+
+                        // do novo update ***
+                        mainBinding.quantasPessoasMoram.setText(pacienteModel.getQuantasPessoasMoram());
+                        mainBinding.principalAconpanhante.setText(pacienteModel.getPrincipalAconpanhante());
+                        mainBinding.provedorRenda.setText(pacienteModel.getProvedorRenda());
+                        mainBinding.ondemMoram.setText(pacienteModel.getOndemMoram());
+
 
                         mainBinding.sexo.setText(pacienteModel.getSexo());
                         mainBinding.nome.setText(pacienteModel.getNome());
@@ -93,19 +101,19 @@ public class NovoPacienteActivity extends AppCompatActivity {
             }
         }
 
-        mainBinding.cadastrar.setOnClickListener( view -> {
+        mainBinding.cadastrar.setOnClickListener(view -> {
 
             if (
                     mainBinding.nome.getText().toString().isEmpty() ||
-                    mainBinding.dataNascimento.getText().toString().isEmpty() ||
-                    mainBinding.prontuario.getText().toString().isEmpty()
-            ){
+                            mainBinding.dataNascimento.getText().toString().isEmpty() ||
+                            mainBinding.prontuario.getText().toString().isEmpty()
+            ) {
                 Toast.makeText(this, "Preencha todas as informações obrigatórias!", Toast.LENGTH_SHORT).show();
-            }else{
+            } else {
                 PacienteModel paciente = new PacienteModel();
-                if ( b == null ){
+                if (b == null) {
                     paciente.setId(UUID.randomUUID().toString());
-                }else{
+                } else {
                     paciente.setId(b.getString("id", ""));
                 }
                 paciente.setSexo(mainBinding.sexo.getText().toString());
@@ -148,13 +156,19 @@ public class NovoPacienteActivity extends AppCompatActivity {
                 paciente.setImc(mainBinding.imc.getText().toString());
                 paciente.setNumeroLeito(mainBinding.numeroLeito.getText().toString());
 
-                refPacientes.child(paciente.getId()).setValue(paciente).addOnCompleteListener( task ->{
-                    if ( task.isSuccessful() ){
-                        if ( b == null){
+                // da nova atualizacao **
+                paciente.setQuantasPessoasMoram(mainBinding.quantasPessoasMoram.getText().toString());
+                paciente.setPrincipalAconpanhante(mainBinding.principalAconpanhante.getText().toString());
+                paciente.setProvedorRenda(mainBinding.provedorRenda.getText().toString());
+                paciente.setOndemMoram(mainBinding.ondemMoram.getText().toString());
+
+                refPacientes.child(paciente.getId()).setValue(paciente).addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        if (b == null) {
                             Toast.makeText(this, "Paciente criado com sucesso!", Toast.LENGTH_SHORT).show();
                             finish();
                             startActivity(new Intent(this, this.getClass()));
-                        }else{
+                        } else {
                             Toast.makeText(this, "Paciente atualizado com sucesso!", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -166,7 +180,9 @@ public class NovoPacienteActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if ( item.getItemId() == android.R.id.home) { finish();}
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
         return super.onOptionsItemSelected(item);
     }
 }

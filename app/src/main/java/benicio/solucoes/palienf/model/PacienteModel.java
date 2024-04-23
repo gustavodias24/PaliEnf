@@ -14,6 +14,43 @@ public class PacienteModel {
     pontoReferencia, sexo = "Não Informado";
 
 
+    String quantasPessoasMoram = "";
+    String principalAconpanhante = "";
+    String provedorRenda = "";
+    String ondemMoram = "";
+
+    public String getQuantasPessoasMoram() {
+        return quantasPessoasMoram;
+    }
+
+    public void setQuantasPessoasMoram(String quantasPessoasMoram) {
+        this.quantasPessoasMoram = quantasPessoasMoram;
+    }
+
+    public String getPrincipalAconpanhante() {
+        return principalAconpanhante;
+    }
+
+    public void setPrincipalAconpanhante(String principalAconpanhante) {
+        this.principalAconpanhante = principalAconpanhante;
+    }
+
+    public String getProvedorRenda() {
+        return provedorRenda;
+    }
+
+    public void setProvedorRenda(String provedorRenda) {
+        this.provedorRenda = provedorRenda;
+    }
+
+    public String getOndemMoram() {
+        return ondemMoram;
+    }
+
+    public void setOndemMoram(String ondemMoram) {
+        this.ondemMoram = ondemMoram;
+    }
+
     boolean necessidadeFinanceira;
     String descriNecessidadeFinanceira;
 

@@ -466,18 +466,21 @@ public class PDFGenerator {
         addStringToPdf(document, "Estado Emocional", avaliacaoModel.getEstadoEmocional(), font);
         addStringToPdf(document, "obs", avaliacaoModel.getObservacaoEstadoEmocional(), font);
         addStringToPdf(document, "Enfrentamento da Doença", avaliacaoModel.getEnfrentamentoDoenca(), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObsEnfrentamentoDoenda(), font);
         addStringToPdf(document, "Imagem Corporal", formatListToString(avaliacaoModel.getImagemCorporal()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObsImagemCorporal(), font);
         addStringToPdf(document, "Autoestima", formatListToString(avaliacaoModel.getAutoestima()), font);
+        addStringToPdf(document, "obs", avaliacaoModel.getObsAutoestima(), font);
         addStringToPdf(document, "Suporte Rede Social", avaliacaoModel.getSuporteRedeSocial(), font);
         addStringToPdf(document, "Qual Suporte Rede Social", avaliacaoModel.getQualSuporteRedeSocial(), font);
         addStringToPdf(document, "Atividade Recreativa", avaliacaoModel.getAtividadeRecreativa(), font);
         addStringToPdf(document, "Qual Atividade Recreativa", avaliacaoModel.getQualAtividadeRecreativa(), font);
 
 
-        addStringToPdf(document, "Quantas Pessoas Moram", avaliacaoModel.getQuantasPessoasMoram(), font);
-        addStringToPdf(document, "Principal Acompanhante", avaliacaoModel.getPrincipalAconpanhante(), font);
-        addStringToPdf(document, "Provedor de Renda", avaliacaoModel.getProvedorRenda(), font);
-        addStringToPdf(document, "Onde Moram", avaliacaoModel.getOndemMoram(), font);
+        addStringToPdf(document, "Quantas Pessoas Moram", pacienteModel.getQuantasPessoasMoram(), font);
+        addStringToPdf(document, "Principal Acompanhante", pacienteModel.getPrincipalAconpanhante(), font);
+        addStringToPdf(document, "Provedor de Renda", pacienteModel.getProvedorRenda(), font);
+        addStringToPdf(document, "Onde Moram", pacienteModel.getOndemMoram(), font);
 
 
         document.add(diagnosticus);
