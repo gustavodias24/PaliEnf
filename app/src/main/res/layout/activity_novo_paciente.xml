@@ -256,6 +256,7 @@
                     android:text="Sim" />
 
                 <RadioButton
+                    android:id="@+id/Naofinanceiro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -295,6 +296,7 @@
                     android:text="Sim" />
 
                 <RadioButton
+                    android:id="@+id/NaofamiliaPresente"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -335,6 +337,7 @@
                     android:text="Sim" />
 
                 <RadioButton
+                    android:id="@+id/NaocrencaReligiao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -374,6 +377,7 @@
                         android:text="Sim" />
 
                     <RadioButton
+                        android:id="@+id/naovisitarLider"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
@@ -415,6 +419,7 @@
                             android:text="Sim" />
 
                         <RadioButton
+                            android:id="@+id/naoritoEspiritual"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"

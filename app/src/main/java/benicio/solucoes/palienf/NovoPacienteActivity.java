@@ -66,17 +66,22 @@ public class NovoPacienteActivity extends AppCompatActivity {
 
 
                         mainBinding.financeiro.setChecked(pacienteModel.isNecessidadeFinanceira());
+                        mainBinding.Naofinanceiro.setChecked(!pacienteModel.isNecessidadeFinanceira());
                         mainBinding.descriFinanceiro.setText(pacienteModel.getDescriNecessidadeFinanceira());
 
                         mainBinding.familiaPresente.setChecked(pacienteModel.isNecessidadeMenbroFamilia());
+                        mainBinding.NaofamiliaPresente.setChecked(!pacienteModel.isNecessidadeMenbroFamilia());
                         mainBinding.descriFamiliaPresente.setText(pacienteModel.getDescriNecessidadeMenbroFamilia());
 
                         mainBinding.crencaReligiao.setChecked(pacienteModel.isCrencaReligiao());
+                        mainBinding.NaocrencaReligiao.setChecked(!pacienteModel.isCrencaReligiao());
                         mainBinding.descriCrencaReligiao.setText(pacienteModel.getDescriCrencaReligiao());
 
                         mainBinding.visitarLider.setChecked(pacienteModel.isCrencaVistirarLider());
+                        mainBinding.naovisitarLider.setChecked(!pacienteModel.isCrencaVistirarLider());
 
                         mainBinding.ritoEspiritual.setChecked(pacienteModel.isCrencaRitoEspiritual());
+                        mainBinding.naoritoEspiritual.setChecked(!pacienteModel.isCrencaRitoEspiritual());
                         mainBinding.descriRituEspiritual.setText(pacienteModel.getDescriRitoEspiritual());
 
                         mainBinding.alergias.setText(pacienteModel.getAlergias());
