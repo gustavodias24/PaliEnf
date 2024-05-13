@@ -42,13 +42,14 @@ import benicio.solucoes.palienf.model.DiagnosticoPacienteModel;
 import benicio.solucoes.palienf.model.IntervencaoModel;
 import benicio.solucoes.palienf.model.NocModel;
 
-public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.MyViewHolder> {
+public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.MyViewHolder> implements View.OnClickListener {
     private DatabaseReference refDiagnosticos = FirebaseDatabase.getInstance().getReference().child("diagnostico");
     List<DiagnosticoModel> diagnosticos;
     Activity c;
     Dialog dialogNoc;
     Dialog dialogIntervencao;
     String idPaciente;
+    private RadioButton ultimoRadioButton = null;
 
     public AdapterDiagnostico(List<DiagnosticoModel> diagnosticos, Activity c, String idPaciente) {
         this.diagnosticos = diagnosticos;
@@ -105,6 +106,7 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
 
                 for (String indicador : noc.getPossiveisIndicadores()) {
                     RadioButton radioButton = new RadioButton(c);
+                    radioButton.setOnClickListener(this);
                     radioButton.setLayoutParams(new LinearLayout.LayoutParams(
                             LinearLayout.LayoutParams.MATCH_PARENT,
                             LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -266,6 +268,23 @@ public class AdapterDiagnostico extends RecyclerView.Adapter<AdapterDiagnostico.
     @Override
     public int getItemCount() {
         return diagnosticos.size();
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v instanceof RadioButton) {
+            RadioButton radioButton = (RadioButton) v;
+
+            if (ultimoRadioButton == radioButton) {
+                // Se o mesmo RadioButton for clicado duas vezes seguidas, desmarque-o
+                radioButton.setChecked(false);
+                ultimoRadioButton = null;
+            } else {
+                // Se for clicado pela primeira vez, marque-o e atualize o último RadioButton clicado
+                radioButton.setChecked(true);
+                ultimoRadioButton = radioButton;
+            }
+        }
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {

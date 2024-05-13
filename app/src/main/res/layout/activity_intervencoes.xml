@@ -22,6 +22,17 @@
             android:textColor="@color/azul"
             android:textSize="24sp" />
 
+        <Button
+            android:id="@+id/btn_pdf_intervencao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF0000"
+            android:text="PDF"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
         <LinearLayout
             android:id="@+id/layout"
             android:layout_width="match_parent"

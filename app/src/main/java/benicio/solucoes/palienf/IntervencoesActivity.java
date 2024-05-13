@@ -30,10 +30,12 @@ import java.util.List;
 import benicio.solucoes.palienf.databinding.ActivityIntervencoesBinding;
 import benicio.solucoes.palienf.model.DiagnosticoPacienteModel;
 import benicio.solucoes.palienf.model.IntervencaoModel;
+import benicio.solucoes.palienf.utils.PDFGenerator;
 
 public class IntervencoesActivity extends AppCompatActivity {
 
     private List<String> idDiagnosticos = new ArrayList<>();
+    private List<IntervencaoModel> listaIntervencoes = new ArrayList<>();
     private DatabaseReference refDiagnosticos = FirebaseDatabase.getInstance().getReference().child("diagnostico");
     private ActivityIntervencoesBinding mainbBinding;
     private Bundle b;
@@ -53,6 +55,11 @@ public class IntervencoesActivity extends AppCompatActivity {
 
         semNada = true;
 
+
+        mainbBinding.btnPdfIntervencao.setOnClickListener(v -> {
+            Toast.makeText(this, "Gerando...", Toast.LENGTH_SHORT).show();
+            PDFGenerator.generateAndSharePDFIntervencoes(this, listaIntervencoes);
+        });
         refDiagnosticos.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -64,8 +71,13 @@ public class IntervencoesActivity extends AppCompatActivity {
                             idDiagnosticos.add(diagnostico.getId());
                             for (IntervencaoModel intervencao : diagnostico.getIntervencoes()) {
 
+                                if (intervencao.isSelecionado()) {
+                                    listaIntervencoes.add(intervencao);
+                                }
+
                                 if (intervencao.isSelecionado() && !intervencao.isResolvido()) {
                                     semNada = false;
+
 
                                     CheckBox checkBox = new CheckBox(IntervencoesActivity.this);
                                     checkBox.setLayoutParams(new LinearLayout.LayoutParams(
@@ -129,6 +141,7 @@ public class IntervencoesActivity extends AppCompatActivity {
                         mainbBinding.info.setText("Sem Nenhuma Intervenção para ser exibida!");
                     } else {
                         mainbBinding.info.setText("Aprazamento");
+                        mainbBinding.btnPdfIntervencao.setVisibility(View.VISIBLE);
                     }
                 } else {
                     mainbBinding.layout2.setVisibility(View.GONE);

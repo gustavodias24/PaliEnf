@@ -77,6 +77,73 @@ public class PDFGenerator {
         }
     }
 
+    public static void generateAndSharePDFIntervencoes(Activity activity, List<IntervencaoModel> listaIntervencoes) {
+
+        File documentosDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
+        File enfermaGuiaDir = new File(documentosDir, "Palienf");
+
+        if (!enfermaGuiaDir.exists()) {
+            enfermaGuiaDir.mkdirs();
+        }
+
+
+        String nomeArquivo = "diagnosticos_" + UUID.randomUUID().toString() + ".pdf";
+        File file = new File(enfermaGuiaDir, nomeArquivo);
+
+        try {
+            PdfDocument pdfDocument = createPDFIntervencoes(file, listaIntervencoes);
+            activity.runOnUiThread(() -> {
+                Toast.makeText(activity, "PDF salvo em Documents/Palienf", Toast.LENGTH_SHORT).show();
+                compartilharPDFViaWhatsApp(activity, file);
+            });
+
+        } catch (IOException e) {
+            activity.runOnUiThread(() -> {
+                AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+                builder.setTitle("Aviso");
+                builder.setMessage(e.getMessage());
+                builder.setPositiveButton("Fechar", null);
+                builder.create().show();
+                e.printStackTrace();
+            });
+        }
+    }
+
+    private static PdfDocument createPDFIntervencoes(File file, List<IntervencaoModel> listaIntervencoes) throws IOException {
+        PdfDocument pdfDocument = new PdfDocument(new PdfWriter(new FileOutputStream(file)));
+        Document document = new Document(pdfDocument, PageSize.A4);
+        document.setMargins(50, 50, 50, 50);
+        PdfFont font = PdfFontFactory.createFont(FontConstants.HELVETICA);
+
+        Paragraph intervencoesTitle = new Paragraph("Intervenções de Enfermagem")
+                .setFont(font)
+                .setBold()
+                .setPadding(10.0f)
+                .setFontSize(19)
+                .setBackgroundColor(new DeviceRgb(16, 64, 105))
+                .setFontColor(new DeviceRgb(255, 255, 255))
+                .setUnderline()
+                .setTextAlignment(TextAlignment.CENTER);
+
+        document.add(intervencoesTitle);
+
+        for ( IntervencaoModel intervencao : listaIntervencoes){
+
+            StringBuilder strIntervencaoBuilder = new StringBuilder();
+            strIntervencaoBuilder.append(intervencao.getDescricao());
+
+            if ( intervencao.isResolvido() ){
+                strIntervencaoBuilder.append(" - Aprazamento: ").append(intervencao.getHoraIntervencao());
+            }
+            addStringToPdf(document, "Intervenção", strIntervencaoBuilder.toString(), font);
+
+
+        }
+
+        document.close();
+        return pdfDocument;
+    }
+
     private static PdfDocument createPDF(File file, AvaDiariaModel avaliacaoModel, PacienteModel pacienteModel, Context context, List<DiagnosticoPacienteModel> diagnosticoPacienteModels, Dialog dialogCarregando) throws IOException {
         PdfDocument pdfDocument = new PdfDocument(new PdfWriter(new FileOutputStream(file)));
         Document document = new Document(pdfDocument, PageSize.A4);

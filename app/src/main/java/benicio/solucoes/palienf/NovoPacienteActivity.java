@@ -1,28 +1,37 @@
 package benicio.solucoes.palienf;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.recyclerview.widget.SnapHelper;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.UUID;
 
 import benicio.solucoes.palienf.databinding.ActivityNovoPacienteBinding;
 import benicio.solucoes.palienf.databinding.ActivityRelatarProblemaBinding;
 import benicio.solucoes.palienf.model.PacienteModel;
+import benicio.solucoes.palienf.model.UsuarioModel;
 
 public class NovoPacienteActivity extends AppCompatActivity {
 
     private ActivityNovoPacienteBinding mainBinding;
     private DatabaseReference refPacientes = FirebaseDatabase.getInstance().getReference().child("pacientes");
     private Bundle b;
+
+    private boolean atualizacao = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,8 +125,10 @@ public class NovoPacienteActivity extends AppCompatActivity {
                 Toast.makeText(this, "Preencha todas as informações obrigatórias!", Toast.LENGTH_SHORT).show();
             } else {
                 PacienteModel paciente = new PacienteModel();
+
                 if (b == null) {
-                    paciente.setId(UUID.randomUUID().toString());
+                    atualizacao = false;
+                    paciente.setId(paciente.getProntuário());
                 } else {
                     paciente.setId(b.getString("id", ""));
                 }
@@ -167,17 +178,48 @@ public class NovoPacienteActivity extends AppCompatActivity {
                 paciente.setProvedorRenda(mainBinding.provedorRenda.getText().toString());
                 paciente.setOndemMoram(mainBinding.ondemMoram.getText().toString());
 
-                refPacientes.child(paciente.getId()).setValue(paciente).addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        if (b == null) {
-                            Toast.makeText(this, "Paciente criado com sucesso!", Toast.LENGTH_SHORT).show();
-                            finish();
-                            startActivity(new Intent(this, this.getClass()));
+                // verificar se tem cadastro duplicado
+                refPacientes.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        boolean permitirCadastro = true;
+                        for (DataSnapshot dado : snapshot.getChildren()) {
+                            PacienteModel pacienteModel = dado.getValue(PacienteModel.class);
+
+                            if (pacienteModel.getProntuário().equals(paciente.getProntuário())) {
+                                permitirCadastro = false;
+                                break;
+                            }
+                        }
+
+                        if (permitirCadastro || atualizacao) {
+                            refPacientes.child(paciente.getId()).setValue(paciente).addOnCompleteListener(task -> {
+                                if (task.isSuccessful()) {
+                                    if (b == null) {
+                                        Toast.makeText(NovoPacienteActivity.this, "Paciente criado com sucesso!", Toast.LENGTH_SHORT).show();
+                                        finish();
+                                        startActivity(new Intent(NovoPacienteActivity.this, NovoPacienteActivity.class));
+                                    } else {
+                                        Toast.makeText(NovoPacienteActivity.this, "Paciente atualizado com sucesso!", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
                         } else {
-                            Toast.makeText(this, "Paciente atualizado com sucesso!", Toast.LENGTH_SHORT).show();
+                            AlertDialog.Builder b = new AlertDialog.Builder(NovoPacienteActivity.this);
+                            b.setTitle("Atenção!");
+                            b.setMessage("Paciente com Prontuário Duplicado.");
+                            b.setPositiveButton("ok", null);
+                            b.show();
                         }
                     }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Toast.makeText(NovoPacienteActivity.this, "Erro de conexão!", Toast.LENGTH_SHORT).show();
+                    }
                 });
+
+
             }
 
         });

@@ -3076,7 +3076,30 @@
     "nome" : "Ambiente físico",
     "possiveisIndicadores" : [ "Gravemente comprometido", "Levemente comprometido", "Moderadamente comprometido", "Muito comprometido", "Não comprometido" ]
   } ],
-  "intervencoes" : [ {
+  "intervencoes" : [
+  {
+
+         "descricao" : "Realizar rodízio de oxímetro e manguito de PA."
+       },
+  {
+
+         "descricao" : "Realizar mudanças de decúbito."
+       },
+  {
+
+         "descricao" : "Realizar curativos (cateteres e drenos)"
+       },
+    {
+
+           "descricao" : "Auxiliar no banho de aspersão"
+         },
+   {
+
+       "descricao" : "Realizar banho no leito "
+     },
+
+
+   {
 
     "descricao" : "Criar um ambiente calmo e acolhedor"
   }, {

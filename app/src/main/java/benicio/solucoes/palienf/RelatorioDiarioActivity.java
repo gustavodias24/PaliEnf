@@ -8,9 +8,12 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,7 +29,7 @@ import java.util.UUID;
 
 import benicio.solucoes.palienf.model.AvaDiariaModel;
 
-public class RelatorioDiarioActivity extends AppCompatActivity {
+public class RelatorioDiarioActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView valorTotalGlasgow;
     int somaGlasgow1 = 0;
@@ -48,6 +51,10 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
 
     private DatabaseReference refRelatorio = FirebaseDatabase.getInstance().getReference().child("relatoriodiario");
 
+    LinearLayout linearLayout;
+
+    private RadioButton ultimoRadioButton = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +63,10 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         avaliacao = new AvaDiariaModel();
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+        linearLayout = findViewById(R.id.main);
+
+        setOnClickListenerForAllChildren(linearLayout);
 
         getSupportActionBar().setTitle("Avaliação Diária");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -1228,7 +1239,7 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         RadioButton Espotanea = findViewById(R.id.Espotanea);
         ids.add(Espotanea.getId());
         Espotanea.setOnClickListener(view -> {
-            Espotanea.setChecked(true);
+//            Espotanea.setChecked(true);
             avaliacao.setAberturaOcular(Espotanea.getText().toString());
             somaGlasgow1 = 4;
             fazerSomaGlasgow();
@@ -1237,7 +1248,7 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         RadioButton comandoverbal = findViewById(R.id.comandoverbal);
         ids.add(comandoverbal.getId());
         comandoverbal.setOnClickListener(view -> {
-            comandoverbal.setChecked(true);
+//            comandoverbal.setChecked(true);
             avaliacao.setAberturaOcular(comandoverbal.getText().toString());
             somaGlasgow1 = 3;
             fazerSomaGlasgow();
@@ -1246,7 +1257,7 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         RadioButton dor = findViewById(R.id.dor);
         ids.add(dor.getId());
         dor.setOnClickListener(view -> {
-            dor.setChecked(true);
+//            dor.setChecked(true);
             avaliacao.setAberturaOcular(dor.getText().toString());
             somaGlasgow1 = 2;
             fazerSomaGlasgow();
@@ -1255,7 +1266,7 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         RadioButton Semabertura = findViewById(R.id.Semabertura);
         ids.add(Semabertura.getId());
         Semabertura.setOnClickListener(view -> {
-            Semabertura.setChecked(true);
+//            Semabertura.setChecked(true);
             avaliacao.setAberturaOcular(Semabertura.getText().toString());
             somaGlasgow1 = 1;
             fazerSomaGlasgow();
@@ -1412,4 +1423,35 @@ public class RelatorioDiarioActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onClick(View v) {
+        if (v instanceof RadioButton) {
+            RadioButton radioButton = (RadioButton) v;
+
+            if (ultimoRadioButton == radioButton) {
+                // Se o mesmo RadioButton for clicado duas vezes seguidas, desmarque-o
+                radioButton.setChecked(false);
+                ultimoRadioButton = null;
+            } else {
+                // Se for clicado pela primeira vez, marque-o e atualize o último RadioButton clicado
+                radioButton.setChecked(true);
+                ultimoRadioButton = radioButton;
+            }
+        }
+    }
+
+    public void setOnClickListenerForAllChildren(ViewGroup viewGroup) {
+        for (int i = 0; i < viewGroup.getChildCount(); i++) {
+            View child = viewGroup.getChildAt(i);
+            if (child instanceof ViewGroup) {
+                // Se o filho for um ViewGroup, chame recursivamente este método
+                setOnClickListenerForAllChildren((ViewGroup) child);
+            } else {
+                // Se o filho não for um ViewGroup, adicione um OnClickListener a ele
+                if (child instanceof RadioButton) {
+                    child.setOnClickListener(this);
+                }
+            }
+        }
+    }
 }
