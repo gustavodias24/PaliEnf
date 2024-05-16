@@ -126,12 +126,7 @@ public class NovoPacienteActivity extends AppCompatActivity {
             } else {
                 PacienteModel paciente = new PacienteModel();
 
-                if (b == null) {
-                    atualizacao = false;
-                    paciente.setId(paciente.getProntuário());
-                } else {
-                    paciente.setId(b.getString("id", ""));
-                }
+
                 paciente.setSexo(mainBinding.sexo.getText().toString());
                 paciente.setNome(mainBinding.nome.getText().toString());
                 paciente.setDataNascimento(mainBinding.dataNascimento.getText().toString());
@@ -177,6 +172,16 @@ public class NovoPacienteActivity extends AppCompatActivity {
                 paciente.setPrincipalAconpanhante(mainBinding.principalAconpanhante.getText().toString());
                 paciente.setProvedorRenda(mainBinding.provedorRenda.getText().toString());
                 paciente.setOndemMoram(mainBinding.ondemMoram.getText().toString());
+
+                // configurar Id
+                if (b == null) {
+                    atualizacao = false;
+                    paciente.setId(paciente.getProntuário());
+                } else {
+                    paciente.setId(b.getString("id", ""));
+                }
+
+
 
                 // verificar se tem cadastro duplicado
                 refPacientes.addListenerForSingleValueEvent(new ValueEventListener() {

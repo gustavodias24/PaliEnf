@@ -1226,6 +1226,38 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
             fazerSomaMucosite();
         });
 
+        Button removerEscala = findViewById(R.id.removerEscalaDorNaoVerbal);
+        removerEscala.setOnClickListener(v -> {
+            alteracaoRespiratoria0.setChecked(false);
+            alteracaoRespiratoria1.setChecked(false);
+            alteracaoRespiratoria2.setChecked(false);
+
+            sinaisVitais0.setChecked(false);
+            sinaisVitais1.setChecked(false);
+            sinaisVitais2.setChecked(false);
+
+
+            defesal0.setChecked(false);
+            defesal1.setChecked(false);
+            defesal2.setChecked(false);
+
+            atividadeCorporal0.setChecked(false);
+            atividadeCorporal1.setChecked(false);
+            atividadeCorporal2.setChecked(false);
+
+            expressaoFacil2.setChecked(false);
+            expressaoFacil2.setChecked(false);
+            expressaoFacil2.setChecked(false);
+
+            somaDorNaoVerbal5 = 2;
+            somaDorNaoVerbal4 = 2;
+            somaDorNaoVerbal3 = 2;
+            somaDorNaoVerbal2 = 2;
+            somaDorNaoVerbal1 = 2;
+
+            fazerSomaMucosite();
+        });
+
     }
 
     @SuppressLint("SetTextI18n")
@@ -1243,6 +1275,7 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
             avaliacao.setAberturaOcular(Espotanea.getText().toString());
             somaGlasgow1 = 4;
             fazerSomaGlasgow();
+
         });
 
         RadioButton comandoverbal = findViewById(R.id.comandoverbal);
@@ -1398,6 +1431,38 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
             bilateral.setChecked(true);
             avaliacao.setRespostaVerbal(bilateral.getText().toString());
             somaGlasgow4 = 0;
+            fazerSomaGlasgow();
+        });
+
+        Button removerEscala = findViewById(R.id.removerEscalaGlawgow);
+        removerEscala.setOnClickListener(v -> {
+            somaGlasgow1 = 0;
+            somaGlasgow2 = 0;
+            somaGlasgow3 = 0;
+            somaGlasgow4 = 0;
+
+            bilateral.setChecked(false);
+            Unilateral.setChecked(false);
+            Nenhuma.setChecked(false);
+            Semrespota.setChecked(false);
+            Extensao.setChecked(false);
+            Flexao.setChecked(false);
+            afasta.setChecked(false);
+            Localiza.setChecked(false);
+            Obedece.setChecked(false);
+            semRespostaVerbal.setChecked(false);
+            incompreensiveis.setChecked(false);
+            Palavrasimproprias.setChecked(false);
+            Confuso.setChecked(false);
+            Orientado.setChecked(false);
+            Semabertura.setChecked(false);
+            dor.setChecked(false);
+            comandoverbal.setChecked(false);
+            Espotanea.setChecked(false);
+
+            avaliacao.setRespostaVerbal("");
+            avaliacao.setAberturaOcular("");
+
             fazerSomaGlasgow();
         });
 

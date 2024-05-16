@@ -23,6 +23,8 @@
             android:textSize="24sp" />
 
 
+
+
         <EditText
             android:id="@+id/temperatura"
             android:layout_width="match_parent"
@@ -1698,6 +1700,14 @@
                                                             android:textSize="24sp"
                                                             android:textStyle="bold" />
 
+                                                        <Button
+                                                            android:id="@+id/removerEscalaGlawgow"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:backgroundTint="#FF0000"
+                                                            android:text="Remover Escala"
+                                                            android:textColor="#FFFFFF" />
+
 
                                                         <TextView
                                                             android:layout_width="match_parent"
@@ -1862,6 +1872,14 @@
                                                             android:textColor="#000000"
                                                             android:textSize="24sp"
                                                             android:textStyle="bold" />
+
+                                                        <Button
+                                                            android:id="@+id/removerEscalaDorNaoVerbal"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:backgroundTint="#FF0000"
+                                                            android:text="Remover Escala"
+                                                            android:textColor="#FFFFFF" />
 
 
 
