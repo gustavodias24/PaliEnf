@@ -12,6 +12,7 @@ public class AvaDiariaModel {
 
     // variaveis nova implementacao
 
+    String condutas = "";
     String obsEnfrentamentoDoenda = "";
     String obsImagemCorporal = "";
     String obsAutoestima = "";
@@ -192,7 +193,13 @@ public class AvaDiariaModel {
     String atividadeRecreativa = "Não";
     String qualAtividadeRecreativa = "";
 
+    public String getCondutas() {
+        return condutas;
+    }
 
+    public void setCondutas(String condutas) {
+        this.condutas = condutas;
+    }
 
     public String getData() {
         return data;

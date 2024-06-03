@@ -84,6 +84,10 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
             EditText obsImagemCorporal = findViewById(R.id.observacaoImagemCorporal);
             EditText obsAutoestima = findViewById(R.id.observacaoAutoestima);
 
+            EditText condutas = findViewById(R.id.condutas);
+
+            avaliacao.setCondutas(condutas.getText().toString());
+
             avaliacao.setObsEnfrentamentoDoenda(obsEnfrentamentoDoenda.getText().toString());
             avaliacao.setObsImagemCorporal(obsImagemCorporal.getText().toString());
             avaliacao.setObsAutoestima(obsAutoestima.getText().toString());
@@ -1228,32 +1232,33 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
 
         Button removerEscala = findViewById(R.id.removerEscalaDorNaoVerbal);
         removerEscala.setOnClickListener(v -> {
-            alteracaoRespiratoria0.setChecked(false);
-            alteracaoRespiratoria1.setChecked(false);
-            alteracaoRespiratoria2.setChecked(false);
 
-            sinaisVitais0.setChecked(false);
-            sinaisVitais1.setChecked(false);
-            sinaisVitais2.setChecked(false);
-
-
-            defesal0.setChecked(false);
-            defesal1.setChecked(false);
-            defesal2.setChecked(false);
+            expressaoFacil0.setChecked(false);
+            expressaoFacil1.setChecked(false);
+            expressaoFacil2.setChecked(false);
 
             atividadeCorporal0.setChecked(false);
             atividadeCorporal1.setChecked(false);
             atividadeCorporal2.setChecked(false);
 
-            expressaoFacil2.setChecked(false);
-            expressaoFacil2.setChecked(false);
-            expressaoFacil2.setChecked(false);
+            defesal0.setChecked(false);
+            defesal1.setChecked(false);
+            defesal2.setChecked(false);
 
-            somaDorNaoVerbal5 = 2;
-            somaDorNaoVerbal4 = 2;
-            somaDorNaoVerbal3 = 2;
-            somaDorNaoVerbal2 = 2;
-            somaDorNaoVerbal1 = 2;
+            sinaisVitais0.setChecked(false);
+            sinaisVitais1.setChecked(false);
+            sinaisVitais2.setChecked(false);
+
+            alteracaoRespiratoria0.setChecked(false);
+            alteracaoRespiratoria1.setChecked(false);
+            alteracaoRespiratoria2.setChecked(false);
+
+
+            somaDorNaoVerbal5 = 0;
+            somaDorNaoVerbal4 = 0;
+            somaDorNaoVerbal3 = 0;
+            somaDorNaoVerbal2 = 0;
+            somaDorNaoVerbal1 = 0;
 
             fazerSomaMucosite();
         });

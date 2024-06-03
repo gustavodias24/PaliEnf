@@ -1517,6 +1517,14 @@
                                                                 android:ems="10"
                                                                 android:hint="Observações"
                                                                 android:inputType="text" />
+
+                                                            <EditText
+                                                                android:id="@+id/condutas"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:ems="10"
+                                                                android:hint="Condutas"
+                                                                android:inputType="text" />
                                                         </RadioGroup>
 
                                                         <TextView
@@ -1705,7 +1713,7 @@
                                                             android:layout_width="match_parent"
                                                             android:layout_height="wrap_content"
                                                             android:backgroundTint="#FF0000"
-                                                            android:text="Remover Escala"
+                                                            android:text="Remover Escala Glasgow"
                                                             android:textColor="#FFFFFF" />
 
 
@@ -1878,7 +1886,7 @@
                                                             android:layout_width="match_parent"
                                                             android:layout_height="wrap_content"
                                                             android:backgroundTint="#FF0000"
-                                                            android:text="Remover Escala"
+                                                            android:text="Remover Escala Dor Não Verbal"
                                                             android:textColor="#FFFFFF" />
 
 

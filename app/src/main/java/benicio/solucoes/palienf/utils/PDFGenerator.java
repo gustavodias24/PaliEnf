@@ -432,6 +432,9 @@ public class PDFGenerator {
         addStringToPdf(document, "Dieta", formatListToString(avaliacaoModel.getDieta()), font);
         addStringToPdf(document, "obs", avaliacaoModel.getObservacaoDieta(), font);
 
+        addStringToPdf(document, "Condutas", avaliacaoModel.getCondutas(), font);
+
+
 
         document.add(escalas);
 
