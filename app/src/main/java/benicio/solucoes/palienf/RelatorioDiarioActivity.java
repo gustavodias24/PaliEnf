@@ -1,12 +1,14 @@
 package benicio.solucoes.palienf;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +20,13 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -31,6 +37,9 @@ import benicio.solucoes.palienf.model.AvaDiariaModel;
 
 public class RelatorioDiarioActivity extends AppCompatActivity implements View.OnClickListener {
 
+//    AvaDiariaModel ultimaAvaliacao = null;
+    boolean carregando = true;
+    String idPaciente;
     TextView valorTotalGlasgow;
     int somaGlasgow1 = 0;
     int somaGlasgow2 = 0;
@@ -59,6 +68,23 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_relatorio_diario);
+
+//        recuperarUltimoRelatorio();
+        Bundle b = getIntent().getExtras();
+        idPaciente = b.getString("id", "");
+
+//        findViewById(R.id.verUltimoRelatorioDiario).setOnClickListener(v -> {
+//            AlertDialog.Builder bVerInfo = new AlertDialog.Builder(RelatorioDiarioActivity.this);
+//            bVerInfo.setTitle("última Avaliação.");
+//            if (ultimaAvaliacao != null) {
+//                bVerInfo.setMessage(ultimaAvaliacao.toString());
+//            } else {
+//                bVerInfo.setMessage(carregando ? "Carregando... tente novamente." : "Última avaliação ainda não disponível!");
+//            }
+//            bVerInfo.setPositiveButton("ok", null);
+//            bVerInfo.create().show();
+//        });
+
 
         avaliacao = new AvaDiariaModel();
 
@@ -1057,10 +1083,7 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
             avaliacao.setQualAtividadeRecreativa(qualAtividadeRecreativa.getText().toString());
 
 
-            Bundle b = getIntent().getExtras();
-
             String id = UUID.randomUUID().toString();
-            String idPaciente = b.getString("id", "");
 
             avaliacao.setId(id);
             avaliacao.setIdPaciente(idPaciente);
@@ -1524,4 +1547,49 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
             }
         }
     }
+
+//    private void recuperarUltimoRelatorio() {
+//        refRelatorio.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//
+//                String dataAtual = "";
+//                @SuppressLint("SimpleDateFormat") SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy 'às' HH:mm");
+//
+//                for (DataSnapshot data : snapshot.getChildren()) {
+//                    AvaDiariaModel ava = data.getValue(AvaDiariaModel.class);
+//
+//                    if (ava.getIdPaciente().equals(idPaciente)) {
+//                        if ( dataAtual.isEmpty() ){
+//                            ultimaAvaliacao = ava;
+//                            avaliacao = ultimaAvaliacao;
+//                            dataAtual = ava.getData();
+//                        }else{
+//                            try{
+//                                Date date1 = formatter.parse(dataAtual);
+//                                Date date2 = formatter.parse(ava.getData());
+//
+//                                if ( date1.before(date2)){
+//                                    ultimaAvaliacao = ava;
+//                                    avaliacao = ultimaAvaliacao;
+//                                    dataAtual = ava.getData();
+//                                }
+//
+//                            }catch (ParseException e){}
+//
+//                        }
+//
+//
+//                    }
+//                }
+//
+//                carregando = false;
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//                carregando = false;
+//            }
+//        });
+//    }
 }

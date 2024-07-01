@@ -932,5 +932,104 @@ public class AvaDiariaModel {
         this.qualAtividadeRecreativa = qualAtividadeRecreativa;
     }
 
+    @Override
+    public String toString() {
+        return
+                "Temperatura: " + temperatura + '\n' +
+                        "PA: " + pa + '\n' +
+                        "FC: " + fc + '\n' +
+                        "FR: " + fr + '\n' +
+                        "Saturação: " + sat + '\n' +
+                        "Pós-operatório: " + posOperatorio + '\n' +
+                        "Obs Pós-operatório: " + posOperatorioObservacao + '\n' +
+                        "Condutas: " + condutas + '\n' +
+                        "Obs Enfrentamento Doença: " + obsEnfrentamentoDoenda + '\n' +
+                        "Obs Imagem Corporal: " + obsImagemCorporal + '\n' +
+                        "Obs Autoestima: " + obsAutoestima + '\n' +
+                        "Data: " + data + '\n' +
+                        "Pulso: " + pulso + '\n' +
+                        "Nível de Consciência: " + nivelConsciencia + '\n' +
+                        "Obs Nível de Consciência: " + observacaoNivelConsciencia + '\n' +
+                        "Pupila: " + pupila + '\n' +
+                        "Obs Pupila: " + observacaoPupila + '\n' +
+                        "Acuidade Visual: " + acuidadeVisual + '\n' +
+                        "Obs Acuidade Visual: " + observacaoAcuidadeVisual + '\n' +
+                        "Acuidade Auditiva: " + acuidadeAuditiva + '\n' +
+                        "Obs Acuidade Auditiva: " + observacaoAcuidadeAuditiva + '\n' +
+                        "Região Crânio-facial: " + regiaoCranioFacial + '\n' +
+                        "Cavidade Oral: " + cavidadeOral + '\n' +
+                        "Obs Cavidade Oral: " + observacaoCavidadeOral + '\n' +
+                        "Ventilação: " + ventilacao + '\n' +
+                        "Obs Ventilação: " + observacaoVentilacao + '\n' +
+                        "Ausculta Pulmonar: " + auscultaPulmonar + '\n' +
+                        "Obs Ausculta Pulmonar: " + observacaoAuscultaPulmonar + '\n' +
+                        "Ausculta Cardíaca: " + auscultaCardiaca + '\n' +
+                        "Obs Ausculta Cardíaca: " + observacaoAuscultaCardiaca + '\n' +
+                        "Tórax: " + torax + '\n' +
+                        "Obs Tórax: " + observacaoTorax + '\n' +
+                        "Abdome: " + abdome + '\n' +
+                        "Obs Abdome: " + observacaoAbdome + '\n' +
+                        "Genitália: " + genitalia + '\n' +
+                        "Obs Genitália: " + observacaoGenitalia + '\n' +
+                        "Membro Superior: " + menbroSuperior + '\n' +
+                        "Obs Membro Superior: " + observacaoMenbroSuperior + '\n' +
+                        "Membro Inferior: " + menbroInferior + '\n' +
+                        "Obs Membro Inferior: " + observacaoMenbroInferior + '\n' +
+                        "Órtese: " + ortese + '\n' +
+                        "Obs Órtese: " + observacaoOrtese + '\n' +
+                        "Prótese: " + protese + '\n' +
+                        "Obs Prótese: " + observacaoProtese + '\n' +
+                        "Mucosas: " + mucosas + '\n' +
+                        "Obs Mucosas: " + observacaoMucosas + '\n' +
+                        "Pele: " + pele + '\n' +
+                        "Obs Pele: " + observacaoPele + '\n' +
+                        "Presença de Dor: " + presencaDeDor + '\n' +
+                        "Obs Presença de Dor: " + ObservacaopresencaDeDor + '\n' +
+                        "Escala de Dor EVA: " + escalaDeDorEva + '\n' +
+                        "Presença de Lesão: " + presencaLesao + '\n' +
+                        "Obs Presença de Lesão: " + observacaopresencaLesao + '\n' +
+                        "Ferida Operatória: " + feridaOperatoria + '\n' +
+                        "Obs Ferida Operatória: " + observacaoFeridaOperatoria + '\n' +
+                        "Amputações: " + amputacoes + '\n' +
+                        "Obs Amputações: " + observacaoAmputacoes + '\n' +
+                        "Histórico de Queda: " + historicoQueda + '\n' +
+                        "Obs Histórico de Queda: " + observacaoHistoricoQueda + '\n' +
+                        "Risco de Queda: " + riscoQueda + '\n' +
+                        "Obs Risco de Queda: " + observacaoRiscoQueda + '\n' +
+                        "Dispositivos: " + dipositivos + '\n' +
+                        "Obs Dispositivos: " + observacaoDispositivos + '\n' +
+                        "Fadiga: " + fadiga + '\n' +
+                        "Obs Fadiga: " + observacaoFadiga + '\n' +
+                        "Aspectos Nutricionais: " + aspectosNutricionais + '\n' +
+                        "Obs Aspectos Nutricionais: " + observacaoAspectosNutricionais + '\n' +
+                        "Dieta: " + dieta + '\n' +
+                        "Obs Dieta: " + observacaoDieta + '\n' +
+                        "Abertura Ocular: " + aberturaOcular + '\n' +
+                        "Resposta Verbal: " + respostaVerbal + '\n' +
+                        "Resposta Motora: " + respostaMotora + '\n' +
+                        "Reatividade Pupilar: " + reatividadePupilar + '\n' +
+                        "Soma Escala Glasgow: " + somaEscalaGlasgow + '\n' +
+                        "Expressão Facial: " + expressaoFacil + '\n' +
+                        "Atividade Corporal: " + atividadeCorporal + '\n' +
+                        "Defesa: " + defesa + '\n' +
+                        "Sinais Vitais: " + sinaisVitais + '\n' +
+                        "Alteração Respiratória: " + alteracaoRespiratoria + '\n' +
+                        "Soma Escala Dor Não Verbal: " + somaEscalaDorNaoVerbal + '\n' +
+                        "Richmond: " + richmond + '\n' +
+                        "Grau de Mucosite: " + grauMucosite + '\n' +
+                        "Escala de Mucosite: " + escalaDeMucosite + '\n' +
+                        "Diurese: " + diurese + '\n' +
+                        "Evacuação: " + evacuacao + '\n' +
+                        "Obs Eliminações: " + observacaoEliminacoes + '\n' +
+                        "Estado Emocional: " + estadoEmocional + '\n' +
+                        "Obs Estado Emocional: " + observacaoEstadoEmocional + '\n' +
+                        "Enfrentamento da Doença: " + enfrentamentoDoenca + '\n' +
+                        "Imagem Corporal: " + imagemCorporal + '\n' +
+                        "Autoestima: " + autoestima + '\n' +
+                        "Suporte Rede Social: " + suporteRedeSocial + '\n' +
+                        "Qual Suporte Rede Social: " + qualSuporteRedeSocial + '\n' +
+                        "Atividade Recreativa: " + atividadeRecreativa + '\n' +
+                        "Qual Atividade Recreativa: " + qualAtividadeRecreativa;
 
+    }
 }

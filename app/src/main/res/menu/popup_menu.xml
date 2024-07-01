@@ -15,4 +15,8 @@
     <item
         android:id="@+id/intervencao"
         android:title="Intervenções de enfermagem" />
+
+    <item
+        android:id="@+id/excluirPaciente"
+        android:title="Excluir paciente" />
 </menu>

@@ -20,7 +20,6 @@ import benicio.solucoes.palienf.databinding.ActivityLoginBinding;
 import benicio.solucoes.palienf.model.UsuarioModel;
 
 public class LoginActivity extends AppCompatActivity {
-
     private ActivityLoginBinding mainBinding;
     private DatabaseReference refUsuarios = FirebaseDatabase.getInstance().getReference().child("usuarios");
     private SharedPreferences sharedPreferences;
@@ -37,6 +36,11 @@ public class LoginActivity extends AppCompatActivity {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         mainBinding.verSenha.setOnClickListener(view -> mainBinding.edtSenha.setInputType(InputType.TYPE_CLASS_TEXT));
+
+        if (!sharedPreferences.getString("id", "").isEmpty()){
+            finish();
+            startActivity(new Intent(LoginActivity.this, MenuActivity.class));
+        }
 
         mainBinding.btnEntrar.setOnClickListener(view -> {
 //            startActivity(new Intent(this, MenuActivity.class));

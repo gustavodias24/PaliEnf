@@ -363,74 +363,72 @@ public class PDFGenerator {
         addStringToPdf(document, "Sat", avaliacaoModel.getSat(), font);
 
         addStringToPdf(document, "Pós-operatório", avaliacaoModel.getPosOperatorio(), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getPosOperatorioObservacao(), font);
+        addStringToPdf(document, "Pós-operatório obs", avaliacaoModel.getPosOperatorioObservacao(), font);
         addStringToPdf(document, "Pulso", formatListToString(avaliacaoModel.getPulso()), font);
         addStringToPdf(document, "Nível de Consciência", formatListToString(avaliacaoModel.getNivelConsciencia()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoNivelConsciencia(), font);
+        addStringToPdf(document, "Nível de Consciência obs", avaliacaoModel.getObservacaoNivelConsciencia(), font);
 
 
         addStringToPdf(document, "Pupila", formatListToString(avaliacaoModel.getPupila()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoPupila(), font);
+        addStringToPdf(document, "Pupila obs", avaliacaoModel.getObservacaoPupila(), font);
         addStringToPdf(document, "Acuidade Visual", formatListToString(avaliacaoModel.getAcuidadeVisual()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoAcuidadeVisual(), font);
+        addStringToPdf(document, "Acuidade Visual obs", avaliacaoModel.getObservacaoAcuidadeVisual(), font);
         addStringToPdf(document, "Acuidade Auditiva", formatListToString(avaliacaoModel.getAcuidadeAuditiva()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoAcuidadeAuditiva(), font);
+        addStringToPdf(document, "Acuidade Auditiva obs", avaliacaoModel.getObservacaoAcuidadeAuditiva(), font);
         addStringToPdf(document, "Região Craniofacial", avaliacaoModel.getRegiaoCranioFacial(), font);
         addStringToPdf(document, "Cavidade Oral", formatListToString(avaliacaoModel.getCavidadeOral()), font);
-
-
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoCavidadeOral(), font);
+        addStringToPdf(document, "Cavidade Oral obs", avaliacaoModel.getObservacaoCavidadeOral(), font);
         addStringToPdf(document, "Ventilação", formatListToString(avaliacaoModel.getVentilacao()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoVentilacao(), font);
+        addStringToPdf(document, "Ventilação obs", avaliacaoModel.getObservacaoVentilacao(), font);
         addStringToPdf(document, "Ausculta Pulmonar", formatListToString(avaliacaoModel.getAuscultaPulmonar()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoAuscultaPulmonar(), font);
+        addStringToPdf(document, "Ausculta Pulmonar obs", avaliacaoModel.getObservacaoAuscultaPulmonar(), font);
         addStringToPdf(document, "Ausculta Cardíaca", formatListToString(avaliacaoModel.getAuscultaCardiaca()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoAuscultaCardiaca(), font);
+        addStringToPdf(document, "Ausculta Cardíaca obs", avaliacaoModel.getObservacaoAuscultaCardiaca(), font);
         addStringToPdf(document, "Tórax", formatListToString(avaliacaoModel.getTorax()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoTorax(), font);
+        addStringToPdf(document, "Tórax obs", avaliacaoModel.getObservacaoTorax(), font);
         addStringToPdf(document, "Abdome", formatListToString(avaliacaoModel.getAbdome()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoAbdome(), font);
+        addStringToPdf(document, "Abdome obs", avaliacaoModel.getObservacaoAbdome(), font);
 
 
         addStringToPdf(document, "Genitália", formatListToString(avaliacaoModel.getGenitalia()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoGenitalia(), font);
+        addStringToPdf(document, "Genitália obs", avaliacaoModel.getObservacaoGenitalia(), font);
         addStringToPdf(document, "Membro Superior", formatListToString(avaliacaoModel.getMenbroSuperior()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoMenbroSuperior(), font);
+        addStringToPdf(document, "Membro Superior obs", avaliacaoModel.getObservacaoMenbroSuperior(), font);
         addStringToPdf(document, "Membro Inferior", formatListToString(avaliacaoModel.getMenbroInferior()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoMenbroInferior(), font);
+        addStringToPdf(document, "Membro Inferior obs", avaliacaoModel.getObservacaoMenbroInferior(), font);
         addStringToPdf(document, "Órtese", avaliacaoModel.getOrtese(), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoOrtese(), font);
+        addStringToPdf(document, "Órtese obs", avaliacaoModel.getObservacaoOrtese(), font);
         addStringToPdf(document, "Prótese", avaliacaoModel.getProtese(), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoProtese(), font);
+        addStringToPdf(document, "Prótese obs", avaliacaoModel.getObservacaoProtese(), font);
 
 
         addStringToPdf(document, "Mucosas", formatListToString(avaliacaoModel.getMucosas()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoMucosas(), font);
+        addStringToPdf(document, "Mucosas obs", avaliacaoModel.getObservacaoMucosas(), font);
         addStringToPdf(document, "Pele", formatListToString(avaliacaoModel.getPele()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoPele(), font);
+        addStringToPdf(document, "Pele obs", avaliacaoModel.getObservacaoPele(), font);
         addStringToPdf(document, "Presença de Dor", avaliacaoModel.getPresencaDeDor(), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getPresencaDeDor(), font);
+        addStringToPdf(document, "Presença de Dor obs", avaliacaoModel.getPresencaDeDor(), font);
         addStringToPdf(document, "Escala de Dor Eva", avaliacaoModel.getEscalaDeDorEva(), font);
         addStringToPdf(document, "Presença de Lesão", avaliacaoModel.getPresencaLesao(), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaopresencaLesao(), font);
+        addStringToPdf(document, "Presença de Lesão obs", avaliacaoModel.getObservacaopresencaLesao(), font);
 
 
         addStringToPdf(document, "Ferida Operatória", avaliacaoModel.getFeridaOperatoria(), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoFeridaOperatoria(), font);
+        addStringToPdf(document, "Ferida Operatória obs", avaliacaoModel.getObservacaoFeridaOperatoria(), font);
         addStringToPdf(document, "Amputações", avaliacaoModel.getAmputacoes(), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoAmputacoes(), font);
+        addStringToPdf(document, "Amputações obs", avaliacaoModel.getObservacaoAmputacoes(), font);
         addStringToPdf(document, "Histórico de Queda", avaliacaoModel.getHistoricoQueda(), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoHistoricoQueda(), font);
+        addStringToPdf(document, "Histórico de Queda obs", avaliacaoModel.getObservacaoHistoricoQueda(), font);
         addStringToPdf(document, "Risco de Queda", avaliacaoModel.getRiscoQueda(), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoRiscoQueda(), font);
+        addStringToPdf(document, "Risco de Queda obs", avaliacaoModel.getObservacaoRiscoQueda(), font);
         addStringToPdf(document, "Dispositivos", formatListToString(avaliacaoModel.getDipositivos()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoDispositivos(), font);
+        addStringToPdf(document, "Dispositivos obs", avaliacaoModel.getObservacaoDispositivos(), font);
         addStringToPdf(document, "Fadiga", avaliacaoModel.getFadiga(), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoFadiga(), font);
+        addStringToPdf(document, "Fadiga obs", avaliacaoModel.getObservacaoFadiga(), font);
         addStringToPdf(document, "Aspectos Nutricionais", avaliacaoModel.getAspectosNutricionais(), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoAspectosNutricionais(), font);
+        addStringToPdf(document, "Aspectos Nutricionais obs", avaliacaoModel.getObservacaoAspectosNutricionais(), font);
         addStringToPdf(document, "Dieta", formatListToString(avaliacaoModel.getDieta()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoDieta(), font);
+        addStringToPdf(document, "Dieta obs", avaliacaoModel.getObservacaoDieta(), font);
 
         addStringToPdf(document, "Condutas", avaliacaoModel.getCondutas(), font);
 
@@ -528,19 +526,19 @@ public class PDFGenerator {
 
         addStringToPdf(document, "Diurese", formatListToString(avaliacaoModel.getDiurese()), font);
         addStringToPdf(document, "Evacuação", formatListToString(avaliacaoModel.getEvacuacao()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoEliminacoes(), font);
+        addStringToPdf(document, "Eliminações obs", avaliacaoModel.getObservacaoEliminacoes(), font);
 
 
         document.add(necessidadesPRE);
 
         addStringToPdf(document, "Estado Emocional", avaliacaoModel.getEstadoEmocional(), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObservacaoEstadoEmocional(), font);
+        addStringToPdf(document, "Estado Emocional obs", avaliacaoModel.getObservacaoEstadoEmocional(), font);
         addStringToPdf(document, "Enfrentamento da Doença", avaliacaoModel.getEnfrentamentoDoenca(), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObsEnfrentamentoDoenda(), font);
+        addStringToPdf(document, "Enfrentamento da Doença obs", avaliacaoModel.getObsEnfrentamentoDoenda(), font);
         addStringToPdf(document, "Imagem Corporal", formatListToString(avaliacaoModel.getImagemCorporal()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObsImagemCorporal(), font);
+        addStringToPdf(document, "Imagem Corporal obs", avaliacaoModel.getObsImagemCorporal(), font);
         addStringToPdf(document, "Autoestima", formatListToString(avaliacaoModel.getAutoestima()), font);
-        addStringToPdf(document, "obs", avaliacaoModel.getObsAutoestima(), font);
+        addStringToPdf(document, "Autoestima obs", avaliacaoModel.getObsAutoestima(), font);
         addStringToPdf(document, "Suporte Rede Social", avaliacaoModel.getSuporteRedeSocial(), font);
         addStringToPdf(document, "Qual Suporte Rede Social", avaliacaoModel.getQualSuporteRedeSocial(), font);
         addStringToPdf(document, "Atividade Recreativa", avaliacaoModel.getAtividadeRecreativa(), font);

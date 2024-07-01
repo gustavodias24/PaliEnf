@@ -47,8 +47,11 @@ public class AdapterPaciente extends RecyclerView.Adapter<AdapterPaciente.MyView
 
     private DatabaseReference refRelatorio = FirebaseDatabase.getInstance().getReference().child("relatoriodiario");
     private DatabaseReference refDiagnosticos = FirebaseDatabase.getInstance().getReference().child("diagnostico");
+    private DatabaseReference refPacientes = FirebaseDatabase.getInstance().getReference().child("pacientes");
     List<PacienteModel> pacientes;
     Activity c;
+
+    Dialog dialogEP;
 
     public AdapterPaciente(List<PacienteModel> pacientes, Activity c) {
         this.pacientes = pacientes;
@@ -61,10 +64,13 @@ public class AdapterPaciente extends RecyclerView.Adapter<AdapterPaciente.MyView
         return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_paciente, parent, false));
     }
 
-    @SuppressLint("NonConstantResourceId")
+    @SuppressLint({"NonConstantResourceId", "NotifyDataSetChanged"})
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.nomePaciente.setText(pacientes.get(position).getNome());
+
+        PacienteModel pacienteModel = pacientes.get(position);
+
+        holder.nomePaciente.setText(pacienteModel.getNome());
 
         holder.itemView.getRootView().setClickable(false);
         holder.maisOpcoes.setOnClickListener(view -> {
@@ -173,6 +179,24 @@ public class AdapterPaciente extends RecyclerView.Adapter<AdapterPaciente.MyView
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     i.putExtra("id", pacientes.get(position).getId());
                     c.startActivity(i);
+                }else if ( menuItem.getItemId() == R.id.excluirPaciente){
+                    AlertDialog.Builder builderEP = new AlertDialog.Builder(c);
+                    builderEP.setTitle("Atenção!");
+                    builderEP.setMessage("Excluir esse paciente permanentemente?");
+                    builderEP.setCancelable(false);
+                    builderEP.setPositiveButton("Sim", (d, i) -> {
+                        Toast.makeText(c, "Excluindo...", Toast.LENGTH_SHORT).show();
+                        refPacientes.child(pacienteModel.getId()).setValue(null).addOnCompleteListener(task -> {
+                            dialogEP.dismiss();
+                            if ( task.isSuccessful()){
+                                pacientes.remove(position);
+                                notifyDataSetChanged();
+                            }
+                        });
+                    });
+                    builderEP.setNegativeButton("Não", null);
+                    dialogEP = builderEP.create();
+                    dialogEP.show();
                 }
 
                 return false;

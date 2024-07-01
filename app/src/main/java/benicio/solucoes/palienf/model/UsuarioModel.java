@@ -12,6 +12,14 @@ public class UsuarioModel {
         this.senha = senha;
     }
 
+    @Override
+    public String toString() {
+        return  "Nome: " + nome + '\n' +
+                "Email: " + email + '\n' +
+                "NR: " + nr + '\n' +
+                "Senha: " + senha ;
+    }
+
     public String getSenha() {
         return senha;
     }

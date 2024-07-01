@@ -14,6 +14,16 @@
         android:padding="8dp"
         tools:context=".RelatorioDiarioActivity">
 
+
+<!--        <Button-->
+<!--            android:id="@+id/verUltimoRelatorioDiario"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:backgroundTint="@color/azul"-->
+<!--            android:text="Ver último relatório"-->
+<!--            android:textAllCaps="true"-->
+<!--            android:textStyle="bold" />-->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -21,8 +31,6 @@
             android:text="Avaliação Física"
             android:textColor="@color/azul"
             android:textSize="24sp" />
-
-
 
 
         <EditText

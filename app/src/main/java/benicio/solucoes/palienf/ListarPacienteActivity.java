@@ -17,6 +17,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -131,14 +132,14 @@ public class ListarPacienteActivity extends AppCompatActivity {
                             }
                         }
                     }
-
+                    mainBinding.carregandoText.setVisibility(View.GONE);
                     adapterPaciente.notifyDataSetChanged();
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                mainBinding.carregandoText.setText(error.getMessage());
             }
         });
     }

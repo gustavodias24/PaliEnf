@@ -24,6 +24,13 @@
             android:text="Pacientes:"
             android:textSize="20sp" />
 
+        <TextView
+            android:id="@+id/carregandoText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Carregando..."
+            android:textSize="24sp" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerPacientes"
             android:layout_width="match_parent"
