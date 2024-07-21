@@ -1,6 +1,8 @@
 package benicio.solucoes.palienf.model;
 
-public class UsuarioModel {
+import java.io.Serializable;
+
+public class UsuarioModel implements Serializable {
 
     String id, nome, email, nr, senha;
 

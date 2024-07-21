@@ -68,7 +68,7 @@ public class VerEnfermeirosActivity extends AppCompatActivity {
                 }
 
                 adapter.notifyDataSetChanged();
-                mainBinding.progressBar.setVisibility(View.INVISIBLE);
+                mainBinding.progressBar.setVisibility(View.GONE);
 
             }
 

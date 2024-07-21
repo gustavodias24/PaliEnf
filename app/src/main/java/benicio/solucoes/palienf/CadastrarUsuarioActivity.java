@@ -23,6 +23,10 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
 
     private ActivityCadastrarUsuarioBinding mainBinding;
     private DatabaseReference refUsuarios = FirebaseDatabase.getInstance().getReference().child("usuarios");
+    private Bundle b;
+    private UsuarioModel enfermeiro = new UsuarioModel();
+    private boolean edicao = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,42 +35,59 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
-        getSupportActionBar().setTitle("Cadastrar novo usuário");
+        b = getIntent().getExtras();
+        if (b != null) {
+            enfermeiro = b.getSerializable("payloadEdicao", UsuarioModel.class);
+            edicao = true;
+
+            mainBinding.email.setText(enfermeiro.getEmail());
+            mainBinding.nr.setText(enfermeiro.getNr());
+            mainBinding.nome.setText(enfermeiro.getNome());
+            mainBinding.senha.setText(enfermeiro.getSenha());
+
+            mainBinding.cadastrar.setText("Atualizar");
+        }
+
+        getSupportActionBar().setTitle(edicao ? "Atualizar Enfermeiro(a)" : "Cadastrar Novo Enfermeiro(a)");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
-        mainBinding.cadastrar.setOnClickListener( view -> {
+        mainBinding.cadastrar.setOnClickListener(view -> {
             String email = mainBinding.email.getText().toString();
             String nr = mainBinding.nr.getText().toString();
             String nome = mainBinding.nome.getText().toString();
             String senha = mainBinding.senha.getText().toString();
 
 
-            if ( email.isEmpty() || nr.isEmpty() || nome.isEmpty() || senha.isEmpty()){
+            if (email.isEmpty() || nr.isEmpty() || nome.isEmpty() || senha.isEmpty()) {
                 Toast.makeText(this, "Preencha todas as informações", Toast.LENGTH_SHORT).show();
-            }else{
+            } else {
 
-                if ( nr.length() != 7){
+                if (nr.length() != 7) {
                     Toast.makeText(this, "Número de registro precisa ter 7 dígitos.", Toast.LENGTH_SHORT).show();
-                }else{
-                    String id = Base64.encodeToString(email.getBytes(), Base64.DEFAULT).trim();
+                } else {
 
-                    UsuarioModel usuarioModel = new UsuarioModel(
-                            id,
-                            nome,
-                            email,
-                            nr,
-                            senha
-                    );
+                    String id = !edicao ? Base64.encodeToString(email.getBytes(), Base64.DEFAULT).trim() : enfermeiro.getId();
 
-                    refUsuarios.child(usuarioModel.getId()).setValue(usuarioModel).addOnCompleteListener(task -> {
-                        if ( task.isSuccessful()){
-                            Toast.makeText(this, "Cadastro Realizado", Toast.LENGTH_LONG).show();
-                            mainBinding.email.setText("");
-                            mainBinding.nr.setText("");
-                            mainBinding.nome.setText("");
-                            mainBinding.senha.setText("");
+                    enfermeiro.setId(id);
+                    enfermeiro.setNome(nome);
+                    enfermeiro.setEmail(email);
+                    enfermeiro.setNr(nr);
+                    enfermeiro.setSenha(senha);
+
+
+                    refUsuarios.child(enfermeiro.getId()).setValue(enfermeiro).addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            if (!edicao) {
+                                Toast.makeText(this, "Cadastro Realizado", Toast.LENGTH_LONG).show();
+                                mainBinding.email.setText("");
+                                mainBinding.nr.setText("");
+                                mainBinding.nome.setText("");
+                                mainBinding.senha.setText("");
+                            } else {
+                                Toast.makeText(this, "Atualização Realizada", Toast.LENGTH_LONG).show();
+                            }
                         }
                     });
                 }
@@ -77,7 +98,9 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if ( item.getItemId() == android.R.id.home) { finish();}
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
         return super.onOptionsItemSelected(item);
     }
 }
