@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
@@ -24,7 +25,8 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
     private ActivityCadastrarUsuarioBinding mainBinding;
     private DatabaseReference refUsuarios = FirebaseDatabase.getInstance().getReference().child("usuarios");
     private Bundle b;
-    private UsuarioModel enfermeiro = new UsuarioModel();
+    private String enfermeiroId;
+    private UsuarioModel enfermeiro;
     private boolean edicao = false;
 
     @Override
@@ -37,15 +39,27 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
 
         b = getIntent().getExtras();
         if (b != null) {
-            enfermeiro = b.getSerializable("payloadEdicao", UsuarioModel.class);
+            enfermeiroId = b.getString("id", "");
             edicao = true;
 
-            mainBinding.email.setText(enfermeiro.getEmail());
-            mainBinding.nr.setText(enfermeiro.getNr());
-            mainBinding.nome.setText(enfermeiro.getNome());
-            mainBinding.senha.setText(enfermeiro.getSenha());
+            mainBinding.carregando.setVisibility(View.VISIBLE);
+            refUsuarios.child(enfermeiroId).get().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    enfermeiro = task.getResult().getValue(UsuarioModel.class);
+                    mainBinding.email.setText(enfermeiro.getEmail());
+                    mainBinding.nr.setText(enfermeiro.getNr());
+                    mainBinding.nome.setText(enfermeiro.getNome());
+                    mainBinding.senha.setText(enfermeiro.getSenha());
+                    mainBinding.carregando.setVisibility(View.GONE);
+                } else {
+                    Toast.makeText(this, "Tente novamente...", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+            });
 
             mainBinding.cadastrar.setText("Atualizar");
+            mainBinding.textView2.setText("Atualizar usuário");
+
         }
 
         getSupportActionBar().setTitle(edicao ? "Atualizar Enfermeiro(a)" : "Cadastrar Novo Enfermeiro(a)");

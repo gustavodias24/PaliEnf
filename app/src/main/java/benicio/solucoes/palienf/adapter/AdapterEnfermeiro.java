@@ -51,7 +51,7 @@ public class AdapterEnfermeiro extends RecyclerView.Adapter<AdapterEnfermeiro.My
         holder.editarEnfermeiro.setOnClickListener( v -> {
             Intent i = new Intent(a, CadastrarUsuarioActivity.class);
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            i.putExtra("payloadEdicao", usuarioModel);
+            i.putExtra("id", usuarioModel.getId());
             a.startActivity(i);
         });
         holder.excluirEnfermeiro.setOnClickListener( v -> {
