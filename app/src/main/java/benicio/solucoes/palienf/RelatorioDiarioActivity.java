@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -37,7 +38,73 @@ import benicio.solucoes.palienf.model.AvaDiariaModel;
 
 public class RelatorioDiarioActivity extends AppCompatActivity implements View.OnClickListener {
 
-//    AvaDiariaModel ultimaAvaliacao = null;
+    private EditText edtTemperatura, edtPA, edtFC, edtFR, edtSAT;
+
+    private RadioButton obsPosOperatorioSim;
+    private EditText edtObsPosOperatorio;
+
+    private CheckBox checkPulsoAmplo, checkPulsoFiliforme, checkPulsoNaoPalpavel;
+
+    private CheckBox checkAcordado, checkLucido, checkSonolento, checkObnubiladoComatoso, checkSedado,
+            checkAgitado;
+    private EditText edtObsNivelConsciencia;
+
+    private CheckBox checkIsocoricas, checkMioticas, checkMidriaticas, checkAnisocorica, checkFotorreagentes, checkNaoFotorreagentes;
+    private EditText edtObsPupila;
+
+    private CheckBox checkVisualPreservada, checkVisualPacilmente, checkVisualAusente, checkVisualExofitalmia, checkVisualEnucleacao;
+    private EditText edtObsVisual;
+
+    private CheckBox checkAuditivoPreservada, checkAuditivoPacilmente, checkAuditivoAusente;
+    private EditText edtObsAuditivo;
+
+    private RadioButton simetrico, assimetrico;
+
+    private CheckBox checkCavidadeOralIntegra, checkCavidadeOralLesionada, checkCavidadeOralSangramento, checkCavidadeOralMucosite, checkCavidadeOralLimpa,
+            checkCavidadeOralSujidade;
+    private EditText edtObsCavidadeOral;
+
+    private CheckBox checkVentilacaoAr, checkVentilacaoMacro, checkVentilacaoBipap,
+            checkVentilacaoCateter, checkVentilacaoTraqueo,
+            checkVentilacaoIntubado, checkVentilacaoMecanica;
+    private EditText edtObsVentilacao;
+
+    private CheckBox checkMVUA, checkMVUAdiminuido, checkMVUAabolido, checkEstertores, checkRoncos,
+            checkSiblilos, checkCreptacao;
+    private EditText edtObsAuscultaPulmonar;
+
+    private CheckBox check2bulhas, check3bulhas, check4bulhas, checkSopro, checkRegular, checkIrregular,
+            checkSiblilosCardiaco;
+    private EditText edtObsAuscultaCardiaca;
+
+    private CheckBox checkToraxSimetrico, checkToraxAssimetrico, checkToraxEscavado, checkToraxProtuso;
+    private EditText edtObsTorax;
+
+    private CheckBox checkGloboso, checkDistendido, checkDepressivel, checkTaboa,
+            checkRigido, checkViceraPalpavel, checkPirapote, checkPeristlaseMais, checkPeristlaseMenos, checkHeperistaltismo, checkHipoperistaltimos;
+    private EditText edtObsAbdome;
+
+    private CheckBox checkGenitaliaIntegra, checkGenitaliaLesionada, checkGenitaliaSecrecao,
+            checkGenitaliaEdema;
+    private EditText edtObsGenitalia;
+
+    private CheckBox checkMenbroSuperiorSemAlteracao, checkMenbroSuperiorParetico,
+            checkMenbroSuperiorPlegico,
+            checkMenbroSuperiorParestesia;
+    private EditText edtObsMenbrosSuperiores;
+
+    private CheckBox checkMenbroInferiorSemAlteracao, checkMenbroInferiorParetico,
+            checkMenbroInferiorPlegico,
+            checkMenbroInferiorParestesia;
+    private EditText edtObsMenbrosInferiores;
+
+    private RadioButton radioOrtese, radioNaoOrtese;
+    private EditText edtObsOrtese;
+
+    private RadioButton radioProtese, radioNaoProtese;
+    private EditText edtObsProtese;
+
+    //    AvaDiariaModel ultimaAvaliacao = null;
     boolean carregando = true;
     String idPaciente;
     TextView valorTotalGlasgow;
@@ -69,22 +136,12 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_relatorio_diario);
 
-//        recuperarUltimoRelatorio();
+        configurarComponentes();
+
         Bundle b = getIntent().getExtras();
         idPaciente = b.getString("id", "");
 
-//        findViewById(R.id.verUltimoRelatorioDiario).setOnClickListener(v -> {
-//            AlertDialog.Builder bVerInfo = new AlertDialog.Builder(RelatorioDiarioActivity.this);
-//            bVerInfo.setTitle("última Avaliação.");
-//            if (ultimaAvaliacao != null) {
-//                bVerInfo.setMessage(ultimaAvaliacao.toString());
-//            } else {
-//                bVerInfo.setMessage(carregando ? "Carregando... tente novamente." : "Última avaliação ainda não disponível!");
-//            }
-//            bVerInfo.setPositiveButton("ok", null);
-//            bVerInfo.create().show();
-//        });
-
+        recuperarUltimoRelatorio();
 
         avaliacao = new AvaDiariaModel();
 
@@ -1082,21 +1139,19 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
             EditText qualAtividadeRecreativa = findViewById(R.id.qualAtividadeRecreativa);
             avaliacao.setQualAtividadeRecreativa(qualAtividadeRecreativa.getText().toString());
 
-
-            String id = UUID.randomUUID().toString();
-
-            avaliacao.setId(id);
+            avaliacao.setId(idPaciente);
             avaliacao.setIdPaciente(idPaciente);
 
             @SuppressLint("SimpleDateFormat") SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy 'às' HH:mm");
             String data = simpleDateFormat.format(new Date());
 
             avaliacao.setData(data);
-            refRelatorio.child(id).setValue(avaliacao).addOnCompleteListener(task -> {
+            refRelatorio.child(avaliacao.getId()).setValue(avaliacao).addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
-                    Toast.makeText(this, "Avaliação Cadastrada!", Toast.LENGTH_SHORT).show();
-                    finish();
-                    startActivity(new Intent(this, this.getClass()));
+                    AlertDialog.Builder builderDialog = new AlertDialog.Builder(RelatorioDiarioActivity.this);
+                    builderDialog.setTitle("Avaliação Cadastrada!");
+                    builderDialog.setMessage("A sua avaliação diária do paciente foi registrada com sucesso!");
+                    builderDialog.setPositiveButton("ok", (dialogInterface, i) -> finish());
                 }
             });
 
@@ -1106,6 +1161,8 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
 
     @SuppressLint("SetTextI18n")
     private void configurarListenerMucosite() {
+
+
         valorTotalSomaDorNaoVerbal = findViewById(R.id.somaEscalaDorNaoVerbal);
 
         List<Integer> ids = new ArrayList<>();
@@ -1548,48 +1605,427 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
         }
     }
 
-//    private void recuperarUltimoRelatorio() {
-//        refRelatorio.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//
-//                String dataAtual = "";
-//                @SuppressLint("SimpleDateFormat") SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy 'às' HH:mm");
-//
-//                for (DataSnapshot data : snapshot.getChildren()) {
-//                    AvaDiariaModel ava = data.getValue(AvaDiariaModel.class);
-//
-//                    if (ava.getIdPaciente().equals(idPaciente)) {
-//                        if ( dataAtual.isEmpty() ){
-//                            ultimaAvaliacao = ava;
-//                            avaliacao = ultimaAvaliacao;
-//                            dataAtual = ava.getData();
-//                        }else{
-//                            try{
-//                                Date date1 = formatter.parse(dataAtual);
-//                                Date date2 = formatter.parse(ava.getData());
-//
-//                                if ( date1.before(date2)){
-//                                    ultimaAvaliacao = ava;
-//                                    avaliacao = ultimaAvaliacao;
-//                                    dataAtual = ava.getData();
-//                                }
-//
-//                            }catch (ParseException e){}
-//
-//                        }
-//
-//
-//                    }
-//                }
-//
-//                carregando = false;
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                carregando = false;
-//            }
-//        });
-//    }
+    private void configurarComponentes() {
+
+        edtTemperatura = findViewById(R.id.temperatura);
+        edtPA = findViewById(R.id.pa);
+        edtFC = findViewById(R.id.fc);
+        edtFR = findViewById(R.id.fr);
+        edtSAT = findViewById(R.id.sat);
+
+        obsPosOperatorioSim = findViewById(R.id.posOperatorio);
+        edtObsPosOperatorio = findViewById(R.id.posOperatorioObservacao);
+
+        checkPulsoAmplo = findViewById(R.id.amplo);
+        checkPulsoFiliforme = findViewById(R.id.filiforme);
+        checkPulsoNaoPalpavel = findViewById(R.id.naoPalpavel);
+
+        checkAcordado = findViewById(R.id.acordado);
+        checkLucido = findViewById(R.id.lucido);
+        checkSonolento = findViewById(R.id.sonolento);
+        checkObnubiladoComatoso = findViewById(R.id.obnubiladoCamotoso);
+        checkSedado = findViewById(R.id.sedado);
+        checkAgitado = findViewById(R.id.agitado);
+        edtObsNivelConsciencia = findViewById(R.id.observacaoNivelConsciencia);
+
+        checkIsocoricas = findViewById(R.id.isocoricas);
+        checkMioticas = findViewById(R.id.mioticas);
+        checkMidriaticas = findViewById(R.id.midriaticas);
+        checkAnisocorica = findViewById(R.id.anisocorica);
+        checkFotorreagentes = findViewById(R.id.fotorreagentes);
+        checkNaoFotorreagentes = findViewById(R.id.naoFotorreagentes);
+        edtObsPupila = findViewById(R.id.observacaoPupila);
+
+        checkVisualPreservada = findViewById(R.id.preservada);
+        checkVisualPacilmente = findViewById(R.id.parcialmente);
+        checkVisualAusente = findViewById(R.id.ausenteVisual);
+        checkVisualExofitalmia = findViewById(R.id.exofitalmia);
+        checkVisualEnucleacao = findViewById(R.id.enucleacao);
+        edtObsVisual = findViewById(R.id.observacaoAcuidadeVisual);
+
+        checkAuditivoPreservada = findViewById(R.id.preservadaAudio);
+        checkAuditivoPacilmente = findViewById(R.id.parcialmenteAudio);
+        checkAuditivoAusente = findViewById(R.id.ausenteAudio);
+        edtObsAuditivo = findViewById(R.id.observacaoAcuidadeAuditiva);
+
+        simetrico = findViewById(R.id.simetricoCranio);
+        assimetrico = findViewById(R.id.assimetricoCranio);
+
+        checkCavidadeOralIntegra = findViewById(R.id.integra);
+        checkCavidadeOralLesionada = findViewById(R.id.lesionada);
+        checkCavidadeOralSangramento = findViewById(R.id.sangramento);
+        checkCavidadeOralMucosite = findViewById(R.id.mucosite);
+        checkCavidadeOralLimpa = findViewById(R.id.limpa);
+        checkCavidadeOralSujidade = findViewById(R.id.sujidade);
+        edtObsCavidadeOral = findViewById(R.id.observacaoCavidadeOral);
+
+        checkVentilacaoAr = findViewById(R.id.ar);
+        checkVentilacaoMacro = findViewById(R.id.macronebulizacao);
+        checkVentilacaoBipap = findViewById(R.id.BIPAP);
+        checkVentilacaoCateter = findViewById(R.id.cateter);
+        checkVentilacaoTraqueo = findViewById(R.id.traqueostomizado);
+        checkVentilacaoIntubado = findViewById(R.id.intubado);
+        checkVentilacaoMecanica = findViewById(R.id.ventilacaoMecanica);
+        edtObsVentilacao = findViewById(R.id.observacaoVentilacao);
+
+
+        checkMVUA = findViewById(R.id.MVUA);
+        checkMVUAdiminuido = findViewById(R.id.MVUAdiminuído);
+        checkMVUAabolido = findViewById(R.id.MVUAabolido);
+        checkEstertores = findViewById(R.id.estertores);
+        checkRoncos = findViewById(R.id.roncos);
+        checkSiblilos = findViewById(R.id.siblilos);
+        checkCreptacao = findViewById(R.id.creptacao);
+        edtObsAuscultaPulmonar = findViewById(R.id.observacaoAuscultaPulmonar);
+
+        check2bulhas = findViewById(R.id.bulhas2);
+        check3bulhas = findViewById(R.id.bulhas3);
+        check4bulhas = findViewById(R.id.bulhas4);
+        checkSopro = findViewById(R.id.sopro);
+        checkRegular = findViewById(R.id.regular);
+        checkIrregular = findViewById(R.id.irregular);
+        checkSiblilosCardiaco = findViewById(R.id.siblilosCardiaco);
+        edtObsAuscultaCardiaca = findViewById(R.id.observacaoAuscultaCardiaca);
+
+        checkToraxSimetrico = findViewById(R.id.simetrico);
+        checkToraxAssimetrico = findViewById(R.id.assimetrico);
+        checkToraxEscavado = findViewById(R.id.escavado);
+        checkToraxProtuso = findViewById(R.id.protuso);
+        edtObsTorax = findViewById(R.id.observacaoTorax);
+
+        checkGloboso = findViewById(R.id.globoso);
+        checkDistendido = findViewById(R.id.distendido);
+        checkDepressivel = findViewById(R.id.depressivel);
+        checkTaboa = findViewById(R.id.taboa);
+        checkRigido = findViewById(R.id.rigido);
+        checkViceraPalpavel = findViewById(R.id.vicerapalpavel);
+        checkPirapote = findViewById(R.id.piparoteMais);
+        checkPeristlaseMais = findViewById(R.id.peristlaseMais);
+        checkPeristlaseMenos = findViewById(R.id.peristalseMenos);
+        checkHeperistaltismo = findViewById(R.id.heperperistaltismo);
+        checkHipoperistaltimos = findViewById(R.id.hipoperistaltismo);
+        edtObsAbdome = findViewById(R.id.observacaoAbdome);
+
+        checkGenitaliaIntegra = findViewById(R.id.integraGenitalia);
+        checkGenitaliaLesionada = findViewById(R.id.lesionadaGenitalia);
+        checkGenitaliaSecrecao = findViewById(R.id.secrecaoGenitalia);
+        checkGenitaliaEdema = findViewById(R.id.edemaGenitalia);
+        edtObsGenitalia = findViewById(R.id.observacaoGenitalia);
+
+        checkMenbroSuperiorSemAlteracao = findViewById(R.id.semalteracaoSuperior);
+        checkMenbroSuperiorParetico = findViewById(R.id.pareticoSuperior);
+        checkMenbroSuperiorPlegico = findViewById(R.id.plegicoSuperior);
+        checkMenbroSuperiorParestesia = findViewById(R.id.parestesiaSuperior);
+        edtObsMenbrosSuperiores = findViewById(R.id.observacaoMenbroSuperior);
+
+        checkMenbroInferiorSemAlteracao = findViewById(R.id.semalteracaoInferior);
+        checkMenbroInferiorParetico = findViewById(R.id.pareticoInferior);
+        checkMenbroInferiorPlegico = findViewById(R.id.plegicoInferior);
+        checkMenbroInferiorParestesia = findViewById(R.id.parestesiaInferior);
+        edtObsMenbrosInferiores = findViewById(R.id.observacaoMenbroInferior);
+
+        radioOrtese = findViewById(R.id.ortese);
+        radioNaoOrtese = findViewById(R.id.Naoortese);
+        edtObsOrtese = findViewById(R.id.observacaoOrtese);
+
+        radioProtese = findViewById(R.id.protese);
+        radioNaoProtese = findViewById(R.id.Naoprotese);
+        edtObsProtese = findViewById(R.id.observacaoProtese);
+
+
+    }
+
+    private void recuperarUltimoRelatorio() {
+        refRelatorio.child(idPaciente).get().addOnCompleteListener(task -> {
+            if (task.isSuccessful() && task.getResult().getValue() != null) {
+                AvaDiariaModel ultimoAvaliacao = task.getResult().getValue(AvaDiariaModel.class);
+
+                edtTemperatura.setText(ultimoAvaliacao.getTemperatura());
+                edtPA.setText(ultimoAvaliacao.getPa());
+                edtFC.setText(ultimoAvaliacao.getFc());
+                edtFR.setText(ultimoAvaliacao.getFr());
+                edtSAT.setText(ultimoAvaliacao.getSat());
+
+                if (ultimoAvaliacao.getPosOperatorio().equals("Sim")) {
+                    obsPosOperatorioSim.setChecked(true);
+                } else if (ultimoAvaliacao.getPosOperatorio().equals("Não")) {
+                    RadioButton pon = findViewById(R.id.posOperatorioNao);
+                    pon.setChecked(true);
+                }
+                edtObsPosOperatorio.setText(ultimoAvaliacao.getPosOperatorioObservacao());
+
+                for (String pulsoItem : ultimoAvaliacao.getPulso()) {
+                    if (pulsoItem.equals("amplo")) {
+                        checkPulsoAmplo.setChecked(true);
+                    } else if (pulsoItem.equals("filiforme")) {
+                        checkPulsoFiliforme.setChecked(true);
+                    } else if (pulsoItem.equals("não palpavel")) {
+                        checkPulsoNaoPalpavel.setChecked(true);
+                    }
+                }
+
+                for (String checkItem : ultimoAvaliacao.getNivelConsciencia()) {
+                    if (checkItem.equals("acordado")) {
+                        checkAcordado.setChecked(true);
+                    } else if (checkItem.equals("lúcido")) {
+                        checkLucido.setChecked(true);
+                    } else if (checkItem.equals("sonolento")) {
+                        checkSonolento.setChecked(true);
+                    } else if (checkItem.equals("obnubilado  Comatoso")) {
+                        checkObnubiladoComatoso.setChecked(true);
+                    } else if (checkItem.equals("Sedado")) {
+                        checkSedado.setChecked(true);
+                    } else if (checkItem.equals("Agitado")) {
+                        checkAgitado.setChecked(true);
+                    }
+                }
+                edtObsNivelConsciencia.setText(ultimoAvaliacao.getObservacaoNivelConsciencia());
+
+                for (String checkItem : ultimoAvaliacao.getPupila()) {
+                    if (checkItem.equals("isocóricas")) {
+                        checkIsocoricas.setChecked(true);
+                    } else if (checkItem.equals("mióticas")) {
+                        checkMioticas.setChecked(true);
+                    } else if (checkItem.equals("midriáticas")) {
+                        checkMidriaticas.setChecked(true);
+                    } else if (checkItem.equals("anisocórica")) {
+                        checkAnisocorica.setChecked(true);
+                    } else if (checkItem.equals("fotorreagentes")) {
+                        checkFotorreagentes.setChecked(true);
+                    } else if (checkItem.equals("não fotorreagentes")) {
+                        checkNaoFotorreagentes.setChecked(true);
+                    }
+                }
+                edtObsPupila.setText(ultimoAvaliacao.getObservacaoPupila());
+
+                for (String checkItem : ultimoAvaliacao.getAcuidadeVisual()) {
+                    if (checkItem.equals("preservada")) {
+                        checkVisualPreservada.setChecked(true);
+                    } else if (checkItem.equals("parcialmente preservada")) {
+                        checkVisualPacilmente.setChecked(true);
+                    } else if (checkItem.equals("ausente")) {
+                        checkVisualAusente.setChecked(true);
+                    } else if (checkItem.equals("exofitalmia")) {
+                        checkVisualExofitalmia.setChecked(true);
+                    } else if (checkItem.equals("enucleação")) {
+                        checkVisualEnucleacao.setChecked(true);
+                    }
+                }
+                edtObsVisual.setText(ultimoAvaliacao.getObservacaoAcuidadeVisual());
+
+                for (String checkItem : ultimoAvaliacao.getAcuidadeAuditiva()) {
+                    if (checkItem.equals("preservada")) {
+                        checkAuditivoPreservada.setChecked(true);
+                    } else if (checkItem.equals("parcialmente presenvada")) {
+                        checkAuditivoPacilmente.setChecked(true);
+                    } else if (checkItem.equals("ausente")) {
+                        checkAuditivoAusente.setChecked(true);
+                    }
+                }
+                edtObsAuditivo.setText(ultimoAvaliacao.getObservacaoAcuidadeAuditiva());
+
+                if (ultimoAvaliacao.getRegiaoCranioFacial().equals("simétrico")) {
+                    simetrico.setChecked(true);
+                } else if (ultimoAvaliacao.getRegiaoCranioFacial().equals("assimétrico")) {
+                    assimetrico.setChecked(true);
+                }
+
+                for (String checkItem : ultimoAvaliacao.getCavidadeOral()) {
+                    if (checkItem.equals("íntegra")) {
+                        checkCavidadeOralIntegra.setChecked(true);
+                    } else if (checkItem.equals("lesionada")) {
+                        checkCavidadeOralLesionada.setChecked(true);
+                    } else if (checkItem.equals("sangramento")) {
+                        checkCavidadeOralSangramento.setChecked(true);
+                    } else if (checkItem.equals("mucosite")) {
+                        checkCavidadeOralMucosite.setChecked(true);
+                    } else if (checkItem.equals("limpa")) {
+                        checkCavidadeOralLimpa.setChecked(true);
+                    } else if (checkItem.equals("sujidade")) {
+                        checkCavidadeOralSujidade.setChecked(true);
+                    }
+                }
+                edtObsCavidadeOral = findViewById(R.id.observacaoCavidadeOral);
+
+                for (String checkItem : ultimoAvaliacao.getVentilacao()) {
+                    if (checkItem.equals("ar ambiente")) {
+                        checkVentilacaoAr.setChecked(true);
+                    } else if (checkItem.equals("macronebulização")) {
+                        checkVentilacaoMacro.setChecked(true);
+                    } else if (checkItem.equals("BIPAP")) {
+                        checkVentilacaoBipap.setChecked(true);
+                    } else if (checkItem.equals("cateter de O2")) {
+                        checkVentilacaoCateter.setChecked(true);
+                    } else if (checkItem.equals("traqueostomizado")) {
+                        checkVentilacaoTraqueo.setChecked(true);
+                    } else if (checkItem.equals("intubado")) {
+                        checkVentilacaoIntubado.setChecked(true);
+                    } else if (checkItem.equals("ventilação mecânica")) {
+                        checkVentilacaoMecanica.setChecked(true);
+                    }
+                }
+                edtObsVentilacao.setText(ultimoAvaliacao.getObservacaoVentilacao());
+
+
+                for (String checkItem : ultimoAvaliacao.getAuscultaPulmonar()) {
+                    if (checkItem.equals("MVUA")) {
+                        checkMVUA.setChecked(true);
+                    } else if (checkItem.equals("MVUA diminuído")) {
+                        checkMVUAdiminuido.setChecked(true);
+                    } else if (checkItem.equals("MVUA abolido")) {
+                        checkMVUAabolido.setChecked(true);
+                    } else if (checkItem.equals("estertores")) {
+                        checkEstertores.setChecked(true);
+                    } else if (checkItem.equals("roncos")) {
+                        checkRoncos.setChecked(true);
+                    } else if (checkItem.equals("siblilos")) {
+                        checkSiblilos.setChecked(true);
+                    } else if (checkItem.equals("creptação")) {
+                        checkCreptacao.setChecked(true);
+                    }
+                }
+                edtObsAuscultaPulmonar.setText(ultimoAvaliacao.getObservacaoAuscultaPulmonar());
+
+                for (String checkItem : ultimoAvaliacao.getAuscultaCardiaca()) {
+                    if (checkItem.equals("2 bulhas")) {
+                        check2bulhas.setChecked(true);
+                    } else if (checkItem.equals("3 bulhas")) {
+                        check3bulhas.setChecked(true);
+                    } else if (checkItem.equals("4 bulhas")) {
+                        check4bulhas.setChecked(true);
+                    } else if (checkItem.equals("sopro")) {
+                        checkSopro.setChecked(true);
+                    } else if (checkItem.equals("regular")) {
+                        checkRegular.setChecked(true);
+                    } else if (checkItem.equals("irregular")) {
+                        checkIrregular.setChecked(true);
+                    } else if (checkItem.equals("siblilos")) {
+                        checkSiblilosCardiaco.setChecked(true);
+                    }
+                }
+                edtObsAuscultaCardiaca.setText(ultimoAvaliacao.getObservacaoAuscultaCardiaca());
+
+
+                for (String checkItem : ultimoAvaliacao.getTorax()) {
+                    if (checkItem.equals("simétrico")) {
+                        checkToraxSimetrico.setChecked(true);
+                    } else if (checkItem.equals("assimétrico")) {
+                        checkToraxAssimetrico.setChecked(true);
+                    } else if (checkItem.equals("escavado")) {
+                        checkToraxEscavado.setChecked(true);
+                    } else if (checkItem.equals("protuso")) {
+                        checkToraxProtuso.setChecked(true);
+                    }
+                }
+                edtObsTorax.setText(ultimoAvaliacao.getObservacaoTorax());
+
+                for (String checkItem : ultimoAvaliacao.getAbdome()) {
+                    if (checkItem.equals("globoso")) {
+                        checkGloboso.setChecked(true);
+                    } else if (checkItem.equals("distendido")) {
+                        checkDistendido.setChecked(true);
+                    } else if (checkItem.equals("depressível")) {
+                        checkDepressivel.setChecked(true);
+                    } else if (checkItem.equals("táboa")) {
+                        checkTaboa.setChecked(true);
+                    } else if (checkItem.equals("rígido")) {
+                        checkRigido.setChecked(true);
+                    } else if (checkItem.equals("vícera palpável")) {
+                        checkViceraPalpavel.setChecked(true);
+                    } else if (checkItem.equals("piparote +")) {
+                        checkPirapote.setChecked(true);
+                    } else if (checkItem.equals("peristlase +")) {
+                        checkPeristlaseMais.setChecked(true);
+                    } else if (checkItem.equals("peristalse –")) {
+                        checkPeristlaseMenos.setChecked(true);
+                    } else if (checkItem.equals("heperperistaltismo")) {
+                        checkHeperistaltismo.setChecked(true);
+                    } else if (checkItem.equals("hipoperistaltismo")) {
+                        checkHipoperistaltimos.setChecked(true);
+                    }
+                }
+                edtObsAbdome.setText(ultimoAvaliacao.getObservacaoAbdome());
+
+                for (String checkItem : ultimoAvaliacao.getGenitalia()) {
+                    if (checkItem.equals("íntegra")) {
+                        checkGenitaliaIntegra.setChecked(true);
+                    } else if (checkItem.equals("lesionada")) {
+                        checkGenitaliaLesionada.setChecked(true);
+                    } else if (checkItem.equals("secreção")) {
+                        checkGenitaliaSecrecao.setChecked(true);
+                    } else if (checkItem.equals("Edema")) {
+                        checkGenitaliaEdema.setChecked(true);
+                    }
+                }
+                edtObsGenitalia.setText(ultimoAvaliacao.getObservacaoGenitalia());
+
+                for (String checkItem : ultimoAvaliacao.getMenbroSuperior()) {
+                    if (checkItem.equals("sem alteração")) {
+                        checkMenbroSuperiorSemAlteracao.setChecked(true);
+                    } else if (checkItem.equals("parético")) {
+                        checkMenbroSuperiorParetico.setChecked(true);
+                    } else if (checkItem.equals("plégico")) {
+                        checkMenbroSuperiorPlegico.setChecked(true);
+                    } else if (checkItem.equals("parestesia")) {
+                        checkMenbroSuperiorParestesia.setChecked(true);
+                    }
+                }
+                edtObsMenbrosSuperiores.setText(ultimoAvaliacao.getObservacaoMenbroSuperior());
+
+                for (String checkItem : ultimoAvaliacao.getMenbroInferior()) {
+                    if (checkItem.equals("sem alteração")) {
+                        checkMenbroInferiorSemAlteracao.setChecked(true);
+                    } else if (checkItem.equals("parético")) {
+                        checkMenbroInferiorParetico.setChecked(true);
+                    } else if (checkItem.equals("plégico")) {
+                        checkMenbroInferiorPlegico.setChecked(true);
+                    } else if (checkItem.equals("parestesia")) {
+                        checkMenbroInferiorParestesia.setChecked(true);
+                    }
+                }
+                edtObsMenbrosInferiores.setText(ultimoAvaliacao.getObservacaoMenbroInferior());
+
+                if (ultimoAvaliacao.getOrtese().equals("Sim")) {
+                    radioOrtese.setChecked(true);
+                } else if (ultimoAvaliacao.getOrtese().equals("Não")) {
+                    radioNaoOrtese.setChecked(true);
+                }
+                edtObsOrtese.setText(ultimoAvaliacao.getObservacaoOrtese());
+
+
+                if (ultimoAvaliacao.getProtese().equals("Sim")) {
+                    radioProtese.setChecked(true);
+                } else if (ultimoAvaliacao.getProtese().equals("Não")) {
+                    radioNaoProtese.setChecked(true);
+                }
+                edtObsProtese.setText(ultimoAvaliacao.getObservacaoProtese());
+
+                //mucosas
+                //pele
+                //presenca de dor
+                //presenca de lesao
+                //ferida operatoria
+                //amputacao
+
+                //hisotiroc de queda
+                //risco de queda
+                //dispositivos
+                //fadiga
+                //aspectos nutricionais
+                //dieta
+
+                //escala glasgow
+                // nao verbal
+                // richomond
+                // eliminacoes
+                //necessidades psicossociais
+                //imagem corpotal
+                //ascpectos sociais
+
+
+            } else {
+                Toast.makeText(this, "Não foi encontrado último registro.", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 }
