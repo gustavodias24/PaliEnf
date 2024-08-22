@@ -60,6 +60,8 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
             mainBinding.cadastrar.setText("Atualizar");
             mainBinding.textView2.setText("Atualizar usuário");
 
+        }else {
+            enfermeiro = new UsuarioModel();
         }
 
         getSupportActionBar().setTitle(edicao ? "Atualizar Enfermeiro(a)" : "Cadastrar Novo Enfermeiro(a)");
