@@ -104,6 +104,12 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
     private RadioButton radioProtese, radioNaoProtese;
     private EditText edtObsProtese;
 
+    private CheckBox checkMucosasHipocoradas, checkMucosasCianoticas, checkMucosasIctericas, checkMucosasNormocoradas, checkMucosasHidratadas, checkMucosasDesistrada;
+    private EditText edtObsMucosas;
+
+    private CheckBox checkPelenormocoradasPele, checkPelehipocoradasPele, checkPelecianoticasPele, checkPeleIctericasPele, checkPelehidratadasPele, checkPeledesidratadaPele, checkPelepetequiasPele, checkPeleHematomasPele, checkPeleequimosePele, checkPelepresencaedemaequimosePele, checkPeleanasarcaPele;
+    private EditText edtObsPele;
+
     //    AvaDiariaModel ultimaAvaliacao = null;
     boolean carregando = true;
     String idPaciente;
@@ -1732,6 +1738,27 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
         radioNaoProtese = findViewById(R.id.Naoprotese);
         edtObsProtese = findViewById(R.id.observacaoProtese);
 
+        checkMucosasHipocoradas = findViewById(R.id.hipocoradas);
+        checkMucosasCianoticas = findViewById(R.id.cianoticas);
+        checkMucosasIctericas = findViewById(R.id.Ictericas);
+        checkMucosasNormocoradas = findViewById(R.id.normocoradas);
+        checkMucosasHidratadas = findViewById(R.id.hidratadas);
+        checkMucosasDesistrada = findViewById(R.id.desidratada);
+        edtObsMucosas = findViewById(R.id.observacaoMucosas);
+
+        checkPelenormocoradasPele = findViewById(R.id.normocoradasPele);
+        checkPelehipocoradasPele = findViewById(R.id.hipocoradasPele);
+        checkPelecianoticasPele = findViewById(R.id.cianoticasPele);
+        checkPeleIctericasPele = findViewById(R.id.IctericasPele);
+        checkPelehidratadasPele = findViewById(R.id.hidratadasPele);
+        checkPeledesidratadaPele = findViewById(R.id.desidratadaPele);
+        checkPelepetequiasPele = findViewById(R.id.petequiasPele);
+        checkPeleHematomasPele = findViewById(R.id.HematomasPele);
+        checkPeleequimosePele = findViewById(R.id.equimosePele);
+        checkPelepresencaedemaequimosePele = findViewById(R.id.presencaedemaequimosePele);
+        checkPeleanasarcaPele = findViewById(R.id.anasarcaPele);
+        edtObsPele = findViewById(R.id.observacaoPele);
+
 
     }
 
@@ -2000,8 +2027,50 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
                 }
                 edtObsProtese.setText(ultimoAvaliacao.getObservacaoProtese());
 
-                //mucosas
-                //pele
+                for (String checkItem : ultimoAvaliacao.getMucosas()) {
+                    if (checkItem.equals("hipocoradas")) {
+                        checkMucosasHipocoradas.setChecked(true);
+                    } else if (checkItem.equals("cianoticas")) {
+                        checkMucosasCianoticas.setChecked(true);
+                    } else if (checkItem.equals("Ictericas")) {
+                        checkMucosasIctericas.setChecked(true);
+                    } else if (checkItem.equals("normocoradas")) {
+                        checkMucosasNormocoradas.setChecked(true);
+                    } else if (checkItem.equals("hidratadas")) {
+                        checkMucosasHidratadas.setChecked(true);
+                    } else if (checkItem.equals("desidratada")) {
+                        checkMucosasDesistrada.setChecked(true);
+                    }
+                }
+                edtObsMucosas.setText(ultimoAvaliacao.getObservacaoMucosas());
+
+                for (String checkItem : ultimoAvaliacao.getPele()) {
+                    if (checkItem.equals("normocoradas")) {
+                        checkPelenormocoradasPele.setChecked(true);
+                    } else if (checkItem.equals("hipocoradas")) {
+                        checkPelehipocoradasPele.setChecked(true);
+                    } else if (checkItem.equals("cianóticas")) {
+                        checkPelecianoticasPele.setChecked(true);
+                    } else if (checkItem.equals("Ictéricas")) {
+                        checkPeleIctericasPele.setChecked(true);
+                    } else if (checkItem.equals("hidratadas")) {
+                        checkPelehidratadasPele.setChecked(true);
+                    } else if (checkItem.equals("desidratada")) {
+                        checkPeledesidratadaPele.setChecked(true);
+                    } else if (checkItem.equals("petéquias")) {
+                        checkPelepetequiasPele.setChecked(true);
+                    } else if (checkItem.equals("Hematomas")) {
+                        checkPeleHematomasPele.setChecked(true);
+                    } else if (checkItem.equals("equimose")) {
+                        checkPeleequimosePele.setChecked(true);
+                    } else if (checkItem.equals("presença de edema")) {
+                        checkPelepresencaedemaequimosePele.setChecked(true);
+                    } else if (checkItem.equals("anasarca")) {
+                        checkPeleanasarcaPele.setChecked(true);
+                    }
+                }
+                edtObsPele.setText(ultimoAvaliacao.getObservacaoPele());
+
                 //presenca de dor
                 //presenca de lesao
                 //ferida operatoria
