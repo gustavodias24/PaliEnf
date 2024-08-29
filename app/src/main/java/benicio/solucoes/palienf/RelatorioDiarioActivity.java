@@ -110,6 +110,25 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
     private CheckBox checkPelenormocoradasPele, checkPelehipocoradasPele, checkPelecianoticasPele, checkPeleIctericasPele, checkPelehidratadasPele, checkPeledesidratadaPele, checkPelepetequiasPele, checkPeleHematomasPele, checkPeleequimosePele, checkPelepresencaedemaequimosePele, checkPeleanasarcaPele;
     private EditText edtObsPele;
 
+    private RadioButton presencaDeDorSim, presencaDeDorNao;
+    private EditText edtObsPresencaDor, edtEscaladeDor;
+
+    private RadioButton presencaDeLesaoSim, presencaDeLesaoNao;
+    private EditText edtObsPresencaLesao;
+
+    private RadioButton presencaFeridaSim, presencaFeridaNao;
+    private EditText edtObsPresencaFerida;
+
+    private RadioButton presencaAmputacaoSim, presencaAmputacaoNao;
+    private EditText edtObsAmputacao;
+
+    private RadioButton presencaHistoricoQuedaSim, presencaHistoricoQuedaNao;
+    private EditText edtObsHistoricoQueda;
+
+    private RadioButton presencaRiscoQuedaSim, presencaRiscoQuedaNao;
+    private EditText edtObsRiscoQueda;
+
+
     //    AvaDiariaModel ultimaAvaliacao = null;
     boolean carregando = true;
     String idPaciente;
@@ -1613,6 +1632,23 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
 
     private void configurarComponentes() {
 
+        presencaRiscoQuedaSim = findViewById(R.id.riscoQueda);
+        presencaRiscoQuedaNao = findViewById(R.id.riscoQuedaNAO);
+        edtObsRiscoQueda = findViewById(R.id.observacaoRiscoQueda);
+
+
+        presencaAmputacaoSim = findViewById(R.id.amputacoes);
+        presencaAmputacaoNao = findViewById(R.id.amputacoesNAO);
+        edtObsAmputacao = findViewById(R.id.observacaoAmputacoes);
+
+        presencaFeridaSim = findViewById(R.id.feridaOperatoria);
+        presencaFeridaNao = findViewById(R.id.feridaOperatoriaNAO);
+        edtObsPresencaFerida = findViewById(R.id.observacaoFeridaOperatoria);
+
+        presencaDeLesaoSim = findViewById(R.id.presencaLesao);
+        presencaDeLesaoNao = findViewById(R.id.presencaLesaoNao);
+        edtObsPresencaLesao = findViewById(R.id.observacaopresencaLesao);
+
         edtTemperatura = findViewById(R.id.temperatura);
         edtPA = findViewById(R.id.pa);
         edtFC = findViewById(R.id.fc);
@@ -1758,6 +1794,15 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
         checkPelepresencaedemaequimosePele = findViewById(R.id.presencaedemaequimosePele);
         checkPeleanasarcaPele = findViewById(R.id.anasarcaPele);
         edtObsPele = findViewById(R.id.observacaoPele);
+
+        presencaDeDorSim = findViewById(R.id.presencaNaoDor);
+        presencaDeDorNao = findViewById(R.id.presencaDor);
+        edtObsPresencaDor = findViewById(R.id.ObservacaopresencaDeDor);
+        edtEscaladeDor = findViewById(R.id.escalaDeDorEva);
+
+        presencaHistoricoQuedaSim = findViewById(R.id.historicoQueda);
+        presencaHistoricoQuedaNao = findViewById(R.id.historicoQuedaNAO);
+        edtObsHistoricoQueda = findViewById(R.id.observacaoHistoricoQueda);
 
 
     }
@@ -2071,13 +2116,52 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
                 }
                 edtObsPele.setText(ultimoAvaliacao.getObservacaoPele());
 
-                //presenca de dor
-                //presenca de lesao
-                //ferida operatoria
-                //amputacao
+                if (ultimoAvaliacao.getPresencaDeDor().equals("Sim")) {
+                    presencaDeDorSim.setChecked(true);
+                } else if (ultimoAvaliacao.getPresencaDeDor().equals("Não")) {
+                    presencaDeDorNao.setChecked(true);
+                }
+                edtObsPresencaDor.setText(ultimoAvaliacao.getObservacaopresencaDeDor());
+                edtEscaladeDor.setText(ultimoAvaliacao.getEscalaDeDorEva());
 
-                //hisotiroc de queda
-                //risco de queda
+                if (ultimoAvaliacao.getPresencaLesao().equals("Sim")) {
+                    presencaDeLesaoSim.setChecked(true);
+                } else if (ultimoAvaliacao.getPresencaLesao().equals("Não")) {
+                    presencaDeLesaoNao.setChecked(true);
+                }
+                edtObsPresencaLesao.setText(ultimoAvaliacao.getObservacaopresencaLesao());
+
+                if (ultimoAvaliacao.getFeridaOperatoria().equals("Sim")) {
+                    presencaFeridaSim.setChecked(true);
+                } else if (ultimoAvaliacao.getFeridaOperatoria().equals("Não")) {
+                    presencaFeridaNao.setChecked(true);
+                }
+                edtObsPresencaFerida.setText(ultimoAvaliacao.getObservacaoFeridaOperatoria());
+
+
+                if (ultimoAvaliacao.getAmputacoes().equals("Sim")) {
+                    presencaAmputacaoSim.setChecked(true);
+                } else if (ultimoAvaliacao.getAmputacoes().equals("Não")) {
+                    presencaAmputacaoNao.setChecked(true);
+                }
+                edtObsAmputacao.setText(ultimoAvaliacao.getObservacaoAmputacoes());
+
+
+                if (ultimoAvaliacao.getHistoricoQueda().equals("Sim")) {
+                    presencaHistoricoQuedaSim.setChecked(true);
+                } else if (ultimoAvaliacao.getHistoricoQueda().equals("Não")) {
+                    presencaHistoricoQuedaNao.setChecked(true);
+                }
+                edtObsHistoricoQueda.setText(ultimoAvaliacao.getObservacaoHistoricoQueda());
+
+
+                if (ultimoAvaliacao.getRiscoQueda().equals("Sim")) {
+                    presencaRiscoQuedaSim.setChecked(true);
+                } else if (ultimoAvaliacao.getRiscoQueda().equals("Não")) {
+                    presencaRiscoQuedaNao.setChecked(true);
+                }
+                edtObsRiscoQueda.setText(ultimoAvaliacao.getObservacaoRiscoQueda());
+
                 //dispositivos
                 //fadiga
                 //aspectos nutricionais
@@ -2087,6 +2171,7 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
                 // nao verbal
                 // richomond
                 // eliminacoes
+
                 //necessidades psicossociais
                 //imagem corpotal
                 //ascpectos sociais

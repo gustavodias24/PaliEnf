@@ -1053,6 +1053,7 @@
                                                             </RadioGroup>
 
                                                             <RadioButton
+                                                                android:id="@+id/presencaNaoDor"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Não" />
@@ -1098,6 +1099,7 @@
                                                                 android:text="Sim" />
 
                                                             <RadioButton
+                                                                android:id="@+id/presencaLesaoNao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Não" />
@@ -1127,6 +1129,7 @@
                                                                 android:text="Sim" />
 
                                                             <RadioButton
+                                                                android:id="@+id/feridaOperatoriaNAO"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Não" />
@@ -1156,6 +1159,7 @@
                                                                 android:text="Sim" />
 
                                                             <RadioButton
+                                                                android:id="@+id/amputacoesNAO"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Não" />
@@ -1185,6 +1189,7 @@
                                                                 android:text="Sim" />
 
                                                             <RadioButton
+                                                                android:id="@+id/historicoQuedaNAO"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Não" />
@@ -1215,6 +1220,7 @@
                                                                 android:text="Sim" />
 
                                                             <RadioButton
+                                                                android:id="@+id/riscoQuedaNAO"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Não" />
