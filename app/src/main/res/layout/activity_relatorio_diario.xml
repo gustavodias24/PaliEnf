@@ -1332,13 +1332,13 @@
                                                                 android:id="@+id/monitorizacao"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
-                                                                android:text="monitorização de PVC " />
+                                                                android:text="monitorização de PVC" />
 
                                                             <CheckBox
                                                                 android:id="@+id/PIC"
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
-                                                                android:text="monitorização de PIC " />
+                                                                android:text="monitorização de PIC" />
 
                                                             <CheckBox
                                                                 android:id="@+id/DVE_DVPE"

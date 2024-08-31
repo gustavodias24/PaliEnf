@@ -128,6 +128,18 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
     private RadioButton presencaRiscoQuedaSim, presencaRiscoQuedaNao;
     private EditText edtObsRiscoQueda;
 
+    private CheckBox checkCateterPICC, checkacessovenosoperiferico, checkCVCjugular,
+            checkCVCfemoral, checkCVCsubclavia, checkCVCtotalmenteimplantado, checkCVCsemiimplantado,
+            checkdisseccaovenosa, checkpuncaoarterial, checkdrenodetorax, checkdrenodehemovac,
+            checkdrenodeJvac, checkdrenodeblake, checkdrenopenrose, checkmonitorizacaodePVC,
+            checkmonitorizacaodePIC, checkDVEDVPE;
+    private EditText edtObsDispositivos;
+
+    private RadioButton fadigaSim, fadigaNao, fadigaLeve, fadigaModerada, fadigaItensa;
+    private EditText edtObsFadiga;
+
+    private RadioButton aspectoNormal, aspectoEmagrecido , aspectoCaquetico;
+    private EditText edtObsAspecto;
 
     //    AvaDiariaModel ultimaAvaliacao = null;
     boolean carregando = true;
@@ -1632,6 +1644,36 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
 
     private void configurarComponentes() {
 
+        private RadioButton aspectoNormal, aspectoEmagrecido , aspectoCaquetico;
+        private EditText edtObsAspecto;
+
+        fadigaSim = findViewById(R.id.simFadiga);
+        fadigaNao = findViewById(R.id.naoFadiga);
+        fadigaLeve = findViewById(R.id.leveFadiga);
+        fadigaModerada = findViewById(R.id.moderadaFadiga);
+        fadigaItensa = findViewById(R.id.intensaFadiga);
+        edtObsFadiga = findViewById(R.id.observacaoFadiga);
+
+
+        checkCateterPICC = findViewById(R.id.CateterPICC);
+        checkacessovenosoperiferico = findViewById(R.id.acessovenoso);
+        checkCVCjugular = findViewById(R.id.CVCjugular);
+        checkCVCfemoral = findViewById(R.id.CVCfemoral);
+        checkCVCsubclavia = findViewById(R.id.CVCsubclavia);
+        checkCVCtotalmenteimplantado = findViewById(R.id.CVCtotalmente);
+        checkCVCsemiimplantado = findViewById(R.id.CVCsemi);
+        checkdisseccaovenosa = findViewById(R.id.disseccao);
+        checkpuncaoarterial = findViewById(R.id.puncao);
+        checkdrenodetorax = findViewById(R.id.dreno);
+        checkdrenodehemovac = findViewById(R.id.hemovac);
+        checkdrenodeJvac = findViewById(R.id.J_vac);
+        checkdrenodeblake = findViewById(R.id.blake);
+        checkdrenopenrose = findViewById(R.id.penrose);
+        checkmonitorizacaodePVC = findViewById(R.id.monitorizacao);
+        checkmonitorizacaodePIC = findViewById(R.id.PIC);
+        checkDVEDVPE = findViewById(R.id.DVE_DVPE);
+        edtObsDispositivos = findViewById(R.id.observacaoDispositivos);
+
         presencaRiscoQuedaSim = findViewById(R.id.riscoQueda);
         presencaRiscoQuedaNao = findViewById(R.id.riscoQuedaNAO);
         edtObsRiscoQueda = findViewById(R.id.observacaoRiscoQueda);
@@ -1805,6 +1847,7 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
         edtObsHistoricoQueda = findViewById(R.id.observacaoHistoricoQueda);
 
 
+
     }
 
     private void recuperarUltimoRelatorio() {
@@ -1917,7 +1960,7 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
                         checkCavidadeOralSujidade.setChecked(true);
                     }
                 }
-                edtObsCavidadeOral = findViewById(R.id.observacaoCavidadeOral);
+                edtObsCavidadeOral.setText(ultimoAvaliacao.getObservacaoCavidadeOral());
 
                 for (String checkItem : ultimoAvaliacao.getVentilacao()) {
                     if (checkItem.equals("ar ambiente")) {
@@ -2162,8 +2205,65 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
                 }
                 edtObsRiscoQueda.setText(ultimoAvaliacao.getObservacaoRiscoQueda());
 
-                //dispositivos
-                //fadiga
+                for (String checkItem : ultimoAvaliacao.getDipositivos()) {
+                    if (checkItem.equals("Cateter PICC")) {
+                        checkCateterPICC.setChecked(true);
+                    } else if (checkItem.equals("acesso venoso periférico")) {
+                        checkacessovenosoperiferico.setChecked(true);
+                    } else if (checkItem.equals("CVC jugular")) {
+                        checkCVCjugular.setChecked(true);
+                    } else if (checkItem.equals("CVC femoral")) {
+                        checkCVCfemoral.setChecked(true);
+                    } else if (checkItem.equals("CVC subclávia")) {
+                        checkCVCsubclavia.setChecked(true);
+                    } else if (checkItem.equals("CVC totalmente implantado")) {
+                        checkCVCtotalmenteimplantado.setChecked(true);
+                    } else if (checkItem.equals("CVC semi-implantado")) {
+                        checkCVCsemiimplantado.setChecked(true);
+                    } else if (checkItem.equals("dissecção venosa")) {
+                        checkdisseccaovenosa.setChecked(true);
+                    } else if (checkItem.equals("punção arterial")) {
+                        checkpuncaoarterial.setChecked(true);
+                    } else if (checkItem.equals("dreno de tórax")) {
+                        checkdrenodetorax.setChecked(true);
+                    } else if (checkItem.equals("dreno de hemovac")) {
+                        checkdrenodehemovac.setChecked(true);
+                    } else if (checkItem.equals("dreno de J-vac")) {
+                        checkdrenodeJvac.setChecked(true);
+                    } else if (checkItem.equals("dreno de blake")) {
+                        checkdrenodeblake.setChecked(true);
+                    } else if (checkItem.equals("dreno penrose")) {
+                        checkdrenopenrose.setChecked(true);
+                    } else if (checkItem.equals("monitorização de PVC")) {
+                        checkmonitorizacaodePVC.setChecked(true);
+                    } else if (checkItem.equals("monitorização de PIC")) {
+                        checkmonitorizacaodePIC.setChecked(true);
+                    } else if (checkItem.equals("DVE/DVPE")) {
+                        checkDVEDVPE.setChecked(true);
+                    }
+                }
+                edtObsDispositivos.setText(ultimoAvaliacao.getObservacaoDispositivos());
+
+                String fadigaMarcada = ultimoAvaliacao.getFadiga();
+                switch (fadigaMarcada){
+                    case "intensa":
+                        fadigaItensa.setChecked(true);
+                        break;
+                    case "moderada":
+                        fadigaModerada.setChecked(true);
+                        break;
+                    case "leve":
+                        fadigaLeve.setChecked(true);
+                        break;
+                    case "sim":
+                        fadigaSim.setChecked(true);
+                        break;
+                    case "não":
+                        fadigaNao.setChecked(true);
+                        break;
+                }
+                edtObsFadiga.setText(ultimoAvaliacao.getObservacaoFadiga());
+
                 //aspectos nutricionais
                 //dieta
 
