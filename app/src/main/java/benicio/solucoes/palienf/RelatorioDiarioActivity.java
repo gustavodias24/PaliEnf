@@ -138,8 +138,36 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
     private RadioButton fadigaSim, fadigaNao, fadigaLeve, fadigaModerada, fadigaItensa;
     private EditText edtObsFadiga;
 
-    private RadioButton aspectoNormal, aspectoEmagrecido , aspectoCaquetico;
+    private RadioButton aspectoNormal, aspectoEmagrecido, aspectoCaquetico;
     private EditText edtObsAspecto;
+
+
+    private CheckBox checkDietasemauxilio, checkDietacomauxilio, checkDietaaceitacao, checkDietaparcial,
+            checkDietadisfagia, checkDietadeficit, checkDietaSNE,
+            checkDietaGTT, checkDietaretencao, checkDietaresiduogastrico, checkDietaSNG, checkDietazero, checkDietaNPT;
+    private EditText edtObsDieta, edtCondutas;
+
+
+    private CheckBox checkDiurese_espontanea, checkDiurese_CVD, checkDiurese_oliguria, checkDiurese_anuria, checkDiurese_hematuria, checkDiurese_coloracaoanormal;
+
+    private CheckBox checkEvacuacao_presente, checkEvacuacao_ausente, checkEvacuacao_liquida, checkEvacuacao_semilíquida,
+            checkEvacuacao_pastosa, checkEvacuacao_enrigecida, checkEvacuacao_fecaloma, checkEvacuacao_realizadoclister, checkEvacuacao_coloracaoanormalEvacuacao;
+    private EditText edtObsEliminacoes;
+
+    private CheckBox checkImgCorporal_alteracao, checkImgCorporal_percepcao, checkImgCorporal_respostas, checkImgCorporal_Evita,
+            checkImgCorporal_aceitacaoCorporal;
+    private EditText edtObsImgCorporal;
+
+
+    private CheckBox checkAutoestima_verbalizacao, checkAutoestima_expressoes, checkAutoestima_sentimentos, checkAutoestima_Avalia;
+    private EditText edtObsAutoestima;
+
+    private RadioButton suporteRedeSocialSim, suporteRedeSocialNao;
+    private EditText edtObsqualSuporteRedeSocial;
+
+    private RadioButton atividadeRecreativaSim, atividadeRecreativaNao;
+    private EditText edtObsqualAtividadeRecreativa;
+
 
     //    AvaDiariaModel ultimaAvaliacao = null;
     boolean carregando = true;
@@ -1644,8 +1672,70 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
 
     private void configurarComponentes() {
 
-        private RadioButton aspectoNormal, aspectoEmagrecido , aspectoCaquetico;
-        private EditText edtObsAspecto;
+        suporteRedeSocialSim = findViewById(R.id.suporteRedeSocial);
+        suporteRedeSocialNao = findViewById(R.id.suporteRedeSocialNao);
+        edtObsqualSuporteRedeSocial = findViewById(R.id.qualSuporteRedeSocial);
+
+         atividadeRecreativaSim = findViewById(R.id.atividadeRecreativa);
+         atividadeRecreativaNao = findViewById(R.id.atividadeRecreativaNao);
+         edtObsqualAtividadeRecreativa = findViewById(R.id.qualAtividadeRecreativa);
+
+
+        checkAutoestima_verbalizacao = findViewById(R.id.verbalizacao);
+        checkAutoestima_expressoes = findViewById(R.id.expressoes);
+        checkAutoestima_sentimentos = findViewById(R.id.sentimentos);
+        checkAutoestima_Avalia = findViewById(R.id.Avalia);
+        edtObsAutoestima = findViewById(R.id.observacaoAutoestima);
+
+        checkImgCorporal_alteracao = findViewById(R.id.alteracao);
+        checkImgCorporal_percepcao = findViewById(R.id.percepcao);
+        checkImgCorporal_respostas = findViewById(R.id.respostas);
+        checkImgCorporal_Evita = findViewById(R.id.Evita);
+        checkImgCorporal_aceitacaoCorporal = findViewById(R.id.aceitacaoCorporal);
+        edtObsImgCorporal = findViewById(R.id.observacaoImagemCorporal);
+
+
+        checkEvacuacao_presente = findViewById(R.id.presente);
+        checkEvacuacao_ausente = findViewById(R.id.ausente);
+        checkEvacuacao_liquida = findViewById(R.id.liquida);
+        checkEvacuacao_semilíquida = findViewById(R.id.semilíquida);
+        checkEvacuacao_pastosa = findViewById(R.id.pastosa);
+        checkEvacuacao_enrigecida = findViewById(R.id.enrigecida);
+        checkEvacuacao_fecaloma = findViewById(R.id.fecaloma);
+        checkEvacuacao_realizadoclister = findViewById(R.id.realizadoclister);
+        checkEvacuacao_coloracaoanormalEvacuacao = findViewById(R.id.coloracaoanormalEvacuacao);
+        edtObsEliminacoes = findViewById(R.id.observacaoEliminacoes);
+
+
+        checkDiurese_espontanea = findViewById(R.id.espontanea);
+        checkDiurese_CVD = findViewById(R.id.CVD);
+        checkDiurese_oliguria = findViewById(R.id.oliguria);
+        checkDiurese_anuria = findViewById(R.id.anuria);
+        checkDiurese_hematuria = findViewById(R.id.hematuria);
+        checkDiurese_coloracaoanormal = findViewById(R.id.coloracaoanormal);
+
+        checkDietasemauxilio = findViewById(R.id.semauxilio);
+        checkDietacomauxilio = findViewById(R.id.comauxilio);
+        checkDietaaceitacao = findViewById(R.id.aceitacao);
+        checkDietaparcial = findViewById(R.id.parcial);
+        checkDietadisfagia = findViewById(R.id.disfagia);
+        checkDietadeficit = findViewById(R.id.deficit);
+        checkDietaSNE = findViewById(R.id.SNE);
+        checkDietaGTT = findViewById(R.id.GTT);
+        checkDietaretencao = findViewById(R.id.retencao);
+        checkDietaresiduogastrico = findViewById(R.id.residuogastrico);
+        checkDietaSNG = findViewById(R.id.SNG);
+        checkDietazero = findViewById(R.id.zero);
+        checkDietaNPT = findViewById(R.id.NPT);
+        edtObsDieta = findViewById(R.id.observacaoDieta);
+        edtCondutas = findViewById(R.id.condutas);
+
+
+        aspectoNormal = findViewById(R.id.aspectonormal);
+        aspectoEmagrecido = findViewById(R.id.emagrecido);
+        aspectoCaquetico = findViewById(R.id.caquetico);
+        edtObsAspecto = findViewById(R.id.observacaoAspectosNutricionais);
+
 
         fadigaSim = findViewById(R.id.simFadiga);
         fadigaNao = findViewById(R.id.naoFadiga);
@@ -1845,7 +1935,6 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
         presencaHistoricoQuedaSim = findViewById(R.id.historicoQueda);
         presencaHistoricoQuedaNao = findViewById(R.id.historicoQuedaNAO);
         edtObsHistoricoQueda = findViewById(R.id.observacaoHistoricoQueda);
-
 
 
     }
@@ -2245,7 +2334,7 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
                 edtObsDispositivos.setText(ultimoAvaliacao.getObservacaoDispositivos());
 
                 String fadigaMarcada = ultimoAvaliacao.getFadiga();
-                switch (fadigaMarcada){
+                switch (fadigaMarcada) {
                     case "intensa":
                         fadigaItensa.setChecked(true);
                         break;
@@ -2264,17 +2353,142 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
                 }
                 edtObsFadiga.setText(ultimoAvaliacao.getObservacaoFadiga());
 
-                //aspectos nutricionais
-                //dieta
+
+                String ascpetoMarcada = ultimoAvaliacao.getAspectosNutricionais();
+                switch (ascpetoMarcada) {
+                    case "aspecto normal":
+                        aspectoNormal.setChecked(true);
+                        break;
+                    case "emagrecido":
+                        aspectoEmagrecido.setChecked(true);
+                        break;
+                    case "caquético":
+                        aspectoCaquetico.setChecked(true);
+                        break;
+                }
+                edtObsAspecto.setText(ultimoAvaliacao.getObservacaoAspectosNutricionais());
+
+                for (String checkItem : ultimoAvaliacao.getDieta()) {
+                    if (checkItem.equals("oral sem auxílio")) {
+                        checkDietasemauxilio.setChecked(true);
+                    } else if (checkItem.equals("oral com auxílio")) {
+                        checkDietacomauxilio.setChecked(true);
+                    } else if (checkItem.equals("aceitação total")) {
+                        checkDietaaceitacao.setChecked(true);
+                    } else if (checkItem.equals("aceitação parcial")) {
+                        checkDietaparcial.setChecked(true);
+                    } else if (checkItem.equals("disfagia")) {
+                        checkDietadisfagia.setChecked(true);
+                    } else if (checkItem.equals("deficit na deglutição ")) {
+                        checkDietadeficit.setChecked(true);
+                    } else if (checkItem.equals("SNE")) {
+                        checkDietaSNE.setChecked(true);
+                    } else if (checkItem.equals("GTT")) {
+                        checkDietaGTT.setChecked(true);
+                    } else if (checkItem.equals("boa retenção")) {
+                        checkDietaretencao.setChecked(true);
+                    } else if (checkItem.equals("presença de resíduo gástrico")) {
+                        checkDietaresiduogastrico.setChecked(true);
+                    } else if (checkItem.equals(" SNG sifonagem")) {
+                        checkDietaSNG.setChecked(true);
+                    } else if (checkItem.equals("zero")) {
+                        checkDietazero.setChecked(true);
+                    } else if (checkItem.equals("NPT")) {
+                        checkDietaNPT.setChecked(true);
+                    }
+                }
+
+                edtObsDieta.setText(ultimoAvaliacao.getObservacaoDieta());
+                edtCondutas.setText(ultimoAvaliacao.getCondutas());
 
                 //escala glasgow
                 // nao verbal
                 // richomond
-                // eliminacoes
 
-                //necessidades psicossociais
-                //imagem corpotal
-                //ascpectos sociais
+
+                for (String checkItem : ultimoAvaliacao.getDiurese()) {
+                    if (checkItem.equals("espontânea")) {
+                        checkDiurese_espontanea.setChecked(true);
+                    } else if (checkItem.equals("CVD")) {
+                        checkDiurese_CVD.setChecked(true);
+                    } else if (checkItem.equals("oligúria")) {
+                        checkDiurese_oliguria.setChecked(true);
+                    } else if (checkItem.equals("anúria")) {
+                        checkDiurese_anuria.setChecked(true);
+                    } else if (checkItem.equals("hematúria")) {
+                        checkDiurese_hematuria.setChecked(true);
+                    } else if (checkItem.equals("coloração anormal")) {
+                        checkDiurese_coloracaoanormal.setChecked(true);
+                    }
+
+                }
+
+                for (String checkItem : ultimoAvaliacao.getEvacuacao()) {
+                    if (checkItem.equals("presente")) {
+                        checkEvacuacao_presente.setChecked(true);
+                    } else if (checkItem.equals("ausente")) {
+                        checkEvacuacao_ausente.setChecked(true);
+                    } else if (checkItem.equals("líquida")) {
+                        checkEvacuacao_liquida.setChecked(true);
+                    } else if (checkItem.equals("semilíquida")) {
+                        checkEvacuacao_semilíquida.setChecked(true);
+                    } else if (checkItem.equals("pastosa")) {
+                        checkEvacuacao_pastosa.setChecked(true);
+                    } else if (checkItem.equals("enrigecida")) {
+                        checkEvacuacao_enrigecida.setChecked(true);
+                    } else if (checkItem.equals("fecaloma")) {
+                        checkEvacuacao_fecaloma.setChecked(true);
+                    } else if (checkItem.equals("realizado clister")) {
+                        checkEvacuacao_realizadoclister.setChecked(true);
+                    } else if (checkItem.equals("coloração anormal")) {
+                        checkEvacuacao_coloracaoanormalEvacuacao.setChecked(true);
+                    }
+                }
+                edtObsEliminacoes.setText(ultimoAvaliacao.getObservacaoEliminacoes());
+
+                for (String checkItem : ultimoAvaliacao.getImagemCorporal()) {
+                    if (checkItem.equals("Existe alteração da imagem corporal?")) {
+                        checkImgCorporal_alteracao.setChecked(true);
+                    } else if (checkItem.equals("Refere percepção alterada do corpo?")) {
+                        checkImgCorporal_percepcao.setChecked(true);
+                    } else if (checkItem.equals("Apresenta respostas não verbais relacionadas à doença e suas consequências? ")) {
+                        checkImgCorporal_respostas.setChecked(true);
+                    } else if (checkItem.equals("Evita reconhecer e tocar o próprio corpo? ")) {
+                        checkImgCorporal_Evita.setChecked(true);
+                    } else if (checkItem.equals("aceitação")) {
+                        checkImgCorporal_aceitacaoCorporal.setChecked(true);
+                    }
+                }
+                edtObsImgCorporal.setText(ultimoAvaliacao.getObsImagemCorporal());
+
+                for (String checkItem : ultimoAvaliacao.getAutoestima()) {
+                    if (checkItem.equals("Apresenta verbalização autonegativa?")) {
+                        checkAutoestima_verbalizacao.setChecked(true);
+                    } else if (checkItem.equals("Apresenta expressões de vergonha?")) {
+                        checkAutoestima_expressoes.setChecked(true);
+                    } else if (checkItem.equals("Verbaliza sentimentos de culpa?")) {
+                        checkAutoestima_sentimentos.setChecked(true);
+                    } else if (checkItem.equals("Avalia a si mesmo como incapaz?")) {
+                        checkAutoestima_Avalia.setChecked(true);
+                    }
+                }
+                edtObsAutoestima.setText(ultimoAvaliacao.getObsAutoestima());
+
+
+                if ( ultimoAvaliacao.getSuporteRedeSocial().equals("Sim")){
+                    suporteRedeSocialSim.setChecked(true);
+                }else if ( ultimoAvaliacao.getSuporteRedeSocial().equals("Não")){
+                    suporteRedeSocialNao.setChecked(true);
+                }
+                edtObsqualSuporteRedeSocial.setText(ultimoAvaliacao.getQualSuporteRedeSocial());
+
+
+                if ( ultimoAvaliacao.getAtividadeRecreativa().equals("Sim")){
+                    atividadeRecreativaSim.setChecked(true);
+                }else if ( ultimoAvaliacao.getAtividadeRecreativa().equals("Não")){
+                    atividadeRecreativaNao.setChecked(true);
+                }
+                edtObsqualAtividadeRecreativa.setText(ultimoAvaliacao.getQualAtividadeRecreativa());
 
 
             } else {
