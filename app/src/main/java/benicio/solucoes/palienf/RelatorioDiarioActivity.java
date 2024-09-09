@@ -168,6 +168,10 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
     private RadioButton atividadeRecreativaSim, atividadeRecreativaNao;
     private EditText edtObsqualAtividadeRecreativa;
 
+    private RadioButton radioGrau0, radioGrauI, radioGrauII, radioGrauIII, radioGrauIV, radioGrauV;
+
+    private RadioButton radioRassCombativo, radioRassMuitoagitado, radioRassAgitado, radioRassInquieto, radioRassAlerta, radioRassSonolento, radioRassSedacao, radioRassmoderada, radioRassintensa, radioRassNaodesperta;
+
 
     //    AvaDiariaModel ultimaAvaliacao = null;
     boolean carregando = true;
@@ -1672,13 +1676,32 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
 
     private void configurarComponentes() {
 
+        radioRassCombativo = findViewById(R.id.Combativo);
+        radioRassMuitoagitado = findViewById(R.id.Muitoagitado);
+        radioRassAgitado = findViewById(R.id.Agitado);
+        radioRassInquieto = findViewById(R.id.Inquieto);
+        radioRassAlerta = findViewById(R.id.Alerta);
+        radioRassSonolento = findViewById(R.id.Sonolento);
+        radioRassSedacao = findViewById(R.id.Sedacao);
+        radioRassmoderada = findViewById(R.id.moderada);
+        radioRassintensa = findViewById(R.id.intensa);
+        radioRassNaodesperta = findViewById(R.id.Naodesperta);
+
+
+        radioGrau0 = findViewById(R.id.Grau0);
+        radioGrauI = findViewById(R.id.GrauI);
+        radioGrauII = findViewById(R.id.GrauII);
+        radioGrauIII = findViewById(R.id.GrauIII);
+        radioGrauIV = findViewById(R.id.GrauIV);
+        radioGrauV = findViewById(R.id.GrauV);
+
         suporteRedeSocialSim = findViewById(R.id.suporteRedeSocial);
         suporteRedeSocialNao = findViewById(R.id.suporteRedeSocialNao);
         edtObsqualSuporteRedeSocial = findViewById(R.id.qualSuporteRedeSocial);
 
-         atividadeRecreativaSim = findViewById(R.id.atividadeRecreativa);
-         atividadeRecreativaNao = findViewById(R.id.atividadeRecreativaNao);
-         edtObsqualAtividadeRecreativa = findViewById(R.id.qualAtividadeRecreativa);
+        atividadeRecreativaSim = findViewById(R.id.atividadeRecreativa);
+        atividadeRecreativaNao = findViewById(R.id.atividadeRecreativaNao);
+        edtObsqualAtividadeRecreativa = findViewById(R.id.qualAtividadeRecreativa);
 
 
         checkAutoestima_verbalizacao = findViewById(R.id.verbalizacao);
@@ -2403,7 +2426,6 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
 
                 //escala glasgow
                 // nao verbal
-                // richomond
 
 
                 for (String checkItem : ultimoAvaliacao.getDiurese()) {
@@ -2475,21 +2497,76 @@ public class RelatorioDiarioActivity extends AppCompatActivity implements View.O
                 edtObsAutoestima.setText(ultimoAvaliacao.getObsAutoestima());
 
 
-                if ( ultimoAvaliacao.getSuporteRedeSocial().equals("Sim")){
+                if (ultimoAvaliacao.getSuporteRedeSocial().equals("Sim")) {
                     suporteRedeSocialSim.setChecked(true);
-                }else if ( ultimoAvaliacao.getSuporteRedeSocial().equals("Não")){
+                } else if (ultimoAvaliacao.getSuporteRedeSocial().equals("Não")) {
                     suporteRedeSocialNao.setChecked(true);
                 }
                 edtObsqualSuporteRedeSocial.setText(ultimoAvaliacao.getQualSuporteRedeSocial());
 
 
-                if ( ultimoAvaliacao.getAtividadeRecreativa().equals("Sim")){
+                if (ultimoAvaliacao.getAtividadeRecreativa().equals("Sim")) {
                     atividadeRecreativaSim.setChecked(true);
-                }else if ( ultimoAvaliacao.getAtividadeRecreativa().equals("Não")){
+                } else if (ultimoAvaliacao.getAtividadeRecreativa().equals("Não")) {
                     atividadeRecreativaNao.setChecked(true);
                 }
                 edtObsqualAtividadeRecreativa.setText(ultimoAvaliacao.getQualAtividadeRecreativa());
 
+
+                switch (ultimoAvaliacao.getGrauMucosite()) {
+                    case "Grau 0":
+                        radioGrau0.setChecked(true);
+                        break;
+                    case "Grau I":
+                        radioGrauI.setChecked(true);
+                        break;
+                    case "Grau II":
+                        radioGrauII.setChecked(true);
+                        break;
+                    case "Grau III":
+                        radioGrauIII.setChecked(true);
+                        break;
+                    case "Grau IV":
+                        radioGrauIV.setChecked(true);
+                        break;
+                    case "Grau V":
+                        radioGrauV.setChecked(true);
+                        break;
+                }
+
+
+                switch (ultimoAvaliacao.getRichmond()) {
+                    case "Combativo":
+                        radioRassCombativo.setChecked(true);
+                        break;
+                    case "Muito agitado":
+                        radioRassMuitoagitado.setChecked(true);
+                        break;
+                    case "Agitado":
+                        radioRassAgitado.setChecked(true);
+                        break;
+                    case "Inquieto":
+                        radioRassInquieto.setChecked(true);
+                        break;
+                    case "Alerta e calmo":
+                        radioRassAlerta.setChecked(true);
+                        break;
+                    case "Sonolento":
+                        radioRassSonolento.setChecked(true);
+                        break;
+                    case "Sedação leve":
+                        radioRassSedacao.setChecked(true);
+                        break;
+                    case "Sedação moderada":
+                        radioRassmoderada.setChecked(true);
+                        break;
+                    case "Sedação intensa":
+                        radioRassintensa.setChecked(true);
+                        break;
+                    case "Não desperta":
+                        radioRassNaodesperta.setChecked(true);
+                        break;
+                }
 
             } else {
                 Toast.makeText(this, "Não foi encontrado último registro.", Toast.LENGTH_SHORT).show();
